@@ -224,6 +224,47 @@ def inject_custom_css():
             filter: grayscale(0.8);
         }
 
+        /* ANIMAÇÃO CSS DE VERMELHO PULSANTE PARA NÓS DE RISCO ALTO */
+        @keyframes pulse-red-glow {
+            0% {
+                box-shadow: 0 0 8px rgba(255, 58, 92, 0.5), 0 0 15px rgba(255, 58, 92, 0.3);
+                border-color: #FF3A5C !important;
+            }
+            50% {
+                box-shadow: 0 0 22px rgba(255, 58, 92, 0.95), 0 0 35px rgba(255, 58, 92, 0.6);
+                border-color: #FF0033 !important;
+            }
+            100% {
+                box-shadow: 0 0 8px rgba(255, 58, 92, 0.5), 0 0 15px rgba(255, 58, 92, 0.3);
+                border-color: #FF3A5C !important;
+            }
+        }
+
+        .node-card-high {
+            border: 2px solid #FF3A5C !important;
+            background-color: rgba(255, 58, 92, 0.08) !important;
+            animation: pulse-red-glow 2s infinite ease-in-out !important;
+            border-radius: 8px !important;
+            padding: 16px !important;
+            margin-bottom: 15px !important;
+        }
+
+        .node-card-medium {
+            border: 1.5px solid #F5D547 !important;
+            background-color: rgba(245, 213, 71, 0.06) !important;
+            border-radius: 8px !important;
+            padding: 16px !important;
+            margin-bottom: 15px !important;
+        }
+
+        .node-card-low {
+            border: 1px solid #2A2D38 !important;
+            background-color: var(--bg-surface) !important;
+            border-radius: 8px !important;
+            padding: 16px !important;
+            margin-bottom: 15px !important;
+        }
+
         /* Status bar de Gestão de Estado / Rate Limit Não-bloqueante */
         .rate-limit-banner {
             background: rgba(91, 104, 255, 0.12);
@@ -857,63 +898,177 @@ def main():
                         status_lote.error(f"Erro no Passo 2 LLM: {str(e)}")
 
     # ---------------------------------------------------------
-    # ABA 3: JORNADA DO CLIENTE & HANDOFF INVISÍVEL (TIMELINE)
+    # ABA 3: JORNADA DO CLIENTE (VERTICAL NODE-BASED TIMELINE)
     # ---------------------------------------------------------
     with tab3:
-        st.subheader("3. Mapeamento Visual da Jornada & Handoff Bot-Humano")
-        st.markdown("Visualização omnicanal da jornada com marcação e distinção de conteúdo processado por **IA/RAG vs Atendente Humano**.")
+        st.subheader("3. Vertical Node-Based Timeline - Jornada Granular do Cliente")
+        st.markdown("Motor de NLP com fragmentação em micro-eventos. Os nós com risco 🔴 **ALERTA CRÍTICO** possuem destaque visual em **vermelho neon pulsante** indicando gargalos operacionais e a Causa Raiz (RCA).")
         
+        # Mock Data Completo (12 Micro-eventos do Pipeline de NLP)
+        mock_timeline_events = [
+            {
+                "etapa": 1,
+                "tempo": "00:00",
+                "ator": "Atendente",
+                "acao_nlp": "Abertura de chamada padrão",
+                "nivel_risco": "BAIXO"
+            },
+            {
+                "etapa": 2,
+                "tempo": "00:15",
+                "ator": "Cliente Titular",
+                "acao_nlp": "Extração de Atrito Multicanal",
+                "entidades": ["Aracaju", "bairro Jardins", "centro da capital"],
+                "causa_raiz": "Falha de Omnichannel - Queda de SLA e redirecionamento físico",
+                "nivel_risco": "ALTO",
+                "acao_sugerida": "Revisar roteamento de atendimento físico"
+            },
+            {
+                "etapa": 3,
+                "tempo": "01:00",
+                "ator": "Sistema",
+                "acao_nlp": "Validação Positiva de Cadastro",
+                "protocolo_gerado": "2607199947",
+                "nivel_risco": "BAIXO"
+            },
+            {
+                "etapa": 4,
+                "tempo": "01:30",
+                "ator": "Atendente",
+                "acao_nlp": "Coleta de PII Secundário (KYC)",
+                "entidades_ofuscadas": ["CPF: 039***0820", "Tel: 79 991***682"],
+                "nivel_risco": "BAIXO"
+            },
+            {
+                "etapa": 5,
+                "tempo": "02:00",
+                "ator": "Sistema",
+                "acao_nlp": "Gargalo de Sistema (Barreira Digital)",
+                "causa_raiz": "Exclusão Digital - Ausência de E-mail / Residente Zona Rural",
+                "nivel_risco": "ALTO",
+                "acao_sugerida": "Sinalizar Fallback de Canal"
+            },
+            {
+                "etapa": 6,
+                "tempo": "02:30",
+                "ator": "Sistema (Motor NLP)",
+                "acao_nlp": "Speaker Diarization (Mudança de Locutor)",
+                "novo_ator": "Terceiro Autorizado (Aldanete)",
+                "nivel_risco": "MÉDIO"
+            },
+            {
+                "etapa": 7,
+                "tempo": "03:00",
+                "ator": "Terceiro",
+                "acao_nlp": "Relato de falha no Autoatendimento",
+                "causa_raiz": "Dependência de conexão contínua - Falha de App por Wi-Fi instável",
+                "nivel_risco": "MÉDIO"
+            },
+            {
+                "etapa": 8,
+                "tempo": "03:30",
+                "ator": "Sistema",
+                "acao_nlp": "Limitação de Ferramenta (Engessamento)",
+                "causa_raiz": "Ausência de funcionalidade de envio via WhatsApp no CRM",
+                "nivel_risco": "ALTO",
+                "acao_sugerida": "Gerar Ticket TI - Habilitar disparo WhatsApp"
+            },
+            {
+                "etapa": 9,
+                "tempo": "04:00",
+                "ator": "Terceiro",
+                "acao_nlp": "Identificação de Objeto de Desejo",
+                "entidades": ["Cartão Visa", "Final 4473"],
+                "nivel_risco": "BAIXO"
+            },
+            {
+                "etapa": 10,
+                "tempo": "05:00",
+                "ator": "Atendente",
+                "acao_nlp": "Quebra de Expectativa Comercial (Risco de Churn)",
+                "causa_raiz": "Limite indisponível comprometido por saque rotativo",
+                "entidades": ["Débito: R$ 2623,54", "Parcela: R$ 15,00"],
+                "nivel_risco": "ALTO",
+                "acao_sugerida": "Alerta Preditivo de Reclamação Futura"
+            },
+            {
+                "etapa": 11,
+                "tempo": "06:00",
+                "ator": "Sistema",
+                "acao_nlp": "Acordo de Resolução e SLA Definido",
+                "canal_definido": "SMS",
+                "prazo_acordado": "1 dia útil",
+                "nivel_risco": "BAIXO"
+            },
+            {
+                "etapa": 12,
+                "tempo": "07:00",
+                "ator": "Atendente",
+                "acao_nlp": "Encerramento e tabulação da chamada",
+                "nivel_risco": "BAIXO"
+            }
+        ]
+
+        # Filtro de Protocolo para Rastreabilidade
+        opcoes_jornada = ["⭐ Protocolo Exemplo 2607199947 (12 Micro-eventos de NLP - Análise Granular)"]
         if not df_banco.empty:
-            proto_jornada = st.selectbox(
-                "Selecione o protocolo para rastrear a timeline de handoff:",
-                df_banco["protocolo"].tolist(),
-                key="sb_jornada"
-            )
-            
-            reg_jornada = database.obter_registro_auditoria(proto_jornada)
-            atend_nome = reg_jornada.get("atendente", "Atendente") if reg_jornada else "Atendente"
-            cli_nome = reg_jornada.get("cliente", "Cliente") if reg_jornada else "Cliente"
-            
-            st.markdown(f"### Timeline da Jornada - Protocolo `{proto_jornada}`")
-            
+            for p in df_banco["protocolo"].tolist():
+                opcoes_jornada.append(f"Protocolo {p} (Auditado no SQLite)")
+                
+        proto_jornada_sel = st.selectbox(
+            "Selecione o protocolo para rastrear a timeline de micro-eventos:",
+            opcoes_jornada,
+            key="sb_jornada_timeline"
+        )
+        
+        st.markdown("---")
+        st.markdown("### 🌲 Árvore Vertical de Eventos da Jornada (Vertical Stepper)")
+        
+        # Renderização dos Nós da Timeline
+        for ev in mock_timeline_events:
+            risco = ev.get("nivel_risco", "BAIXO")
+            if risco == "ALTO":
+                card_class = "node-card-high"
+                badge_html = "<span class='badge badge-critical'>🔴 RISCO ALTO (ATENÇÃO CRÍTICA)</span>"
+            elif risco == "MÉDIO":
+                card_class = "node-card-medium"
+                badge_html = "<span class='badge badge-attention'>🟡 RISCO MÉDIO</span>"
+            else:
+                card_class = "node-card-low"
+                badge_html = "<span class='badge badge-controlled'>🟢 RISCO BAIXO</span>"
+                
             st.markdown(f"""
-            <div class="timeline-step">
-                <div class="timeline-badge" style="background-color: #28E0B3;"></div>
-                <h4 style="margin:0; color: #28E0B3 !important;">🤖 Etapa 1: Triagem &amp; URA Digital <span class="badge badge-controlled">IA / RAG</span></h4>
-                <p style="font-size:0.85rem; color: #8B8D98;">Horário: 14:00:10 | Canal: Chat Digital Daycoval</p>
-                <div style="background-color: #14151C; padding: 10px; border-radius: 6px; border: 1px solid #2A2D38;">
-                    <b>Bot Daycoval:</b> "Olá, {cli_nome}! Sou a IA do Banco Daycoval. Como posso ajudar?"<br>
-                    <b>Cliente:</b> "Quero contestar um lançamento no meu cartão."
+            <div class="{card_class}">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <div>
+                        <span style="font-weight:700; color:var(--accent-cyan);">Etapa {ev['etapa']}</span> | 
+                        <span style="font-family:'JetBrains Mono', monospace; color:var(--text-muted);">⏱️ {ev['tempo']}</span> | 
+                        <b>👤 Ator:</b> {ev['ator']}
+                    </div>
+                    <div>{badge_html}</div>
                 </div>
-            </div>
-            
-            <div class="timeline-step">
-                <div class="timeline-badge" style="background-color: #5B68FF;"></div>
-                <h4 style="margin:0; color: #5B68FF !important;">🔄 Etapa 2: Handoff Transparente de Contexto <span class="badge" style="background: rgba(91,104,255,0.2); color:#5B68FF;">HANDOFF INVISÍVEL</span></h4>
-                <p style="font-size:0.85rem; color: #8B8D98;">Horário: 14:01:45 | Transferência sem repetição de dados</p>
-                <div style="background-color: #14151C; padding: 10px; border-radius: 6px; border: 1px solid #5B68FF;">
-                    <b>Payload Transmitido ao Atendente:</b> Cliente autenticado via biometria facial | Categoria: Contestação de Lançamento | Risco: Médio
-                </div>
-            </div>
-            
-            <div class="timeline-step">
-                <div class="timeline-badge" style="background-color: #3DD7E5;"></div>
-                <h4 style="margin:0; color: #3DD7E5 !important;">👤 Etapa 3: Atendimento Humano <span class="badge" style="background: rgba(61,215,229,0.2); color:#3DD7E5;">OPERADOR HUMANO</span></h4>
-                <p style="font-size:0.85rem; color: #8B8D98;">Horário: 14:02:00 | Atendente: {atend_nome}</p>
-                <div style="background-color: #14151C; padding: 10px; border-radius: 6px; border: 1px solid #2A2D38;">
-                    <b>Atendente ({atend_nome}):</b> "Olá, {cli_nome}! Já recebi o histórico da sua contestação e estou verificando no sistema."
-                </div>
-            </div>
-            
-            <div class="timeline-step">
-                <div class="timeline-badge" style="background-color: #FF3A5C;"></div>
-                <h4 style="margin:0; color: #FF3A5C !important;">📊 Etapa 4: Auditoria do Sistema Halo <span class="badge badge-critical">SISTEMA HALO MCP</span></h4>
-                <p style="font-size:0.85rem; color: #8B8D98;">Horário: 14:05:00 | Processamento de Causa Raiz &amp; 14 Blocos</p>
-                <div style="background-color: #14151C; padding: 10px; border-radius: 6px; border: 1px solid #FF3A5C;">
-                    <b>Resultado da Auditoria:</b> Score: {reg_jornada.get('score_operador', 100)}/100 | Status: {reg_jornada.get('status_caso', '🟡 Atenção')}
-                </div>
+                <h4 style="margin: 8px 0 4px 0;">🎯 {ev['acao_nlp']}</h4>
             </div>
             """, unsafe_allow_html=True)
+            
+            # Se tiver detalhes (causa_raiz, entidades ou acao_sugerida), abre painel expansível interativo (Side/Bottom Sheet)
+            if "causa_raiz" in ev or "entidades" in ev or "acao_sugerida" in ev or "entidades_ofuscadas" in ev:
+                with st.expander(f"🔍 Investigar Detalhes Analíticos da Etapa {ev['etapa']} (Painel de Causa Raiz)"):
+                    if "causa_raiz" in ev:
+                        st.markdown(f"**🚨 Causa Raiz Técnica (RCA):** {ev['causa_raiz']}")
+                    if "entidades" in ev:
+                        st.markdown(f"**📌 Entidades Capturadas:** `{', '.join(ev['entidades'])}`")
+                    if "entidades_ofuscadas" in ev:
+                        st.markdown(f"**🔒 PII Ofuscado:** `{', '.join(ev['entidades_ofuscadas'])}`")
+                    if "protocolo_gerado" in ev:
+                        st.markdown(f"**📄 Protocolo Gerado:** `{ev['protocolo_gerado']}`")
+                        
+                    if "acao_sugerida" in ev:
+                        st.write("")
+                        st.markdown("**⚡ Ação Analítica Recomendada (AITriggerButton):**")
+                        lbl_acao = ev['acao_sugerida']
+                        if st.button(f"⚡ {lbl_acao}", key=f"btn_ai_trigger_node_{ev['etapa']}"):
+                            st.success(f"🚀 [AITrigger Executado] Ação '{lbl_acao}' disparada com sucesso no pipeline RAG/MCP!")
 
     # ---------------------------------------------------------
     # ABA 4: CENTRAL MODULAR DE DIAGNÓSTICO & CHAT RAG
