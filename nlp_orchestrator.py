@@ -174,7 +174,7 @@ class KeyPoolManager:
 
 def call_gemini_with_rate_limit_retry(client, model_name, prompt_input, prompt_rules, response_schema=None, log_callback=None, max_retries=4):
     """
-    Executa a chamada ao Gemini com gestão inteligente de Rate Limit (HTTP 429 RESOURCE_EXHAUSTED) 
+    Executa a chamada ao Gemini com gestão inteligente de Rate Limit (HTTP 429 RESOURCE_EXHAUSTED / 503 UNAVAILABLE) 
     e Roteamento/Fallback de Modelo de IA (ex: gemini-2.5-flash -> gemini-flash-latest).
     """
     models_to_try = [model_name]
@@ -201,17 +201,16 @@ def call_gemini_with_rate_limit_retry(client, model_name, prompt_input, prompt_r
                 return response
             except Exception as e:
                 err_str = str(e)
-                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "Quota exceeded" in err_str:
+                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "503" in err_str or "UNAVAILABLE" in err_str or "Quota exceeded" in err_str:
                     attempt += 1
                     
-                    # Se cota diária excedida no modelo atual e temos modelo de fallback na fila, alterna imediatamente
-                    if ("QuotaId" in err_str or "PerDay" in err_str or "free_tier" in err_str) and len(models_to_try) > 1 and current_model != models_to_try[-1]:
-                        msg_fallback = f"🔄 [Fallback Routing] Cota do modelo `{current_model}` atingida. Redirecionando automaticamente para o modelo fallback `{models_to_try[-1]}`..."
+                    if ("QuotaId" in err_str or "PerDay" in err_str or "free_tier" in err_str or "503" in err_str or "UNAVAILABLE" in err_str) and len(models_to_try) > 1 and current_model != models_to_try[-1]:
+                        msg_fallback = f"🔄 [Fallback Routing] Notificação no modelo `{current_model}`. Redirecionando para o modelo fallback `{models_to_try[-1]}`..."
                         if log_callback: log_callback(msg_fallback)
                         else: print(msg_fallback)
                         break
                         
-                    wait_time = 8.0 * (1.5 ** (attempt - 1))
+                    wait_time = 4.0 * (1.5 ** (attempt - 1))
                     match_wait = re.search(r"retry in (\d+(\.\d+)?)s", err_str, re.IGNORECASE)
                     if match_wait:
                         try:
@@ -226,14 +225,14 @@ def call_gemini_with_rate_limit_retry(client, model_name, prompt_input, prompt_r
                             except Exception:
                                 pass
                                 
-                    msg = f"⏳ [Rate Limit Gemini 429 - Modelo `{current_model}`] Cota excedida. Aguardando {wait_time:.1f}s para retentar (Tentativa {attempt}/{max_retries})..."
+                    msg = f"⏳ [Gemini `{current_model}`] Servidor temporariamente ocupado (429/503). Aguardando {wait_time:.1f}s (Tentativa {attempt}/{max_retries})..."
                     if log_callback: log_callback(msg)
                     else: print(msg)
                     time.sleep(wait_time)
                 else:
                     raise e
                     
-    raise RuntimeError(f"Cota do Gemini (Rate Limit 429) excedida em todos os modelos testados ({', '.join(models_to_try)}). Aguarde a renovação da cota da sua chave.")
+    raise RuntimeError(f"O serviço Gemini está temporariamente com alta demanda na Google Cloud (503/429). Por favor, aguarde alguns segundos e tente novamente.")
 
 # ---------------------------------------------------------
 # CLASSE ORQUESTRADORA PRINCIPAL

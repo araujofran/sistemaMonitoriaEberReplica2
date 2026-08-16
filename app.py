@@ -823,38 +823,42 @@ def main():
                             
                             # Chamada usando a interface nativa de Chat do SDK do Gemini (client.chats.create)
                             client = genai.Client(api_key=api_key)
+                            models_to_try = [model_name, "gemini-flash-latest"] if model_name != "gemini-flash-latest" else ["gemini-flash-latest"]
                             
-                            try:
-                                chat = client.chats.create(
-                                    model=model_name,
-                                    config=types.GenerateContentConfig(
-                                        system_instruction=prompt_system,
-                                        temperature=0.3
-                                    )
-                                )
-                                response = chat.send_message(user_input)
-                                resposta_final = response.text
-                            except Exception as chat_err:
-                                err_str = str(chat_err)
-                                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
-                                    # Fallback de modelo para gemini-flash-latest
-                                    chat_fallback = client.chats.create(
-                                        model="gemini-flash-latest",
-                                        config=types.GenerateContentConfig(
-                                            system_instruction=prompt_system,
-                                            temperature=0.3
+                            resposta_final = None
+                            last_err = None
+                            
+                            for m in models_to_try:
+                                for attempt in range(3):
+                                    try:
+                                        chat = client.chats.create(
+                                            model=m,
+                                            config=types.GenerateContentConfig(
+                                                system_instruction=prompt_system,
+                                                temperature=0.3
+                                            )
                                         )
-                                    )
-                                    response = chat_fallback.send_message(user_input)
-                                    resposta_final = response.text
+                                        response = chat.send_message(user_input)
+                                        resposta_final = response.text
+                                        break
+                                    except Exception as chat_err:
+                                        last_err = str(chat_err)
+                                        if ("503" in last_err or "UNAVAILABLE" in last_err or "429" in last_err or "RESOURCE_EXHAUSTED" in last_err) and attempt < 2:
+                                            time.sleep(3)
+                                        else:
+                                            break
+                                if resposta_final:
+                                    break
+                                    
+                            if not resposta_final:
+                                if "503" in str(last_err) or "UNAVAILABLE" in str(last_err):
+                                    resposta_final = "⚠️ **Servidores da Google Cloud temporariamente ocupados (HTTP 503 Alta Demanda)**\n\nA API do Gemini está passando por um pico temporário de uso global nos servidores gratuitos da Google. Por favor, aguarde alguns instantes e tente novamente!"
+                                elif "429" in str(last_err) or "RESOURCE_EXHAUSTED" in str(last_err):
+                                    resposta_final = "⚠️ **Limite de Cota do Gemini Atingido (HTTP 429)**\n\nA cota de requisições da chave foi atingida. Por favor, aguarde a renovação da cota da sua chave de API."
                                 else:
-                                    raise chat_err
+                                    resposta_final = f"❌ Erro ao chamar o Gemini: {last_err}"
                         except Exception as e:
-                            err_msg = str(e)
-                            if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg or "Quota exceeded" in err_msg:
-                                resposta_final = "⚠️ **Limite de Cota do Gemini Atingido (HTTP 429)**\n\nA cota de requisições da chave do Gemini foi excedida temporariamente. O sistema aplicou a troca de modelo fallback, mas a cota gratuita do projeto foi atingida.\n\n*Dica: Você pode consultar as notas e estatísticas navegando diretamente na aba **Painel de Auditorias**.*"
-                            else:
-                                resposta_final = f"❌ Erro ao chamar o Gemini: {err_msg}"
+                            resposta_final = f"❌ Erro na execução do Chat: {str(e)}"
                     else:
                         resposta_final = "⚠️ O chat conversacional inteligente requer o modo Real (Gemini LLM) ativo com a chave de API configurada."
                         
