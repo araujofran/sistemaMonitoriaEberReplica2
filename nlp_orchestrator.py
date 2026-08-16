@@ -199,75 +199,113 @@ class NLPAuditOrchestrator:
         """
         if log_callback: log_callback(f"🧠 [LLM] Iniciando Passo 2 (Auditoria Avançada) para protocolo {protocolo}...")
         
-        async with LocalMCPClient() as mcp:
-            if log_callback: log_callback(f"📂 [MCP Tool] Obtendo transcrição e NLP do banco...")
-            registro_str = await mcp.call_tool("obter_registro_db", {"protocolo": protocolo})
-            registro = json.loads(registro_str)
+        texto_transcricao = None
+        nlp_json_str = None
+        
+        # Tenta obter via MCP Tool primeiro; se falhar o transporte, faz fallback direto para database.py
+        try:
+            async with LocalMCPClient() as mcp:
+                if log_callback: log_callback(f"📂 [MCP Tool] Obtendo transcrição e NLP do banco...")
+                registro_str = await mcp.call_tool("obter_registro_db", {"protocolo": protocolo})
+                if registro_str and registro_str != "None":
+                    registro = json.loads(registro_str)
+                    if isinstance(registro, dict):
+                        texto_transcricao = registro.get("texto_transcricao")
+                        nlp_json_str = registro.get("nlp_json")
+        except Exception as mcp_err:
+            if log_callback: log_callback(f"ℹ️ [MCP] Notificação de transporte: {mcp_err}. Usando conexão direta SQLite...")
             
-            if not registro or not registro.get("texto_transcricao"):
-                raise RuntimeError(f"Registro do protocolo {protocolo} não encontrado no banco ou sem transcrição.")
+        if not texto_transcricao:
+            import database
+            registro = database.obter_registro_auditoria(protocolo)
+            if registro:
+                texto_transcricao = registro.get("texto_transcricao")
+                nlp_json_str = registro.get("nlp_json")
                 
-            texto_transcricao = registro["texto_transcricao"]
-            nlp_json_str = registro["nlp_json"]
+        if not texto_transcricao:
+            # Tenta buscar arquivo em transcricoes/
+            trans_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "transcricoes")
+            possible_files = [
+                os.path.join(trans_dir, f"protocolo_{protocolo}.txt"),
+                os.path.join(trans_dir, f"{protocolo}.txt")
+            ]
+            for pf in possible_files:
+                if os.path.exists(pf):
+                    with open(pf, "r", encoding="utf-8", errors="ignore") as f:
+                        texto_transcricao = f.read()
+                    break
+                    
+        if not texto_transcricao:
+            raise RuntimeError(f"Registro do protocolo {protocolo} não encontrado no banco ou sem transcrição.")
             
-            if log_callback: log_callback("🌐 Conectando à API do Google Gemini via novo SDK...")
-            client = genai.Client(api_key=self.api_key)
+        if not nlp_json_str:
+            dados_nlp_temp = self.analisar_nlp_local(protocolo, texto_transcricao)
+            nlp_json_str = json.dumps(dados_nlp_temp, ensure_ascii=False)
             
-            prompt_input = f"""
-            Você deve realizar a auditoria da transcrição de atendimento abaixo, refinando a análise NLP preliminar gerada pelo sistema heurístico local.
-            
-            --- TRANSCRIÇÃO ---
-            {texto_transcricao}
-            --- FIM TRANSCRIÇÃO ---
-            
-            --- ANÁLISE NLP PRELIMINAR (PASSO 1) ---
-            {nlp_json_str}
-            --- FIM ANÁLISE NLP PRELIMINAR ---
-            
-            Realize todas as análises de acordo com as instruções de monitoria do sistema (system_instruction).
-            Sua resposta final deve ser estritamente no formato JSON fornecido, preenchendo todos os critérios.
-            """
-            
-            if log_callback: log_callback("🧠 Enviando dados estruturados para o Gemini (isso pode levar 10-20 segundos)...")
-            
+        if log_callback: log_callback("🌐 Conectando à API do Google Gemini...")
+        client = genai.Client(api_key=self.api_key)
+        
+        prompt_input = f"""
+        Você deve realizar a auditoria da transcrição de atendimento abaixo, refinando a análise NLP preliminar gerada pelo sistema heurístico local.
+        
+        --- TRANSCRIÇÃO ---
+        {texto_transcricao}
+        --- FIM TRANSCRIÇÃO ---
+        
+        --- ANÁLISE NLP PRELIMINAR (PASSO 1) ---
+        {nlp_json_str}
+        --- FIM ANÁLISE NLP PRELIMINAR ---
+        
+        Realize todas as análises de acordo com as instruções de monitoria do sistema (system_instruction).
+        Sua resposta final deve ser estritamente no formato JSON fornecido, preenchendo todos os critérios.
+        """
+        
+        if log_callback: log_callback("🧠 Enviando dados estruturados para o Gemini...")
+        
+        try:
+            loop = asyncio.get_running_loop()
+        except RuntimeError:
             loop = asyncio.get_event_loop()
-            response = await loop.run_in_executor(
-                None,
-                lambda: client.models.generate_content(
-                    model=self.model_name,
-                    contents=prompt_input,
-                    config=types.GenerateContentConfig(
-                        system_instruction=self.prompt_rules,
-                        response_mime_type="application/json",
-                        response_schema=AuditoriaCXReport,
-                        temperature=0.1
-                    )
+            
+        response = await loop.run_in_executor(
+            None,
+            lambda: client.models.generate_content(
+                model=self.model_name,
+                contents=prompt_input,
+                config=types.GenerateContentConfig(
+                    system_instruction=self.prompt_rules,
+                    response_mime_type="application/json",
+                    response_schema=AuditoriaCXReport,
+                    temperature=0.1
                 )
             )
+        )
+        
+        llm_json_str = response.text
+        if log_callback: log_callback("📥 Auditoria consolidada recebida. Decodificando...")
+        
+        dados_consolidado = json.loads(llm_json_str)
+        
+        # Tenta salvar via MCP, se falhar salva via database.py diretamente
+        try:
+            async with LocalMCPClient() as mcp:
+                if log_callback: log_callback(f"💾 [MCP Tool] Gravando auditoria consolidada no banco...")
+                await mcp.call_tool("salvar_llm_db", {
+                    "protocolo": protocolo,
+                    "llm_json": llm_json_str
+                })
+                await mcp.call_tool("salvar_auditoria", {
+                    "protocolo": protocolo,
+                    "dados_auditoria": llm_json_str
+                })
+        except Exception:
+            if log_callback: log_callback(f"💾 Gravando auditoria via conexão direta SQLite...")
+            import database
+            database.salvar_auditoria_llm(protocolo, llm_json_str)
             
-            llm_json_str = response.text
-            if log_callback: log_callback("📥 Auditoria consolidada recebida. Decodificando...")
-            
-            dados_consolidado = json.loads(llm_json_str)
-            
-            # Salva no banco SQLite via MCP
-            if log_callback: log_callback(f"💾 [MCP Tool] Gravando auditoria consolidada no banco...")
-            retorno_db = await mcp.call_tool("salvar_llm_db", {
-                "protocolo": protocolo,
-                "llm_json": llm_json_str
-            })
-            if log_callback: log_callback(f"✔️ {retorno_db}")
-            
-            # Salva também em arquivo físico JSON na pasta auditorias/ para fins de integridade
-            if log_callback: log_callback(f"💾 [MCP Tool] Salvando auditoria em arquivo físico...")
-            retorno_disco = await mcp.call_tool("salvar_auditoria", {
-                "protocolo": protocolo,
-                "dados_auditoria": llm_json_str
-            })
-            if log_callback: log_callback(f"✔️ {retorno_disco}")
-            
-            dados_consolidado["_raw_llm_markdown"] = ""
-            return dados_consolidado
+        if log_callback: log_callback(f"✅ Auditoria do protocolo {protocolo} gravada com sucesso!")
+        dados_consolidado["_raw_llm_markdown"] = ""
+        return dados_consolidado
 
     def analisar_nlp_local(self, protocolo: str, texto: str) -> dict:
         """Executa a análise NLP heurística local (Passo 1) sobre a transcrição."""

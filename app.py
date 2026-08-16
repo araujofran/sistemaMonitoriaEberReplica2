@@ -8,6 +8,7 @@ import pandas as pd
 import database
 from nlp_orchestrator import NLPAuditOrchestrator, render_markdown_report, achatar_dados_auditoria
 from google import genai
+from google.genai import types
 
 # ---------------------------------------------------------
 # 1. CONFIGURAÇÃO DA PÁGINA E DESIGN SYSTEM (HALO DARK)
@@ -675,20 +676,39 @@ def main():
                     else:
                         progress_lote = st.progress(0)
                         status_lote = st.empty()
+                        log_box_lote = st.empty()
+                        logs_lote = []
+                        
+                        def log_cb_lote(msg):
+                            logs_lote.append(f"[{len(logs_lote)+1}] {msg}")
+                            log_html = "".join([f"<div class='console-line'>{l}</div>" for l in logs_lote])
+                            log_box_lote.markdown(f"<div class='console-box'>{log_html}</div>", unsafe_allow_html=True)
+                            
                         orchestrator = NLPAuditOrchestrator(use_real_llm=use_real, api_key=api_key, model_name=model_name)
+                        sucessos = 0
+                        erros = 0
+                        
+                        log_cb_lote(f"🚀 Iniciando auditoria LLM em lote para {len(pendentes)} protocolos pendentes...")
                         
                         for idx, proto in enumerate(pendentes):
-                            status_lote.write(f"⏳ Processando LLM para protocolo {proto} ({idx+1}/{len(pendentes)})...")
-                            progress_lote.progress((idx+1)/len(pendentes))
+                            pct = (idx + 1) / len(pendentes)
+                            status_lote.write(f"⏳ Processando LLM para protocolo `{proto}` ({idx+1}/{len(pendentes)})...")
+                            progress_lote.progress(pct)
+                            log_cb_lote(f"--- [Protocolo {proto}] ({idx+1}/{len(pendentes)}) ---")
+                            
                             try:
                                 loop = asyncio.new_event_loop()
                                 asyncio.set_event_loop(loop)
-                                loop.run_until_complete(orchestrator.executar_passo2_llm(proto))
+                                loop.run_until_complete(orchestrator.executar_passo2_llm(proto, log_cb_lote))
                                 loop.close()
+                                sucessos += 1
                             except Exception as e:
-                                st.error(f"Erro no protocolo {proto}: {str(e)}")
+                                erros += 1
+                                log_cb_lote(f"❌ Erro no protocolo {proto}: {str(e)}")
                         
-                        status_lote.success("✅ Processamento LLM em lote concluído!")
+                        status_lote.success(f"✅ Processamento LLM em lote concluído! Sucessos: {sucessos} | Erros: {erros}")
+                        log_cb_lote(f"🎉 Finalizado lote: {sucessos} com sucesso, {erros} com erro.")
+                        time.sleep(2)
                         st.rerun()
             
             with col_lote2:
