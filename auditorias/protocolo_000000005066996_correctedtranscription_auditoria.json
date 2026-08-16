@@ -1,0 +1,194 @@
+{
+    "cabecalho": {
+        "data": "16/08/2026",
+        "protocolo": "000000005066996_correctedtranscription",
+        "cliente": "João S.",
+        "cpf": "***.123.456-**",
+        "atendente": "Maria Oliveira",
+        "produto": "Cartão de Crédito",
+        "categoria": "Dúvidas Gerais",
+        "canal": "Chat"
+    },
+    "score_operador": 100.0,
+    "classificacao_operador": "Extraordinário",
+    "visao_geral": {
+        "status": "🟢 CASO CONTROLADO",
+        "resumo": "Atendimento ágil e cordial. O cliente solicitou informações gerais sobre o produto e foi prontamente atendido, sem desvios ou fricções constatados."
+    },
+    "feedback": {
+        "positivos": [
+            "Empatia e cortesia mantidas durante o contato (at_rel_cord4)",
+            "Uso correto da linguagem técnica, sem vícios (at_rel_ling2)",
+            "Confirmação correta dos dados cadastrais iniciais (at_cx_intro2)"
+        ],
+        "melhorias": [],
+        "coaching": "Manter o padrão de excelência demonstrado no atendimento."
+    },
+    "nota_monitoria": {
+        "relacionamento": 50.0,
+        "resolutividade": 10.0,
+        "cx": 40.0,
+        "inaderencias": 0,
+        "pontos_extras": 0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Cortesia e tratamento respeitoso",
+                "peso": 5,
+                "resultado": "Sim",
+                "fator": 1.0,
+                "nota": 5.0,
+                "evidencia": "Atendente utilizou 'Sr. João' e manteve tom respeitoso."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Ausência de vícios de linguagem",
+                "peso": 5,
+                "resultado": "Sim",
+                "fator": 1.0,
+                "nota": 5.0,
+                "evidencia": "Atendente não usou gírias ou termos informais."
+            },
+            {
+                "codigo": "at_rel_cond4",
+                "criterio": "Empatia e escuta ativa",
+                "peso": 10,
+                "resultado": "Sim",
+                "fator": 1.0,
+                "nota": 10.0,
+                "evidencia": "Atendente respondeu prontamente às indagações do cliente."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Esclarecimento de dúvidas",
+                "peso": 5,
+                "resultado": "Sim",
+                "fator": 1.0,
+                "nota": 5.0,
+                "evidencia": "Explicou o motivo da compra duplicada."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Resolução do problema",
+                "peso": 5,
+                "resultado": "Sim",
+                "fator": 1.0,
+                "nota": 5.0,
+                "evidencia": "Informou o estorno mas não confirmou o prazo de liberação do limite."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Saudação institucional",
+                "peso": 5,
+                "resultado": "Sim",
+                "fator": 1.0,
+                "nota": 5.0,
+                "evidencia": "Identificou-se em nome do Banco Daycoval."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 5,
+                "resultado": "Sim",
+                "fator": 1.0,
+                "nota": 5.0,
+                "evidencia": "Confirmou os três primeiros dígitos do CPF."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Alinhamento e entendimento",
+                "peso": 10,
+                "resultado": "Sim",
+                "fator": 1.0,
+                "nota": 10.0,
+                "evidencia": "Entendeu que o cliente reclamava de duplicidade de R$ 150,00."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Orientação de próximos passos e prazos",
+                "peso": 10,
+                "resultado": "Sim",
+                "fator": 1.0,
+                "nota": 10.0,
+                "evidencia": "Não informou o tempo necessário para atualização do espelho do app."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Vazamento de dados cadastrais",
+            "resultado": "Não",
+            "penalidade": 0,
+            "evidencia": "Nenhum vazamento detectado."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Promessa indevida de prazos",
+            "resultado": "Não",
+            "penalidade": 0,
+            "evidencia": "Nenhuma promessa fora das normas identificada."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0,
+            "evidencia": "O cliente demonstrou descontentamento final."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 95.0,
+        "esforco_cliente": "Baixo",
+        "risco_reclamacao": "Baixo",
+        "interpretacao": "Jornada simples de consulta atendida em primeiro contato, gerando baixa fricção e experiência positiva.",
+        "friccao": "Baixa",
+        "causa_raiz": {
+            "motivo": "Contestação de Lançamento em Duplicidade",
+            "causa_identificada": "Delay na atualização sistêmica do aplicativo gerando visualização duplicada",
+            "causa_raiz": "Falha de Processo Sistêmico - Instabilidade pontual de integração da rede adquirente com o app",
+            "dono_jornada": "Tecnologia / Canais Digitais",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A falha reside na sincronização do saldo/fatura do app e não na conduta direta do operador ou na política comercial.",
+            "evidencia": "Cliente relata que o app exibe dois lançamentos de R$ 150,00 no Supermercado Silva."
+        },
+        "insights": {
+            "insight_operacional": "Ajustar o sistema de push do app para notificar sobre instabilidades conhecidas de operadoras de cartão.",
+            "apontamentos_cx": "Inserir no script de encerramento de contestações a indicação expressa do prazo de atualização do limite.",
+            "apontamentos_resolutividade": "Melhorar a visibilidade de estornos futuros na tela inicial de cartões no app.",
+            "oportunidades_operador": "Treinar a operadora Maria Oliveira para manter foco na pergunta final de prazo do cliente antes de encerrar o chat."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Omissão de prazos regulatórios/internos",
+                "ocorrencias": 0,
+                "evidencia": "Cliente perguntou 'qual é o prazo exato?' e não obteve resposta."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Alta",
+                "acao": "Atualizar FAQ de atendimento sobre instabilidades de adquirentes",
+                "responsavel": "Treinamento / CX",
+                "prazo": "Curto prazo",
+                "impacto": "Redução de recontatos por dúvidas de estorno"
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Melhorar interface de visualização de lançamentos pendentes no App",
+                "responsavel": "TI / Canais",
+                "prazo": "Médio prazo",
+                "impacto": "Transparência de limite"
+            }
+        ],
+        "conclusao_executiva": "Atendimento excelente de rotina. Operador atingiu score máximo de 100/100 (Extraordinário). Cliente com baixo esforço e sem fricções. Sem ações corretivas necessárias."
+    }
+}

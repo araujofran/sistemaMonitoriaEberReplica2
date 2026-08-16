@@ -1,0 +1,377 @@
+{
+    "cabecalho": {
+        "data": "16/08/2026",
+        "protocolo": "260759462",
+        "cliente": "Fernando",
+        "cpf": "Não identificado",
+        "atendente": "Ricardo",
+        "produto": "Veículo",
+        "categoria": "Baixa de Gravame",
+        "canal": "Telefone"
+    },
+    "score_operador": 73.5,
+    "classificacao_operador": "Atende as expectativas",
+    "visao_geral": {
+        "status": "🔴 ALERTA CRÍTICO",
+        "resumo": "O cliente Fernando contata a Central de Atendimento do Banco Daycoval, pois o gravame de seu veículo, que o banco havia informado estar baixado desde o dia 19, ainda não consta como baixado no DETRAN. O atendente Ricardo, após confirmação de dados, verifica que o gravame consta como baixado internamente, mas o cliente reitera a urgência e a existência de uma liminar judicial. Ricardo abre uma nova solicitação de baixa com prioridade e verificação do ocorrido, informando um prazo de 1 a 2 dias úteis. O caso é classificado como 'ALERTA CRÍTICO' devido à reincidência do problema, alto esforço do cliente, risco de reclamação e potencial de ouvidoria, além da menção a uma liminar judicial."
+    },
+    "feedback": {
+        "positivos": [
+            "O atendente manteve a cordialidade e o tratamento respeitoso durante toda a interação, chamando o cliente pelo nome e demonstrando calma.",
+            "Houve acolhimento e empatia genuína por parte do atendente ao compreender a frustração do cliente e se prontificar a ajudar.",
+            "A comunicação do atendente foi adequada, clara e transmitiu segurança nas informações e ações que seriam tomadas.",
+            "O atendente foi proativo ao solicitar novamente a baixa do gravame com prioridade e a verificação do ocorrido, indo além de apenas registrar a demanda."
+        ],
+        "melhorias": [
+            "A confirmação de dados cadastrais foi incompleta, não atingindo o mínimo de quatro dados exigidos.",
+            "O cliente precisou repetir informações importantes sobre a reincidência do problema e a urgência da situação.",
+            "O atendimento não resolveu o problema do gravame na ligação, apenas abriu uma nova solicitação, resultando em um atendimento não resolutivo e aumento do esforço do cliente.",
+            "O problema é uma reincidência de uma falha anterior do banco, e a solução proposta não elimina o risco de o problema persistir.",
+            "A expectativa do cliente de que o gravame já estivesse baixado não foi atendida.",
+            "O atendente utilizou gerundismo em algumas falas, o que pode impactar a percepção de clareza e objetividade."
+        ],
+        "coaching": "O operador Ricardo deve focar em aprimorar a confirmação de dados cadastrais, garantindo que pelo menos quatro informações sejam validadas. Além disso, é importante estar atento para evitar o uso de gerundismo e, em casos de reincidência de problemas críticos, explorar opções de escalada ou acompanhamento diferenciado para gerenciar a expectativa do cliente e reduzir o esforço."
+    },
+    "nota_monitoria": {
+        "relacionamento": 46.5,
+        "resolutividade": 5.0,
+        "cx": 22.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente chamou o cliente de 'senhor Fernando' no início e durante a interação, demonstrando respeito."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente pediu desculpas pela falha na linha: 'Desculpe, houve uma falha na linha. O senhor está me ouvindo?'"
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou acolhimento ao cliente ao compreender a situação: 'Compreendo, senhor. Realmente a área interna já confirmou...'"
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente expressou empatia ao reconhecer a situação do cliente e se prontificar a ajudar: 'Compreendo, senhor. Realmente a área interna já confirmou nos documentos que o senhor encaminhou nos protocolos anteriores a baixa do gravame, porém, como ainda consta no DETRAN, eu vou solicitar novamente para verificarem o que aconteceu, tudo bem?'"
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a paciência durante toda a interação, mesmo diante da frustração e urgência expressas pelo cliente."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente permitiu que o cliente expusesse sua situação sem interrupções, demonstrando escuta ativa."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a calma e a postura profissional durante todo o atendimento, mesmo em um contexto de urgência e frustração do cliente."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A linguagem utilizada pelo atendente foi formal, respeitosa e apropriada para o contexto de atendimento bancário."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificados vícios de linguagem significativos que comprometessem a comunicação do atendente."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente transmitiu segurança nas informações fornecidas e nas ações que seriam tomadas para resolver o problema do cliente."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente utilizou gerundismo em falas como 'estou verificando' e 'estou ouvindo', o que não está em conformidade com a comunicação clara e objetiva esperada."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "As informações sobre a nova solicitação, o protocolo e o prazo foram transmitidas de forma clara e compreensível para o cliente."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente foi objetivo na condução do atendimento, focando na compreensão do problema e na proposição de uma solução."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve o foco na resolução do problema principal do cliente, que era a baixa do gravame."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente demonstrou proatividade ao se prontificar a solicitar novamente a baixa do gravame com prioridade e a verificação do que ocorreu, indo além de uma postura reativa."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não conseguiu resolver o problema do gravame na ligação, apenas abriu uma nova solicitação com prazo de 2 dias úteis, o que exige que o cliente aguarde e potencialmente recontate, aumentando seu esforço na jornada."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente iniciou o contato com a saudação institucional: 'Central de Atendimento Banco Daycoval, me chamo Ricardo, como posso ajudar?'"
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente solicitou a confirmação de data de nascimento, nome completo da mãe e endereço, totalizando três dados cadastrais. A regra exige a confirmação de pelo menos quatro dados para ser classificado como 'Sim'."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente realizou sondagem adequada ao perguntar sobre o número do protocolo anterior e a orientação do DETRAN para entender a situação."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente identificou corretamente o motivo do contato do cliente: o gravame do veículo não havia sido baixado no DETRAN, apesar da informação do banco."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente repetiu a informação de que o gravame deveria estar baixado desde o dia 19 e a urgência da situação, indicando que a informação não foi totalmente absorvida ou que a solução anterior não foi eficaz."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente validou o entendimento da situação ao resumir: 'Compreendo, senhor. Realmente a área interna já confirmou nos documentos que o senhor encaminhou nos protocolos anteriores a baixa do gravame, porém, como ainda consta no DETRAN, eu vou solicitar novamente para verificarem o que aconteceu, tudo bem?'"
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema do gravame não baixado é uma reincidência de uma falha anterior do banco, e a solução de abrir uma nova solicitação não elimina o risco de o problema persistir ou de o cliente precisar recontatar."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente informou claramente os próximos passos e o prazo: 'O protocolo leva de 1 até no máximo 2 dias úteis, e a área responsável dará um retorno para confirmação, tudo bem?'"
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa do cliente era que o gravame já estivesse baixado no DETRAN, conforme informado anteriormente pelo banco. O atendimento não atendeu a essa expectativa, apenas abriu uma nova solicitação com prazo, o que não resolveu o problema na hora."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente convidou o cliente para a pesquisa de satisfação ao final do atendimento: 'peço que aguarde um momento para responder à pesquisa de satisfação'."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o número do protocolo no início da ligação e o repetiu ao final para acompanhamento."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o prazo de 1 a 2 dias úteis para a resolução da solicitação: 'O protocolo leva de 1 até no máximo 2 dias úteis'."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo durante a interação. O prazo foi informado uma única vez."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento da ligação ocorreu de forma adequada, após o cliente se despedir e o atendente agradecer o contato."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não foi identificado o uso de linguagem inadequada, ofensiva ou desrespeitosa por parte do atendente."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente não causou prejuízo financeiro direto ao cliente durante esta interação. O prejuízo já existia devido à falha anterior do banco."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo ou reconhecimento explícito do cliente ao atendimento do operador."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência do cliente foi severamente negativa devido à reincidência de um problema crítico (gravame não baixado) que já havia sido 'resolvido' pelo banco. O alto esforço exigido do cliente, a frustração expressa e a urgência da situação, agravada pela menção a uma liminar judicial, resultaram em uma jornada de alta fricção e um Score Experiência de 0.0. Embora o operador tenha demonstrado bom desempenho comportamental e técnico dentro de sua alçada, a falha de processo anterior e a não resolução imediata impactaram diretamente a percepção do cliente.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Gravame do veículo não baixado no DETRAN, apesar de o banco ter informado a baixa.",
+            "causa_identificada": "Falha na comunicação ou execução do processo de baixa de gravame entre a área interna do banco e o DETRAN.",
+            "causa_raiz": "Divergência entre a informação interna do banco e a situação real no órgão de trânsito, indicando uma falha no fluxo de trabalho ou na integração de sistemas para a efetivação da baixa do gravame.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A falha inicial de não baixar o gravame no DETRAN, apesar da confirmação interna e da liminar judicial, indica uma falha no processo de comunicação ou execução entre as áreas internas do banco e o DETRAN. O atendente agiu dentro de sua alçada ao abrir uma nova solicitação.",
+            "evidencia": "Cliente: 'falaram que o gravame do meu carro estava baixado desde o dia 19, só que eu estou aqui no DETRAN e não tem nada baixado.' e Atendente: 'Verifiquei aqui no sistema e o protocolo que o senhor me informou realmente consta com o gravame do veículo já baixado pela área interna'."
+        },
+        "insights": {
+            "insight_operacional": "A necessidade de reabrir uma solicitação para um problema que já deveria ter sido resolvido e confirmado internamente indica uma falha no processo de baixa de gravame ou na comunicação com o DETRAN. É crucial revisar e otimizar esse fluxo para evitar reincidências e alto esforço do cliente.",
+            "apontamentos_cx": "A experiência do cliente foi severamente impactada pela informação incorreta e pela reincidência do problema, gerando frustração e alto esforço. A expectativa de resolução imediata não foi atendida, e a fricção na jornada foi alta.",
+            "apontamentos_resolutividade": "Embora o atendente tenha sido proativo em abrir uma nova solicitação com prioridade, a resolução efetiva do problema não ocorreu na ligação, resultando em um atendimento não resolutivo e aumento do esforço do cliente.",
+            "oportunidades_operador": "O operador Ricardo pode ser treinado para, em casos de reincidência de problemas críticos como este, oferecer uma escalada interna ou um acompanhamento mais próximo, além de gerenciar a expectativa do cliente sobre a complexidade da resolução. Aprimorar a confirmação de dados e evitar gerundismo também são pontos de melhoria."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Registro incompleto",
+                "ocorrencias": 1,
+                "evidencia": "O atendente solicitou a confirmação de apenas três dados cadastrais (data de nascimento, nome da mãe e endereço), não atingindo o mínimo de quatro dados exigidos para uma confirmação completa (at_cx_intro2 = Não)."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e otimizar o processo de baixa de gravame e comunicação com o DETRAN para garantir a efetivação e a consistência das informações.",
+                "responsavel": "Área de Operações/Processos",
+                "prazo": "Curto prazo",
+                "impacto": "Redução de reincidências, diminuição do esforço do cliente e conformidade com decisões judiciais."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Implementar um sistema de monitoramento proativo das baixas de gravame para identificar e corrigir divergências com o DETRAN antes do contato do cliente.",
+                "responsavel": "Tecnologia/Operações",
+                "prazo": "Médio prazo",
+                "impacto": "Melhoria significativa da experiência do cliente, redução de recontatos e prevenção de reclamações."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Treinar operadores para gerenciar expectativas em casos de reincidência de problemas críticos, oferecendo opções de escalada ou acompanhamento diferenciado e aprimorando a confirmação de dados.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da percepção do cliente, redução da frustração e aumento da eficácia na resolução de problemas complexos."
+            }
+        ],
+        "conclusao_executiva": "O caso do cliente Fernando é classificado como 'ALERTA CRÍTICO' devido à reincidência de um problema de baixa de gravame, alto esforço do cliente e risco de reclamação/ouvidoria, agravado pela menção a uma liminar judicial. O operador Ricardo demonstrou um desempenho 'Atende as expectativas' (73.5/100), mantendo a cordialidade e proatividade, mas a experiência do cliente foi severamente negativa (Score Experiência 0.0) devido a uma falha de processo do banco. A ação prioritária é a revisão e otimização urgente do processo de baixa de gravame e comunicação com o DETRAN para evitar novas reincidências e impactos negativos."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

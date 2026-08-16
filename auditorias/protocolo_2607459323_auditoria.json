@@ -1,0 +1,382 @@
+{
+    "cabecalho": {
+        "data": "16/08/2026",
+        "protocolo": "2607-465-93-23",
+        "cliente": "Não identificado",
+        "cpf": "***.XXX.XXX-**",
+        "atendente": "Não identificado",
+        "produto": "Financiamento de Veículo",
+        "categoria": "Inversão de Parcela",
+        "canal": "Telefone"
+    },
+    "score_operador": 0.0,
+    "classificacao_operador": "Pode Melhorar Muito",
+    "visao_geral": {
+        "status": "🔴 ALERTA CRÍTICO",
+        "resumo": "O cliente contatou o Banco Daycoval devido a um erro no pagamento de uma parcela de financiamento de veículo, tendo pago a parcela 26 em vez da 20. Apesar de uma solicitação de inversão já ter sido aberta, o problema persistia, com cobranças indevidas e juros sobre a parcela 20. O atendente confirmou o pagamento da parcela 26 no sistema e propôs abrir uma reanálise do protocolo existente para agilizar a resolução. Contudo, a solução não foi definitiva na ligação, e a falta de um prazo claro para a efetiva inversão e cessação das cobranças mantém o cliente em uma situação de alto esforço e risco de recontato, classificando o caso como um alerta crítico."
+    },
+    "feedback": {
+        "positivos": [
+            "O atendente demonstrou acolhimento e empatia genuína ao se prontificar a verificar o problema e tentar agilizar a resolução para evitar um novo prazo.",
+            "Manteve a paciência e a calma durante toda a interação, mesmo diante da complexidade do problema e de uma interrupção na ligação.",
+            "Utilizou comunicação adequada, sem vícios de linguagem, e demonstrou segurança e clareza ao explicar a ação que seria tomada.",
+            "Foi objetivo e manteve o foco na resolução do problema do cliente, sem interrupções."
+        ],
+        "melhorias": [
+            "Melhorar a confirmação de dados cadastrais no início do atendimento, solicitando mais de quatro dados para validação.",
+            "Aprimorar a comunicação de próximos passos e prazos, detalhando o que o cliente deve esperar e quando, para gerenciar expectativas e reduzir a probabilidade de recontato.",
+            "Evitar o uso de gerundismo na comunicação para transmitir maior profissionalismo e clareza.",
+            "Garantir que a solução proposta atenda plenamente à expectativa do cliente, buscando a resolução definitiva do problema na primeira interação."
+        ],
+        "coaching": "O operador deve focar em aprimorar a etapa de confirmação de dados cadastrais, garantindo a validação de pelo menos quatro informações. É crucial também detalhar os próximos passos e prazos de forma clara e objetiva ao cliente, especialmente em casos de reanálise de protocolos, para gerenciar expectativas e reduzir a incerteza. Adicionalmente, trabalhar na eliminação do gerundismo contribuirá para uma comunicação mais profissional e assertiva."
+    },
+    "nota_monitoria": {
+        "relacionamento": 43.5,
+        "resolutividade": 7.5,
+        "cx": 16.0,
+        "inaderencias": -100.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não utilizou o nome do cliente em nenhum momento da interação."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente pediu desculpas pela interrupção na ligação (\"Desculpa. Oi?\") e pela demora na verificação (\"Desculpe pela demora.\")."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou acolhimento ao se prontificar a verificar o problema do cliente (\"Eu vou verificar para a senhora no sistema, ver qual parcela é.\") e ao reconhecer a situação (\"Sim, entendi. Vou dar um jeito aqui, só um momento.\")."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou empatia ao reconhecer a situação do cliente (\"Sim, entendi.\") e ao tentar agilizar a resolução para evitar um novo prazo (\"Para eu não ter que abrir um outro protocolo de solicitação de inversão de parcela, para não demorar o prazo de 3 dias ou um pouco mais, eu vou abrir a reanálise do protocolo que a senhora já abriu.\")."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou paciência ao lidar com a repetição do e-mail do cliente e com a interrupção na ligação, mantendo a calma e a cordialidade."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente não interrompeu o cliente durante suas explicações, permitindo que ele expusesse o problema completamente."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a calma e a postura profissional durante toda a interação, mesmo diante da complexidade do problema e da interrupção na ligação."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente utilizou uma linguagem formal e respeitosa, adequada ao contexto de atendimento bancário."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificados vícios de linguagem na fala do atendente."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou segurança nas informações e na solução proposta, explicando o que faria para tentar resolver o problema."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente utilizou gerundismo em sua fala, como em \"Eu vou verificar para a senhora no sistema\" e \"eu vou abrir a reanálise\"."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "O atendente explicou de forma clara a ação que seria tomada: \"Eu vou abrir a reanálise do protocolo que a senhora já abriu. Nessa reanálise, eu vou colocar a informação de que já consta no sistema a baixa do pagamento da parcela 26\"."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente foi objetivo ao buscar a informação no sistema e propor uma solução para o problema do cliente."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve o foco na resolução do problema do cliente, sem desviar do assunto principal."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente demonstrou proatividade ao verificar o sistema, confirmar o pagamento da parcela 26 e propor uma \"reanálise\" do protocolo existente para agilizar o processo e evitar um novo prazo de 3 dias."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Parcial",
+                "nota": 2.5,
+                "evidencia": "O atendente tentou reduzir o esforço do cliente ao propor a reanálise do protocolo existente. No entanto, a solução ainda depende de um processo interno e não garante a resolução imediata, o que pode gerar a necessidade de o cliente acompanhar ou recontatar."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente iniciou o contato com uma saudação cordial e institucional: \"Oi, boa tarde. Tudo bem? Eu posso ajudar?\"."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente solicitou apenas o e-mail do cliente e não confirmou pelo menos quatro dados cadastrais antes de prosseguir com o atendimento."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente realizou perguntas para compreender a situação: \"A senhora chegou a solicitar a inversão de parcela?\", \"Mas a senhora tem comprovante?\"."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente identificou corretamente o motivo do contato do cliente, que era a inversão de parcela paga erroneamente e a cessação das cobranças indevidas."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O cliente não precisou repetir as informações essenciais sobre o problema após a explicação inicial, exceto a confirmação do e-mail devido a uma falha de comunicação."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não validou explicitamente seu entendimento do problema com o cliente antes de propor a solução."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A solução proposta (reanálise de protocolo) não garante a resolução definitiva do problema na primeira interação, e a falta de um prazo claro para a efetiva inversão da parcela e cessação das cobranças aumenta o risco de reincidência do contato."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente informou a ação que seria tomada (\"Eu vou abrir a reanálise do protocolo\"), mas não detalhou os próximos passos para o cliente, como o prazo para a reanálise, como ele seria notificado da resolução, ou o que fazer caso as cobranças persistissem."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa do cliente era resolver o problema da parcela paga errada e cessar as cobranças indevidas. A solução de \"reanálise\" de um protocolo anterior, sem um prazo claro para a efetiva resolução, não atende plenamente a essa expectativa, pois o problema ainda não está resolvido."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendimento não chegou ao encerramento, portanto, não houve direcionamento para pesquisa."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o protocolo de atendimento no início da ligação: \"Inicialmente, vou passar para a senhora o protocolo de atendimento, que é o protocolo 2607-465-93-23.\"."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Sim",
+            "penalidade": -100.0,
+            "evidencia": "O atendente não informou um prazo claro para a conclusão da reanálise do protocolo ou para a efetiva inversão da parcela e cessação das cobranças."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo, pois nenhum prazo foi informado inicialmente."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendimento foi encerrado pelo atendente solicitando um momento, não houve desligamento inadequado."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não foi identificada linguagem inadequada por parte do atendente."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente não causou prejuízo direto ao cliente durante a interação. O prejuízo (juros) já estava ocorrendo devido ao problema anterior."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo do cliente ao atendimento."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência do cliente foi severamente comprometida, resultando em um Score Experiência de 0.0. O cliente enfrentou um alto esforço para resolver um problema que já havia sido tratado anteriormente, com a persistência de cobranças indevidas e juros. A solução proposta, uma reanálise de protocolo, não garantiu a resolução imediata, prolongando a incerteza e a frustração. Embora o operador tenha demonstrado bom relacionamento e proatividade, a falha no processo de resolução e a falta de comunicação clara sobre os próximos passos e prazos contribuíram para uma experiência negativa e alta probabilidade de recontato.",
+        "friccao": "Sim",
+        "causa_raiz": {
+            "motivo": "Pagamento de parcela errada e cobrança indevida da parcela correta.",
+            "causa_identificada": "Falha no processo de inversão de parcela e atualização sistêmica, resultando na persistência de cobranças indevidas após uma solicitação anterior.",
+            "causa_raiz": "A falha inicial parece estar no processo de inversão de parcela ou na atualização sistêmica do status de pagamento, que não resolveu o problema do cliente após a primeira solicitação, levando à cobrança indevida e à necessidade de recontato.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A falha inicial parece estar no processo de inversão de parcela ou na atualização sistêmica do status de pagamento, que não resolveu o problema do cliente após a primeira solicitação, levando à cobrança indevida e à necessidade de recontato. O atendente agiu dentro de sua alçada para tentar mitigar o problema existente.",
+            "evidencia": "Cliente afirma: \"Eu já entrei em contato com vocês, só que parece que a parcela informada não conseguiu ser localizada como paga.\" e \"Aí eu recebi ontem no e-mail, só que eu ia ligar ontem já. Só que era mais de oito horas quando fui verificar, e não tinha como entrar em contato com a Central de Atendimento. Aí me falaram que iam localizar no sistema essa parcela paga.\" e \"É porque estão me cobrando. Estão me cobrando com bastante juros já a parcela.\"."
+        },
+        "insights": {
+            "insight_operacional": "O processo de inversão de parcela e a comunicação com o cliente sobre o status e a resolução precisam ser revisados para evitar recontatos e cobranças indevidas. É fundamental que o sistema reflita o status correto do pagamento e que as solicitações sejam tratadas de forma mais eficiente e com prazos claros.",
+            "apontamentos_cx": "A experiência do cliente foi negativamente impactada pela necessidade de recontato para um problema que já deveria ter sido resolvido, pela persistência das cobranças indevidas e pela falta de clareza nos próximos passos e prazos para a resolução definitiva. A confirmação de dados foi incompleta.",
+            "apontamentos_resolutividade": "Embora o atendente tenha demonstrado proatividade em buscar uma solução, a resolutividade do atendimento foi parcial, pois o problema principal não foi concluído na ligação, dependendo de uma reanálise de um processo que já se mostrou ineficaz anteriormente.",
+            "oportunidades_operador": "O operador pode melhorar na confirmação de dados cadastrais no início do atendimento e na comunicação de próximos passos e prazos de forma mais detalhada e clara para o cliente, gerenciando melhor as expectativas. A eliminação do gerundismo também é uma oportunidade."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 2,
+                "evidencia": "O atendente não detalhou os próximos passos para o cliente após a reanálise do protocolo (at_cx_classif2) e não informou um prazo claro para a resolução (at_inad_compr3)."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 1,
+                "evidencia": "O atendente não confirmou pelo menos quatro dados cadastrais do cliente no início do atendimento (at_cx_intro2)."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e otimizar o processo de inversão de parcelas e atualização sistêmica de pagamentos para garantir a resolução eficaz e evitar cobranças indevidas.",
+                "responsavel": "Processos/Tecnologia",
+                "prazo": "Curto prazo",
+                "impacto": "Redução de recontatos, melhoria da satisfação do cliente e mitigação de riscos regulatórios."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Desenvolver e implementar um treinamento específico para operadores sobre a comunicação de próximos passos e prazos em casos de reanálise de protocolos, incluindo a gestão de expectativas do cliente.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhora na experiência do cliente, redução da probabilidade de recontato e aumento da resolutividade na primeira ligação."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Reforçar a importância da confirmação de dados cadastrais (mínimo de 4 itens) no início do atendimento para todos os operadores, através de comunicados e monitorias focadas.",
+                "responsavel": "Qualidade/Supervisão",
+                "prazo": "Imediato",
+                "impacto": "Aumento da segurança da informação e conformidade com políticas internas."
+            },
+            {
+                "prioridade": "Baixa",
+                "acao": "Incluir no treinamento de comunicação a eliminação do gerundismo para uma linguagem mais formal e assertiva.",
+                "responsavel": "Treinamento",
+                "prazo": "Médio prazo",
+                "impacto": "Melhora na percepção de profissionalismo do atendente."
+            }
+        ],
+        "conclusao_executiva": "Este caso é classificado como Alerta Crítico devido à persistência de um problema de pagamento e cobrança indevida, gerando alto esforço e frustração para o cliente, com um Score Experiência de 0.0. Embora o operador tenha demonstrado bom desempenho em relacionamento e proatividade, a falha no processo de inversão de parcela e a comunicação incompleta sobre prazos e próximos passos resultaram em uma inaderência crítica e baixa resolutividade. A ação prioritária é a revisão do processo de inversão de parcelas e um treinamento focado na comunicação de prazos e próximos passos para os operadores, visando mitigar riscos de reclamação e melhorar a experiência do cliente."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

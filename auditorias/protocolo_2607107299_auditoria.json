@@ -1,0 +1,387 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "2607107299",
+        "cliente": "Fábio",
+        "cpf": "Não identificado",
+        "atendente": "Eric",
+        "produto": "Serviço Bancário - Protesto/Anuência",
+        "categoria": "Solicitação de Documento",
+        "canal": "Telefone"
+    },
+    "score_operador": 0.0,
+    "classificacao_operador": "Pode Melhorar Muito",
+    "visao_geral": {
+        "status": "🔴 ALERTA CRÍTICO",
+        "resumo": "O cliente Fábio contatou o Banco Daycoval buscando uma carta de anuência para um protesto, uma questão que ele tenta resolver há mais de um mês. O atendente Eric solicitou que o cliente enviasse evidências do protesto e um e-mail via WhatsApp do banco, seguindo um procedimento específico. O cliente expressou frustração com a repetição do processo e a expectativa de que o banco resolvesse diretamente com o cartório, mencionando o envolvimento de 'Juvo Brasil Tecnologia'. A demanda principal do cliente não foi resolvida no contato, apenas o procedimento para iniciar a resolução foi informado, resultando em alto esforço e potencial de recontato. A inaderência crítica na solicitação de avaliação e a falta de prazo para retorno contribuíram para a classificação de alerta."
+    },
+    "feedback": {
+        "positivos": [
+            "O atendente Eric manteve a calma e a paciência durante toda a interação, mesmo diante da frustração expressa pelo cliente Fábio.",
+            "A comunicação utilizada pelo atendente foi formal e adequada, sem a presença de vícios de linguagem, contribuindo para a clareza das instruções.",
+            "O atendente demonstrou segurança ao fornecer o número do WhatsApp do banco e as instruções para o envio da documentação."
+        ],
+        "melhorias": [
+            "Não houve demonstração de desculpas ou acolhimento pela situação do cliente, que relatou estar há mais de um mês tentando resolver o problema.",
+            "A sondagem sobre o histórico do cliente e a menção a 'Juvo Brasil Tecnologia' foi inadequada, não explorando a fundo o contexto do protesto.",
+            "O atendente não validou o entendimento do cliente sobre os próximos passos, aumentando o risco de dúvidas e recontato.",
+            "Houve direcionamento para pesquisa de satisfação ao final do atendimento, o que é uma inaderência crítica.",
+            "Não foi informado um prazo claro para a análise do setor interno e o retorno por e-mail, gerando incerteza para o cliente."
+        ],
+        "coaching": "Eric, é fundamental aprimorar a escuta ativa e a empatia, especialmente quando o cliente relata um histórico de tentativas de resolução. Busque acolher a frustração do cliente e, quando aplicável, pedir desculpas pela situação. Além disso, aprofunde a sondagem para entender o contexto completo do problema, como a menção a 'Juvo Brasil Tecnologia', e sempre valide o entendimento do cliente sobre os próximos passos. Evite direcionar o cliente para pesquisa de satisfação e sempre informe prazos claros para as próximas etapas do processo."
+    },
+    "nota_monitoria": {
+        "relacionamento": 39.5,
+        "resolutividade": 0.0,
+        "cx": 13.0,
+        "inaderencias": -100.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente cumprimentou o cliente utilizando seu nome: 'Bom dia, senhor Fábio.'"
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não ofereceu desculpas pela situação do cliente, que relatou estar há mais de um mês tentando resolver o problema."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não demonstrou acolhimento à frustração do cliente, que expressou: 'Faz um mês já que eu estou assim, entendeu?'"
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Não foi observada uma demonstração de empatia genuína por parte do atendente em relação à situação prolongada e frustrante do cliente."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a paciência durante a interação, mesmo com o cliente repetindo informações e expressando frustração."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificadas interrupções por parte do atendente durante as falas do cliente."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a calma e a postura profissional durante todo o atendimento."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A linguagem utilizada pelo atendente foi formal e apropriada para o contexto de atendimento bancário."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificados vícios de linguagem na fala do atendente."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente transmitiu segurança ao fornecer as informações e o procedimento para o cliente."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não houve uso de gerundismo na comunicação do atendente."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "As instruções para o envio da documentação via WhatsApp foram claras, embora o cliente tenha solicitado a repetição do protocolo."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente foi objetivo ao solicitar as evidências e explicar o procedimento de envio."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve o foco na orientação do procedimento para o cliente, apesar das interjeições do cliente."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente atuou de forma reativa, solicitando que o cliente enviasse documentos para iniciar a resolução, sem explorar alternativas ou aprofundar na questão do 'Juvo Brasil Tecnologia' ou no histórico de tentativas do cliente."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente exigiu que o cliente realizasse uma ação externa (enviar evidências via WhatsApp) para iniciar a resolução, aumentando o esforço do cliente para um problema que ele já tentava resolver há um mês."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente iniciou com 'Bom dia, tudo bem? Meu nome é Eric. Com quem eu falo?' e encerrou com 'A Central de Atendimento Banco Daycoval agradece. Desejo um ótimo dia para o senhor, Zé Fábio.'"
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente mencionou 'vou verificar aqui pelo CPF do senhor', mas não confirmou pelo menos quatro dados cadastrais com o cliente antes de prosseguir com o atendimento."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não sondou a fundo a menção do cliente sobre 'Juvo Brasil Tecnologia' e 'Banco Daycoval, multimercado Juvo', nem o histórico de 'um mês e pouco que eu ligo aí', focando apenas na solicitação de evidências."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente identificou o motivo principal do contato do cliente: 'Eu preciso de uma carta de anuência.'"
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente repetiu a informação sobre a necessidade da carta de anuência e a dificuldade: 'Eu não tenho documentação, eu só preciso que o senhor envie essa documentação para o cartório.' e 'Faz um mês já que eu estou assim, entendeu?'"
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não validou o entendimento do cliente sobre o procedimento de envio de documentos e os próximos passos, o que poderia ter evitado dúvidas futuras."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A demanda do cliente não foi resolvida no contato, apenas o procedimento para iniciar a resolução foi informado, indicando alto risco de reincidência."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente informou os próximos passos: 'O setor interno vai fazer a análise desse protesto que o senhor enviar e vai entrar em contato com o senhor pelo e-mail.'"
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa do cliente era que o banco enviasse a carta de anuência diretamente ao cartório, ou que a questão fosse resolvida, mas a solução apresentada foi o envio de documentos pelo cliente para iniciar o processo, não atendendo à expectativa inicial."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Sim",
+            "penalidade": -100.0,
+            "evidencia": "O atendente encerrou o atendimento com 'Peço que o senhor permaneça na linha para avaliar o atendimento', direcionando o cliente para uma pesquisa de satisfação."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O protocolo foi fornecido no início do atendimento e repetido quando solicitado pelo cliente."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Sim",
+            "penalidade": -100.0,
+            "evidencia": "O atendente informou que o setor interno faria a análise e entraria em contato por e-mail, mas não especificou um prazo (ex: em X dias úteis) para essa análise e retorno."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazos durante o atendimento."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento foi realizado de forma padrão e adequada."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não foi utilizada linguagem inadequada pelo atendente."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há evidências de que o atendente tenha causado prejuízo ao cliente."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo do cliente durante ou ao final do atendimento."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Médio",
+        "interpretacao": "A experiência do cliente foi negativa, com um Score de Experiência de 0/100. O cliente demonstrou alto esforço, pois já estava há mais de um mês tentando resolver a questão da carta de anuência e, neste contato, foi-lhe exigido que realizasse uma ação externa (envio de documentos) para iniciar o processo. A demanda não foi resolvida, e a expectativa do cliente não foi atendida, gerando alta probabilidade de recontato e fricção na jornada. Embora o operador tenha mantido a cordialidade, a falta de proatividade, sondagem aprofundada e acolhimento contribuiu para a percepção negativa da experiência, que é agravada por falhas de processo que transferem a responsabilidade inicial para o cliente.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Cliente precisa de carta de anuência para protesto, conforme solicitação do cartório.",
+            "causa_identificada": "Dificuldade em obter a carta de anuência devido à necessidade de envio de evidências pelo cliente e falta de clareza sobre o processo, além de um histórico de tentativas sem sucesso.",
+            "causa_raiz": "Processo complexo e não transparente para o cliente para obtenção de carta de anuência, que exige uma ação inicial do cliente (envio de evidências) para um problema que o cartório atribui ao banco. A menção a 'Juvo Brasil Tecnologia' e 'Banco Daycoval, multimercado Juvo' sugere uma possível falha na comunicação ou integração entre entidades, ou um processo interno que não é claro para o cliente.",
+            "dono_jornada": "Processo / Comunicação",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "O processo atual exige que o cliente colete e envie evidências de um protesto que o cartório atribui ao banco, gerando atrito e retrabalho. A falta de um fluxo mais direto para a resolução da carta de anuência, especialmente com o histórico do cliente, indica uma falha processual.",
+            "evidencia": "Cliente: 'Eu não tenho documentação, eu só preciso que o senhor envie essa documentação para o cartório.' e 'O cartório mandou assim: 'Bom dia, a anuência precisa vir deles, pois foram eles que começaram o processo, então parte do direito do crédito.''"
+        },
+        "insights": {
+            "insight_operacional": "O processo de obtenção de carta de anuência para protestos, especialmente quando envolve terceiros como 'Juvo Brasil Tecnologia', precisa ser revisado para reduzir o esforço do cliente e evitar recontatos. A exigência de o cliente enviar evidências de um protesto que o cartório atribui ao banco gera fricção e insatisfação. É necessário um fluxo mais simplificado ou proativo por parte do banco.",
+            "apontamentos_cx": "O cliente está frustrado com a repetição do processo e a falta de resolução em contatos anteriores. A expectativa de que o banco resolva diretamente com o cartório não foi atendida. A falta de confirmação de dados e sondagem aprofundada sobre o histórico e o envolvimento de 'Juvo Brasil Tecnologia' contribuiu para a experiência negativa. A ausência de validação do entendimento do cliente sobre os próximos passos também é um ponto de melhoria.",
+            "apontamentos_resolutividade": "O atendimento não foi resolutivo, pois a demanda principal do cliente (obter a carta de anuência) não foi concluída. O atendente apenas forneceu os passos para iniciar o processo, transferindo a responsabilidade da coleta de evidências para o cliente, o que não é proativo e aumenta o esforço do cliente.",
+            "oportunidades_operador": "O operador poderia ter demonstrado mais empatia e acolhimento diante da frustração do cliente, que relatou estar há um mês tentando resolver. Uma sondagem mais aprofundada sobre o histórico e a menção a 'Juvo Brasil Tecnologia' poderia ter levado a uma solução mais direta ou a uma explicação mais completa. A validação do entendimento do cliente sobre os próximos passos também foi uma oportunidade perdida. Além disso, a inaderência de direcionar para pesquisa e não informar prazo claro são pontos críticos de melhoria."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 1,
+                "evidencia": "at_cx_compr1: O atendente não sondou a fundo a menção do cliente sobre 'Juvo Brasil Tecnologia' e o histórico de tentativas."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 1,
+                "evidencia": "at_cx_intro2: O atendente não confirmou pelo menos quatro dados cadastrais com o cliente."
+            },
+            {
+                "falha": "Falta de informação sobre prazo",
+                "ocorrencias": 1,
+                "evidencia": "at_inad_compr3: O atendente não informou um prazo específico para a análise e retorno do setor interno."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar o processo de obtenção de carta de anuência para protestos, buscando simplificar a jornada do cliente e reduzir a necessidade de envio de evidências para casos onde o banco é o originador do processo.",
+                "responsavel": "Área de Processos / Operações",
+                "prazo": "Curto prazo",
+                "impacto": "Redução drástica do esforço do cliente, diminuição de recontatos e aumento da satisfação."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Desenvolver um script ou treinamento específico para operadores sobre como lidar com casos de protesto envolvendo terceiros (ex: Juvo Brasil Tecnologia), garantindo sondagem aprofundada e informações claras sobre a responsabilidade e o fluxo de resolução.",
+                "responsavel": "Treinamento / Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhora na qualidade da sondagem, aumento da resolutividade no primeiro contato e redução da fricção."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Implementar a obrigatoriedade de informar prazos claros para todas as etapas de análise e retorno ao cliente, evitando a inaderência de falta de informação sobre prazo.",
+                "responsavel": "Área de Processos / Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Aumento da transparência para o cliente e conformidade com as diretrizes de atendimento."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Reforçar o treinamento sobre a proibição de direcionar o cliente para pesquisa de satisfação ao final do atendimento, focando na conformidade das regras de encerramento.",
+                "responsavel": "Treinamento / Qualidade",
+                "prazo": "Imediato",
+                "impacto": "Eliminação de inaderência crítica e melhoria da experiência de encerramento."
+            }
+        ],
+        "conclusao_executiva": "Este atendimento é classificado como 'Alerta Crítico' devido à não resolução da demanda do cliente, o alto esforço exigido e a presença de inaderências críticas. O cliente, que já estava frustrado com tentativas anteriores, foi direcionado a um processo que exige mais ações de sua parte, sem um prazo claro para a resolução. Embora o operador tenha mantido a cordialidade, houve falhas significativas em empatia, sondagem e validação do entendimento. A causa raiz reside em um processo complexo e pouco transparente para o cliente, que transfere a responsabilidade inicial para ele. A ação prioritária é a revisão do processo de carta de anuência para reduzir o esforço do cliente e garantir a conformidade nas informações de prazo e encerramento."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Neutro",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

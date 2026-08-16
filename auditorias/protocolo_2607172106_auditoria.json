@@ -1,0 +1,375 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "2607172106",
+        "cliente": "Darcy Geraldo dos Santos",
+        "cpf": "Não identificado",
+        "atendente": "Camila",
+        "produto": "Carnê",
+        "categoria": "Alteração de data de vencimento",
+        "canal": "Telefone"
+    },
+    "score_operador": 69.5,
+    "classificacao_operador": "Pode Melhorar",
+    "visao_geral": {
+        "status": "🟠 CASO RELEVANTE",
+        "resumo": "O cliente Darcy Geraldo dos Santos contatou a central de atendimento do Banco Daycoval para resolver um problema com a data de vencimento de seu carnê. Ele havia solicitado a alteração do dia 21 para o dia 13 no mês anterior, mas a data foi registrada incorretamente como dia 3. Após uma primeira tentativa de correção que resultou na data de dia 6 (também insatisfatória), o carnê chegou com a data original do dia 3. O cliente, que recebe no dia 7, precisa que a data de vencimento seja para o dia 10, 8 ou 9. A atendente Camila confirmou os dados do cliente e, após verificar o histórico, informou que o banco realiza apenas uma alteração de vencimento, o que gerou frustração no cliente. A atendente abriu um protocolo de reanálise para verificar a questão com o setor responsável, mencionando a data ideal para o cliente (dia 10), mas alertou que, se fosse uma correção do erro anterior, a data seria dia 6. O prazo para a reanálise é de dois dias úteis. O cliente também perguntou sobre a possibilidade de abater valores já pagos para reduzir a parcela, sendo informado que é possível antecipar o valor ou pedir aumento de prazo, mas não apenas abaixar a parcela. O cliente aceitou a abertura do protocolo de reanálise e agradeceu as informações sobre a parcela. O atendimento foi encerrado com a oferta de pesquisa de satisfação."
+    },
+    "feedback": {
+        "positivos": [
+            "A atendente manteve a cordialidade e o tratamento respeitoso durante toda a interação, utilizando o nome do cliente e pedindo desculpas pela demora.",
+            "Demonstrou empatia e paciência ao ouvir o histórico do cliente e suas frustrações, sem interrupções.",
+            "A comunicação foi clara, segura e objetiva, explicando a política do banco e os próximos passos.",
+            "Informou o protocolo no início e convidou para a pesquisa de satisfação no encerramento."
+        ],
+        "melhorias": [
+            "A atendente utilizou gerundismo em sua fala, o que pode ser aprimorado para uma comunicação mais formal.",
+            "Não validou o entendimento da solicitação do cliente de forma explícita, o que contribuiu para a repetição de informações.",
+            "Não confirmou o número mínimo de dados cadastrais exigidos pela política interna.",
+            "A solução apresentada (reanálise) não foi resolutiva no momento do contato, gerando alto esforço e risco de reincidência para o cliente."
+        ],
+        "coaching": "Revisar a utilização de gerundismo na comunicação para aprimorar a fluidez e formalidade da linguagem. Praticar a validação do entendimento da solicitação do cliente, resumindo o problema e a solução proposta antes de finalizar, para garantir que todas as informações foram compreendidas e registradas corretamente, minimizando a necessidade de repetição por parte do cliente. Atentar-se à confirmação de dados cadastrais, garantindo que o número mínimo exigido pela política seja coletado."
+    },
+    "nota_monitoria": {
+        "relacionamento": 50.0,
+        "resolutividade": 2.5,
+        "cx": 17.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utilizou o nome do cliente ('Senhor Darcy') após a identificação e em diversos momentos da conversa, demonstrando tratamento respeitoso."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente pediu desculpas pela demora em dois momentos ('Desculpe a demora'), demonstrando consideração pelo tempo do cliente."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou acolhimento ao agradecer a pergunta sobre seu bem-estar ('Tudo bem, obrigado por perguntar') e ao ouvir o histórico do cliente sem interrupções."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente expressou compreensão pela situação do cliente ('Entendo. Eu entendo, senhor') ao ouvir sobre a dificuldade com a data de vencimento e a necessidade de alteração."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a paciência mesmo quando o cliente repetiu informações e expressou frustração, respondendo de forma calma e sem demonstrar irritação."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente permitiu que o cliente expusesse seu problema e histórico sem interrupções, demonstrando escuta ativa."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a calma e o tom de voz estável durante toda a interação, contribuindo para um ambiente de atendimento profissional."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utilizou linguagem formal e apropriada para o contexto bancário, sem gírias ou informalidades."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não apresentou vícios de linguagem ou repetições desnecessárias em sua fala, exceto pelo gerundismo."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente transmitiu segurança nas informações sobre a política de alteração de vencimento e sobre o processo de reanálise."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente utilizou gerundismo em sua fala ('vou fazer o seguinte: vou abrir um protocolo de reanálise', 'eles vão me validar por e-mail'), o que é considerado um vício de linguagem."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "A atendente explicou de forma clara a política de uma única alteração de vencimento e o processo de abertura do protocolo de reanálise, incluindo o prazo."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente foi objetiva ao abordar as questões do cliente, indo direto ao ponto sobre a política do banco e as ações que seriam tomadas."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve o foco nas solicitações do cliente, mesmo quando ele divagou sobre o histórico, e retornou ao assunto principal da data de vencimento."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Parcial",
+                "nota": 2.5,
+                "evidencia": "A atendente abriu um protocolo de reanálise para o cliente, o que demonstra uma ação para tentar resolver o problema, mas não ofereceu uma solução imediata ou alternativa concreta dentro de sua alçada para a questão da data de vencimento."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não conseguiu evitar que o cliente tivesse que realizar novas ações (aguardar 2 dias úteis pela reanálise e possivelmente recontatar), e a solução apresentada não reduziu o esforço do cliente, que já havia tentado resolver o problema duas vezes."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente iniciou o contato de forma institucional ('Central de Atendimento Banco Daycoval, Camila, boa tarde.')."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente confirmou o nome completo, nome da mãe e data de nascimento do cliente (3 dados), mas a regra exige a confirmação de pelo menos quatro dados cadastrais para ser classificado como 'Sim'."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente ouviu o histórico do cliente e fez perguntas para entender a situação, como 'O senhor solicitou alteração de vencimento para todo dia 3? No dia 23 de junho, o senhor solicitou a data de vencimento para todo dia 3?'."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente identificou corretamente o motivo do contato do cliente, que era a alteração da data de vencimento do carnê."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente precisou repetir diversas vezes o histórico da solicitação e a data desejada ('Dia 13. Eu solicitei para dia 13. Só que tem que dar atenção ao que eu falei. Eu falei dia 13 e a menina entendeu dia 3.', 'Dia 3 eu não recebo. Dia 3 eu não recebo.')."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não resumiu o entendimento da situação para o cliente antes de propor a solução, o que poderia ter evitado a repetição de informações por parte do cliente."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A solução apresentada (reanálise) não garante a resolução do problema conforme a expectativa do cliente e a política de uma única alteração de vencimento pode levar a um novo contato sem solução, aumentando o risco de reincidência."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente informou claramente os próximos passos e o prazo para a reanálise ('O banco tem mais dois dias úteis para verificar')."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa principal do cliente de ter a data de vencimento alterada para o dia 10 (ou posterior ao dia 7) não foi atendida durante o atendimento, sendo apenas encaminhada para reanálise com incerteza de resultado."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente convidou o cliente para a pesquisa de satisfação ao final do atendimento ('O senhor poderia permanecer na linha para uma breve pesquisa de satisfação?')."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou o número de protocolo no início do atendimento ('O atendimento do senhor é registrado ao número de protocolo 2607172106.')."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou o prazo de dois dias úteis para a reanálise ('O banco tem mais dois dias úteis para verificar')."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo informado ao cliente."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento foi adequado, com agradecimento e convite para pesquisa."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente utilizou linguagem formal e respeitosa durante toda a interação."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há evidência de que a atendente causou prejuízo financeiro direto ao cliente."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo do cliente ao atendimento ou ao operador."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "O cliente teve uma experiência crítica devido ao alto esforço para resolver um problema reincidente de alteração de data de vencimento. A falta de resolução imediata e a política do banco de uma única alteração, combinada com erros de registro anteriores, geraram frustração e a necessidade de um novo contato para acompanhar a reanálise. Embora o operador tenha demonstrado bom desempenho comportamental e técnico dentro de sua alçada, a jornada do cliente foi marcada por fricção e insatisfação, resultando em um Score Experiência de 0/100.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Alteração de data de vencimento do carnê incorreta e dificuldade de correção.",
+            "causa_identificada": "Erro de registro da solicitação inicial de alteração de data de vencimento e política do banco que impede uma segunda correção.",
+            "causa_raiz": "Falha no processo de registro de solicitações de alteração de vencimento e rigidez da política de uma única alteração, mesmo em casos de erro interno.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A política do banco de permitir apenas uma alteração de vencimento, combinada com falhas no registro da solicitação inicial e nas tentativas de correção, impede a resolução do problema do cliente.",
+            "evidencia": "Cliente: 'Eu falei dia 13 e a menina entendeu dia 3. Aí eu liguei outra vez, conversei com outra menina, que não era a mesma, ela fez o protocolo, perguntou tudo para mim outra vez, e passou para dia 6. Entendeu? Aí chegou o carnê para mim aqui, mas chegou com a data do dia 3.' e Atendente: 'E essa alteração, senhor Darcy, só é feita uma única vez. O banco não faz outra alteração dessa.'"
+        },
+        "insights": {
+            "insight_operacional": "A política de uma única alteração de vencimento, quando combinada com erros de registro, gera alta fricção e insatisfação para o cliente. É necessário revisar o processo de alteração de vencimento e a política de reanálise para casos de erro inicial.",
+            "apontamentos_cx": "O cliente teve que repetir informações e a solução apresentada não atendeu à sua expectativa, gerando alto esforço e risco de reincidência. A validação do entendimento e a confirmação da solicitação inicial poderiam ter evitado a reincidência do erro. Além disso, a não confirmação de 4 dados cadastrais impactou negativamente a experiência.",
+            "apontamentos_resolutividade": "A atendente não conseguiu resolver o problema da data de vencimento de forma definitiva, apenas encaminhou para reanálise, o que não reduz o esforço do cliente e mantém a incerteza sobre a resolução.",
+            "oportunidades_operador": "O operador poderia ter validado o entendimento da solicitação do cliente de forma mais explícita antes de propor a reanálise, para garantir que todas as informações fossem compreendidas e registradas corretamente. Além disso, a utilização de gerundismo pode ser aprimorada e a confirmação de dados cadastrais deve seguir a regra de 4 dados mínimos."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 2,
+                "evidencia": "A atendente não confirmou o mínimo de quatro dados cadastrais exigidos (at_cx_intro2) e não validou o entendimento da solicitação do cliente (at_cx_compr4)."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar o processo de alteração de data de vencimento para identificar e corrigir a causa raiz dos erros de registro (dia 13 vs dia 3).",
+                "responsavel": "Processos/Tecnologia",
+                "prazo": "Curto prazo",
+                "impacto": "Redução de erros de registro, diminuição do recontato e melhoria da satisfação do cliente."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Avaliar a política de 'uma única alteração de vencimento' em casos de erro comprovado do banco, para permitir correções sem penalizar o cliente.",
+                "responsavel": "Política de Crédito/Operações",
+                "prazo": "Médio prazo",
+                "impacto": "Melhoria da experiência do cliente, redução de reclamações e ouvidorias."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Treinamento de operadores sobre a importância da validação explícita do entendimento da solicitação do cliente, aprimoramento da linguagem (evitar gerundismo) e confirmação de dados cadastrais (mínimo de 4 dados).",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da comunicação, redução de repetição de informações pelo cliente e aumento da satisfação."
+            }
+        ],
+        "conclusao_executiva": "O atendimento do cliente Darcy Geraldo dos Santos foi classificado como CASO RELEVANTE devido à reincidência de um problema de alteração de data de vencimento do carnê, que não foi resolvido em múltiplas tentativas. O operador Camila demonstrou um desempenho que Pode Melhorar (Score 69.5/100), mantendo a cordialidade e a clareza, mas a experiência do cliente foi Crítica (Score 0/100) devido ao alto esforço e à falta de resolução. A causa principal do contato reside em uma falha de processo e política do banco, que gerou erros de registro e impediu a correção da data. A ação prioritária é a revisão do processo de alteração de data de vencimento e da política de 'uma única alteração' para evitar a penalização do cliente por erros internos."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

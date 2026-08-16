@@ -1,0 +1,383 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "2607-380678",
+        "cliente": "Joyce",
+        "cpf": "Não identificado",
+        "atendente": "Júlia",
+        "produto": "Financiamento de Veículo",
+        "categoria": "Problema com Correspondente Bancário",
+        "canal": "Telefone"
+    },
+    "score_operador": 58.5,
+    "classificacao_operador": "Pode Melhorar",
+    "visao_geral": {
+        "status": "🟠 CASO RELEVANTE",
+        "resumo": "A cliente Joyce contata o Banco Daycoval para resolver um problema com um financiamento de veículo, onde o correspondente bancário responsável desapareceu e ela se sente desassistida há quase 60 dias. Durante o atendimento, a cliente expressa frustração com a ineficácia dos processos anteriores do banco. A atendente Júlia abre duas solicitações: uma reanálise do problema com o correspondente e uma solicitação do DED (descrição de juros/gastos). Além disso, a cliente busca informações detalhadas sobre o processo de entrega amigável do veículo. Embora a atendente tenha sido cordial e tenha conseguido registrar os protocolos, o problema principal da cliente não foi resolvido, apenas encaminhado para reanálise, gerando alto esforço e fricção na jornada do cliente e um alto potencial de recontato e reclamação."
+    },
+    "feedback": {
+        "positivos": [
+            "A atendente Júlia manteve a cordialidade e o tratamento respeitoso durante toda a interação, chamando a cliente pelo nome e utilizando linguagem adequada.",
+            "Demonstrou paciência e calma ao lidar com a frustração da cliente, permitindo que ela expressasse suas preocupações sem interrupções.",
+            "Manteve o foco e a objetividade nas solicitações da cliente, buscando as informações necessárias para o registro dos protocolos e esclarecimento das dúvidas."
+        ],
+        "melhorias": [
+            "Falta de desculpas explícitas e empatia genuína pela situação prolongada e frustrante da cliente.",
+            "Uso de gerundismo em algumas falas, o que pode impactar a percepção de clareza e profissionalismo.",
+            "A clareza e segurança na informação foram comprometidas ao não conseguir informar o prazo do leilão da entrega amigável, necessitando consultar a supervisora.",
+            "A proatividade na resolução do problema principal foi parcial, pois o problema foi apenas reanalisado, sem uma solução mais robusta ou um plano de ação claro.",
+            "A comunicação inicial sobre a limitação de uma solicitação por atendimento aumentou o esforço percebido pela cliente, mesmo que corrigida posteriormente.",
+            "A cliente precisou repetir informações e o entendimento não foi validado explicitamente, impactando a experiência."
+        ],
+        "coaching": "Júlia, é fundamental aprimorar a demonstração de empatia e oferecer desculpas proativas em situações de frustração do cliente, reconhecendo o impacto da situação. Revise o uso de gerundismo para uma comunicação mais direta e profissional. Busque aprofundar o conhecimento sobre todos os processos, como prazos de leilão para entrega amigável, para garantir segurança e clareza nas informações. Ao invés de apenas reabrir protocolos, explore proativamente soluções ou planos de ação mais concretos para problemas complexos e de longa data, e sempre valide o entendimento completo da situação do cliente."
+    },
+    "nota_monitoria": {
+        "relacionamento": 35.0,
+        "resolutividade": 2.5,
+        "cx": 21.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente perguntou como a cliente gostaria de ser chamada e utilizou 'Senhora Joyce' durante toda a interação."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não ofereceu desculpas explícitas pela situação prolongada e frustrante que a cliente estava enfrentando."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utilizou frases como 'Sim, tudo bem. Eu vou abrir, então, uma reanálise da última solicitação, tá bom?' demonstrando disposição em ajudar e acolher a demanda."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Não houve demonstração explícita de empatia genuína em relação à frustração da cliente com a situação de 60 dias sem solução."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou paciência ao lidar com a cliente, que estava visivelmente frustrada e precisou repetir o histórico."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não interrompeu a cliente durante suas explicações e desabafos, permitindo que ela expressasse completamente sua situação."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a calma e a postura profissional durante toda a interação, mesmo quando a cliente expressou frustração."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utilizou uma linguagem formal e apropriada para o contexto bancário, sem gírias ou informalidades."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificados vícios de linguagem na fala da atendente durante a transcrição."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Parcial",
+                "nota": 1.75,
+                "evidencia": "A atendente demonstrou segurança ao informar sobre os protocolos, mas hesitou e não conseguiu fornecer um prazo para o leilão, precisando consultar a supervisora."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente utilizou gerundismo em falas como 'Eu estava me informando aqui' e 'Informar o que está ocorrendo'."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Parcial",
+                "nota": 2.25,
+                "evidencia": "A clareza foi comprometida ao não conseguir informar o prazo do leilão e ao inicialmente indicar que não poderia abrir duas solicitações."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve o foco nas solicitações da cliente e nas informações necessárias para o registro dos protocolos."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou foco em resolver as demandas da cliente, mesmo com as múltiplas solicitações e a complexidade do histórico."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Parcial",
+                "nota": 2.5,
+                "evidencia": "A atendente demonstrou proatividade ao se informar e conseguir abrir as duas solicitações, mas não antecipou outras dúvidas ou ofereceu alternativas para a situação do correspondente."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente inicialmente informou que só seria possível abrir uma solicitação por atendimento, o que geraria retrabalho para a cliente. A falta de um prazo para o leilão também aumentou o esforço."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente iniciou com 'Banco Daycoval, boa tarde. Meu nome é Júlia.' e encerrou com 'O Banco Daycoval agradece. Peço somente que permaneça em linha para avaliação. Tchau, tchau.'."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente solicitou data de nascimento, nome completo da mãe, cidade de residência e e-mail para contato."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente realizou perguntas para compreender o problema do correspondente, como 'Desde quando?'."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente identificou corretamente os motivos do contato: problema com correspondente, solicitação de DED e dúvidas sobre entrega amigável."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A cliente precisou repetir informações sobre o histórico do problema e a solicitação do DED ('Eu quero o meu DED.')."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não validou explicitamente seu entendimento sobre a complexidade do problema da cliente ou sobre as informações fornecidas."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema principal da cliente não foi resolvido, apenas encaminhado para reanálise, o que gera alto risco de reincidência do contato."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente informou os prazos para os dois protocolos abertos e explicou o procedimento para a entrega amigável."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendimento resultou apenas na abertura de reanálises, sem uma solução definitiva ou um posicionamento claro do banco sobre o problema principal, não atendendo à expectativa de uma 'resposta concreta e viável'."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente solicitou que a cliente permanecesse em linha para avaliação ('Peço somente que permaneça em linha para avaliação')."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente forneceu os números de protocolo para ambas as solicitações abertas."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou os prazos para os dois protocolos abertos ('esse protocolo vai ser respondido em até 2 dias, tá? Então, até dia 16 de julho' e 'esse é de 3 dias úteis, até dia 17 de julho')."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo durante o atendimento."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento foi realizado de forma cordial e profissional, com a atendente se despedindo e agradecendo."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não foi identificado uso de linguagem inadequada ou ofensiva por parte da atendente."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve nenhuma ação ou informação por parte da atendente que pudesse causar prejuízo direto à cliente."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo do cliente ao atendimento ou ao operador."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência da cliente foi crítica, resultando em um Score Experiência de 0/100. Isso se deve à não resolução do problema principal, ao alto esforço que a cliente precisou empreender para ter suas demandas atendidas e à alta fricção na jornada. A cliente expressou frustração com a ineficácia dos processos anteriores e a percepção de que o banco estava se esquivando. Embora a atendente tenha demonstrado cordialidade e tenha registrado os protocolos, a falta de uma solução definitiva e a necessidade de repetir informações impactaram negativamente a experiência, elevando a probabilidade de recontato e reclamação.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Problema com correspondente bancário desaparecido e falta de resolução do financiamento.",
+            "causa_identificada": "O correspondente bancário responsável pelo financiamento da cliente desapareceu e o Banco Daycoval não forneceu uma solução concreta ou um posicionamento claro para o problema, apesar dos múltiplos contatos da cliente por quase 60 dias.",
+            "causa_raiz": "A ineficácia do processo de gestão de correspondentes bancários e a falta de um fluxo de escalonamento e resolução eficaz para problemas complexos e de longa data, especialmente quando o ponto de contato inicial falha, são a causa raiz da insatisfação da cliente.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A responsabilidade recai sobre o processo de gestão de correspondentes bancários e a eficácia dos canais de atendimento internos em resolver problemas complexos e de longa data, especialmente quando o ponto de contato inicial (correspondente) falha. A falta de um processo claro para lidar com a ausência do correspondente e a ineficácia das reanálises anteriores contribuíram para a situação.",
+            "evidencia": "Cliente afirmou: 'Essa história de abrir reanálise, abrir protocolo, mandar para o setor responsável, enfim, todas essas situações, isso já vem sendo feito desde quando? Nós já estamos indo, eu acho, para quase 60 dias ou mais, entendeu? Então, assim, infelizmente, o setor de vocês não é funcional, ele não funciona. Abre-se um chamado, abre-se uma ocorrência e nada acontece.' e 'Hoje, o que eu sinto, literalmente, é que o Banco Daycoval está se esquivando do problema.'"
+        },
+        "insights": {
+            "insight_operacional": "O processo de acompanhamento e resolução de problemas envolvendo correspondentes bancários precisa ser revisado para garantir que o cliente não fique desassistido quando o correspondente falha. É crucial ter um plano de contingência e um fluxo de escalonamento eficaz para evitar a percepção de que o banco está se esquivando.",
+            "apontamentos_cx": "A experiência do cliente foi severamente impactada pela percepção de que o banco está se esquivando do problema e pela necessidade de repetir informações e insistir por ações. A falta de uma solução definitiva e a abertura de apenas reanálises não atenderam à expectativa de uma 'resposta concreta e viável'.",
+            "apontamentos_resolutividade": "A resolutividade foi parcial, pois o problema principal não foi solucionado, apenas encaminhado. A atendente poderia ter sido mais proativa em buscar uma solução mais robusta ou um plano de ação claro para o problema do correspondente, em vez de apenas reabrir protocolos.",
+            "oportunidades_operador": "O operador poderia ter demonstrado mais empatia genuína e oferecido desculpas pela situação prolongada da cliente. Além disso, a comunicação inicial sobre a limitação de uma solicitação por atendimento e a dificuldade em fornecer o prazo do leilão indicam oportunidades de melhoria na clareza e segurança das informações. Evitar o gerundismo também é uma oportunidade."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Registro incompleto",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e otimizar o processo de gestão e acompanhamento de correspondentes bancários, incluindo um plano de contingência para casos de inatividade ou desaparecimento.",
+                "responsavel": "Área de Operações/Parcerias",
+                "prazo": "Curto prazo",
+                "impacto": "Redução de casos de clientes desassistidos e melhoria na imagem do banco."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Treinar a equipe de atendimento para demonstrar empatia genuína e oferecer desculpas adequadas em situações de frustração prolongada do cliente.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria na percepção do cliente sobre o acolhimento e cuidado do banco."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Capacitar os operadores com informações completas e atualizadas sobre todos os processos, incluindo prazos de leilão para entrega amigável de veículos, para evitar a necessidade de consultas durante o atendimento.",
+                "responsavel": "Treinamento/Conhecimento",
+                "prazo": "Curto prazo",
+                "impacto": "Aumento da segurança e clareza nas informações prestadas, reduzindo o esforço do cliente."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Implementar um sistema que permita a abertura de múltiplas solicitações relacionadas ao mesmo caso em um único atendimento, ou revisar a política de 'uma solicitação por atendimento' se for um impedimento sistêmico.",
+                "responsavel": "Tecnologia/Processos",
+                "prazo": "Médio prazo",
+                "impacto": "Redução do esforço do cliente e otimização do tempo de atendimento."
+            }
+        ],
+        "conclusao_executiva": "Este atendimento é classificado como um Caso Relevante, com um Score Experiência de 0/100, indicando uma experiência crítica para a cliente. O desempenho do operador foi classificado como 'Pode Melhorar' (58.5/100). A principal causa do contato foi a falta de resolução de um problema de financiamento devido ao desaparecimento de um correspondente bancário, evidenciando uma falha no processo de gestão de parceiros. Há um alto risco de reclamação e ouvidoria. A ação prioritária é a revisão do processo de gestão de correspondentes e o treinamento da equipe para aprimorar a empatia e a segurança nas informações, visando reduzir o esforço do cliente e evitar recontatos."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

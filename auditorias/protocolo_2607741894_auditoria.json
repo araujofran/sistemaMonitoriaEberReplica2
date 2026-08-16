@@ -1,0 +1,373 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "2607741894",
+        "cliente": "Isabel",
+        "cpf": "Não identificado",
+        "atendente": "Letícia",
+        "produto": "Financiamento de Veículo",
+        "categoria": "Correção de Documento de Quitação",
+        "canal": "Telefone"
+    },
+    "score_operador": 71.5,
+    "classificacao_operador": "Atende as expectativas",
+    "visao_geral": {
+        "status": "🟠 CASO RELEVANTE",
+        "resumo": "A cliente Isabel, esposa do titular Alisson, contata o Banco Daycoval após a queda de uma ligação anterior para solicitar a correção de uma divergência em documentos de quitação de um veículo sinistrado com perda total. A seguradora responsável pela indenização do veículo solicitou a carta saldo e o boleto de quitação, mas a carta saldo apresenta a data de vencimento do boleto como 30/07, enquanto o boleto em si indica 07/08. Essa inconsistência impede a seguradora de dar seguimento ao processo de indenização. A atendente Letícia compreende a situação e informa que será aberta uma solicitação de reanálise com prazo de 2 dias úteis para resposta por e-mail, sem garantia de alteração. A cliente expressa frustração devido à longa espera (mais de três meses) e à urgência da situação. A atendente tenta solicitar prioridade, mas reitera o prazo. O atendimento é encerrado com a abertura da solicitação, mas o problema principal permanece sem resolução imediata."
+    },
+    "feedback": {
+        "positivos": [
+            "A atendente demonstrou cordialidade e tratamento respeitoso durante toda a interação, chamando a cliente pelo nome e mantendo uma comunicação adequada.",
+            "Houve acolhimento e empatia genuína por parte da atendente, que ouviu a cliente sem interrupções e manteve a calma, mesmo diante da frustração expressa.",
+            "A atendente foi clara e objetiva ao explicar o processo de abertura da solicitação e os próximos passos, garantindo o entendimento da cliente."
+        ],
+        "melhorias": [
+            "A atendente utilizou gerundismo em diversas frases, o que pode impactar a formalidade da comunicação.",
+            "Não foi realizada a confirmação de pelo menos quatro dados cadastrais do titular ou da cliente, o que é uma falha no processo de segurança.",
+            "A solução apresentada não reduziu o esforço do cliente, que precisará aguardar e possivelmente recontatar o banco."
+        ],
+        "coaching": "Letícia, para aprimorar ainda mais seus atendimentos, foque em evitar o uso de gerundismo, buscando formas mais diretas e formais de se expressar. Além disso, é crucial reforçar a etapa de confirmação de dados cadastrais, validando no mínimo quatro informações para garantir a segurança e conformidade da interação. Por fim, explore proativamente todas as opções para tentar reduzir o esforço do cliente, mesmo quando a resolução depende de áreas internas, buscando oferecer o máximo de suporte e clareza sobre o que o cliente precisa fazer a seguir."
+    },
+    "nota_monitoria": {
+        "relacionamento": 43.0,
+        "resolutividade": 2.5,
+        "cx": 26.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente chamou a cliente pelo nome ('É com a senhora Isabel?') e a cliente se referiu à atendente pelo nome ('Boa tarde, Letícia.')."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente pediu desculpas pela demora e ausência em linha: 'Desculpa pela demora e pela ausência em linha, tá?'."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente iniciou a ligação com uma saudação cordial e perguntou 'Como eu posso te ajudar?', demonstrando acolhimento."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou empatia ao tentar solicitar prioridade ('Eu posso até tentar solicitar uma prioridade aqui no sistema'), mesmo que o prazo não mudasse."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou paciência ao ouvir a cliente explicar a situação detalhadamente e ao lidar com a frustração expressa, sem apressá-la."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não interrompeu a cliente durante suas explicações ou desabafos, permitindo que ela expressasse sua demanda completamente."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a calma e a postura profissional durante toda a interação, mesmo quando a cliente expressou desespero e frustração."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utilizou uma linguagem formal e respeitosa, adequada ao contexto de atendimento bancário, sem gírias ou informalidades excessivas."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não apresentou vícios de linguagem ou expressões informais que pudessem comprometer a comunicação profissional."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente transmitiu segurança nas informações que pôde fornecer, explicando o processo de abertura de solicitação e o prazo."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente utilizou gerundismo em diversas falas, como 'Eu vou te informar o protocolo da ligação', 'já volto em linha para te informar', 'Eu vou fazer algumas validações', 'Eu vou só finalizar a solicitação', 'eu estou abrindo essa solicitação', 'eu estou solicitando aqui no sistema a urgência'."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "A atendente foi clara ao explicar o processo de abertura da solicitação, o prazo de 2 dias úteis e a incerteza sobre a alteração da data."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve o foco na resolução da demanda da cliente, direcionando a conversa para a abertura da solicitação necessária."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou foco na demanda da cliente, buscando entender a divergência de datas e explicando o procedimento para a abertura da solicitação."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Parcial",
+                "nota": 2.5,
+                "evidencia": "A atendente foi proativa ao tentar solicitar uma prioridade no sistema, mesmo informando que o prazo não mudaria. No entanto, a solução foi apenas a abertura de uma solicitação interna."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não conseguiu reduzir o esforço do cliente, pois a solução proposta exige que a cliente aguarde 2 dias úteis e, possivelmente, realize um novo contato."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente iniciou o contato de forma institucional e clara: 'Central de Atendimento Banco Daycoval, boa tarde. Meu nome é Letícia, com quem eu falo?'."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente perguntou o nome e a relação com o titular ('A senhora se chama Isabel, né?', 'A senhora seria a mulher dele?'), mas não confirmou pelo menos quatro dados cadastrais antes de prosseguir."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente realizou uma sondagem adequada para compreender a divergência, perguntando 'o boleto que foi enviado está para qual data?' e 'E vocês querem para qual data?'."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente identificou corretamente o motivo do contato da cliente, que era a correção da data de vencimento na carta saldo."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A cliente não precisou repetir a mesma informação diversas vezes após a atendente ter compreendido o problema, que confirmou 'Sim, eu compreendi agora.'."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente validou seu entendimento ao resumir a solicitação antes de finalizar: 'Na solicitação eu coloquei aqui que a senhora entrou em contato solicitando a correção da data informada na carta de saldo devedor...'."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Há risco de reincidência, pois a solução não foi imediata e depende de uma análise interna, com a cliente já questionando a necessidade de ligar novamente."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente informou claramente os próximos passos, incluindo o prazo de 2 dias úteis para a resposta por e-mail e a orientação para ligar novamente caso não receba."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa da cliente era a alteração da data na carta saldo para que a seguradora pudesse prosseguir, o que não foi garantido nem resolvido na ligação, gerando frustração."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente convidou a cliente para a pesquisa de satisfação: 'Peço que, por gentileza, a senhora permaneça na linha para uma breve avaliação do atendimento'."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou o protocolo da ligação: 'Eu vou te informar o protocolo da ligação, tá? Que é 2607741894'."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou o prazo de 2 dias úteis para a resposta da solicitação por e-mail."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente não alterou o prazo informado; ela reiterou que, mesmo com prioridade, o prazo permaneceria o mesmo."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento foi adequado, com a atendente se despedindo e a cliente respondendo."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente utilizou linguagem profissional e respeitosa durante toda a interação."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente não causou prejuízo direto à cliente; a falha é de processo ou sistema que gerou a divergência inicial."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo do cliente ao atendimento."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência do cliente foi extremamente negativa, resultando em um Score Experiência de 0/100. Isso se deve ao fato de o problema principal não ter sido resolvido na ligação, exigindo alto esforço da cliente que já estava em contato anterior e aguarda há meses. A solução proposta é uma análise interna com prazo e sem garantia, gerando alta probabilidade de recontato e potencial de reclamação. Embora o operador tenha demonstrado um desempenho adequado dentro de sua alçada, a falha de processo na origem da divergência documental impactou severamente a jornada do cliente.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Divergência na data de vencimento do boleto entre a carta saldo e o boleto de quitação de veículo sinistrado.",
+            "causa_identificada": "Inconsistência na geração dos documentos de quitação, onde a data de vencimento do boleto na carta saldo (30/07) não corresponde à data real do boleto (07/08).",
+            "causa_raiz": "Falha no processo de emissão ou sincronização de documentos de quitação (carta saldo e boleto), que não garante a consistência das informações de vencimento.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A divergência na data de vencimento entre a carta saldo e o boleto indica uma falha no processo de emissão ou sincronização desses documentos, que não está sob o controle direto do operador.",
+            "evidencia": "Cliente: 'Só que na carta saldo teve uma divergência na data de vencimento do boleto. No boleto consta vencimento em 07/08 e, na carta saldo, a data que está para vencimento do boleto consta como 30/07, no caso hoje.'"
+        },
+        "insights": {
+            "insight_operacional": "O processo de emissão da carta saldo e do boleto de quitação precisa ser revisado para garantir a consistência das datas de vencimento, evitando divergências que geram retrabalho e frustração para o cliente e a seguradora. A automação da validação de datas entre documentos relacionados pode ser uma solução.",
+            "apontamentos_cx": "A experiência do cliente foi severamente impactada pela necessidade de recontato e pela incerteza da resolução de um problema que já se arrasta por meses, evidenciando uma falha crítica na jornada de quitação de sinistro. A falta de uma solução imediata ou mais ágil para um problema documental simples gerou alta fricção.",
+            "apontamentos_resolutividade": "A resolutividade do atendimento foi baixa, pois o problema não foi solucionado na primeira interação, exigindo a abertura de uma solicitação interna com prazo, o que aumenta o esforço do cliente e a probabilidade de recontato. A proatividade do operador foi limitada pela alçada do processo.",
+            "oportunidades_operador": "O operador pode ser treinado para evitar o uso de gerundismo, mantendo a formalidade e a clareza da comunicação. Além disso, reforçar a importância da confirmação de dados cadastrais completos para garantir a segurança e conformidade do atendimento."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 1,
+                "evidencia": "A atendente não confirmou pelo menos quatro dados cadastrais da cliente ou do titular antes de prosseguir com a solicitação (at_cx_intro2)."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e corrigir o processo de emissão da carta saldo e boleto de quitação para garantir a consistência das datas de vencimento.",
+                "responsavel": "Área de Operações/Tecnologia",
+                "prazo": "Curto prazo",
+                "impacto": "Redução de recontatos, aumento da satisfação do cliente e agilidade nos processos de indenização."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Treinamento para operadores sobre a importância da confirmação de dados cadastrais completos antes de prosseguir com solicitações sensíveis.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Médio prazo",
+                "impacto": "Melhoria na segurança e conformidade dos atendimentos."
+            },
+            {
+                "prioridade": "Baixa",
+                "acao": "Reforçar a comunicação sem gerundismo para os operadores, com exemplos práticos de substituição.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria na qualidade e formalidade da comunicação."
+            }
+        ],
+        "conclusao_executiva": "Este caso é classificado como relevante devido à não resolução do problema principal da cliente, que já se arrasta por meses e impede a indenização de um sinistro. O operador Letícia demonstrou um desempenho que atende às expectativas (71.5/100), mantendo a cordialidade e clareza, mas a experiência do cliente foi crítica (Score Experiência 0/100) devido ao alto esforço e à fricção gerada por uma falha de processo na emissão de documentos. A causa raiz é uma inconsistência na data de vencimento entre a carta saldo e o boleto. A ação prioritária é a revisão urgente do processo de emissão desses documentos para evitar futuras divergências e reduzir o impacto negativo na jornada do cliente."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

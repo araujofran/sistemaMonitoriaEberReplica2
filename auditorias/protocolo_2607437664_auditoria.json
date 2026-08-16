@@ -1,0 +1,374 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "Não identificado",
+        "cliente": "Jeferson / Marilene",
+        "cpf": "274.XXX.XXX-70",
+        "atendente": "Beatriz",
+        "produto": "Financiamento de Veículo",
+        "categoria": "Quitação de Financiamento",
+        "canal": "Telefone"
+    },
+    "score_operador": 0.0,
+    "classificacao_operador": "Pode Melhorar Muito",
+    "visao_geral": {
+        "status": "🔴 ALERTA CRÍTICO",
+        "resumo": "Jeferson, filho da titular Marilene, contata o Banco Daycoval para obter o boleto de quitação de um financiamento de veículo. O carro foi devolvido amigavelmente à loja há três meses devido a defeitos, e a loja se comprometeu a quitar o débito. No entanto, a loja não efetuou o pagamento, resultando na negativação do nome de Marilene. Jeferson relata que a loja alega não ter quitado o débito porque o Banco Daycoval não enviou o boleto de quitação, mesmo após solicitações. Durante o atendimento, a atendente Beatriz valida os dados com a titular Marilene e, em seguida, prossegue com Jeferson. A atendente informa que não consegue gerar o boleto diretamente, pois o contrato está com mais de 15 dias de atraso. Ela registra um protocolo de reanálise para a área interna verificar a situação, colocando uma ressalva de urgência e informando um prazo de dois dias úteis para a tratativa, com término previsto para 20 de julho. A resposta será enviada por e-mail. Jeferson expressa frustração com o prazo e a falta de resolução imediata, afirmando que ligará novamente na segunda-feira para acompanhar o caso, pois a situação precisa ser resolvida. Ele manifesta desconfiança em relação à loja, mas enfatiza que, com o boleto em mãos, a loja não terá mais desculpas para não quitar o débito, e ele poderá tomar medidas legais caso a situação persista. O atendimento é encerrado com a informação sobre a pesquisa de satisfação."
+    },
+    "feedback": {
+        "positivos": [
+            "A atendente demonstrou paciência ao lidar com o cliente e ao aguardar a titular para a validação de dados, mantendo a calma e a postura profissional durante toda a interação.",
+            "A comunicação da atendente foi adequada, utilizando linguagem formal e profissional, sem vícios de linguagem, e transmitindo clareza nas informações sobre o procedimento de reanálise e prazos.",
+            "A atendente manteve o foco e a objetividade na solicitação do cliente, direcionando a conversa para a solução possível dentro de sua alçada."
+        ],
+        "melhorias": [
+            "A atendente não ofereceu desculpas ou acolhimento pela situação do cliente, que está com o nome da mãe negativado e enfrentando dificuldades há meses, resultando em falta de empatia genuína.",
+            "A atuação da atendente foi reativa, não explorando alternativas ou soluções proativas para a urgência do cliente, apenas registrando um protocolo com prazo.",
+            "O cliente precisou repetir diversas vezes o histórico e a necessidade do boleto de quitação, indicando que a atendente não conseguiu absorver completamente as informações na primeira explicação.",
+            "A atendente não forneceu o número do protocolo de reanálise ao cliente, o que é uma omissão de informação importante para o acompanhamento."
+        ],
+        "coaching": "Recomenda-se que a atendente Beatriz aprimore a escuta ativa para evitar que o cliente precise repetir informações. É fundamental desenvolver a capacidade de demonstrar empatia e acolhimento em situações sensíveis, oferecendo desculpas pelo transtorno e reconhecendo o impacto da situação no cliente. Além disso, é crucial fornecer o número do protocolo ao cliente sempre que um registro for efetuado, garantindo a rastreabilidade e a transparência do atendimento. Explorar proativamente soluções ou escalonamentos mais rápidos em casos de urgência, além do registro padrão, também é um ponto de melhoria."
+    },
+    "nota_monitoria": {
+        "relacionamento": 36.0,
+        "resolutividade": 0.0,
+        "cx": 26.0,
+        "inaderencias": -100.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utiliza o nome do cliente Jeferson e da titular Marilene durante a interação, como em 'Boa tarde, Beatriz. Com o Jeferson.' e 'Meu nome é Beatriz, sou da Central de Atendimento Banco Daycoval. Antes de eu prosseguir, vou fazer uma breve validação de dados com a senhora. Informe o nome da sua mãe completo, por favor.'"
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não oferece desculpas pela situação ou pelo transtorno que o cliente e a titular estão enfrentando, apesar do histórico de problemas e da negativação do nome."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não demonstra acolhimento à situação do cliente, que relata um problema sério de negativação de nome e dificuldade em obter um documento essencial. A interação é estritamente procedimental."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não expressa empatia genuína pela situação do cliente, que está com o nome da mãe negativado e enfrentando dificuldades há meses. A comunicação é focada na coleta de informações e no registro do protocolo, sem reconhecimento do impacto emocional ou financeiro."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstra paciência ao lidar com o cliente, que repete o histórico e expressa frustração, e também ao aguardar a titular para a validação de dados ('Um momento, por favor.', 'Espera um minuto aí só.', 'Só mais um momento.')."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não interrompe o cliente durante suas explicações, permitindo que ele exponha o problema e o histórico sem cortes."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente mantém a calma e a postura profissional, mesmo diante da frustração e da insistência do cliente em obter uma solução imediata."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utiliza uma linguagem formal e apropriada para o contexto de atendimento bancário, sem gírias ou informalidades."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não apresenta vícios de linguagem, como 'né', 'tipo', 'tá bom', mantendo uma comunicação clara e profissional."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente transmite segurança nas informações que possui acesso e nos procedimentos que pode realizar, como o registro do protocolo de reanálise."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente utiliza gerundismo em algumas falas, como 'eu estou verificando aqui no sistema' e 'acabam entrando em contato antes'."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "A atendente comunica as informações de forma clara, explicando o procedimento de reanálise, o prazo e o canal de resposta (e-mail)."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente mantém a objetividade, focando na coleta de dados e no registro do protocolo, sem desviar do assunto principal."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente mantém o foco na solicitação do cliente, mesmo quando ele divaga sobre o áudio ou a dona Fátima, direcionando a conversa para a solução possível dentro de sua alçada."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente atua de forma reativa, registrando um protocolo de reanálise conforme o procedimento, mas não oferece alternativas ou soluções proativas para a urgência do cliente, que já tem o nome da mãe negativado e um histórico de recontatos. Ela não explora outras possibilidades além do registro."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não reduz o esforço do cliente, que já teve que passar por validação com a titular, repetiu o histórico e agora terá que aguardar um prazo de dois dias úteis e possivelmente recontatar. A solução apresentada exige mais ações e acompanhamento por parte do cliente."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente inicia o contato de forma institucional, identificando-se e ao banco: 'Boa tarde, meu nome é Beatriz. Com quem eu falo?' e posteriormente 'Meu nome é Beatriz, sou da Central de Atendimento Banco Daycoval.'"
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente realiza uma validação de dados completa com a titular Marilene, solicitando nome completo da mãe, endereço, idade, marca e ano do veículo, confirmando mais de quatro dados cadastrais."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente realiza a sondagem adequada ao perguntar 'No caso, qual seria a dúvida do senhor?' e 'Só para eu entender novamente: o senhor fez a entrega amigável, não pagaram, e qual foi a resposta da loja?', buscando compreender o problema."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O motivo principal do contato, a necessidade do boleto de quitação, é claramente identificado e compreendido pela atendente, que registra um protocolo de reanálise para essa finalidade."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente repete diversas vezes o histórico e a necessidade do boleto de quitação, especialmente após a validação com a mãe e a retomada do atendimento por Jeferson ('Eu estou com um problema com vocês. Eu tinha devolvido o carro e o Banco Daycoval não está enviando o boleto para pagamento.', 'já pediu para vocês o boleto de quitação desse carro. Já tem tempo e vocês não enviaram.', 'eu preciso desse boleto de quitação para ele, para ele quitar e tirar logo esse problema do nome da minha mãe.')."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente valida o entendimento ao resumir a situação: 'Só para eu entender novamente: o senhor fez a entrega amigável, não pagaram, e qual foi a resposta da loja?'."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Há um alto risco de reincidência, pois o cliente expressa claramente que irá recontatar: 'eu vou ligando. Amanhã não, mas segunda-feira eu ligo para saber se tem alguma notícia breve'."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente informa claramente os próximos passos: 'registrei um protocolo de reanálise para que a área interna possa verificar', 'O procedimento tem um prazo de tratativa de dois dias úteis', 'com término no dia 20 de julho', 'tem que aguardar a resposta no e-mail'."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa do cliente era obter o boleto de quitação imediatamente ou uma solução mais rápida, dada a urgência e o histórico. A solução de registrar um protocolo com prazo de dois dias úteis não atende à sua expectativa, como demonstrado por sua frustração e intenção de recontatar."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0,
+            "evidencia": "A atendente convida o cliente para a pesquisa de satisfação no final do atendimento: 'Nós temos a pesquisa de satisfação no final do atendimento.'"
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Sim",
+            "penalidade": -100,
+            "evidencia": "A atendente informa que registrou um protocolo de reanálise, mas não fornece o número do protocolo ao cliente, o que constitui uma omissão da informação completa do protocolo."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0,
+            "evidencia": "A atendente informa o prazo de tratativa: 'O procedimento tem um prazo de tratativa de dois dias úteis. ... com término no dia 20 de julho, tá?'."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0,
+            "evidencia": "Não há evidência de que a atendente tenha alterado um prazo previamente informado."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0,
+            "evidencia": "O desligamento ocorre após a atendente perguntar se pode auxiliar em algo mais e o cliente responder que não, seguindo o fluxo padrão."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0,
+            "evidencia": "A atendente mantém uma linguagem formal e profissional durante todo o atendimento."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0,
+            "evidencia": "A atendente não causa prejuízo direto ao cliente durante o atendimento. O prejuízo (negativação do nome) já existia e a atendente seguiu o procedimento para tentar resolver."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0,
+            "evidencia": "Não há elogio espontâneo do cliente. Pelo contrário, o cliente expressa frustração e insatisfação."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência do cliente foi extremamente negativa, resultando em um Score Experiência de 0/100. O cliente Jeferson e a titular Marilene enfrentam um problema grave de negativação de nome devido à falta de quitação de um financiamento de veículo, e o banco não conseguiu fornecer uma solução imediata. O alto esforço do cliente, que já teve múltiplos contatos e precisou repetir o histórico, somado à frustração com o prazo de dois dias úteis para uma reanálise, gerou uma alta probabilidade de recontato e um elevado potencial de reclamação. A atuação da atendente, embora profissional, foi reativa e careceu de empatia e proatividade para mitigar a fricção na jornada do cliente, que se sente desamparado e cogita ações legais.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Dificuldade em obter o boleto de quitação de um financiamento de veículo após devolução amigável do carro à loja, resultando na negativação do nome da titular.",
+            "causa_identificada": "A loja alega que o Banco Daycoval não enviou o boleto de quitação, impedindo o pagamento. O banco, por sua vez, não conseguiu gerar o boleto imediatamente devido ao atraso do contrato e precisou de uma reanálise interna.",
+            "causa_raiz": "O processo interno para emissão de boleto de quitação de contrato com mais de 15 dias de atraso não permite a emissão imediata pelo atendente, exigindo um protocolo de reanálise pela área interna, o que gera atraso e esforço para o cliente.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "O processo para emissão de boleto de quitação de contrato com mais de 15 dias de atraso não permite a emissão imediata pelo atendente, exigindo um protocolo de reanálise pela área interna, o que gera atraso e esforço para o cliente.",
+            "evidencia": "Cliente: 'já pediu para vocês o boleto de quitação desse carro. Já tem tempo e vocês não enviaram.' Atendente: 'Não consigo. No caso, o contrato dela passou de 15 dias em atraso. ... Bom, eu registrei um protocolo de reanálise para que a área interna possa verificar'."
+        },
+        "insights": {
+            "insight_operacional": "O processo de emissão de boletos de quitação para contratos em atraso precisa ser revisado para reduzir o tempo de resposta e o esforço do cliente, especialmente em casos de negativação de nome. A dependência de uma 'área interna' com prazo de 2 dias úteis para um documento tão crítico é um ponto de fricção que impacta negativamente a experiência do cliente e aumenta o potencial de recontato e reclamação.",
+            "apontamentos_cx": "A experiência do cliente foi severamente impactada pela não resolução imediata do problema, o alto esforço exigido (múltiplos contatos, repetição de informações, necessidade de envolver a titular) e a frustração com o prazo de espera, resultando em alta probabilidade de recontato e potencial de reclamação. A falta de empatia e acolhimento por parte da atendente também contribuiu para a experiência negativa.",
+            "apontamentos_resolutividade": "A atendente não conseguiu resolver o problema na primeira interação, apenas registrando um protocolo. Não houve proatividade em buscar soluções alternativas ou acelerar o processo, o que resultou em baixa resolutividade e aumento do esforço do cliente, que terá que aguardar e possivelmente recontatar.",
+            "oportunidades_operador": "O operador poderia ter demonstrado mais empatia e acolhimento à situação do cliente, oferecendo desculpas pelo transtorno. Além disso, poderia ter explorado a possibilidade de escalar a urgência de forma mais efetiva, além de apenas 'colocar uma ressalva de urgência', ou buscar informações adicionais sobre o status de protocolos anteriores para tentar antecipar a solução. A omissão do número do protocolo também é uma oportunidade de melhoria na comunicação."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Registro incompleto",
+                "ocorrencias": 1,
+                "evidencia": "A atendente informou que registrou um protocolo de reanálise, mas não forneceu o número do protocolo ao cliente, caracterizando um registro incompleto da informação essencial."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e otimizar o processo de emissão de boletos de quitação para contratos em atraso, buscando reduzir o prazo de entrega e a dependência de reanálise manual.",
+                "responsavel": "Área de Processos/Operações",
+                "prazo": "Curto prazo",
+                "impacto": "Redução do esforço do cliente, diminuição de recontatos e reclamações, melhoria da satisfação."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Treinamento de empatia e acolhimento para atendentes, com foco em situações de alta sensibilidade (negativação de nome, histórico de problemas).",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da percepção do cliente sobre o atendimento, redução da frustração."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Implementar ferramenta ou processo que permita ao atendente visualizar o status de protocolos anteriores de forma mais ágil e, se possível, intervir para acelerar a resolução em casos de urgência.",
+                "responsavel": "Tecnologia/Operações",
+                "prazo": "Médio prazo",
+                "impacto": "Aumento da resolutividade no primeiro contato, redução do retrabalho do cliente."
+            }
+        ],
+        "conclusao_executiva": "O atendimento foi classificado como ALERTA CRÍTICO devido à não resolução do problema principal do cliente, o alto esforço exigido e o elevado potencial de reclamação e ouvidoria. O operador obteve uma classificação de 'Pode Melhorar Muito' com 0/100 pontos, impactado pela omissão do número do protocolo. A experiência do cliente foi extremamente negativa (Score Experiência 0/100), marcada pela frustração com a demora na obtenção do boleto de quitação e a negativação do nome da titular. A causa raiz reside no processo interno do banco para emissão de boletos de quitação de contratos em atraso, que exige reanálise e prazos longos. A ação prioritária é a revisão e otimização desse processo para reduzir o esforço do cliente e evitar escalonamentos."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Neutro",
+    "probabilidade_recontato": "Alta"
+}

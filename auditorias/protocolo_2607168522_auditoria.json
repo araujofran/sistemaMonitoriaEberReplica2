@@ -1,0 +1,379 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "2607168522",
+        "cliente": "Ana Carolina",
+        "cpf": "Não identificado",
+        "atendente": "Gabriel",
+        "produto": "Financiamento de Veículo",
+        "categoria": "Substituição de Garantia / Informação Incorreta",
+        "canal": "Telefone"
+    },
+    "score_operador": 76.0,
+    "classificacao_operador": "Atende as expectativas",
+    "visao_geral": {
+        "status": "🟠 CASO RELEVANTE",
+        "resumo": "A cliente Ana Carolina contatou o atendimento para confirmar o valor e solicitar um boleto para antecipar três parcelas de um financiamento de veículo, com o objetivo de realizar a substituição da garantia. Ela havia recebido a informação em um contato anterior de que bastava pagar três parcelas, independentemente de serem as iniciais ou finais. O atendente Gabriel inicialmente confirmou o valor e gerou o boleto, mas, ao verificar a política interna, identificou que a informação anterior estava incorreta. Para a substituição de garantia, são necessários três meses de experiência com o Banco Daycoval, ou seja, três parcelas pagas nos respectivos meses, e não apenas a antecipação. A cliente expressou grande frustração, pois o carro financiado está com problemas e ela não pode esperar três meses. O atendente ofereceu a abertura de um protocolo de reclamação sobre a informação incorreta e para verificar com a área interna se há alguma alternativa, solicitando prioridade na resposta. O boleto gerado foi instruído a não ser pago. A cliente aceitou a abertura do protocolo e aguardará a resposta do banco por e-mail em até três dias úteis. O problema principal da substituição de garantia não foi resolvido no contato, mas uma ação foi tomada para buscar uma solução."
+    },
+    "feedback": {
+        "positivos": [
+            "O atendente utilizou o nome da cliente de forma respeitosa durante a interação, demonstrando cordialidade.",
+            "O atendente pediu perdão pela informação incorreta passada anteriormente, reconhecendo o erro e demonstrando preocupação.",
+            "O atendente demonstrou acolhimento e empatia genuína ao ouvir a frustração da cliente e buscar ativamente uma solução alternativa com a área interna.",
+            "O atendente manteve a paciência e a calma durante toda a interação, mesmo diante da frustração e das repetições da cliente.",
+            "A comunicação do atendente foi formal, clara e adequada, sem vícios de linguagem, e demonstrou segurança ao corrigir a informação e propor a reclamação.",
+            "O atendente demonstrou proatividade ao verificar a informação com a área interna, corrigir a política e abrir um protocolo de reclamação para buscar uma solução alternativa.",
+            "O atendente informou claramente os próximos passos e o prazo para a resposta do protocolo de reclamação, além de mencionar que pediria prioridade.",
+            "O atendente instruiu a cliente a não realizar o pagamento do boleto gerado até a resposta do banco, evitando um potencial prejuízo financeiro."
+        ],
+        "melhorias": [
+            "O atendente não realizou a confirmação de pelo menos quatro dados cadastrais no início do atendimento, apenas o e-mail.",
+            "A cliente precisou repetir diversas vezes a urgência de sua situação e a informação incorreta que havia recebido anteriormente, indicando que o entendimento não foi totalmente validado de imediato.",
+            "O problema principal da cliente (substituição de garantia) não foi resolvido no contato, gerando alto risco de reincidência e não atendendo à expectativa inicial.",
+            "O atendente utilizou gerundismo na frase 'Estou abrindo o protocolo de reclamação', o que pode ser aprimorado para uma comunicação mais direta."
+        ],
+        "coaching": "Gabriel, seu atendimento demonstrou excelente proatividade e empatia ao lidar com uma situação complexa e uma cliente frustrada por uma informação incorreta anterior. Para aprimorar ainda mais, foque em confirmar um número maior de dados cadastrais no início da chamada para garantir a segurança e conformidade. Além disso, revise o uso de gerundismo para uma comunicação mais assertiva e direta. Continue com a postura de buscar soluções e acolher o cliente, como fez ao abrir o protocolo de reclamação e pedir prioridade."
+    },
+    "nota_monitoria": {
+        "relacionamento": 46.5,
+        "resolutividade": 7.5,
+        "cx": 22.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente utilizou o nome da cliente ('Ana Carolina' e 'Senhora Ana') de forma respeitosa durante a interação."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente pediu perdão pela informação incorreta passada anteriormente, demonstrando reconhecimento do erro e preocupação com a cliente ('Eu peço perdão pela informação que passaram para a senhora, porque foi uma informação errada.')."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou acolhimento ao ouvir a frustração da cliente sobre o carro com problema e buscar ativamente uma solução alternativa com a área interna ('Eu entendo. Vou verificar com a área interna o que pode ser feito nessa situação, ver se tem algum outro meio que possa ser feito.')."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente expressou empatia genuína ao afirmar 'Eu entendo' diante da situação da cliente com o carro problemático e ao se prontificar a buscar outras soluções com a área interna."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a paciência durante toda a interação, mesmo diante da frustração e das repetições da cliente sobre a urgência da situação e a informação incorreta recebida."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente permitiu que a cliente expressasse suas preocupações e o contexto da situação sem interrupções inadequadas."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou calma e serenidade ao longo da ligação, mesmo ao ter que corrigir uma informação anterior e lidar com a insatisfação da cliente."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A comunicação do atendente foi formal, clara e adequada ao contexto de atendimento bancário, utilizando termos profissionais."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente utilizou uma linguagem livre de vícios, contribuindo para a clareza e profissionalismo da comunicação."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou segurança ao corrigir a informação incorreta previamente fornecida e ao propor a abertura de um protocolo de reclamação e verificação interna."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente utilizou gerundismo na frase 'Estou abrindo o protocolo de reclamação', o que pode ser aprimorado para uma comunicação mais direta."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "O atendente comunicou de forma clara a política de substituição de garantia e os próximos passos relacionados à abertura do protocolo de reclamação e a necessidade de aguardar a resposta do banco."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou objetividade ao buscar as informações no sistema, corrigir a política e propor a abertura do protocolo de reclamação como solução."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve o foco na busca por uma solução para a cliente, mesmo diante da complexidade da situação e da frustração expressa pela cliente."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente demonstrou proatividade ao verificar a informação com a área interna, corrigir a política, e, diante da insatisfação da cliente, abrir um protocolo de reclamação e buscar uma solução alternativa."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Parcial",
+                "nota": 2.5,
+                "evidencia": "Embora o atendente tenha tomado ações para buscar uma solução, o problema principal da cliente (substituição de garantia imediata) não foi resolvido no contato, exigindo que ela aguarde um prazo de 3 dias úteis e, potencialmente, realize um novo contato."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente iniciou a ligação com uma saudação adequada ('Boa tarde, Ana Carolina, tudo bem?') e informou o número de protocolo."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente confirmou apenas o e-mail da cliente ('O e-mail da senhora continua o mesmo?'), não realizando a confirmação de pelo menos quatro dados cadastrais antes de prosseguir com o atendimento."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente realizou uma sondagem adequada ao questionar sobre a ligação anterior e a informação recebida, buscando entender o contexto completo da solicitação da cliente."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente identificou corretamente o motivo do contato da cliente (confirmar valor e solicitar boleto para substituição de garantia) e o problema subjacente (informação incorreta e urgência na troca do veículo)."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A cliente precisou repetir diversas vezes a urgência de sua situação ('Eu não posso esperar três meses', 'Não vou ficar três meses com esse carro') e a informação incorreta que havia recebido anteriormente."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente validou o entendimento da situação ao ler o que havia relatado no protocolo de reclamação, garantindo que a solicitação da cliente estava corretamente registrada."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema principal da cliente (substituição de garantia) não foi resolvido no contato, e ela precisará aguardar a resposta do protocolo, o que gera um alto risco de reincidência de contato para dar seguimento à demanda."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente informou claramente os próximos passos (aguardar a resposta do banco via e-mail) e o prazo para a resposta do protocolo de reclamação (três dias úteis), além de mencionar que pediria prioridade."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa principal da cliente era conseguir realizar a substituição de garantia imediatamente, o que não foi atendido devido à informação incorreta anterior e à política do banco. A solução apresentada foi a abertura de uma reclamação e a espera."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não foi identificada na transcrição nenhuma solicitação ou direcionamento do atendente para que a cliente participasse de uma pesquisa de satisfação."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o número de protocolo no início da ligação e registrou um novo protocolo de reclamação ao final, não havendo omissão."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o prazo de três dias úteis para a resposta do protocolo de reclamação."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo durante a interação; o prazo de 3 dias úteis foi informado uma única vez para a resposta do protocolo."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento ocorreu de forma cordial e respeitosa, com o atendente desejando 'Tenha uma ótima tarde' e a cliente respondendo 'Obrigada. Tchau, tchau.'."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente manteve uma linguagem profissional e adequada durante toda a interação, sem uso de termos inadequados ou ofensivos."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente instruiu a cliente a não realizar o pagamento do boleto gerado até que o banco respondesse ao protocolo, evitando um potencial prejuízo financeiro caso a antecipação não fosse válida para a substituição de garantia."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não foi identificado na transcrição nenhum elogio espontâneo ou reconhecimento explícito do cliente em relação ao atendimento do operador."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência da cliente foi severamente negativa, resultando em um Score Experiência de 0/100. Isso se deve principalmente à informação incorreta recebida em um contato anterior, que gerou expectativas não atendidas e um alto esforço para a cliente. O problema central (substituição de garantia do veículo com defeito) não foi resolvido no contato, exigindo que a cliente aguarde um prazo e, possivelmente, recontate o banco. Embora o operador Gabriel tenha demonstrado proatividade e empatia, a falha de processo na comunicação da política e a rigidez da mesma impactaram diretamente a jornada do cliente, levando a um alto potencial de reclamação e cancelamento.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "A cliente contatou para confirmar o valor e solicitar um boleto para antecipar três parcelas de um financiamento de veículo, com o objetivo de realizar a substituição da garantia, baseada em uma informação incorreta recebida anteriormente.",
+            "causa_identificada": "A informação passada na ligação anterior sobre a política de substituição de garantia era incorreta, gerando expectativas desalinhadas e impedindo a cliente de resolver seu problema urgente (carro com defeito) de forma imediata.",
+            "causa_raiz": "Inconsistência na comunicação da política interna de substituição de garantia entre os atendentes e rigidez do processo que não contempla exceções para situações de urgência com veículos defeituosos.",
+            "dono_jornada": "Comunicação",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A falha principal reside na comunicação de uma política interna de forma inconsistente ou incorreta em um atendimento anterior, e na rigidez do processo de substituição de garantia que não contempla exceções para veículos com problema.",
+            "evidencia": "Cliente: 'Ela falou que precisava ter três parcelas pagas, mas que não tinha problema ser tanto as da frente quanto as de trás.' Atendente: 'Eu peço perdão pela informação que passaram para a senhora, porque foi uma informação errada. Para substituição de garantia, o cliente tem que ter pelo menos três parcelas pagas, mais os respectivos meses, para ter pelo menos três meses de experiência com o Banco Daycoval.'"
+        },
+        "insights": {
+            "insight_operacional": "A inconsistência na informação sobre a política de substituição de garantia entre atendentes gera retrabalho, frustração do cliente e risco de reclamação. É crucial garantir que todos os operadores estejam alinhados com as políticas e procedimentos atualizados e que haja um mecanismo de validação de informações críticas.",
+            "apontamentos_cx": "A experiência do cliente foi severamente impactada pela informação incorreta e pela incapacidade de resolver um problema urgente (carro com defeito) devido à rigidez da política. O alto esforço e a necessidade de recontato são pontos críticos que contribuem para uma alta fricção na jornada.",
+            "apontamentos_resolutividade": "A resolutividade foi parcial, pois o problema central da cliente não foi solucionado no primeiro contato, exigindo a abertura de um protocolo e a espera por uma análise interna. Isso aumenta o esforço do cliente e a probabilidade de recontato.",
+            "oportunidades_operador": "O operador Gabriel demonstrou proatividade e empatia ao corrigir a informação, abrir a reclamação e buscar alternativas. Uma oportunidade de melhoria seria a confirmação de mais dados cadastrais no início do atendimento para segurança e conformidade, e a revisão do uso de gerundismo para uma comunicação mais direta."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 1,
+                "evidencia": "O atendente confirmou apenas o e-mail da cliente, não realizando a confirmação de pelo menos quatro dados cadastrais (at_cx_intro2)."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e padronizar a comunicação da política de substituição de garantia para todos os canais e operadores, garantindo alinhamento e precisão das informações.",
+                "responsavel": "Treinamento/Qualidade/Produto",
+                "prazo": "Curto prazo",
+                "impacto": "Redução de informações incorretas, retrabalho e frustração do cliente."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Avaliar a flexibilidade da política de substituição de garantia em casos de veículos com defeito, buscando alternativas ou processos de exceção para clientes em situações de urgência.",
+                "responsavel": "Produto/Crédito/Operações",
+                "prazo": "Médio prazo",
+                "impacto": "Melhoria da satisfação do cliente, redução de cancelamentos e mitigação de riscos de reclamação."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Reforçar o treinamento sobre a importância da confirmação de múltiplos dados cadastrais no início do atendimento para garantir a segurança e conformidade.",
+                "responsavel": "Treinamento",
+                "prazo": "Curto prazo",
+                "impacto": "Aumento da segurança das operações e conformidade com as políticas internas."
+            }
+        ],
+        "conclusao_executiva": "Este caso é classificado como relevante devido à informação incorreta fornecida anteriormente, que gerou alta frustração e um problema não resolvido para a cliente. O operador Gabriel demonstrou um desempenho que atende às expectativas, agindo com proatividade e empatia ao corrigir a informação e abrir um protocolo de reclamação. No entanto, a experiência do cliente foi crítica, com alto esforço e risco de recontato e cancelamento, evidenciando uma falha de processo na comunicação da política. A ação prioritária é a revisão e padronização da comunicação da política de substituição de garantia para evitar futuras inconsistências e melhorar a jornada do cliente."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

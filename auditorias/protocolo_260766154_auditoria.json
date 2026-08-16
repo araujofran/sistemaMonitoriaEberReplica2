@@ -1,0 +1,373 @@
+{
+    "cabecalho": {
+        "data": "16/08/2026",
+        "protocolo": "260766154",
+        "cliente": "Roselaine",
+        "cpf": "075.XXX.XXX-70",
+        "atendente": "Fábio",
+        "produto": "Financiamento",
+        "categoria": "Revisão de Financiamento / Juros Abusivos",
+        "canal": "Telefone"
+    },
+    "score_operador": 85.0,
+    "classificacao_operador": "Supera as expectativas",
+    "visao_geral": {
+        "status": "🟠 CASO RELEVANTE",
+        "resumo": "A cliente Roselaine contatou o Banco Daycoval para verificar o status de um protocolo anterior (2606230686) referente a uma reclamação de juros abusivos em seu financiamento, pois não havia recebido retorno e o prazo de 3 dias havia expirado. O atendente Fábio localizou o protocolo e informou a resposta da área responsável, que indicava que as tarifas e encargos estavam corretos. A cliente expressou discordância e solicitou a abertura de uma reanálise. Adicionalmente, a cliente solicitou uma cópia do contrato, que ela alegou não ter recebido após a assinatura. O atendente abriu um protocolo de reanálise para a contestação dos juros (com prazo de 2 dias úteis) e enviou a cópia do contrato para o e-mail da cliente, que confirmou o recebimento. O atendimento foi encerrado com a orientação de aguardar o retorno da reanálise."
+    },
+    "feedback": {
+        "positivos": [
+            "O atendente demonstrou cordialidade e tratamento respeitoso durante toda a interação, chamando a cliente pelo nome e pedindo desculpas pela demora.",
+            "Houve proatividade do atendente ao oferecer a reanálise e o envio do contrato, facilitando a jornada da cliente e centralizando as soluções.",
+            "A comunicação foi clara e segura, com o atendente informando os próximos passos e prazos de forma compreensível."
+        ],
+        "melhorias": [
+            "A confirmação de dados cadastrais foi incompleta, não atingindo o mínimo de quatro dados exigidos.",
+            "O atendente utilizou gerundismo durante a interação.",
+            "A questão principal da contestação dos juros não foi resolvida no contato, gerando risco de reincidência."
+        ],
+        "coaching": "Fábio, seu atendimento demonstrou excelente proatividade e cordialidade. Para aprimorar ainda mais, foque em confirmar um número maior de dados cadastrais no início do atendimento, conforme o procedimento, e evite o uso de gerundismo para uma comunicação mais formal e direta. Além disso, reforce a validação de e-mails, incluindo a capitalização, para garantir a efetividade das comunicações futuras."
+    },
+    "nota_monitoria": {
+        "relacionamento": 46.5,
+        "resolutividade": 10.0,
+        "cx": 28.5,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente chamou a cliente de \"dona Roselaine\" ao longo da interação, demonstrando respeito."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente pediu desculpas pela demora na busca de informações: \"Obrigado por aguardar e desculpe a demora.\""
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente demonstrou acolhimento ao iniciar a interação com \"Pois não, como é que eu posso ajudá-la?\" e ao ouvir a demanda da cliente."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente demonstrou empatia ao reconhecer a insatisfação da cliente com a resposta anterior e oferecer uma reanálise: \"Entendi. Foi enviado para o seu e-mail... Mas não tem problema, eu leio para a senhora o retorno da área responsável.\""
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente aguardou a cliente soletrar o e-mail, buscar o protocolo e verificar o recebimento do contrato: \"Eu aguardo.\", \"Ok, eu aguardo.\""
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foi localizada evidência de interrupções por parte do atendente durante a fala da cliente."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente manteve a calma e a postura profissional durante toda a interação, mesmo diante da insatisfação inicial da cliente e da falha na linha."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A linguagem utilizada pelo atendente foi formal, respeitosa e apropriada para o contexto bancário."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificados vícios de linguagem na fala do atendente, exceto o gerundismo."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente demonstrou segurança nas informações e procedimentos, explicando as opções disponíveis à cliente de forma clara."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente utilizou gerundismo: \"Estou abrindo o protocolo de reanálise e finalizando aqui no atendimento.\""
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "As informações sobre o protocolo, a reanálise e o envio do contrato foram transmitidas de forma clara e compreensível para a cliente."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente foi objetivo ao buscar as informações necessárias e apresentar as soluções para as solicitações da cliente, sem rodeios."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente manteve o foco nas solicitações da cliente, tratando tanto a reanálise quanto o envio do contrato de forma sequencial e completa."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente foi proativo ao oferecer a abertura de uma reanálise e se prontificar a verificar e enviar a cópia do contrato, antecipando a necessidade da cliente."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente facilitou o processo ao centralizar as soluções (reanálise e envio de contrato) e evitar que a cliente precisasse buscar informações ou realizar ações em outros canais."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente iniciou o atendimento de forma institucional: \"Boa tarde, Central de Atendimento Banco Daycoval, Fábio. Com quem eu falo?\""
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente confirmou o CPF e o e-mail, totalizando apenas dois dados cadastrais. A regra exige a confirmação de pelo menos quatro dados cadastrais para ser classificado como \"Sim\"."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente realizou sondagem adequada ao solicitar o CPF e o número do protocolo que a cliente possuía para verificar as informações."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente identificou corretamente o motivo do contato como \"reclamação sobre juros abusivos do contrato, solicitando revisão do financiamento e análise revisional do contrato\"."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A cliente não precisou repetir informações essenciais sobre o motivo do contato ou o protocolo, exceto uma pergunta devido a uma falha na linha, não por falta de compreensão do atendente."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente validou o entendimento da cliente sobre o protocolo e o e-mail: \"Esse é o protocolo da solicitação, correto, dona Roselaine?\", \"Está correto, né?\"."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema principal da cliente (discordância dos juros) foi encaminhado para reanálise, o que gera um risco de reincidência caso a nova resposta não seja satisfatória."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente informou claramente os próximos passos e o prazo para o retorno da reanálise: \"O prazo deles é de 2 dias úteis, então eles têm até o dia 3 de julho para entrar em contato com a senhora\"."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Parcial",
+                "nota": 2.5,
+                "evidencia": "As expectativas imediatas da cliente foram atendidas (abertura de reanálise e envio do contrato), mas a questão central da contestação dos juros ainda depende de uma nova análise, não sendo resolvida no contato."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não foi localizada evidência de que o atendente deixou de convidar o cliente para a pesquisa de satisfação."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente forneceu o protocolo do atendimento atual (260766154) e o protocolo referente ao envio da cópia do contrato (260766840)."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o prazo de 2 dias úteis para a reanálise: \"O prazo deles é de 2 dias úteis, então eles têm até o dia 3 de julho para entrar em contato com a senhora\"."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não foi localizada evidência de alteração de prazo durante o atendimento."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento foi adequado, com a cliente agradecendo e o atendente finalizando a interação."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não foi localizada evidência de uso de linguagem inadequada ou ofensiva por parte do atendente."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não foi localizada evidência de que o atendente causou qualquer tipo de prejuízo à cliente."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo ou reconhecimento explícito do cliente ao atendente durante a interação."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 10.0,
+        "esforco_cliente": "Médio",
+        "risco_reclamacao": "Médio",
+        "interpretacao": "A cliente teve uma experiência de esforço médio, pois precisou recontatar o banco para obter o retorno de um protocolo anterior, soletrar o e-mail e corrigir a capitalização, além de ter que repetir uma pergunta devido a uma falha na linha. Embora o operador tenha demonstrado um desempenho que supera as expectativas ao ser proativo e empático, a experiência do cliente foi impactada por fricções no processo de comunicação e entrega de documentos. O problema principal da contestação dos juros não foi resolvido, apenas encaminhado para reanálise, o que mantém a pendência e o potencial de recontato.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "A cliente contesta os juros aplicados em seu financiamento e não recebeu a cópia do contrato assinado.",
+            "causa_identificada": "A resposta inicial do banco sobre a revisão de juros não satisfez a cliente, e houve uma falha no processo de entrega ou disponibilização do contrato após a assinatura. Além disso, a cliente não recebeu o e-mail com a resposta inicial do protocolo.",
+            "causa_raiz": "Falha no processo de comunicação do resultado da análise de juros e falha no processo de entrega/disponibilização do contrato ao cliente.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A falha na comunicação do retorno do protocolo e na entrega do contrato são indicativos de lacunas ou ineficiências nos processos operacionais do banco.",
+            "evidencia": "Cliente: \"eu tenho um protocolo em aberto pedindo a revisão do meu financiamento... não me deram retorno nenhum.\" e \"você consegue me mandar o contrato que eu assinei? Porque eu assinei, mas eles não me deram o contrato, só me fizeram assinar.\""
+        },
+        "insights": {
+            "insight_operacional": "O processo de comunicação de retornos de protocolos precisa ser revisado para garantir a efetiva entrega da informação ao cliente e, se necessário, um follow-up proativo. O processo de entrega/disponibilização de contratos após a assinatura também deve ser aprimorado para evitar solicitações futuras.",
+            "apontamentos_cx": "A experiência do cliente foi impactada negativamente pela necessidade de recontato para obter o retorno de um protocolo e pela ausência do contrato. A reanálise, embora necessária, prolonga a jornada de resolução da questão principal, gerando fricção.",
+            "apontamentos_resolutividade": "Embora o operador tenha sido resolutivo em sua alçada ao encaminhar as solicitações, o problema central da insatisfação com os juros não foi resolvido no contato, apenas encaminhado para uma nova análise, o que mantém a pendência para o cliente.",
+            "oportunidades_operador": "O operador pode ser treinado para evitar o uso de gerundismo e para reforçar a importância de confirmar todos os detalhes de dados cadastrais, como a capitalização de letras em e-mails, para evitar potenciais falhas de comunicação e garantir a conformidade com as regras de validação."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Registro incompleto",
+                "ocorrencias": 1,
+                "evidencia": "O atendente não confirmou o mínimo de quatro dados cadastrais exigidos, conforme evidenciado pela classificação 'Não' no critério at_cx_intro2."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Alta",
+                "acao": "Revisar o processo de comunicação de retornos de protocolos para garantir a entrega efetiva da informação ao cliente e implementar um follow-up proativo.",
+                "responsavel": "Área de Processos/CX",
+                "prazo": "Curto prazo",
+                "impacto": "Redução de recontatos, melhoria da satisfação do cliente e diminuição do esforço do cliente."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Implementar ou revisar o processo de entrega/disponibilização automática de cópias de contratos aos clientes após a assinatura, preferencialmente por canais digitais.",
+                "responsavel": "Área de Produtos/Processos",
+                "prazo": "Médio prazo",
+                "impacto": "Aumento da transparência, redução de solicitações de cópia e melhoria da experiência do cliente."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Treinamento para operadores sobre a importância de evitar gerundismo e de confirmar detalhes de e-mails (ex: capitalização) para evitar falhas de comunicação e garantir a conformidade na validação de dados.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da comunicação do operador e redução de erros cadastrais."
+            }
+        ],
+        "conclusao_executiva": "O caso é relevante devido à insatisfação da cliente com os juros do financiamento e a necessidade de reanálise, além da falta inicial do contrato. O operador Fábio demonstrou um desempenho que supera as expectativas, sendo proativo e empático ao encaminhar as solicitações da cliente. No entanto, a experiência do cliente foi impactada por fricções no processo de comunicação e entrega de documentos. A causa principal do contato reside em falhas de processo relacionadas à comunicação do resultado da análise de juros e à disponibilização do contrato. A ação prioritária é a revisão dos processos de comunicação de retornos de protocolos e de entrega de contratos para mitigar riscos de recontato e reclamação."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Neutro",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Média"
+}

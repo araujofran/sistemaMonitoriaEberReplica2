@@ -1,0 +1,393 @@
+{
+    "cabecalho": {
+        "data": "16/08/2026",
+        "protocolo": "260743-5609",
+        "cliente": "Kleber",
+        "cpf": "Não identificado",
+        "atendente": "Beatriz",
+        "produto": "Financiamento de Veículo",
+        "categoria": "Substituição de Veículo Financiado",
+        "canal": "Telefone"
+    },
+    "score_operador": 0.0,
+    "classificacao_operador": "Pode Melhorar Muito",
+    "visao_geral": {
+        "status": "🔴 ALERTA CRÍTICO",
+        "resumo": "O cliente Kleber contata o Banco Daycoval pela segunda vez no dia para verificar o status de uma substituição de garantia de veículo financiado. O veículo original apresentou problemas, foi trocado por um Ford Ka, e a documentação para a substituição foi enviada pelo dono da agência ao banco. O cliente expressa frustração, pois a aprovação não chegou, e ele está sem o carro novo, utilizando o da esposa. A atendente Beatriz tem dificuldade em localizar as informações e questiona o método de envio da documentação, apesar do cliente insistir que já foi enviado. Após validação de dados, a atendente identifica que a alteração para o Ford Ka já consta no sistema, mas o cliente informa que a agência ainda não liberou o carro por falta de aprovação formal. A atendente abre uma reanálise com prazo de dois dias úteis para retorno via e-mail, mas não esclarece completamente a dúvida do cliente sobre o prazo final, encerrando a ligação enquanto o cliente ainda questionava."
+    },
+    "feedback": {
+        "positivos": [
+            "O atendente tratou o cliente pelo nome, mantendo a cordialidade durante a interação.",
+            "O atendente demonstrou paciência ao lidar com a frustração do cliente e a repetição de informações.",
+            "O atendente não interrompeu o cliente de forma inadequada, permitindo que ele expusesse sua situação.",
+            "O atendente manteve a calma durante toda a interação, mesmo diante da irritação do cliente.",
+            "A comunicação utilizada pelo atendente foi adequada e formal, sem gírias ou informalidades excessivas.",
+            "Não foram identificados vícios de linguagem na fala do atendente, exceto o gerundismo.",
+            "O atendente demonstrou segurança nas informações que possuía e nos procedimentos padrão.",
+            "O atendente manteve a objetividade na busca por informações e na condução do atendimento.",
+            "O atendente manteve o foco na resolução do problema, apesar das dificuldades de comunicação e localização de dados."
+        ],
+        "melhorias": [
+            "O atendente não pediu desculpas pela situação do cliente ou pela dificuldade em localizar as informações, o que poderia ter amenizado a frustração.",
+            "Não houve acolhimento à frustração do cliente, que estava sem carro e com um problema recorrente.",
+            "Não foi demonstrada empatia genuína pela situação do cliente, que estava sem o veículo e com alto nível de estresse.",
+            "O atendente utilizou gerundismo na fala, o que pode ser aprimorado para uma comunicação mais direta.",
+            "A clareza na comunicação foi parcial, pois houve dificuldade em compreender o problema inicial e o processo de envio de documentos, além de não esclarecer a dúvida final sobre o prazo.",
+            "O atendente atuou de forma reativa, não demonstrando proatividade na busca por soluções ou na investigação do histórico do cliente.",
+            "O atendente não facilitou o processo para o cliente, exigindo repetição de informações e não conseguindo localizar documentos já enviados, aumentando o esforço do cliente.",
+            "A sondagem inicial não foi adequada, resultando em repetição de informações e atrito na compreensão do problema.",
+            "O motivo principal foi identificado parcialmente, mas a complexidade do histórico e do envio de documentos não foi totalmente compreendida inicialmente.",
+            "O cliente precisou repetir diversas informações, indicando que o atendente não capturou ou registrou adequadamente os dados.",
+            "O atendente não validou o entendimento com o cliente antes de propor a solução, o que poderia ter evitado dúvidas posteriores.",
+            "O problema não foi resolvido, apenas encaminhado, o que gera alto risco de reincidência de contato.",
+            "Os próximos passos foram informados parcialmente, pois a dúvida do cliente sobre o prazo final não foi esclarecida.",
+            "A expectativa do cliente de ter a substituição aprovada não foi atendida, resultando apenas na abertura de uma reanálise.",
+            "O atendente direcionou para a pesquisa de satisfação, o que é uma inaderência conforme a regra de não convidar o cliente para a pesquisa.",
+            "O atendente não esclareceu a dúvida do cliente sobre o prazo final, deixando-o sem uma data clara de retorno.",
+            "O atendente encerrou a ligação enquanto o cliente ainda tentava entender o prazo, caracterizando um desligamento inadequado."
+        ],
+        "coaching": "O operador Beatriz deve focar em aprimorar a escuta ativa e a sondagem para compreender integralmente o histórico e a expectativa do cliente, evitando a repetição de informações. É fundamental demonstrar empatia e acolhimento à frustração do cliente, além de garantir a clareza na comunicação de prazos e a validação do entendimento antes do encerramento da ligação. Recomenda-se revisar o uso do gerundismo e buscar soluções mais proativas, investigando as informações fornecidas pelo cliente, como o nome do Fábio Chaves e o comprovante de envio, antes de apenas encaminhar a demanda."
+    },
+    "nota_monitoria": {
+        "relacionamento": 33.25,
+        "resolutividade": 0.0,
+        "cx": 12.5,
+        "inaderencias": -200.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente se apresentou e chamou o cliente pelo nome: 'Meu nome é Beatriz, com quem eu falo?' e 'Boa tarde, Beatriz. Fala com o Kleber'."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não pediu desculpas pela situação do cliente ou pela dificuldade em localizar as informações."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não demonstrou acolhimento à frustração do cliente, focando na busca de informações sem validar o sentimento do cliente."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não demonstrou empatia pela situação do cliente, que está sem carro e frustrado com a falta de resolução."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a paciência mesmo com a irritação do cliente e a repetição de informações."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não interrompeu o cliente de forma inadequada durante sua explanação."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a calma durante toda a interação, apesar da frustração do cliente."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A linguagem utilizada pela atendente foi formal e adequada ao contexto bancário."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificados vícios de linguagem na fala da atendente."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou segurança nas informações que possuía e nos procedimentos padrão do banco."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente utilizou gerundismo: 'Eu vou abrir uma reanálise pedindo para que o Banco Daycoval verifique a situação.'"
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Parcial",
+                "nota": 2.25,
+                "evidencia": "A atendente teve dificuldade em compreender o que o cliente estava buscando inicialmente e o processo de envio de documentos, o que gerou repetição de informações. A explicação sobre o prazo final também não foi clara."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente tentou ser objetiva na busca por informações e na condução do atendimento."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve o foco na resolução do problema, mesmo com a dificuldade de comunicação e localização de dados."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente atuou de forma reativa, solicitando informações e abrindo uma reanálise apenas após a insistência do cliente, sem oferecer alternativas ou investigar proativamente a situação do Fábio Chaves ou do comprovante."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não facilitou o processo, exigindo que o cliente repetisse informações e não conseguindo localizar os documentos já enviados, o que aumentou o esforço do cliente."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente iniciou o contato de forma institucional: 'Boa tarde, Central de Atendimento Banco Daycoval, protocolo 260743-5609. Meu nome é Beatriz, com quem eu falo?'"
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente realizou uma validação de dados completa, solicitando nome da mãe, endereço, idade, data de nascimento, marca do veículo, valor da parcela e quantidade de parcelas."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A sondagem inicial não foi adequada, pois a atendente teve dificuldade em compreender o problema do cliente e o processo de envio de documentos, levando a repetições e atrito. Ex: 'Mas esse comprovante é do quê, senhor?' e 'Certo, mas a gente está falando dos documentos.'"
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Parcial",
+                "nota": 2.0,
+                "evidencia": "O motivo principal (substituição de garantia) foi identificado, mas a complexidade do histórico e do envio de documentos não foi totalmente compreendida inicialmente, gerando atrito."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente precisou repetir diversas informações, como o nome do Fábio Chaves, o fato de os documentos já terem sido enviados e a situação de estar sem carro."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não validou o entendimento com o cliente antes de propor a solução de abrir uma reanálise."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema não foi resolvido, apenas encaminhado para reanálise, o que gera alto risco de reincidência de contato por parte do cliente."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Parcial",
+                "nota": 2.5,
+                "evidencia": "A atendente informou que abriu uma reanálise e o prazo de dois dias úteis para retorno via e-mail, mas não esclareceu a dúvida do cliente sobre 'até dia 20?', deixando uma lacuna na informação."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa do cliente era a aprovação da substituição do veículo, e o atendimento resultou apenas na abertura de uma reanálise, sem resolução imediata ou garantia de aprovação."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou 'Temos uma pesquisa de satisfação ao final da ligação', o que é um convite para a pesquisa, não uma omissão ou direcionamento inadequado."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O protocolo foi informado no início da ligação: 'protocolo 260743-5609'."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Sim",
+            "penalidade": -100.0,
+            "evidencia": "A atendente informou um prazo de dois dias úteis, mas não esclareceu a dúvida do cliente sobre 'até dia 20?', deixando o cliente sem uma data clara de retorno."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo durante a interação."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Sim",
+            "penalidade": -100.0,
+            "evidencia": "A atendente encerra a ligação ('O Banco Daycoval agradece. Tenha uma excelente tarde.') enquanto o cliente ainda tenta entender o prazo ('Então o retorno vai ser até dia 20?'), sem garantir que todas as dúvidas foram sanadas."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve uso de linguagem inadequada ou ofensiva por parte da atendente."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há evidência de que o atendente tenha causado prejuízo financeiro direto ao cliente durante esta interação."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo ou reconhecimento explícito do cliente ao atendimento do operador."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência do cliente foi extremamente negativa, resultando em um Score Experiência de 0/100. O problema principal de substituição de garantia de veículo não foi resolvido, apenas encaminhado para reanálise, o que gerou alto esforço e fricção na jornada do cliente. Ele precisou ligar duas vezes, repetiu informações, passou por burocracia e ainda está sem o carro. O humor do cliente permaneceu negativo devido à falta de resolução e à comunicação incompleta sobre os próximos passos e prazos. A atuação do operador, embora cordial, não foi proativa e não conseguiu mitigar a frustração do cliente, que provavelmente fará um recontato.",
+        "friccao": "Sim",
+        "causa_raiz": {
+            "motivo": "O principal problema relatado pelo cliente é a falta de aprovação da substituição de garantia de um veículo financiado, apesar de a documentação ter sido enviada e um boleto pago.",
+            "causa_identificada": "O problema aconteceu porque os documentos enviados pelo lojista para a substituição do veículo não foram localizados ou processados corretamente pelo Banco Daycoval, resultando na pendência da aprovação e na impossibilidade do cliente de utilizar o novo veículo.",
+            "causa_raiz": "A origem principal da falha reside no processo interno do Banco Daycoval para recebimento, rastreamento e processamento de documentos de substituição de garantia, que não garantiu a localização e a aprovação em tempo hábil.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A dificuldade em localizar os documentos já enviados e a falta de um processo claro e eficiente para a substituição de garantia, que já deveria ter sido aprovada, indicam uma falha no processo interno do banco.",
+            "evidencia": "Cliente: 'Eu liguei aí e a moça falou que não tinha encontrado esses documentos.' e 'Eu já encaminhei tudo. Já te falei o nome da pessoa para quem foi encaminhado. Até o RG da pessoa. É o Fábio Chaves.' e Atendente: 'Bom, aqui no sistema eu não localizei nenhuma resposta da área interna referente a isso.'"
+        },
+        "insights": {
+            "insight_operacional": "O processo de recebimento e rastreamento de documentos para substituição de garantia de veículos precisa ser revisado para evitar perdas e garantir a localização rápida das informações, especialmente quando enviadas por parceiros (lojistas). A integração entre os canais de recebimento (e-mail, WhatsApp) e o sistema de gestão de documentos deve ser aprimorada.",
+            "apontamentos_cx": "A experiência do cliente foi severamente impactada pela necessidade de recontato, repetição de informações e a falta de resolução de um problema que o deixou sem o veículo. A comunicação sobre o status da documentação e os próximos passos foi ineficaz, gerando alta fricção e frustração.",
+            "apontamentos_resolutividade": "A atendente não conseguiu resolver o problema na primeira instância, atuando de forma reativa e apenas encaminhando a demanda para reanálise, sem proatividade na busca por soluções ou informações já fornecidas pelo cliente. A falta de conhecimento sobre o processo de localização de documentos já enviados contribuiu para a baixa resolutividade.",
+            "oportunidades_operador": "O operador poderia ter demonstrado mais empatia e acolhimento à frustração do cliente, além de ter aprofundado a sondagem sobre o comprovante e o Fábio Chaves para tentar localizar a documentação de forma mais eficaz, evitando a repetição de informações. A clareza na comunicação de prazos e a validação do entendimento do cliente antes do encerramento da ligação também são oportunidades de melhoria."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 1,
+                "evidencia": "A sondagem inicial da atendente foi inadequada, resultando em repetição de informações e atrito na compreensão do problema (at_cx_compr1 = Não)."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 1,
+                "evidencia": "A atendente não esclareceu completamente a dúvida do cliente sobre o prazo final ('até dia 20?'), deixando uma lacuna na informação (at_cx_classif2 = Parcial, at_inad_compr3 = Sim)."
+            },
+            {
+                "falha": "Registro incompleto",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e otimizar o processo de recebimento, rastreamento e processamento de documentos de substituição de garantia de veículos, incluindo a comunicação com lojistas e a área interna.",
+                "responsavel": "Operações, Tecnologia, Produtos",
+                "prazo": "Curto prazo",
+                "impacto": "Redução do esforço do cliente, diminuição de recontatos e reclamações, melhoria da satisfação do cliente e agilidade na aprovação de substituições."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Treinamento da equipe de atendimento sobre como lidar com casos de documentos não localizados, incluindo a proatividade na busca por informações e a demonstração de empatia.",
+                "responsavel": "Treinamento, Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da qualidade do atendimento, aumento da resolutividade no primeiro contato e redução da frustração do cliente."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Reforçar a importância da clareza na comunicação de prazos e a validação do entendimento do cliente antes do encerramento da ligação.",
+                "responsavel": "Qualidade, Supervisão",
+                "prazo": "Imediato",
+                "impacto": "Redução de recontatos por dúvidas sobre prazos e melhoria da experiência do cliente."
+            }
+        ],
+        "conclusao_executiva": "O caso apresenta um ALERTA CRÍTICO devido à falha no processo de substituição de garantia de veículo, que deixou o cliente sem o carro e altamente frustrado. O desempenho do operador foi comprometido por inaderências e baixa resolutividade, resultando em um Score Operador de 0. A experiência do cliente foi extremamente negativa (Score Experiência 0), com alto esforço e fricção na jornada. A causa raiz principal é uma falha no processo de recebimento e localização de documentos. A ação prioritária é a revisão urgente do processo de substituição de garantia e o treinamento da equipe para lidar com essas situações de forma mais proativa e empática."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

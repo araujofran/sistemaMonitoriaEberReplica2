@@ -1,0 +1,374 @@
+{
+    "cabecalho": {
+        "data": "16/08/2026",
+        "protocolo": "260-782-155",
+        "cliente": "Andréa",
+        "cpf": "***.XXX.XXX-**",
+        "atendente": "Wilson",
+        "produto": "Quitação de Veículo",
+        "categoria": "Reenvio de Boleto de Quitação",
+        "canal": "Telefone"
+    },
+    "score_operador": 69.0,
+    "classificacao_operador": "Pode Melhorar",
+    "visao_geral": {
+        "status": "🟡 PONTO DE ATENÇÃO",
+        "resumo": "A cliente Andréa contatou a central de atendimento para relatar que o boleto de quitação de veículo, solicitado na semana anterior, não foi recebido com o anexo correto. O atendente Wilson registrou um novo protocolo, validou os dados da cliente e solicitou uma reanálise com prioridade para o envio do boleto, informando um prazo de até dois dias úteis, com urgência para o dia seguinte e prazo máximo até segunda-feira. O problema original de não recebimento do boleto não foi resolvido imediatamente, exigindo que a cliente aguarde novamente, o que gera um ponto de atenção devido ao retrabalho e esforço do cliente."
+    },
+    "feedback": {
+        "positivos": [
+            "O atendente Wilson demonstrou cortesia e tratamento respeitoso ao longo da interação, utilizando o nome da cliente e mantendo uma comunicação adequada.",
+            "Houve paciência e calma na condução do atendimento, sem interrupções à fala da cliente.",
+            "A comunicação foi clara e objetiva, transmitindo segurança nas informações sobre os próximos passos e prazos."
+        ],
+        "melhorias": [
+            "O atendente não demonstrou empatia genuína ou se desculpou pela falha anterior no envio do boleto, o que poderia ter melhorado o acolhimento da cliente.",
+            "A confirmação de dados cadastrais foi parcial, não abrangendo o mínimo de quatro dados para uma validação completa.",
+            "Não houve validação explícita do entendimento da cliente sobre os próximos passos e prazos informados.",
+            "O uso de gerundismo ('estou verificando', 'pedi uma reanálise') pode ser aprimorado para uma comunicação mais direta e profissional."
+        ],
+        "coaching": "Wilson, para aprimorar a experiência do cliente, é fundamental demonstrar empatia genuína e se desculpar por falhas anteriores, como o não recebimento do boleto. Além disso, reforce a validação de dados cadastrais, confirmando pelo menos quatro informações, e sempre valide o entendimento do cliente sobre os próximos passos e prazos. Atente-se também para evitar o uso de gerundismo, buscando uma comunicação mais assertiva."
+    },
+    "nota_monitoria": {
+        "relacionamento": 43.5,
+        "resolutividade": 2.5,
+        "cx": 23.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente utilizou 'Senhora Andréa' no início e no final do atendimento, demonstrando tratamento respeitoso."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não se desculpou pela falha anterior no envio do boleto, que motivou o recontato da cliente."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente ouviu a solicitação da cliente e buscou o protocolo anterior, demonstrando acolhimento à demanda."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Não foram identificadas frases ou comportamentos que demonstrassem empatia genuína pela situação da cliente, como 'Entendo sua frustração'."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou paciência ao aguardar as informações da cliente e ao acessar os dados."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente não interrompeu a fala da cliente durante a explicação do problema."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a calma e a postura profissional durante toda a interação."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A linguagem utilizada foi formal e apropriada para o contexto de atendimento bancário."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificados vícios de linguagem na fala do atendente."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente transmitiu segurança ao informar os procedimentos e prazos para o reenvio do boleto."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente utilizou gerundismo em frases como 'estou verificando' e 'pedi uma reanálise'."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "As informações sobre o prazo normal e a solicitação de urgência foram comunicadas de forma clara à cliente."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente foi objetivo na condução do atendimento, focando na resolução da solicitação do boleto."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve o foco na solicitação de reenvio do boleto de quitação, sem desviar do assunto principal."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Parcial",
+                "nota": 2.5,
+                "evidencia": "O atendente demonstrou proatividade ao solicitar uma reanálise com prioridade, mas não conseguiu resolver o problema de forma imediata."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não conseguiu evitar que a cliente tivesse que aguardar novamente pelo boleto e possivelmente recontatar, aumentando o esforço do cliente."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente iniciou o contato com a saudação institucional: 'Central de Atendimento Banco Daycoval, Wilson, bom dia.'"
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Parcial",
+                "nota": 2.0,
+                "evidencia": "O atendente solicitou o endereço da cliente para validação, mas não há evidência de confirmação de pelo menos quatro dados cadastrais."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente realizou sondagem adequada ao perguntar se o boleto era para quitação com recursos próprios e referente ao veículo."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente identificou corretamente o motivo do contato como o reenvio do boleto de quitação."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A cliente não precisou repetir a informação principal do problema, apenas forneceu o protocolo anterior quando solicitado."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não validou explicitamente o entendimento da cliente sobre os prazos e próximos passos informados."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Há risco de reincidência, pois o boleto pode não chegar novamente ou a cliente pode precisar recontatar se o prazo não for cumprido."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente informou os próximos passos e prazos: 'Vamos ver se até amanhã eles conseguem mandar para a senhora, tá bom? Aí, se não chegar, a senhora aguarda até segunda-feira'."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa da cliente era receber o boleto, o que não foi resolvido imediatamente, exigindo nova espera e recontato potencial."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente convidou a cliente para a pesquisa de satisfação: 'Só peço a gentileza de a senhora aguardar para avaliar o meu atendimento'."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o protocolo do atendimento no início: 'este atendimento gerou um número de protocolo, que é o 260-782-155'."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou os prazos para o reenvio do boleto: 'O prazo normal seria de dois dias úteis. Eu pedi urgência aqui. Normalmente, o prazo máximo seria só na segunda-feira'."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo previamente acordado neste atendimento. O atendente informou um novo prazo para uma nova solicitação."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente se despediu cordialmente da cliente: 'Um ótimo dia para a senhora. Tchau, tchau'."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não foi identificado uso de linguagem inadequada ou ofensiva por parte do atendente."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há evidências na transcrição de que o atendente tenha causado qualquer tipo de prejuízo à cliente."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo ou reconhecimento explícito do cliente ao atendimento do operador."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 10.0,
+        "esforco_cliente": "Médio",
+        "risco_reclamacao": "Baixo",
+        "interpretacao": "A experiência da cliente foi impactada negativamente pela necessidade de recontato para resolver um problema que deveria ter sido solucionado no primeiro contato. O esforço do cliente foi médio, pois precisou ligar novamente e aguardar um novo prazo. Embora o atendente tenha agido dentro de sua alçada para solicitar prioridade, a falha original no processo de envio do boleto gerou fricção e um risco de reincidência, resultando em um Score Experiência baixo. O humor da cliente permaneceu neutro, mas a situação de retrabalho é um ponto crítico para a jornada.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Reenvio de boleto de quitação",
+            "causa_identificada": "Falha no processo de envio do boleto de quitação, onde o e-mail foi enviado sem o anexo essencial.",
+            "causa_raiz": "Falha no sistema ou processo de geração e envio de documentos que resultou na ausência do anexo do boleto no e-mail.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A falha na entrega do boleto (anexo ausente) é uma questão de processo ou plataforma de envio de documentos, não de atuação do operador neste contato.",
+            "evidencia": "Cliente afirmou: 'Mandaram no meu e-mail, mas o boleto não chegou. Veio só o corpo do e-mail, apenas o assunto escrito. O boleto não veio anexo.'"
+        },
+        "insights": {
+            "insight_operacional": "O processo de envio de boletos de quitação precisa ser revisado e otimizado para garantir que os anexos sejam incluídos corretamente nos e-mails, evitando recontatos e retrabalho para o cliente e a operação.",
+            "apontamentos_cx": "A experiência do cliente foi prejudicada pela necessidade de recontato para um problema que deveria ter sido resolvido no primeiro contato. A falta de validação do entendimento e o risco de reincidência contribuem para uma experiência de alto esforço e fricção na jornada.",
+            "apontamentos_resolutividade": "A resolutividade foi parcial, pois o problema não foi resolvido imediatamente e a cliente ainda precisa aguardar um novo prazo, o que aumenta o esforço do cliente e a probabilidade de recontato.",
+            "oportunidades_operador": "O operador pode melhorar na demonstração de empatia genuína e na validação do entendimento do cliente sobre os próximos passos e prazos. Além disso, aprimorar a comunicação evitando o uso de gerundismo contribuirá para um atendimento mais profissional."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 1,
+                "evidencia": "O critério 'Sem risco de reincidência' (at_cx_classif1) foi classificado como 'Não', indicando que os próximos passos informados não foram suficientes para eliminar o risco de um novo contato."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 1,
+                "evidencia": "O critério 'Confirmação de dados' (at_cx_intro2) foi classificado como 'Parcial', pois não houve evidência de confirmação de pelo menos quatro dados cadastrais."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Alta",
+                "acao": "Revisar e otimizar o processo de geração e envio de boletos de quitação para garantir a inclusão correta dos anexos nos e-mails.",
+                "responsavel": "Área de Processos/Tecnologia",
+                "prazo": "Curto prazo",
+                "impacto": "Redução significativa de recontatos, melhoria da satisfação do cliente e diminuição do retrabalho operacional."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Treinar operadores em técnicas de empatia, validação de entendimento e confirmação completa de dados cadastrais.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Médio prazo",
+                "impacto": "Melhoria da experiência do cliente, aumento da resolutividade no primeiro contato e redução da fricção na jornada."
+            },
+            {
+                "prioridade": "Baixa",
+                "acao": "Reforçar a importância de evitar o uso de gerundismo na comunicação para promover uma linguagem mais direta e profissional.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Aprimoramento da clareza e profissionalismo da comunicação do operador."
+            }
+        ],
+        "conclusao_executiva": "O atendimento é classificado como Ponto de Atenção. Embora o operador Wilson tenha demonstrado bom desempenho em relacionamento e conduta, a experiência do cliente foi prejudicada por uma falha processual anterior no envio do boleto, resultando em alto esforço e risco de reincidência. A causa raiz principal é a falha no processo de envio de anexos. A ação prioritária é a revisão do processo de envio de boletos para evitar reincidências e melhorar a satisfação do cliente."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Neutro",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Média"
+}

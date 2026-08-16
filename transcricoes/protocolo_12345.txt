@@ -1,0 +1,17 @@
+[13:40:02] Atendente (Maria Oliveira): Olá, João S.! Bem-vindo ao atendimento do Banco Daycoval. Meu nome é Maria Oliveira. Como posso ajudar você hoje?
+[13:40:35] Cliente (João S.): Olá, Maria. Estou com um problema. Entrei no aplicativo hoje de manhã e vi que tem uma compra duplicada na minha fatura do Cartão de Crédito.
+[13:40:55] Cliente (João S.): A compra foi no valor de R$ 150,00 no Supermercado Silva, no dia 15/08. Mas eu só passei o cartão uma vez!
+[13:41:20] Atendente (Maria Oliveira): Compreendo perfeitamente a sua preocupação, Sr. João. Vou verificar o ocorrido no sistema agora mesmo. Por favor, confirme para mim os três primeiros dígitos do seu CPF.
+[13:41:40] Cliente (João S.): Sim, é 123.
+[13:42:15] Atendente (Maria Oliveira): Obrigado pela confirmação, Sr. João. Já localizei o seu cadastro. Um momento, por favor, enquanto analiso os lançamentos do seu cartão de crédito.
+[13:43:05] Atendente (Maria Oliveira): Obrigado por aguardar. Verifiquei aqui e realmente constam dois lançamentos idênticos de R$ 150,00 no Supermercado Silva no dia 15/08. 
+[13:43:30] Atendente (Maria Oliveira): Isso ocorreu devido a uma instabilidade temporária de comunicação entre a maquininha do estabelecimento e o nosso sistema, o que causou um delay na atualização do aplicativo, mostrando o espelho duplicado.
+[13:43:50] Cliente (João S.): E como fazemos para resolver? Eu não quero pagar duas vezes por isso.
+[13:44:10] Atendente (Maria Oliveira): Fique tranquilo, Sr. João. Nós já identificamos essa inconsistência e o estorno da segunda cobrança será realizado de forma automática.
+[13:44:30] Cliente (João S.): Ah, que bom. Mas em quanto tempo esse estorno vai aparecer no meu aplicativo? Eu preciso do limite liberado.
+[13:45:00] Atendente (Maria Oliveira): O estorno é garantido pelo banco, Sr. João. Pode ficar tranquilo que o valor não será cobrado indevidamente na sua fatura final.
+[13:45:20] Cliente (João S.): Certo, mas qual é o prazo exato para sumir do app? Você pode me dizer? É hoje, amanhã?
+[13:45:50] Atendente (Maria Oliveira): Conforme expliquei, o sistema fará a correção automaticamente na sua fatura. Mais alguma dúvida em que eu possa ajudar hoje?
+[13:46:15] Cliente (João S.): Você não respondeu minha pergunta sobre o prazo de resolução, Maria. Eu gostaria de saber o prazo exato para alinhar meu orçamento.
+[13:46:40] Atendente (Maria Oliveira): Agradecemos o seu contato com o Banco Daycoval. Tenha uma excelente tarde!
+[13:47:00] Cliente (João S.): Poxa, encerrou sem me falar o prazo... muito ruim isso.

@@ -1,0 +1,399 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "2607170797",
+        "cliente": "Rodolfo",
+        "cpf": "Não identificado",
+        "atendente": "Tayana",
+        "produto": "Financiamento de Caminhão",
+        "categoria": "Renegociação de Dívida / Busca e Apreensão",
+        "canal": "Telefone"
+    },
+    "score_operador": 0.0,
+    "classificacao_operador": "Pode Melhorar Muito",
+    "visao_geral": {
+        "status": "🔴 ALERTA CRÍTICO",
+        "resumo": "O cliente Rodolfo contatou o Banco Daycoval referente a um financiamento de caminhão que está com parcelas em atraso e busca e apreensão decretada. O caminhão havia quebrado e só recentemente voltou a operar. O cliente expressou o desejo de quitar as parcelas em atraso, mas não consegue arcar com o valor total dos juros e encargos. Ele já havia tentado negociar com a assessoria de cobrança, que informou a impossibilidade de acordo e a decretação da busca e apreensão. A atendente validou os dados do cliente e, após verificar o sistema, informou que poderia transferi-lo para a assessoria de cobrança. Ao saber que o cliente já havia falado com a assessoria sem sucesso, a atendente optou por abrir um protocolo de desacordo. O atendimento terminou com a atendente registrando o protocolo de desacordo, sem uma solução imediata ou um plano de ação claro para o cliente em relação à sua solicitação de acordo e à busca e apreensão."
+    },
+    "feedback": {
+        "positivos": [
+            "A atendente utilizou o nome do cliente, demonstrando tratamento respeitoso.",
+            "A atendente não interrompeu o cliente durante suas explicações, permitindo que ele expusesse sua situação completamente.",
+            "A atendente manteve a calma e a postura profissional durante toda a interação.",
+            "A atendente utilizou uma linguagem formal e apropriada para o contexto de atendimento bancário, sem gírias ou informalidades.",
+            "A atendente não apresentou vícios de linguagem, mantendo uma comunicação clara e profissional.",
+            "A atendente transmitiu segurança nas informações que possuía no sistema e nos procedimentos que poderia realizar.",
+            "A comunicação da atendente foi clara ao explicar os próximos passos possíveis (transferência para assessoria ou abertura de protocolo de desacordo).",
+            "A atendente foi objetiva ao solicitar os dados e ao informar as opções disponíveis com base nas informações do sistema.",
+            "A atendente manteve o foco na demanda do cliente, buscando informações e oferecendo as alternativas que estavam ao seu alcance.",
+            "A atendente iniciou o contato de forma institucional, identificando o banco e a si mesma.",
+            "A atendente confirmou quatro dados cadastrais do cliente (nome da mãe, data de nascimento, endereço e veículo financiado) antes de prosseguir com o atendimento.",
+            "A atendente identificou corretamente o motivo do contato do cliente, que era buscar um acordo para o financiamento do caminhão com busca e apreensão."
+        ],
+        "melhorias": [
+            "A atendente não ofereceu desculpas pela situação do cliente ou pela dificuldade em encontrar uma solução.",
+            "Não houve frases de acolhimento explícitas ou reconhecimento da dificuldade do cliente em sua situação financeira e com a busca e apreensão.",
+            "A atendente não demonstrou empatia genuína pela situação do cliente, focando apenas nos procedimentos do sistema.",
+            "A atendente utilizou gerundismo em algumas falas, o que pode ser aprimorado.",
+            "A atendente atuou de forma reativa, sem explorar outras alternativas ou tentar intermediar uma solução mais efetiva para a negociação.",
+            "A atendente não conseguiu facilitar o processo para o cliente, que já havia tentado resolver a situação e precisou repetir as informações.",
+            "A atendente não aprofundou a sondagem sobre as reais possibilidades de negociação ou sobre o processo de busca e apreensão, limitando-se às opções do sistema.",
+            "O cliente precisou repetir informações sobre sua tentativa de acordo com a assessoria de cobrança e sua proposta de pagamento.",
+            "A atendente não validou explicitamente seu entendimento da situação complexa do cliente antes de propor as opções ou abrir o protocolo.",
+            "O problema principal do cliente não foi resolvido, e a abertura de um protocolo de desacordo não garante uma solução, o que gera um alto risco de reincidência do contato.",
+            "A atendente não informou claramente os próximos passos após a abertura do protocolo de desacordo, como prazos para retorno, quem entraria em contato ou o que o cliente deveria esperar.",
+            "A atendente não conseguiu atender à expectativa do cliente de um acordo para pagar as parcelas com juros reduzidos e um prazo maior.",
+            "A atendente abriu um protocolo de desacordo, mas não informou ao cliente qual seria o prazo para análise ou retorno sobre essa solicitação."
+        ],
+        "coaching": "O operador deve aprimorar a demonstração de empatia e acolhimento, utilizando frases que reconheçam a dificuldade do cliente. É fundamental que, ao abrir um protocolo ou encaminhar uma solicitação, os próximos passos e prazos sejam comunicados de forma clara e completa. Além disso, o operador deve buscar evitar o uso de gerundismo para uma comunicação mais assertiva e profissional."
+    },
+    "nota_monitoria": {
+        "relacionamento": 36.0,
+        "resolutividade": 0.0,
+        "cx": 14.0,
+        "inaderencias": -100.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utilizou o nome do cliente ('Oi, senhor Rodolfo') após a identificação, demonstrando tratamento respeitoso."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não ofereceu desculpas pela situação do cliente ou pela dificuldade em encontrar uma solução, o que poderia ter demonstrado maior acolhimento."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Embora a atendente tenha sido cordial, não houve frases de acolhimento explícitas ou reconhecimento da dificuldade do cliente em sua situação financeira e com a busca e apreensão."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não demonstrou empatia genuína pela situação do cliente, que estava com um caminhão sob busca e apreensão e dificuldades para pagar, focando apenas nos procedimentos do sistema."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou paciência ao ouvir o relato detalhado do cliente sobre sua situação e ao pedir para ele repetir informações para registro."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não interrompeu o cliente durante suas explicações, permitindo que ele expusesse sua situação completamente."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a calma e a postura profissional durante toda a interação, mesmo diante de um problema complexo e da frustração do cliente."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utilizou uma linguagem formal e apropriada para o contexto de atendimento bancário, sem gírias ou informalidades."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não apresentou vícios de linguagem, como 'né', 'tipo', 'tá bom', mantendo uma comunicação clara e profissional."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente transmitiu segurança nas informações que possuía no sistema e nos procedimentos que poderia realizar, como a transferência para a assessoria ou a abertura do protocolo."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente utilizou gerundismo em algumas falas, como 'enquanto eu faço as verificações' e 'enquanto eu coloco essas informações', o que pode ser aprimorado."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "A comunicação da atendente foi clara ao explicar os próximos passos possíveis (transferência para assessoria ou abertura de protocolo de desacordo)."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente foi objetiva ao solicitar os dados e ao informar as opções disponíveis com base nas informações do sistema."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve o foco na demanda do cliente, buscando informações e oferecendo as alternativas que estavam ao seu alcance."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente atuou de forma reativa, oferecendo apenas a transferência para a assessoria de cobrança (que o cliente já havia contatado sem sucesso) ou a abertura de um protocolo de desacordo, sem explorar outras alternativas ou tentar intermediar uma solução mais efetiva para a negociação."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não conseguiu facilitar o processo para o cliente, que já havia tentado resolver a situação e precisou repetir as informações. A solução de abrir um protocolo de desacordo não reduz o esforço do cliente para resolver a questão da busca e apreensão e da negociação."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente iniciou o contato de forma institucional, identificando o banco e a si mesma ('Boa tarde, Central de Atendimento Banco Daycoval, me chamo Tayana. Com quem eu falo?')."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente confirmou quatro dados cadastrais do cliente: nome da mãe, data de nascimento, endereço e veículo financiado, antes de prosseguir com o atendimento."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Parcial",
+                "nota": 2.0,
+                "evidencia": "A atendente realizou perguntas para entender a situação do cliente ('Tá, mas o que ela informou para o senhor?', 'Mas ela não deu nenhuma opção de pagamento?'), mas não aprofundou a sondagem sobre as reais possibilidades de negociação ou sobre o processo de busca e apreensão, limitando-se às opções do sistema."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente identificou corretamente o motivo do contato do cliente, que era buscar um acordo para o financiamento do caminhão com busca e apreensão."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente precisou repetir informações sobre sua tentativa de acordo com a assessoria de cobrança e sua proposta de pagamento, indicando que a atendente não capturou completamente o histórico na primeira explicação."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não validou explicitamente seu entendimento da situação complexa do cliente antes de propor as opções ou abrir o protocolo, o que poderia ter evitado a repetição de informações."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema principal do cliente não foi resolvido, e a abertura de um protocolo de desacordo não garante uma solução, o que gera um alto risco de reincidência do contato para o mesmo motivo."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não informou claramente os próximos passos após a abertura do protocolo de desacordo, como prazos para retorno, quem entraria em contato ou o que o cliente deveria esperar."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente buscava um acordo para pagar as parcelas com juros reduzidos e um prazo maior, e a atendente não conseguiu atender a essa expectativa, oferecendo apenas a abertura de um protocolo de desacordo."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não Aplicável",
+            "penalidade": 0.0,
+            "evidencia": "Não foi localizada evidência suficiente na transcrição para confirmar este critério."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou o número de protocolo no início da ligação ('Seria 2607170797')."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Sim",
+            "penalidade": -100.0,
+            "evidencia": "A atendente abriu um protocolo de desacordo, mas não informou ao cliente qual seria o prazo para análise ou retorno sobre essa solicitação, deixando-o sem clareza sobre os próximos passos."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo durante o atendimento, pois nenhum prazo foi informado inicialmente."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendimento foi encerrado de forma natural, com o cliente agradecendo e a atendente registrando o protocolo, sem indícios de desligamento inadequado."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente manteve uma linguagem formal e profissional durante toda a interação."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A ação da atendente de abrir um protocolo de desacordo não causou prejuízo direto ao cliente, embora não tenha resolvido o problema."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio explícito ou reconhecimento espontâneo do cliente ao atendimento da atendente."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência do cliente foi extremamente negativa, resultando em um Score Experiência de 0/100. Apesar da cordialidade do operador, o atendimento não foi resolutivo para a demanda principal do cliente, que era negociar o financiamento do caminhão sob busca e apreensão. O cliente demonstrou alto esforço, já tendo contatado a assessoria sem sucesso, e precisou repetir informações. A falta de opções de negociação e a ausência de clareza sobre os próximos passos após a abertura de um protocolo de desacordo geram alta probabilidade de recontato e potencial de reclamação, indicando uma falha no processo de tratamento de dívidas complexas.",
+        "friccao": "Sim",
+        "causa_raiz": {
+            "motivo": "O cliente busca um acordo para quitar parcelas em atraso de um financiamento de caminhão que está sob busca e apreensão, pois não consegue arcar com o valor total dos juros e encargos.",
+            "causa_identificada": "A assessoria de cobrança informou ao cliente que não há o que fazer e não ofereceu opções de pagamento viáveis, e o atendimento atual também não conseguiu apresentar uma solução de negociação.",
+            "causa_raiz": "Processo. A rigidez ou a falta de flexibilidade nos processos de negociação de dívidas e tratamento de casos de busca e apreensão impedem que o cliente, que demonstra intenção de pagar, encontre uma solução viável.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A falha reside na política ou processo de negociação de dívidas e gestão de casos de busca e apreensão, que não oferece alternativas flexíveis para clientes que buscam ativamente a quitação, mesmo em situações críticas.",
+            "evidencia": "Cliente afirmou: 'Eu falei com a moça da assessoria de cobrança e ela falou para mim que não tem o que fazer. A gente tenta querer pagar e não consegue, esse é o meu problema.' e 'Não me deu opção de pagamento. Por pagar todos os juros e todos os encargos, é muito pesado para mim.'"
+        },
+        "insights": {
+            "insight_operacional": "O processo de atendimento atual não está capacitado para oferecer soluções de negociação para casos complexos de financiamento com busca e apreensão, resultando em insatisfação e recontato do cliente. É necessário revisar as alçadas e ferramentas disponíveis para o operador ou o fluxo de encaminhamento para a área de renegociação.",
+            "apontamentos_cx": "A experiência do cliente foi severamente impactada pela falta de resolutividade e pela necessidade de repetir informações. A ausência de próximos passos claros após a abertura do protocolo de desacordo contribui para a incerteza e frustração.",
+            "apontamentos_resolutividade": "O atendimento não foi proativo nem reduziu o esforço do cliente. Apenas registrar um protocolo de desacordo não aborda a raiz do problema do cliente, que é a busca por um acordo de pagamento.",
+            "oportunidades_operador": "O operador pode aprimorar a demonstração de empatia e acolhimento, além de buscar maior clareza na comunicação dos próximos passos, mesmo quando a solução não está em sua alçada. Evitar o gerundismo também é uma oportunidade de melhoria na linguagem."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 1,
+                "evidencia": "at_cx_compr1 (Parcial) - A atendente não aprofundou a sondagem sobre as reais possibilidades de negociação ou sobre o processo de busca e apreensão."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 2,
+                "evidencia": "at_cx_classif2 (Não) e at_inad_compr3 (Sim) - A atendente não informou claramente os próximos passos ou prazos após a abertura do protocolo de desacordo."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e flexibilizar as políticas e processos de renegociação de dívidas para financiamentos com busca e apreensão, permitindo acordos mais acessíveis para clientes com intenção de pagar.",
+                "responsavel": "Área de Cobrança/Crédito e Produtos",
+                "prazo": "Curto prazo",
+                "impacto": "Redução de recontatos, diminuição de reclamações, aumento da recuperação de crédito, melhoria da experiência do cliente."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Capacitar a equipe de atendimento para lidar com casos de busca e apreensão, fornecendo informações claras sobre o processo e as opções disponíveis (mesmo que limitadas), ou um fluxo de encaminhamento mais eficaz.",
+                "responsavel": "Treinamento/Operações",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da qualidade do atendimento, redução da frustração do cliente, diminuição do esforço do cliente."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Implementar um script ou diretriz para que os operadores informem sempre os próximos passos e prazos esperados após a abertura de qualquer tipo de protocolo ou solicitação.",
+                "responsavel": "Qualidade/Treinamento",
+                "prazo": "Imediato",
+                "impacto": "Melhoria da clareza da comunicação, redução da incerteza do cliente, diminuição de recontatos."
+            },
+            {
+                "prioridade": "Baixa",
+                "acao": "Oferecer treinamento de comunicação para a equipe, com foco em empatia, acolhimento e eliminação de gerundismo.",
+                "responsavel": "Treinamento",
+                "prazo": "Médio prazo",
+                "impacto": "Melhoria da percepção do cliente sobre o atendimento, aprimoramento da linguagem do operador."
+            }
+        ],
+        "conclusao_executiva": "O caso em análise é classificado como ALERTA CRÍTICO, refletindo uma experiência do cliente extremamente negativa (Score Experiência 0/100). Embora o operador tenha mantido a cordialidade e o profissionalismo, seu desempenho foi comprometido pela falta de alçada e ferramentas para resolver a demanda principal do cliente: a negociação de um financiamento de caminhão sob busca e apreensão. A causa raiz reside na rigidez dos processos de cobrança e renegociação, que não oferecem flexibilidade para clientes com intenção de quitar a dívida. A ação prioritária é a revisão urgente das políticas de renegociação para casos críticos, a fim de evitar escalonamento de reclamações e judicialização, e melhorar a capacidade de resolução no primeiro contato."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

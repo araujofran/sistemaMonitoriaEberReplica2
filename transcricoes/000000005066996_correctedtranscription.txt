@@ -1,0 +1,37 @@
+#Atendente: Central de Atendimento Banco Daycoval, Adriel. Boa tarde, com quem eu falo?
+
+#Cliente: Oi, meu nome é Estéia.
+
+#Atendente: Esta ligação gerou o protocolo 2606648481. Caso deseje anotar, eu repito. O que eu posso te ajudar?
+
+#Cliente: Eu precisava do boleto de quitação do meu cartão consignado.
+
+#Atendente: A senhora precisava do boleto de quitação do seu cartão consignado? É uma fatura antecipada, correto?
+
+#Cliente: Isso, do meu cartão consignado.
+
+#Atendente: Confirma para mim o CEP.
+
+#Cliente: 04864220.
+
+#Atendente: Nome da mãe?
+
+#Cliente: Lourdes Fonseca Pinto.
+
+#Atendente: Data de nascimento da senhora?
+
+#Cliente: 23/10/1966.
+
+#Atendente: Atualmente está com quantos anos?
+
+#Cliente: 59.
+
+#Atendente: Senhora, desculpa a demora, tudo bem? A Central de Atendimento que faz esse tipo de serviço, da geração do valor total, funciona só até às 17 horas. Eu não vou encaminhar a senhora para lá nem transferir, porque eles não vão conseguir te ajudar, já que passou do horário. Mas eu consigo te passar o telefone direto de lá para a senhora entrar em contato amanhã. Pode ser?
+
+#Cliente: Pode ser, sim. Pode falar para mim.
+
+#Atendente: É o 3004-5300.
+
+#Cliente: Tá bom. Obrigada, viu?
+
+#Atendente: Por nada. Peço desculpas por não ter conseguido ajudar. Banco Daycoval deseja uma excelente tarde.

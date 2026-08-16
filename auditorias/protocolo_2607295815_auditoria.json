@@ -1,0 +1,373 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "2607295815",
+        "cliente": "Vinícius",
+        "cpf": "Não identificado",
+        "atendente": "Julia",
+        "produto": "Financiamento de carro",
+        "categoria": "Baixa de Gravame/Alienação",
+        "canal": "Telefone"
+    },
+    "score_operador": 81.0,
+    "classificacao_operador": "Atende as expectativas",
+    "visao_geral": {
+        "status": "🟠 CASO RELEVANTE",
+        "resumo": "O cliente Vinícius entra em contato novamente com a Central de Atendimento do Banco Daycoval para tratar da baixa de gravame/alienação de seu financiamento de carro. Ele informa que sua irmã já fez a solicitação no Detran e possui o comprovante (PDF) da carta de quitação, mas o Detran alega que o banco não está resolvendo a situação. A atendente Julia esclarece o tipo de documento necessário e orienta o cliente a enviar o documento via WhatsApp do banco, abrindo um protocolo de reanálise e fornecendo o passo a passo detalhado para o envio, incluindo o novo número de protocolo. Ela informa um prazo de dois dias úteis para a reanálise. O cliente compreende as instruções e expressa satisfação com o auxílio da atendente, embora o problema principal não tenha sido resolvido na ligação."
+    },
+    "feedback": {
+        "positivos": [
+            "A atendente manteve um tratamento cordial e respeitoso durante toda a interação, utilizando o nome do cliente e demonstrando paciência.",
+            "A comunicação da atendente foi clara e objetiva, fornecendo instruções detalhadas sobre o processo de envio de documentos.",
+            "O atendente demonstrou proatividade ao abrir um protocolo de reanálise e orientar o cliente sobre os próximos passos para a resolução do problema."
+        ],
+        "melhorias": [
+            "A atendente não realizou a confirmação de dados cadastrais do cliente, o que é uma etapa importante para a segurança e identificação.",
+            "Não houve uma validação ativa do entendimento do cliente sobre o processo complexo de envio via WhatsApp, o que poderia reduzir o esforço e a chance de erro.",
+            "A atendente utilizou gerundismo em sua fala, o que pode ser aprimorado para uma comunicação mais formal e direta."
+        ],
+        "coaching": "Recomenda-se que o operador reforce a prática de confirmação de dados cadastrais no início do atendimento para garantir a segurança e a conformidade. Além disso, ao explicar processos complexos, é fundamental validar ativamente o entendimento do cliente, resumindo os passos e perguntando se ficou claro, em vez de apenas questionar se há dúvidas. Atentar-se à eliminação do gerundismo na comunicação também contribuirá para uma linguagem mais profissional."
+    },
+    "nota_monitoria": {
+        "relacionamento": 46.5,
+        "resolutividade": 7.5,
+        "cx": 26.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 1.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente utilizou o nome do cliente, 'Sr. Vinícius', durante a interação, demonstrando tratamento respeitoso."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Não foi localizada evidência suficiente na transcrição para confirmar este critério, pois não houve uma situação que exigisse desculpas explícitas e elas não foram oferecidas."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente se apresentou e perguntou como o cliente gostaria de ser chamado, demonstrando acolhimento inicial: 'Me chamo Julia. Como gostaria de ser chamado durante o atendimento?'"
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou compreensão ao problema do cliente e buscou uma solução ativa para a reanálise do gravame."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente aguardou o cliente atender uma ligação pessoal ('Peraí, minha mãe está me ligando') e repetiu informações quando solicitado, demonstrando paciência."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente não interrompeu o cliente de forma inadequada durante a conversa, permitindo que ele expusesse sua situação."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a calma e a postura profissional durante toda a interação, mesmo diante de um problema recorrente do cliente."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente utilizou uma linguagem formal e respeitosa, adequada ao contexto de atendimento bancário."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificados vícios de linguagem significativos na fala do atendente, contribuindo para uma comunicação clara."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou segurança nas informações fornecidas e no passo a passo do processo de envio de documentos via WhatsApp."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente utilizou gerundismo na frase 'Você já está conseguindo me auxiliar bem', o que pode ser aprimorado."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "As instruções fornecidas pelo atendente sobre o envio de documentos via WhatsApp foram claras e detalhadas, facilitando a compreensão do cliente."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente foi objetivo ao abordar o problema do cliente e focar na apresentação da solução e dos próximos passos."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve o foco na demanda principal do cliente, a baixa do gravame, sem desviar para outros assuntos."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente demonstrou proatividade ao abrir um protocolo de reanálise e orientar o cliente sobre o envio do documento, buscando uma solução para o problema recorrente."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Parcial",
+                "nota": 2.5,
+                "evidencia": "O atendente facilitou o processo de envio de documentos, mas o cliente ainda precisa realizar uma ação (enviar o documento via WhatsApp) e aguardar um novo prazo, o que representa um esforço adicional para a resolução do problema."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente iniciou o contato de forma institucional: 'Central de Atendimento Banco Daycoval, boa tarde. Me chamo Julia.'"
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Não há evidência de que o atendente tenha confirmado pelo menos quatro dados cadastrais do cliente. Apenas o nome foi utilizado após o cliente se identificar."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente realizou uma sondagem adequada ao confirmar o tipo de documento ('gravame do banco', 'alienação do banco') e o status com o cliente."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O motivo do contato, a baixa de gravame/alienação do financiamento do carro, foi corretamente identificado e confirmado pelo atendente."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O cliente não precisou repetir informações que já havia fornecido, indicando que o atendente acompanhou o histórico ou compreendeu rapidamente a situação."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não realizou uma validação ativa do entendimento do cliente sobre o processo complexo de envio via WhatsApp, como resumir os passos e perguntar se ficou claro. A pergunta 'O senhor tem alguma dúvida?' é reativa e não garante a validação completa."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema principal do cliente (baixa do gravame) não foi resolvido na ligação e depende de um processo externo de envio de documentos e reanálise, mantendo o risco de reincidência caso o processo falhe ou o prazo não seja cumprido."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente informou claramente os próximos passos, incluindo o número do WhatsApp, o formato da mensagem, o novo protocolo e o prazo para a reanálise."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O cliente expressou satisfação ao final do atendimento, afirmando: 'Você já está conseguindo me auxiliar bem, tá bom?'."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente solicitou que o cliente permanecesse na linha para avaliação do atendimento: 'peço, por gentileza, que permaneça na linha para avaliação do atendimento, ok?'."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente forneceu o novo número de protocolo ao cliente: 'É o 2607. ... 2958. ... 15.'"
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o prazo para a reanálise: 'eu acredito que vai ser dois dias úteis. É, dois dias úteis, tá bom?'."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo durante o atendimento. O prazo foi informado uma única vez."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento foi cordial e adequado, com o atendente agradecendo e se despedindo: 'Eu que agradeço. Tchau, tchau.'"
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A linguagem utilizada pelo atendente foi sempre adequada e profissional, sem termos ofensivos ou informais."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há indícios na transcrição de que o atendente tenha causado qualquer tipo de prejuízo ao cliente."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Sim",
+            "bonus": 1.0,
+            "evidencia": "O cliente elogiou espontaneamente o atendimento ao final da interação, afirmando: 'Você já está conseguindo me auxiliar bem, tá bom?'."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 10.0,
+        "esforco_cliente": "Médio",
+        "risco_reclamacao": "Baixo",
+        "interpretacao": "A experiência do cliente foi impactada negativamente pela necessidade de recontato para um problema já existente e pela exigência de um processo de envio de documentos via WhatsApp com regras específicas, o que gerou um esforço médio e fricção na jornada. Embora o operador tenha demonstrado um bom desempenho técnico e comportamental, o problema principal não foi resolvido na ligação, resultando em um baixo Score Experiência. A satisfação final do cliente se deu pela clareza dos próximos passos, mas a jornada ainda é complexa e dependente de ações do cliente e do banco.",
+        "friccao": "Alta fricção",
+        "causa_raiz": {
+            "motivo": "Baixa de gravame/alienação de financiamento de carro não realizada pelo banco.",
+            "causa_identificada": "Falha no processo de baixa de gravame/alienação, onde o banco não processou a quitação mesmo após a emissão do documento pelo Detran.",
+            "causa_raiz": "Não foi possível determinar a causa técnica exata da falha no processo de baixa do gravame com base apenas na transcrição. A evidência indica que o Detran já emitiu a carta de quitação, mas o banco não deu baixa, sugerindo uma falha na integração ou processamento interno.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "O cliente já havia solicitado a baixa e o Detran já havia emitido a carta de quitação, indicando que a falha está na etapa de processamento interno do banco para efetivar a baixa do gravame, e não na ação inicial do cliente.",
+            "evidencia": "Cliente: 'Minha irmã já fez a solicitação no Detran. É o banco que não está dando baixa. Minha irmã até tem o comprovante de que o Detran já fez essa carta de quitação, e o banco que não está resolvendo.'"
+        },
+        "insights": {
+            "insight_operacional": "A recorrência do contato para o mesmo problema de baixa de gravame, mesmo após a emissão da carta de quitação pelo Detran, indica uma falha no processo de integração ou na automação da baixa. É crucial revisar o fluxo para evitar que o cliente precise recontatar o banco para uma etapa que deveria ser automática ou mais fluida.",
+            "apontamentos_cx": "A necessidade de o cliente seguir um passo a passo complexo via WhatsApp para enviar um documento já existente, com regras específicas (hashtag, sem saudação), gera fricção e aumenta o esforço. A experiência do cliente seria melhorada com um processo de envio mais intuitivo ou com a proatividade do banco em buscar o documento diretamente do Detran ou de sistemas internos.",
+            "apontamentos_resolutividade": "Embora o atendente tenha fornecido um caminho para a reanálise, a resolução completa do problema não ocorreu na ligação. A dependência de um processo externo e um novo prazo de dois dias úteis para a reanálise mantém o problema em aberto e o risco de recontato.",
+            "oportunidades_operador": "O operador pode aprimorar a validação ativa do entendimento do cliente, especialmente em instruções complexas, para garantir que todos os passos foram compreendidos. Além disso, a confirmação de dados cadastrais no início do atendimento é uma prática essencial de segurança e conformidade que deve ser reforçada."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Registro incompleto",
+                "ocorrencias": 1,
+                "evidencia": "at_cx_intro2: Não houve confirmação de dados cadastrais do cliente."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Alta",
+                "acao": "Revisar e otimizar o processo de baixa de gravame/alienação para identificar e corrigir a falha que impede a efetivação automática após a quitação pelo Detran.",
+                "responsavel": "Processos/Tecnologia",
+                "prazo": "Curto prazo",
+                "impacto": "Redução drástica de recontatos e melhoria da satisfação do cliente."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Simplificar o processo de envio de documentos via WhatsApp, tornando-o mais intuitivo e menos propenso a erros por parte do cliente.",
+                "responsavel": "Canais Digitais/CX",
+                "prazo": "Médio prazo",
+                "impacto": "Redução do esforço do cliente e aumento da taxa de sucesso no envio de documentos."
+            },
+            {
+                "prioridade": "Baixa",
+                "acao": "Reforçar o treinamento dos operadores sobre a importância da confirmação de dados cadastrais e da validação ativa do entendimento do cliente em processos complexos.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Imediato",
+                "impacto": "Melhora na segurança, conformidade e experiência do cliente no atendimento."
+            }
+        ],
+        "conclusao_executiva": "Este caso é classificado como Relevante devido à recorrência do problema de baixa de gravame e ao esforço exigido do cliente, resultando em um baixo Score Experiência. Embora o operador Julia tenha demonstrado um desempenho que atende às expectativas, com boa comunicação e proatividade, a causa raiz do problema reside em uma falha de processo que impede a efetivação da baixa. A ação prioritária é a revisão do processo de baixa de gravame para eliminar a necessidade de recontato e ações adicionais do cliente, além de aprimorar a validação de dados e entendimento no atendimento."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Positivo",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Média"
+}

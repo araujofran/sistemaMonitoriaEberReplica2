@@ -1,0 +1,375 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "Não identificado",
+        "cliente": "Roberto",
+        "cpf": "Não identificado",
+        "atendente": "Eduardo",
+        "produto": "Financiamento de Veículo",
+        "categoria": "Reclamação de Direcionamento Incorreto",
+        "canal": "Telefone"
+    },
+    "score_operador": 0.0,
+    "classificacao_operador": "Pode Melhorar Muito",
+    "visao_geral": {
+        "status": "🟠 CASO RELEVANTE",
+        "resumo": "O cliente Roberto contatou o Banco Daycoval para dar seguimento a uma reclamação anterior, após ter sido incorretamente direcionado a um representante externo (E-Credi) que o instruiu a retornar ao banco. O atendente Eduardo realizou a validação de dados e buscou entender o histórico do direcionamento falho. Contudo, o atendimento foi interrompido sem uma solução efetiva ou a comunicação dos próximos passos e prazos, resultando em uma experiência de alto esforço e sem resolutividade para o cliente."
+    },
+    "feedback": {
+        "positivos": [
+            "O atendente realizou a saudação institucional e se identificou, demonstrando profissionalismo no início do contato.",
+            "O atendente manteve a calma e a paciência durante toda a interação, sem interromper o cliente.",
+            "O atendente conduziu a validação de dados de forma completa e segura, confirmando múltiplos dados cadastrais e do veículo.",
+            "O atendente demonstrou clareza e objetividade na comunicação, utilizando linguagem adequada e sem vícios."
+        ],
+        "melhorias": [
+            "O atendente não demonstrou empatia ou acolhimento diante da frustração do cliente por ter sido mal direcionado.",
+            "O atendente não informou os próximos passos ou prazos para a resolução da demanda, deixando o cliente sem visibilidade.",
+            "O atendimento não foi resolutivo, pois a demanda do cliente não foi solucionada na interação.",
+            "O atendente não validou o entendimento da situação com o cliente antes de ir buscar informações."
+        ],
+        "coaching": "Eduardo, é fundamental que, ao lidar com clientes que já passaram por um direcionamento incorreto, você demonstre empatia e acolhimento, reconhecendo o esforço do cliente. Além disso, mesmo em casos de verificação interna, sempre informe os próximos passos e um prazo estimado para retorno ou resolução, garantindo que o cliente tenha visibilidade sobre o andamento da sua demanda. Pratique validar o entendimento do cliente antes de prosseguir com ações internas."
+    },
+    "nota_monitoria": {
+        "relacionamento": 39.5,
+        "resolutividade": 0.0,
+        "cx": 20.0,
+        "inaderencias": -100.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente chamou o cliente pelo nome: 'Sr. Roberto'."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Atendente não pediu desculpas pelo direcionamento incorreto ou pelo retrabalho do cliente."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Atendente não demonstrou acolhimento à frustração do cliente por ter sido mal direcionado."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Atendente não expressou compreensão pela situação do cliente, mantendo uma postura apenas técnica."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente aguardou o cliente e não demonstrou impaciência."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente não interrompeu o cliente durante sua fala."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente manteve a calma e a postura profissional durante toda a interação."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente utilizou linguagem formal e respeitosa: 'Central de Atendimento Banco Daycoval, boa tarde. Meu nome é Eduardo, com quem eu falo?'"
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente não apresentou vícios de linguagem na comunicação."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente demonstrou segurança ao conduzir o atendimento e solicitar dados."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente não utilizou gerundismo durante a interação."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "Atendente se comunicou de forma clara e compreensível."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente foi objetivo na solicitação de dados e na busca por informações."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Atendente manteve o foco na demanda do cliente, sem desviar do assunto principal."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Atendente não teve postura proativa, não ofereceu alternativas ou antecipou dúvidas, apenas informou que iria verificar a situação."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Atendente não facilitou o processo nem reduziu o esforço do cliente, que já havia recontatado o banco e o atendimento terminou sem resolução ou próximos passos."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "Atendente iniciou o contato com saudação institucional e se identificou: 'Central de Atendimento Banco Daycoval, boa tarde. Meu nome é Eduardo, com quem eu falo?'"
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "Atendente confirmou múltiplos dados cadastrais (data de nascimento, nome da mãe, endereço) e dados do veículo (bem financiado, ano, modelo, placa)."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "Atendente realizou sondagem adequada para entender o histórico do direcionamento incorreto: 'No caso, te informaram o contato com quem o senhor tinha que entrar para fazer a tratativa, e entrando em contato, eles informaram que não era com eles, era diretamente com o banco?'"
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "Atendente identificou corretamente que o motivo do contato era a falha no direcionamento da reclamação anterior."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "Cliente expôs a situação uma vez e não precisou repetir informações para o atendente."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Atendente não validou o entendimento da situação com o cliente antes de ir buscar informações no sistema."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema do cliente não foi resolvido, o que mantém o risco de reincidência do contato."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Atendente não informou os próximos passos ou prazos para a resolução da demanda do cliente."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa do cliente era resolver a reclamação, e o atendimento foi interrompido sem uma solução ou plano de ação."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não Aplicável",
+            "penalidade": 0.0,
+            "evidencia": "O atendimento não chegou ao ponto de encerramento para que o convite à pesquisa de satisfação fosse realizado."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há evidência na transcrição de que um número de protocolo deveria ter sido fornecido e foi omitido."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Sim",
+            "penalidade": -100.0,
+            "evidencia": "Atendente não informou nenhum prazo para a verificação ou resolução da demanda do cliente."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve informação de prazo inicial para que pudesse ser alterada."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não Aplicável",
+            "penalidade": 0.0,
+            "evidencia": "O atendimento não foi encerrado, portanto não houve desligamento inadequado."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Atendente utilizou linguagem adequada e profissional durante toda a interação."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há evidência na transcrição de que o atendente causou algum prejuízo ao cliente."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo ou reconhecimento explícito do cliente ao atendimento."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Médio",
+        "interpretacao": "A experiência do cliente foi severamente comprometida devido a um processo falho de direcionamento de reclamações, que o obrigou a recontatar o banco. O alto esforço do cliente, a falta de resolução e a ausência de comunicação sobre próximos passos e prazos contribuíram para uma experiência negativa, apesar da cordialidade do operador. A falha de processo é a principal causa da insatisfação.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "O cliente ligou para dar continuidade a uma reclamação anterior, mas foi direcionado a um contato externo (E-Credi) que o informou que o assunto era com o banco.",
+            "causa_identificada": "O problema aconteceu devido a um direcionamento incorreto da reclamação inicial, fazendo com que o cliente tivesse que recontatar o banco.",
+            "causa_raiz": "Falha no processo de triagem e direcionamento de reclamações, que não encaminhou o cliente ao canal ou responsável correto na primeira interação.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A falha ocorreu no processo de direcionamento do cliente para a resolução da reclamação, que o enviou para um contato externo que não era o responsável, gerando retrabalho e insatisfação.",
+            "evidencia": "Cliente: 'Eu liguei ontem, vocês passaram o número de um telefone para mim, aí eu entrei em contato e o rapaz falou que o assunto não é com ele, que tem que ser diretamente com vocês.' e 'vocês mandaram o telefone de um representante, ele informa a respeito para ver os veículos. (...) da E-Credi.'"
+        },
+        "insights": {
+            "insight_operacional": "A reincidência do contato devido a um direcionamento incorreto na ligação anterior indica uma falha sistêmica ou de processo na triagem de reclamações, necessitando de revisão da base de conhecimento ou do fluxo de encaminhamento.",
+            "apontamentos_cx": "A experiência do cliente foi negativamente impactada pela necessidade de recontato e repetição do histórico, além da falta de resolução e de próximos passos claros neste atendimento, gerando frustração e incerteza.",
+            "apontamentos_resolutividade": "O atendimento não foi resolutivo, pois a demanda do cliente não foi solucionada e o atendente não conseguiu fornecer um plano de ação ou prazo, apenas informou que iria verificar, o que aumenta a probabilidade de recontato.",
+            "oportunidades_operador": "O operador poderia ter demonstrado mais empatia e acolhimento diante da frustração do cliente por ter sido mal direcionado. Além disso, a falta de informação sobre os próximos passos e prazos é uma oportunidade de melhoria na comunicação e gestão da expectativa do cliente."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 3,
+                "evidencia": "O atendente não informou os próximos passos (at_cx_classif2), não garantiu a ausência de risco de reincidência (at_cx_classif1) e não informou prazos (at_inad_compr3)."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e padronizar o processo de direcionamento de reclamações para garantir que os clientes sejam encaminhados corretamente na primeira interação, evitando retrabalho e frustração.",
+                "responsavel": "Área de Processos/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Redução significativa de recontatos, melhoria da satisfação do cliente e otimização da operação."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Treinar os atendentes sobre a importância de informar claramente os próximos passos e prazos, mesmo em situações de verificação interna, para gerenciar a expectativa do cliente.",
+                "responsavel": "Treinamento/Supervisão",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da comunicação, redução da ansiedade do cliente e aumento da percepção de resolutividade."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Reforçar a importância da empatia e do acolhimento em situações onde o cliente já expressa frustração ou retrabalho, validando seu sentimento.",
+                "responsavel": "Treinamento/Supervisão",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da experiência emocional do cliente e fortalecimento do relacionamento."
+            }
+        ],
+        "conclusao_executiva": "O atendimento analisado revela um 'Caso Relevante' impulsionado por uma falha processual no direcionamento inicial da reclamação do cliente, resultando em alto esforço e recontato. Embora o operador Eduardo tenha sido cordial e eficiente na validação de dados, a ausência de resolução, a falta de comunicação de próximos passos e prazos impactaram negativamente a experiência. A causa raiz reside no processo de encaminhamento de reclamações. A ação prioritária é a revisão imediata desse processo para mitigar reincidências e aprimorar a satisfação do cliente."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Neutro",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

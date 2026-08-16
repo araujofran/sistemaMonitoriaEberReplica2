@@ -1,0 +1,374 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "260788032",
+        "cliente": "Humberto e Tiara",
+        "cpf": "Não identificado",
+        "atendente": "Giovane/Giovanna",
+        "produto": "Financiamento de Veículo",
+        "categoria": "Negativação Indevida",
+        "canal": "Telefone"
+    },
+    "score_operador": 81.0,
+    "classificacao_operador": "Atende as expectativas",
+    "visao_geral": {
+        "status": "🔴 ALERTA CRÍTICO",
+        "resumo": "O cliente Humberto contatou o Banco Daycoval pela quinta vez para resolver a negativação indevida do nome de sua esposa, Tiara, no Serasa. O contrato de financiamento de veículo foi quitado em 05/06, mas a restrição persiste. Durante o atendimento, o operador precisou confirmar dados com a titular e, ao constatar a falta de resolução da área interna em protocolos anteriores, abriu uma reanálise com prazo de dois dias úteis. O cliente expressou extrema frustração, ameaçando recorrer à justiça para pedir indenização. O caso é crítico devido à reincidência do problema, o alto esforço do cliente e o risco judicial, evidenciando uma falha processual grave na baixa da negativação."
+    },
+    "feedback": {
+        "positivos": [
+            "O atendente demonstrou cordialidade e tratamento respeitoso, dirigindo-se ao cliente como 'Sr. Humberto' e à esposa como 'senhora Tiara'.",
+            "Houve pedidos de desculpas pelo transtorno ('Peço desculpa pelo transtorno causado') e pela demora ('desculpa a demora'), demonstrando acolhimento e empatia.",
+            "O operador manteve a paciência e a calma durante toda a interação, mesmo diante da irritação e das ameaças do cliente, sem interrupções inadequadas.",
+            "A comunicação foi adequada, sem vícios de linguagem e com clareza nas explicações, mantendo a objetividade e o foco na resolução.",
+            "O atendente foi proativo ao abrir uma reanálise e solicitar urgência, buscando uma alternativa para o cliente diante da ineficácia dos protocolos anteriores."
+        ],
+        "melhorias": [
+            "Apesar da clareza geral, foi identificado o uso de gerundismo ('o senhor, creio eu, já vai ser notificado'), que pode ser aprimorado para uma comunicação mais direta.",
+            "A resolutividade do problema foi baixa, pois a solução final ainda depende de ações futuras do banco, prolongando o esforço do cliente e gerando recontato."
+        ],
+        "coaching": "Revisar o uso de gerundismo em frases como 'creio eu, já vai ser notificado', optando por construções mais diretas e assertivas. Continuar aprimorando a proatividade na busca por soluções, mas sempre alinhando as expectativas do cliente sobre a resolução imediata versus a dependência de processos internos."
+    },
+    "nota_monitoria": {
+        "relacionamento": 50.0,
+        "resolutividade": 5.0,
+        "cx": 26.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente se dirigiu ao cliente como 'Sr. Humberto' e à esposa como 'senhora Tiara', demonstrando tratamento respeitoso."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente pediu desculpas pelo transtorno ('Peço desculpa pelo transtorno causado') e pela demora ('desculpa a demora')."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou acolhimento ao cliente, especialmente quando ele estava alterado, dizendo 'Eu compreendo, senhor, não tem problema, tá bom?'."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente expressou compreensão pela situação do cliente: 'Eu entendo. O senhor está dentro da lei, eu entendo.' e 'Eu compreendo, senhor, não tem problema'."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a paciência durante toda a interação, mesmo com o cliente irritado e fazendo ameaças."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente não interrompeu o cliente de forma inadequada, permitindo que ele expressasse sua frustração."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a calma e a postura profissional, mesmo sob pressão do cliente."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente utilizou linguagem formal e apropriada para o contexto de atendimento bancário."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificados vícios de linguagem na fala do atendente."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou segurança nas informações que possuía e na condução do atendimento, explicando os procedimentos."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A frase 'o senhor, creio eu, já vai ser notificado' não configura gerundismo, que seria o uso indevido do gerúndio para ações futuras. A construção está gramaticalmente correta."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "O atendente se expressou de forma clara, explicando a necessidade de confirmação de dados e o processo de reanálise."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve o foco na resolução do problema, mesmo com as interrupções e desabafos do cliente."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente direcionou a conversa para os passos necessários para a reanálise e a busca por uma solução."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente, ao perceber a falta de resposta da área interna, proativamente abriu uma reanálise e solicitou urgência, buscando uma alternativa para o cliente."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não conseguiu evitar que o cliente tivesse que esperar por uma solução futura, nem reduziu o esforço geral do cliente, que já havia feito múltiplos contatos e ainda terá que aguardar um novo prazo."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente iniciou o contato de forma institucional: 'Boa tarde, meu nome é Giovane. Com quem eu falo, por gentileza?' e 'Eu me chamo Giovanna, falo da Central de Atendimento Banco Daycoval'."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente confirmou múltiplos dados com a titular (nome da mãe, data de nascimento, e-mail, modelo e placa do veículo), garantindo a segurança da informação."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente fez perguntas para entender a natureza da negativação ('Está negativada com o quê?', 'receberam alguma notificação de protesto ou só consta o registro?'), buscando detalhes para a reanálise."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente identificou claramente o motivo do contato: negativação indevida no Serasa por contrato quitado."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente precisou repetir a informação sobre a negativação e o histórico de contatos várias vezes, especialmente no início e ao longo da conversa, evidenciando que a informação não foi absorvida ou registrada adequadamente nos contatos anteriores."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente validou o entendimento ao resumir a situação ('Então é o registro que consta no site do SPC/Serasa?') e ao confirmar a quitação do contrato."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema não foi resolvido, apenas uma reanálise foi aberta. Há um alto risco de reincidência se a reanálise não for efetiva ou se o prazo não for cumprido, o que já ocorreu em contatos anteriores."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente informou claramente os próximos passos: abertura de reanálise, prazo de dois dias úteis e expectativa de notificação até 06/07."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa do cliente era a resolução imediata da negativação, não a abertura de mais um protocolo de reanálise com um novo prazo, especialmente após múltiplos contatos anteriores sem sucesso."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente convidou o cliente para a pesquisa de satisfação: 'Peço encarecidamente que o senhor permaneça em linha para avaliar o meu atendimento na pesquisa de satisfação'."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o número de protocolo no início do atendimento: 'É o 260788032'."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o prazo para a reanálise: 'o prazo para essa reanálise é de dois dias úteis'."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo durante o atendimento. Um novo prazo foi estabelecido para a reanálise."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente encerrou o atendimento de forma profissional e institucional."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente manteve uma linguagem formal e respeitosa durante toda a interação."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente não causou prejuízo direto ao cliente durante este atendimento. O prejuízo potencial decorre da falha do processo do banco, não da ação do atendente nesta ligação."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "O cliente agradeceu a atenção, mas não houve um elogio espontâneo que indicasse que o atendente fez mais do que o esperado. O agradecimento está mais ligado à esperança de resolução do problema."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência do cliente foi extremamente negativa, resultando em um Score Experiência de 0/100. Isso se deve ao alto esforço exigido (múltiplos contatos sem resolução), à alta fricção na jornada (repetição de informações, necessidade de envolver a titular) e ao fato de o problema principal não ter sido resolvido, gerando um alto risco de reclamação e ação judicial. Embora o operador tenha demonstrado bom desempenho comportamental e técnico dentro de sua alçada, a falha processual do banco em resolver a negativação indevida impactou diretamente a experiência do cliente.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Manutenção da negativação indevida no Serasa após quitação de contrato de financiamento.",
+            "causa_identificada": "Falha na baixa da negativação e ineficácia na resolução de protocolos anteriores pela área interna.",
+            "causa_raiz": "A área interna do banco não processou a baixa da negativação do contrato quitado dentro do prazo legal e não respondeu aos protocolos de atendimento anteriores, resultando na reincidência do problema e na frustração do cliente.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A falha principal reside na ineficácia do processo interno do banco em dar baixa na negativação após a quitação do contrato e na falta de resposta da 'área interna' aos protocolos anteriores, levando à reincidência do problema.",
+            "evidencia": "Cliente: 'o nome dela está negativado por causa do banco. Ela já ligou aí três, quatro vezes... não resolvem esse problema.' Atendente: 'a área interna ainda não tem uma resposta concreta referente a essa solicitação efetuada'."
+        },
+        "insights": {
+            "insight_operacional": "A reincidência do problema de negativação indevida após quitação e a ineficácia dos protocolos anteriores indicam uma falha sistêmica ou de processo na área interna responsável pela baixa de restrições e no acompanhamento das solicitações. É crucial revisar o fluxo de trabalho e a comunicação entre as áreas para garantir a resolução em tempo hábil e evitar escaladas judiciais.",
+            "apontamentos_cx": "A necessidade de o cliente repetir informações e a não resolução do problema em múltiplos contatos geram alta fricção e frustração. A expectativa do cliente não foi atendida, pois ele buscava a baixa imediata da negativação, não a abertura de mais um protocolo, especialmente após experiências anteriores negativas.",
+            "apontamentos_resolutividade": "Embora o atendente tenha sido proativo ao abrir uma reanálise, a resolutividade do problema em si foi baixa, pois a solução final ainda depende de ações futuras do banco, prolongando o esforço do cliente e mantendo o risco de recontato.",
+            "oportunidades_operador": "O operador demonstrou excelente relacionamento e proatividade. A única oportunidade de melhoria identificada foi a utilização de gerundismo, que pode ser corrigida com treinamento específico em comunicação para garantir a máxima clareza e profissionalismo."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e otimizar o processo de baixa de negativação após quitação de contratos para garantir o cumprimento do prazo legal de 5 dias úteis.",
+                "responsavel": "Área de Processos/Operações",
+                "prazo": "Curto prazo",
+                "impacto": "Redução drástica da reincidência de negativação indevida, diminuição de reclamações e mitigação de riscos judiciais."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Implementar um sistema de acompanhamento proativo para protocolos de negativação indevida, com alertas para garantir a resolução dentro do SLA e comunicação efetiva com o cliente.",
+                "responsavel": "Área de Atendimento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria significativa da experiência do cliente, redução de recontatos e prevenção de escaladas para ouvidoria ou justiça."
+            },
+            {
+                "prioridade": "Baixa",
+                "acao": "Oferecer treinamento de comunicação para operadores, com foco na eliminação de gerundismo e na promoção de uma linguagem mais direta e assertiva.",
+                "responsavel": "Treinamento",
+                "prazo": "Médio prazo",
+                "impacto": "Aprimoramento da qualidade da comunicação do operador e percepção de maior profissionalismo."
+            }
+        ],
+        "conclusao_executiva": "Este caso é classificado como ALERTA CRÍTICO devido à reincidência de uma negativação indevida após a quitação do contrato, gerando alto esforço e frustração para o cliente, com ameaças de ação judicial. O operador demonstrou um desempenho 'Atende as expectativas', com 81.0 pontos, mantendo a cordialidade e proatividade. No entanto, a experiência do cliente foi severamente comprometida (Score Experiência 0/100) por uma falha processual do banco na baixa da restrição e na ineficácia dos protocolos anteriores. A ação prioritária é a revisão urgente do processo de baixa de negativação e o acompanhamento proativo dos protocolos para evitar novas escaladas e mitigar riscos legais."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

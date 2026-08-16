@@ -1,0 +1,374 @@
+{
+    "cabecalho": {
+        "data": "16/08/2026",
+        "protocolo": "2607153496",
+        "cliente": "Priscila",
+        "cpf": "411.XXX.XXX-02",
+        "atendente": "Érika",
+        "produto": "Substituição de Garantia de Veículo",
+        "categoria": "Documentação para Substituição de Garantia",
+        "canal": "Telefone"
+    },
+    "score_operador": 59.5,
+    "classificacao_operador": "Pode Melhorar",
+    "visao_geral": {
+        "status": "🟠 CASO RELEVANTE",
+        "resumo": "A cliente Priscila contatou o Banco Daycoval para resolver um problema persistente na substituição de garantia de veículo. Ela já havia enviado os documentos solicitados, incluindo a ficha de substituição de garantia assinada, e ligou anteriormente para confirmar o recebimento e a conformidade, sendo informada que estava tudo certo. No entanto, recebeu uma nova mensagem do banco solicitando novamente o mesmo documento, o que a deixou extremamente frustrada. A atendente Érika propôs abrir uma reanálise do protocolo e escalar o caso para seus superiores, pedindo prioridade, mas informou um prazo de até dois dias úteis para a reanálise. A cliente, já exausta após um mês de tentativas, aceitou a escalada, mas expressou sua insatisfação e ameaçou tomar medidas judiciais caso o problema não seja resolvido prontamente."
+    },
+    "feedback": {
+        "positivos": [
+            "A atendente Érika manteve a calma e a postura profissional durante toda a interação, mesmo diante da irritação e frustração da cliente Priscila, demonstrando paciência e não interrompendo a cliente durante seus desabafos.",
+            "A comunicação da atendente foi adequada, sem vícios de linguagem e transmitiu segurança nas informações sobre a abertura da reanálise e a escalada do caso.",
+            "A atendente foi objetiva ao propor a abertura de uma reanálise e a escalada do caso, mantendo o foco na solicitação da cliente."
+        ],
+        "melhorias": [
+            "A atendente não demonstrou proatividade para buscar uma solução imediata ou alternativa para a cliente, limitando-se a registrar e escalar o problema.",
+            "A sondagem realizada pela atendente não foi aprofundada o suficiente para identificar a causa raiz da falha na documentação, o que poderia ter evitado a repetição de informações pela cliente.",
+            "A atendente não demonstrou empatia genuína ou acolhimento ativo diante da alta frustração e do desabafo da cliente, apenas reagindo com um 'Sinto muito' pontual.",
+            "A utilização de gerundismo na comunicação da atendente pode ser aprimorada para uma linguagem mais direta e profissional."
+        ],
+        "coaching": "Érika, para aprimorar seu atendimento em situações de alta frustração do cliente, foque em aprofundar a sondagem para identificar a causa raiz do problema, buscando entender 'por que' a falha ocorreu, e não apenas 'o que' aconteceu. Demonstre empatia ativa, validando os sentimentos do cliente com frases como 'Compreendo sua frustração, Priscila, e lamento que esteja passando por isso'. Além disso, explore proativamente soluções alternativas ou a possibilidade de envolver um superior em tempo real para agilizar a resolução, sempre que possível. Revise o uso de gerundismo para uma comunicação mais assertiva."
+    },
+    "nota_monitoria": {
+        "relacionamento": 39.5,
+        "resolutividade": 0.0,
+        "cx": 20.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente cumprimentou a cliente pelo nome: 'Bom dia, Priscila.'"
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente expressou 'Sinto muito' após o desabafo da cliente sobre a situação."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Não houve um acolhimento inicial ou durante o desabafo que demonstrasse compreensão profunda da frustração da cliente, além de um 'Sinto muito' pontual."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não demonstrou empatia genuína, apenas reagiu com 'Sinto muito' após o desabafo, sem aprofundar na dor da cliente ou oferecer suporte emocional ativo."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a calma e a postura profissional mesmo com a cliente irritada e expressando frustração."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente permitiu que a cliente expusesse todo o seu histórico e frustração sem interrupções."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a calma e a postura profissional durante toda a interação, mesmo diante da irritação da cliente."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A linguagem utilizada foi formal, respeitosa e adequada ao contexto bancário."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificados vícios de linguagem na fala da atendente."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente transmitiu segurança nas informações que forneceu sobre a abertura da reanálise e a escalada do caso."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente utilizou gerundismo em frases como 'estou pedindo prioridade' e 'estou informando aos meus superiores'."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "As informações sobre a reanálise, a escalada e o prazo foram comunicadas de forma clara."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente foi objetiva ao propor a abertura de uma reanálise e a escalada do caso."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve o foco na solicitação da cliente e nas ações que poderia tomar para endereçá-la."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente atuou de forma reativa, registrando a insatisfação e escalando, mas não buscou uma solução imediata ou alternativa para a cliente, nem tentou verificar os documentos em tempo real ou com um superior durante a chamada."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não reduziu o esforço do cliente, que terá que aguardar mais dias por uma solução que já deveria ter sido dada, e precisou repetir todo o histórico."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente iniciou o atendimento com saudação institucional e se identificou: 'Central de Atendimento Banco Daycoval, meu nome é Érika. Com quem eu falo?'"
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Parcial",
+                "nota": 2.0,
+                "evidencia": "A atendente confirmou o CPF e o e-mail ('A senhora pode me passar o seu CPF para confirmação?', 'O e-mail da senhora permanece monteiroacis?'), mas não atingiu o mínimo de quatro dados cadastrais para ser classificado como 'Sim'."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não realizou uma sondagem aprofundada para entender a causa raiz do problema dos documentos (por que o banco continua pedindo algo já enviado e confirmado), apenas registrou a insatisfação da cliente."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O motivo principal do contato, a solicitação repetida da ficha de substituição de garantia assinada, foi claramente identificado."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A cliente precisou repetir o histórico de envio de documentos e sua frustração diversas vezes ao longo da interação."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente validou seu entendimento da situação da cliente: 'Vou colocar aqui que a senhora não concorda com a resposta e que o serviço não foi fornecido da forma solicitada, correto?'"
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema não foi resolvido na interação, apenas escalado para reanálise, o que mantém o risco de reincidência do contato para o mesmo problema."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente informou os próximos passos: abertura de reanálise, escalada para superiores e prazo de até dois dias úteis."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa da cliente era a resolução imediata do problema e a verificação do que realmente estava faltando, não ter que esperar mais dias por uma reanálise."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente solicitou a avaliação do atendimento: 'Eu peço que a senhora permaneça na linha para avaliar o atendimento.'"
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O protocolo foi informado no início do atendimento: 'Atendimento gerou o protocolo número 2607153496.'"
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou o prazo de até dois dias úteis para a reanálise: 'esse protocolo tem o prazo de até dois dias úteis.'"
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo durante a interação."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento foi padrão e adequado, com a atendente agradecendo e desejando um bom dia."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente manteve uma linguagem profissional e respeitosa durante toda a interação."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há evidência de que a ação ou inação da atendente nesta interação tenha causado prejuízo financeiro direto à cliente."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo ou reconhecimento explícito do cliente ao atendimento da atendente."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência da cliente foi extremamente negativa, resultando em um Score Experiência de 0/100. O problema principal não foi resolvido, exigindo alto esforço da cliente que precisou repetir informações e aguardar por uma reanálise. A frustração da cliente escalou ao ponto de ameaçar medidas judiciais, indicando uma falha significativa no processo do banco. Embora o operador tenha mantido a cordialidade, sua atuação reativa e a falta de proatividade para resolver a questão de forma imediata contribuíram para a má experiência, mesmo que a causa raiz seja processual.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Problema com a substituição de garantia de veículo, especificamente a solicitação repetida da ficha de substituição de garantia assinada, que a cliente afirma já ter enviado e confirmado.",
+            "causa_identificada": "Falha no processo de recebimento, validação ou comunicação interna dos documentos enviados pela cliente, resultando em retrabalho e frustração.",
+            "causa_raiz": "A origem principal da falha reside na ineficiência do processo de gestão de documentos e na falta de comunicação ou integração entre as áreas do banco responsáveis pela análise da documentação de substituição de garantia. Isso leva à solicitação repetida de documentos já enviados e confirmados como corretos.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A responsabilidade é do processo, pois a falha está na gestão e comunicação dos documentos internamente, levando à repetição de solicitações e à falta de resolução para o cliente.",
+            "evidencia": "Cliente: 'o banco me mandou uma mensagem falando que eu tinha que mandar a ficha de substituição de garantia assinada, só que eu mandei assinada. Eu quero saber o que mais eu preciso mandar assinado.' e 'Toda vez que eu envio um documento, nunca é suficiente. Eu ligo, pergunto se está precisando de mais alguma coisa, falam que já está tudo certo. Pergunto se está abrindo, falam que está abrindo. Pergunto se precisa de mais alguma coisa, dizem que não precisa. Aí eu espero um dia, três dias ou cinco dias, e a resposta que eu tenho é que está faltando documento.'"
+        },
+        "insights": {
+            "insight_operacional": "O processo de recebimento e validação de documentos para substituição de garantia precisa ser revisado urgentemente para evitar solicitações repetidas e garantir a comunicação eficaz entre as áreas, minimizando o retrabalho do cliente e a insatisfação. A falta de um mecanismo para verificar o status real dos documentos em tempo real é uma lacuna crítica.",
+            "apontamentos_cx": "A experiência do cliente foi severamente impactada pela repetição de informações, o alto esforço para resolver o problema e a falta de resolução imediata, gerando frustração extrema e ameaças de medidas legais. A jornada do cliente é de alta fricção e baixo valor percebido.",
+            "apontamentos_resolutividade": "A atendente não demonstrou proatividade para buscar uma solução imediata ou alternativa, limitando-se a registrar e escalar, o que não resolveu o problema na primeira instância e aumentou o esforço do cliente. A falta de autonomia ou ferramentas para uma verificação mais aprofundada contribuiu para a não resolutividade.",
+            "oportunidades_operador": "O operador poderia ter aprofundado a sondagem para entender a causa raiz da falha na documentação, demonstrar empatia mais ativa e buscar uma solução mais imediata, como envolver um superior em tempo real para verificar os documentos ou oferecer um acompanhamento mais próximo."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 1,
+                "evidencia": "A atendente não realizou uma sondagem aprofundada para entender a causa raiz do problema dos documentos (at_cx_compr1 = Não)."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 1,
+                "evidencia": "A confirmação de dados foi parcial, não atingindo o mínimo de quatro dados cadastrais (at_cx_intro2 = Parcial)."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e otimizar o processo de recebimento, validação e comunicação interna de documentos para substituição de garantia, garantindo que documentos já enviados e confirmados não sejam solicitados novamente.",
+                "responsavel": "Área de Processos/Operações",
+                "prazo": "Curto prazo",
+                "impacto": "Redução drástica de recontatos, melhoria da satisfação do cliente, mitigação de riscos legais e operacionais."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Treinamento para operadores sobre sondagem aprofundada em casos de problemas recorrentes de documentação e técnicas de empatia ativa para clientes em alta frustração.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da experiência do cliente, aumento da resolutividade em primeiro contato e redução do esforço do cliente."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Implementar ferramenta ou processo que permita ao operador verificar o status detalhado dos documentos ou escalar para verificação imediata por um superior em casos críticos durante a chamada.",
+                "responsavel": "Tecnologia/Operações",
+                "prazo": "Médio prazo",
+                "impacto": "Aumento da resolutividade em primeiro contato, redução do esforço do cliente e maior agilidade na resolução de problemas complexos."
+            }
+        ],
+        "conclusao_executiva": "O caso é classificado como relevante devido à não resolução do problema da cliente, o alto esforço exigido e o risco de medidas judiciais. O operador obteve um desempenho 'Pode Melhorar' (59.5/100), demonstrando cordialidade e clareza, mas falhou em proatividade, empatia genuína e sondagem adequada, contribuindo para a experiência negativa do cliente (Score Experiência 0/100). A causa principal do contato reside em uma falha de processo na gestão de documentos. A ação prioritária é a revisão urgente do processo de substituição de garantia para evitar a repetição de solicitações e mitigar riscos legais."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Neutro",
+    "probabilidade_recontato": "Alta"
+}

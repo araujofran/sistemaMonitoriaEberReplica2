@@ -1,0 +1,2 @@
+# Cole sua chave de API do Gemini aqui
+COLE_SUA_CHAVE_GEMINI_AQUI

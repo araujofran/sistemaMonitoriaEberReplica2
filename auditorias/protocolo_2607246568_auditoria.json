@@ -1,0 +1,375 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "260-724-6568",
+        "cliente": "Evandro Brasil",
+        "cpf": "Não identificado",
+        "atendente": "Cleitson",
+        "produto": "Veículo (Gravame)",
+        "categoria": "Liberação de Gravame",
+        "canal": "Telefone"
+    },
+    "score_operador": 0.0,
+    "classificacao_operador": "Pode Melhorar Muito",
+    "visao_geral": {
+        "status": "🔴 ALERTA CRÍTICO",
+        "resumo": "O cliente Evandro Brasil contatou o Banco Daycoval para reclamar sobre a não liberação do gravame de seu veículo, um Ford Fox placa PAB-3H13. Ele relata que o problema persiste há meses, com solicitações de documentos já enviados. O atendente Cleitson realizou a confirmação de dados e informou que o banco aguarda o boletim de ocorrência ou carta da seguradora. O cliente, frustrado, reiterou que já havia enviado esses documentos há meses. A interação terminou sem resolução, com o atendente pedindo um momento para verificar novamente, o que configura uma inaderência crítica pela falta de prazo e um alto risco de reclamação e recontato."
+    },
+    "feedback": {
+        "positivos": [
+            "O atendente iniciou o contato identificando o banco e a si mesmo, e perguntou como o cliente gostaria de ser chamado, demonstrando cortesia inicial.",
+            "Manteve a calma e a postura profissional durante toda a interação, mesmo diante da frustração expressa pelo cliente.",
+            "Realizou a confirmação de dados de forma completa, solicitando 5 informações cadastrais."
+        ],
+        "melhorias": [
+            "Demonstrar empatia genuína em relação à frustração do cliente com o problema recorrente, em vez de apenas ler informações do sistema.",
+            "Evitar o uso de gerundismo na comunicação para maior clareza e profissionalismo.",
+            "Atuar de forma proativa, investigando a discrepância entre a afirmação do cliente e a informação do sistema sobre os documentos já enviados.",
+            "Validar o entendimento do cliente sobre a situação e os próximos passos, especialmente após a expressão de frustração.",
+            "Informar claramente os próximos passos e prazos para a resolução do problema, evitando a inaderência de falta de informação sobre prazo."
+        ],
+        "coaching": "Cleitson, é fundamental que, ao lidar com clientes que expressam frustração por problemas recorrentes, você vá além da leitura do sistema. Busque entender a raiz da insatisfação, investigue por que os documentos já enviados não foram processados e ofereça um plano de ação claro com prazos definidos. A proatividade em resolver a causa da repetição do contato e a comunicação transparente dos próximos passos são essenciais para melhorar a experiência do cliente e evitar recontatos."
+    },
+    "nota_monitoria": {
+        "relacionamento": 39.0,
+        "resolutividade": 0.0,
+        "cx": 12.0,
+        "inaderencias": -100.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente cumprimentou o cliente pelo nome ('Seu Evandro, tudo bem?') e o utilizou durante a interação."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente pediu desculpas pela ausência em linha após um momento de espera ('Peço desculpas pela ausência em linha.')."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou acolhimento ao perguntar 'Como o senhor gostaria de ser chamado durante o nosso atendimento?' e ao se desculpar pela ausência."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Não houve uma demonstração explícita de empatia em relação à frustração do cliente com o problema recorrente, a resposta foi técnica e focada na leitura do sistema."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a calma e a postura profissional mesmo diante da frustração expressa pelo cliente e da repetição de informações."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não há evidências de que o atendente tenha interrompido o cliente durante suas falas."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a calma e a postura profissional durante toda a interação, mesmo com o cliente expressando frustração."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A comunicação do atendente foi formal, respeitosa e adequada ao contexto profissional."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente não apresentou vícios de linguagem na transcrição."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Parcial",
+                "nota": 1.75,
+                "evidencia": "O atendente demonstrou segurança ao confirmar os dados e ler a tratativa do sistema, mas a falta de uma solução efetiva para o problema recorrente do cliente pode ter transmitido uma sensação de insegurança na resolução."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente utilizou gerundismo ('estou verificando', 'estamos no aguardo')."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Parcial",
+                "nota": 2.25,
+                "evidencia": "O atendente foi claro ao explicar os documentos necessários, mas a clareza foi comprometida pelo fato de o cliente já ter enviado esses documentos, indicando uma falha no processo ou na comunicação anterior que não foi endereçada."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente foi objetivo ao conduzir a confirmação de dados e ao apresentar a informação do sistema."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve o foco na solicitação do cliente, buscando informações no sistema."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente atuou de forma reativa, lendo a informação do sistema e reiterando a necessidade de documentos que o cliente já havia enviado, sem oferecer uma alternativa ou investigar a falha no processo de recebimento."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não facilitou o processo, pois reiterou a necessidade de documentos que o cliente já havia enviado, aumentando o esforço do cliente que precisará novamente provar que já enviou ou reenviar."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente iniciou o contato identificando o banco e a si mesmo ('Banco Daycoval, boa noite. Me chamo Cleitson.')."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente confirmou a data de nascimento, nome da mãe, e-mail, modelo e placa do veículo, totalizando 5 dados cadastrais."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A sondagem não foi adequada, pois o atendente apenas leu a informação do sistema sobre a pendência de documentos, sem investigar por que o cliente já havia enviado esses documentos e eles não foram processados."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente identificou o motivo principal do contato como a liberação do gravame e a pendência de documentos."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente precisou repetir informações cruciais, como o fato de já ter enviado os documentos há meses ('Eu já mandei isso tudo para vocês. Já tem meses que eu mandei isso para vocês.')."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não validou o entendimento do cliente sobre a solução ou os próximos passos, especialmente após o cliente expressar que já havia enviado os documentos."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema não foi resolvido e a solução apresentada foi a repetição de uma solicitação já atendida pelo cliente, o que indica alto risco de reincidência do contato."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não informou os próximos passos claros e efetivos para a resolução do problema, apenas reiterou a necessidade de documentos já enviados. A conversa terminou com o atendente pedindo um momento para verificar novamente, sem um desfecho."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente expressou claramente que o problema não estava sendo resolvido e que as informações eram repetitivas ('Todo dia é uma história e eu nunca tenho uma resposta'). A expectativa de resolução não foi atendida."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A interação foi encerrada abruptamente pelo fim da transcrição, sem que o atendente tivesse a oportunidade de direcionar para pesquisa."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o número de protocolo no início do atendimento ('nossa ligação gerou um número de protocolo, que é 260-724-6568')."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Sim",
+            "penalidade": -100.0,
+            "evidencia": "O atendente não informou um prazo para a nova verificação ou para a resolução do problema, apenas disse 'Só mais um momento'."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo, mas sim a falta de um prazo claro."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A transcrição termina com o atendente pedindo um momento, não há evidência de desligamento inadequado."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente utilizou linguagem formal e adequada."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há evidência de que o atendente tenha causado prejuízo direto ao cliente durante esta interação. O prejuízo é decorrente da falha de processo anterior."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo do cliente."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência do cliente foi extremamente negativa, com um Score Experiência de 0/100. O cliente demonstrou alto esforço, precisando repetir informações e contatar o banco diversas vezes para um problema que se arrasta há meses. A falta de resolução na interação, a reiteração de solicitações de documentos já enviados e a ausência de próximos passos claros contribuíram para uma alta fricção na jornada e um humor negativo. A falha principal reside no processo do banco, que não está processando os documentos do cliente, gerando frustração e potencial de recontato e reclamação.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Liberação de gravame de veículo não realizada devido à solicitação repetida de documentos já enviados.",
+            "causa_identificada": "Documentos enviados pelo cliente não foram processados ou registrados corretamente no sistema do banco, levando à reiteração da mesma solicitação.",
+            "causa_raiz": "Falha no processo de recebimento, validação e atualização do status dos documentos para liberação do gravame, resultando em informações desatualizadas no sistema e retrabalho para o cliente.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A falha principal reside no processo de tratamento e acompanhamento dos documentos para liberação do gravame, que não está registrando ou processando corretamente os envios do cliente, conforme evidenciado pela repetição da solicitação.",
+            "evidencia": "Cliente afirma: 'Eu já mandei isso tudo para vocês. Já tem meses que eu mandei isso para vocês. É isso que eu não entendo. A última vez que eu mandei foi no dia 5 do mês passado.' Atendente lê do sistema: 'Estamos no aguardo do boletim de ocorrência. Por gentileza, encaminhar o boletim de ocorrência referente à perda total do veículo.'"
+        },
+        "insights": {
+            "insight_operacional": "O processo de recebimento e validação de documentos para liberação de gravame precisa ser revisado urgentemente para evitar a repetição de solicitações de documentos já enviados, que gera alto esforço e frustração para o cliente. É crucial garantir que os envios sejam registrados e o status atualizado em tempo real.",
+            "apontamentos_cx": "A experiência do cliente foi severamente impactada pela necessidade de repetir informações e pela falta de resolução de um problema que se arrasta há meses, resultando em alta fricção e insatisfação. A comunicação de pendências deve ser alinhada com o histórico do cliente para evitar retrabalho.",
+            "apontamentos_resolutividade": "A resolutividade foi nula, pois o atendente não conseguiu resolver o problema na interação, apenas reiterou uma solicitação já cumprida pelo cliente, sem investigar a causa raiz da falha no processo de recebimento de documentos.",
+            "oportunidades_operador": "O operador poderia ter demonstrado mais proatividade ao investigar a discrepância entre a afirmação do cliente e a informação do sistema, buscando uma solução que não envolvesse a repetição de ações já realizadas pelo cliente. Além disso, a falta de um prazo para a nova verificação é uma oportunidade de melhoria na comunicação."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 1,
+                "evidencia": "O atendente não investigou a fundo a razão pela qual os documentos já enviados pelo cliente ainda constavam como pendentes (at_cx_compr1 = Não)."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 2,
+                "evidencia": "O atendente não informou os próximos passos claros para a resolução do problema nem um prazo para a nova verificação (at_cx_classif2 = Não e at_inad_compr3 = Sim)."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 0,
+                "evidencia": "Não foi localizada evidência suficiente na transcrição para confirmar este critério."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e otimizar o processo de recebimento e validação de documentos para liberação de gravame, garantindo o registro e atualização em tempo real.",
+                "responsavel": "Área de Operações / Tecnologia",
+                "prazo": "Curto prazo",
+                "impacto": "Redução drástica de recontatos, aumento da satisfação do cliente e diminuição de riscos regulatórios."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Treinar operadores para investigar ativamente discrepâncias entre informações do cliente e do sistema, buscando a causa raiz de problemas recorrentes.",
+                "responsavel": "Treinamento / Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhora na resolutividade no primeiro contato e na experiência do cliente."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Implementar a obrigatoriedade de informar prazos claros e próximos passos em todas as interações, especialmente em casos de pendência ou reanálise.",
+                "responsavel": "Qualidade / Operações",
+                "prazo": "Imediato",
+                "impacto": "Redução de inaderências e aumento da transparência para o cliente."
+            }
+        ],
+        "conclusao_executiva": "O caso é classificado como Alerta Crítico devido à falha persistente na liberação do gravame e ao alto esforço do cliente. O operador Cleitson obteve um Score de 0/100, classificado como 'Pode Melhorar Muito', principalmente pela inaderência de falta de prazo e pela baixa resolutividade. A experiência do cliente foi extremamente negativa (Score Experiência 0/100). A causa raiz principal é uma falha no processo de tratamento de documentos, que exige a revisão urgente das operações e um plano de ação para melhorar a comunicação e a proatividade dos operadores."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Neutro",
+    "probabilidade_recontato": "Alta"
+}

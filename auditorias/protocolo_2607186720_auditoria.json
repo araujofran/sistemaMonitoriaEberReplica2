@@ -1,0 +1,375 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "290-718-6720",
+        "cliente": "Júlio",
+        "cpf": "Não identificado",
+        "atendente": "Luana",
+        "produto": "Financiamento de Veículo",
+        "categoria": "Negociação de Dívida",
+        "canal": "Telefone"
+    },
+    "score_operador": 69.75,
+    "classificacao_operador": "Pode Melhorar",
+    "visao_geral": {
+        "status": "🟠 CASO RELEVANTE",
+        "resumo": "O cliente Júlio contatou o banco buscando negociar o financiamento de seu veículo, que possui parcelas em atraso e problemas mecânicos. Ele já havia tentado negociação com a assessoria Fabrício Steader, mas as propostas não foram aceitas e houve falha na emissão de um boleto com data de vencimento específica. A atendente Luana verificou o histórico e informou a impossibilidade de resolução imediata, registrando um protocolo de reanálise para a possibilidade de emissão do boleto para o dia 20 do mês corrente. O cliente aguardará o retorno por e-mail, o que gera alto esforço e probabilidade de recontato, classificando o caso como relevante devido à falta de resolução no primeiro contato e ao histórico de frustração."
+    },
+    "feedback": {
+        "positivos": [
+            "A atendente manteve a cordialidade e o tratamento respeitoso durante toda a interação, chamando o cliente pelo nome e utilizando linguagem adequada.",
+            "Demonstrou paciência ao ouvir o longo relato do cliente sobre suas dificuldades e o histórico de negociações.",
+            "Manteve a calma e o foco na solicitação do cliente, sendo objetiva ao informar as limitações e a solução possível via protocolo.",
+            "Informou claramente os próximos passos e o prazo para o retorno do protocolo de reanálise."
+        ],
+        "melhorias": [
+            "Não confirmou os dados cadastrais do cliente no início do atendimento, comprometendo a segurança e o protocolo de identificação.",
+            "Não demonstrou empatia genuína ao não pedir desculpas pela situação do cliente ou pelas tentativas anteriores frustradas, focando apenas no processo.",
+            "A solução apresentada não atendeu à expectativa do cliente de resolução imediata, exigindo um novo contato e gerando alto esforço.",
+            "O cliente precisou repetir informações importantes sobre o histórico da negociação e a data desejada para o boleto."
+        ],
+        "coaching": "Recomenda-se que o operador reforce a prática de confirmação de dados cadastrais no início do atendimento para garantir a segurança e a conformidade. Além disso, é importante desenvolver a escuta ativa para identificar oportunidades de demonstrar empatia genuína, reconhecendo a frustração do cliente e pedindo desculpas pela situação, mesmo quando a resolução imediata não é possível. Pratique o resumo do entendimento para evitar que o cliente precise repetir informações."
+    },
+    "nota_monitoria": {
+        "relacionamento": 45.25,
+        "resolutividade": 2.5,
+        "cx": 22.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente cumprimentou o cliente utilizando seu nome: 'Bom dia, senhor Júlio, tudo bem?'"
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não expressou desculpas pela situação do cliente ou pelas tentativas anteriores frustradas de negociação."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente ouviu o relato do cliente sobre suas dificuldades e registrou o protocolo de reanálise, demonstrando acolhimento à demanda."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Parcial",
+                "nota": 1.75,
+                "evidencia": "A atendente ouviu o relato do cliente sobre as dificuldades com o carro e as restrições no nome, mas a resposta foi focada no processo ('Infeliamente a gente não consegue...'), sem uma demonstração mais profunda de empatia."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou paciência ao ouvir o longo relato do cliente sobre o histórico da negociação e os problemas do veículo, sem interromper."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não interrompeu o cliente durante seu relato, permitindo que ele expusesse toda a situação."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a calma e a postura profissional durante toda a interação, mesmo diante da frustração do cliente."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utilizou linguagem formal e respeitosa durante todo o atendimento."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "Não foram identificados vícios de linguagem na fala da atendente."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou segurança ao explicar o processo de registro de protocolo e os próximos passos."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não utilizou gerundismo em sua comunicação."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "As informações sobre o registro do protocolo, o prazo de retorno e a forma de comunicação (e-mail) foram transmitidas de forma clara ao cliente."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente foi objetiva ao informar as limitações de contato direto com a área interna e ao propor a abertura de um protocolo como solução."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve o foco na solicitação do cliente de negociação e emissão de boleto, buscando a solução possível dentro de sua alçada."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Parcial",
+                "nota": 2.5,
+                "evidencia": "A atendente ofereceu registrar um novo protocolo de reanálise e colocou a notificação de caso crítico para prioridade, demonstrando proatividade dentro de suas limitações, mas não conseguiu resolver a emissão do boleto diretamente."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente precisará aguardar o retorno do protocolo por e-mail e, se concordar com a negociação, entrar em contato novamente para solicitar o envio do boleto, o que representa um esforço adicional e não reduz a necessidade de novas ações pelo cliente."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente iniciou o contato de forma adequada: 'Bom dia, senhor Júlio, tudo bem?'"
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não confirmou pelo menos quatro dados cadastrais do cliente no início do atendimento. Apenas confirmou o e-mail no final da ligação."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente realizou uma sondagem inicial ('Negociação do quê, no caso?') e verificou o sistema para entender o histórico do cliente."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente identificou corretamente que o cliente buscava negociar a quitação do financiamento do veículo e emitir um boleto para uma data específica."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente repetiu a necessidade do boleto para o dia 20 várias vezes e detalhou o histórico com a assessoria, indicando que a informação não foi absorvida ou validada de forma eficaz inicialmente."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente validou o entendimento da solicitação do cliente perguntando: 'No caso, o senhor gostaria desse boleto para o dia 20?'"
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A solução apresentada é um protocolo de reanálise, o que implica que o cliente precisará aguardar um retorno e, possivelmente, fazer um novo contato para solicitar o boleto, gerando risco de reincidência."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente informou claramente os próximos passos, o prazo de dois dias úteis para a reanálise e que o retorno seria via e-mail até o dia 9."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa do cliente era 'falar com alguém que realmente já me resolvesse isso, pra mim emitir esse boleto já agora pro dia 20 desse mês'. A solução foi a abertura de um protocolo, não a emissão imediata do boleto, não atendendo à expectativa inicial."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente direcionou o cliente para a pesquisa de satisfação ao final do atendimento: 'Eu peço só que aguarde na linha para a pesquisa de satisfação.'"
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou o número do protocolo no início do atendimento: 'Eu vou só informar o número do protocolo, que é 290-718-6720.'"
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou o prazo para a reanálise: 'No caso, o prazo da reanálise é de até dois dias úteis, mas eles geralmente podem entrar em contato até antes. A data-alvo é até o dia 9.'"
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo por parte da atendente durante a interação."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento foi adequado, com a atendente direcionando para a pesquisa de satisfação e desejando um bom dia."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A linguagem utilizada pela atendente foi formal e respeitosa durante todo o atendimento."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há evidências na transcrição de que a atendente tenha causado qualquer prejuízo ao cliente."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo ou reconhecimento explícito do cliente ao atendimento da atendente."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Médio",
+        "interpretacao": "A experiência do cliente foi significativamente negativa, resultando em um Score Experiência de 0/100. Isso se deve à não resolução da demanda principal no primeiro contato, ao alto esforço exigido do cliente (que já vinha de tentativas frustradas e precisará aguardar e recontatar), e à fricção gerada pelo processo que não permite a emissão imediata do boleto. Embora o operador tenha demonstrado bom desempenho comportamental, a jornada do cliente foi impactada por limitações de processo e pela incapacidade de atender à expectativa de resolução imediata.",
+        "friccao": "Sim",
+        "causa_raiz": {
+            "motivo": "Negociação de parcelas em atraso de financiamento de veículo e solicitação de boleto para quitação com nova data.",
+            "causa_identificada": "O processo de negociação de dívidas e emissão de boletos com datas flexíveis não permite a resolução imediata pelo atendente de primeiro nível, exigindo a abertura de protocolos e tratativas internas que geram esforço e recontato para o cliente. A assessoria anterior também falhou em cumprir o acordado.",
+            "causa_raiz": "A arquitetura do processo de negociação de dívidas e emissão de boletos com datas flexíveis é fragmentada, exigindo múltiplos pontos de contato e tratativas internas que impedem a resolução no primeiro nível de atendimento. Isso gera atrito na jornada do cliente e aumenta o esforço necessário para concluir a solicitação.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "O processo de negociação e emissão de boletos com datas específicas não permite a resolução imediata pelo atendente de primeiro nível, exigindo a abertura de protocolos e tratativas internas que geram esforço e recontato para o cliente. A assessoria também falhou em contatos anteriores.",
+            "evidencia": "Cliente: 'eu já tô tentando uma negociação com o banco há alguns dias e não tá fácil.' e 'eu queria falar com alguém que realmente já me resolvesse isso, pra mim emitir esse boleto já agora pro dia 20 desse mês'. Atendente: 'Infeliamente a gente não consegue realizar transferência ou ter diretamente o contato com a área interna. Aí é somente por tratativas com o protocolo mesmo.'"
+        },
+        "insights": {
+            "insight_operacional": "O processo de negociação de dívidas e emissão de boletos com datas flexíveis precisa ser revisado para permitir maior autonomia do atendente ou um fluxo mais ágil e resolutivo, evitando múltiplos contatos e frustração do cliente. A integração com assessorias externas também deve ser monitorada para garantir a consistência das informações e o cumprimento dos acordos.",
+            "apontamentos_cx": "A experiência do cliente é impactada negativamente pela necessidade de múltiplos contatos e pela incapacidade de obter uma resolução imediata para uma solicitação de negociação e emissão de boleto com data específica. A falta de confirmação de dados no início também é um ponto de melhoria para a segurança e a percepção do cliente.",
+            "apontamentos_resolutividade": "A resolutividade é baixa, pois a atendente não conseguiu resolver a solicitação principal do cliente (emissão do boleto para o dia 20) no primeiro contato, apenas registrou um protocolo para reanálise, o que prolonga a jornada do cliente e aumenta o esforço.",
+            "oportunidades_operador": "O operador poderia ter demonstrado mais empatia ao reconhecer a frustração do cliente com as tentativas anteriores e a situação do veículo, além de garantir a confirmação de dados cadastrais no início da chamada para seguir os protocolos de segurança."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 1,
+                "evidencia": "A atendente não confirmou pelo menos quatro dados cadastrais do cliente no início do atendimento, apenas o e-mail no final da ligação (at_cx_intro2 = Não)."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Alta",
+                "acao": "Revisar o processo de negociação de dívidas e emissão de boletos com datas flexíveis para permitir maior autonomia do atendente ou um fluxo mais ágil e resolutivo.",
+                "responsavel": "Área de Processos/Operações",
+                "prazo": "Médio prazo",
+                "impacto": "Redução do esforço do cliente, aumento da resolutividade no primeiro contato e diminuição da probabilidade de recontato."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Treinamento para operadores sobre a importância da confirmação de dados cadastrais no início do atendimento para garantir a segurança e a conformidade.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da segurança do atendimento e da percepção de profissionalismo pelo cliente."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Desenvolver scripts ou ferramentas para que os operadores possam expressar empatia de forma mais efetiva em situações de frustração do cliente, reconhecendo o histórico e as dificuldades.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria do relacionamento com o cliente e da percepção de cuidado e atenção."
+            }
+        ],
+        "conclusao_executiva": "O atendimento foi classificado como 'Caso Relevante' devido à não resolução da demanda principal do cliente no primeiro contato e ao alto esforço exigido. O operador obteve um Score de 69.75/100 ('Pode Melhorar'), demonstrando cordialidade e clareza, mas falhou na confirmação de dados e na resolução imediata. A experiência do cliente foi crítica (Score Experiência 0/100) devido à fricção do processo e à necessidade de recontato. A causa raiz reside na fragmentação do processo de negociação de dívidas. A ação prioritária é a revisão desse processo para aumentar a autonomia do atendente e a resolutividade no primeiro contato."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Neutro",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

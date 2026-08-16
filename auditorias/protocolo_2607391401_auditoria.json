@@ -1,0 +1,374 @@
+{
+    "cabecalho": {
+        "data": "16/08/2026",
+        "protocolo": "2607-39-1401",
+        "cliente": "Júlio César Santos",
+        "cpf": "Não identificado",
+        "atendente": "Letícia",
+        "produto": "Financiamento de Veículo",
+        "categoria": "Contestação de Juros",
+        "canal": "Telefone"
+    },
+    "score_operador": 77.5,
+    "classificacao_operador": "Atende as expectativas",
+    "visao_geral": {
+        "status": "🟠 CASO RELEVANTE",
+        "resumo": "O cliente Júlio César Santos contatou o Banco Daycoval pela segunda vez para contestar juros que considera abusivos em seu financiamento de veículo, alegando falta de clareza na contratação e orientação jurídica. A atendente Letícia identificou o protocolo anterior e informou sobre uma resposta já enviada por e-mail. Diante da insatisfação do cliente, Letícia ofereceu a abertura de um desacordo para uma nova análise do contrato, com prazo de dois dias úteis. O caso é relevante devido à persistência do problema, alto esforço do cliente e potencial de escalonamento, apesar da atuação adequada do operador em registrar a nova solicitação."
+    },
+    "feedback": {
+        "positivos": [
+            "A atendente Letícia demonstrou cordialidade e tratamento respeitoso, utilizando o nome do cliente e mantendo a calma durante toda a interação.",
+            "Houve acolhimento e empatia genuína por parte da atendente, que compreendeu a insatisfação do cliente e ofereceu uma nova ação para registrar o desacordo.",
+            "A comunicação da atendente foi clara, objetiva e transmitiu segurança nas informações e procedimentos, incluindo a explicação sobre o e-mail de resposta, o protocolo e a abertura do desacordo.",
+            "A atendente foi proativa ao oferecer a abertura de um 'desacordo' para registrar a não concordância do cliente e solicitar uma nova análise, em vez de apenas reiterar a resposta anterior."
+        ],
+        "melhorias": [
+            "A atendente não ofereceu desculpas pela experiência negativa anterior do cliente ou pela falta de retorno efetivo da solicitação passada.",
+            "Foi identificado o uso de gerundismo em algumas falas, o que pode ser aprimorado para uma comunicação mais direta e formal.",
+            "O cliente precisou repetir diversas vezes a informação sobre os juros abusivos e a falta de clareza na contratação, indicando que o entendimento não foi totalmente validado ou que a escuta ativa poderia ser aprofundada para evitar repetições."
+        ],
+        "coaching": "Letícia, para aprimorar ainda mais seus atendimentos, foque em oferecer desculpas proativas pela experiência negativa do cliente, mesmo que a causa não seja sua responsabilidade direta. Além disso, revise o uso de gerundismo para garantir uma comunicação mais formal e direta. Pratique a validação do entendimento do cliente de forma a evitar repetições de informações, garantindo que ele se sinta plenamente compreendido desde o início."
+    },
+    "nota_monitoria": {
+        "relacionamento": 46.5,
+        "resolutividade": 5.0,
+        "cx": 26.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente cumprimentou o cliente pelo nome ('Tudo bem com o senhor Júlio César?') e o utilizou durante a interação."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não pediu desculpas pela experiência anterior do cliente ou pela falta de retorno efetivo da solicitação passada."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou acolhimento ao perguntar 'Tudo bem com o senhor Júlio César?' e ao ouvir atentamente o histórico do cliente."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou empatia ao compreender a situação do cliente ('Tá, eu compreendi que o senhor verificou que há juros abusivos, né?') e ao oferecer uma nova ação para registrar o desacordo."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a paciência durante toda a interação, mesmo com o cliente repetindo o histórico e a insatisfação."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não interrompeu o cliente durante suas explicações."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a calma e a postura profissional durante todo o atendimento."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utilizou uma linguagem formal e apropriada para o contexto bancário, sem gírias ou informalidades."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não apresentou vícios de linguagem durante a interação."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente transmitiu segurança nas informações e nos procedimentos, explicando sobre o protocolo, e-mail e a abertura do desacordo."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente utilizou gerundismo em falas como 'vou te informar o protocolo, fazer algumas validações com o senhor e te passar a tratativa' e 'o setor vai te encaminhar a resposta'."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "A atendente foi clara ao explicar sobre o e-mail de resposta, o protocolo e a abertura do desacordo, informando os próximos passos e prazos."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente foi objetiva ao buscar o protocolo, validar os dados e propor a abertura de um desacordo como solução para a insatisfação do cliente."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve o foco na demanda principal do cliente, que era a contestação dos juros abusivos e a busca por uma nova análise."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente demonstrou proatividade ao oferecer a abertura de um 'desacordo' para registrar a não concordância do cliente com a resposta anterior e solicitar uma nova análise."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente já havia ligado na semana anterior para o mesmo problema e não obteve resolução. Ele precisou repetir o histórico e ainda terá que aguardar um novo prazo e verificar o e-mail, indicando um esforço elevado na jornada."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente iniciou o contato de forma institucional: 'Banco Daycoval, bom dia. Me chamo Letícia, com quem eu falo?'."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente confirmou múltiplos dados cadastrais do cliente: nome da mãe, data de nascimento, endereço e veículo financiado."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente realizou uma sondagem adequada ao revisar o protocolo anterior e questionar se o cliente havia recebido a resposta por e-mail, além de ouvir o histórico completo."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O motivo do contato foi claramente identificado pela atendente como a insatisfação do cliente com os juros abusivos e a busca por esclarecimentos/revisão do contrato."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente repetiu diversas vezes a informação sobre os juros abusivos e a falta de clareza no momento da contratação, bem como a orientação do advogado."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente validou o entendimento ao resumir a situação do cliente: 'Tá, eu compreendi que o senhor verificou que há juros abusivos, né?' e ao descrever o registro do desacordo."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendimento não eliminou o risco de reincidência, pois a questão principal dos juros abusivos não foi resolvida, apenas reencaminhada para nova análise, e o cliente foi instruído a ligar novamente se não receber a resposta."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente informou claramente os próximos passos: aguardar a atuação do setor responsável, prazo de dois dias úteis (até dia 17) e a forma de recebimento da resposta (e-mail), além de orientar sobre o que fazer em caso de não recebimento."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa principal do cliente era 'baixar esses juros abusivos' ou obter uma solução para a questão dos juros. O atendimento resultou em uma nova análise, mas não na resolução imediata ou na confirmação de que sua expectativa seria atendida."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente direcionou o cliente para a pesquisa de satisfação ao final do atendimento: 'Peço que, por gentileza, permaneça na linha para uma breve avaliação do atendimento'."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou o protocolo ao cliente: 'O protocolo é 2607-39-1401'."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou o prazo para a nova tratativa ('Em dois dias úteis, tá? Esses dois dias úteis vão até o dia 17') e o prazo para constar o pagamento ('até três dias úteis')."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo durante o atendimento. O prazo de 2 dias úteis foi informado e mantido."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento foi adequado, com a atendente agradecendo e se despedindo após o cliente."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente não utilizou linguagem inadequada."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há evidência de que a atendente causou prejuízo ao cliente."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "O cliente agradeceu ('Muito obrigado'), mas não houve um elogio espontâneo que indicasse que o atendente fez mais do que o esperado."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Médio",
+        "interpretacao": "A experiência do cliente foi negativa, resultando em um Score Experiência de 0/100. Isso se deve ao fato de que o problema principal do cliente (contestação de juros abusivos) não foi resolvido, apenas reencaminhado para uma nova análise, após um contato anterior sem resolução. O cliente experimentou alto esforço e fricção na jornada, precisando repetir informações e aguardar por uma solução que ainda não se concretizou. Embora o operador tenha demonstrado bom desempenho dentro de sua alçada, a falha no processo de resolução e comunicação impactou diretamente a satisfação do cliente.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Cliente contesta juros abusivos em financiamento de veículo, alegando falta de informação no momento da contratação e orientação jurídica de que os juros são abusivos.",
+            "causa_identificada": "O cliente não teve clareza sobre as taxas de juros no momento da contratação na revendedora, e a primeira tratativa do banco não foi suficiente para esclarecer ou resolver sua insatisfação, levando a um recontato.",
+            "causa_raiz": "Falha na comunicação das condições contratuais no ponto de venda e ineficácia da primeira tratativa do banco em resolver a contestação do cliente, resultando em recontato e persistência da insatisfação.",
+            "dono_jornada": "Comunicação / Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "Falha na comunicação das condições contratuais no ponto de venda e na efetividade da primeira tratativa do banco em resolver a insatisfação do cliente.",
+            "evidencia": "Cliente: 'no momento em que fiz a compra na revendedora, o rapaz não me passou esse contrato totalmente, com esse valor. Só me passou o total que eu ia pagar, na verdade.' e 'Até hoje não me deu uma informação suficiente. Não consegui baixar esses juros abusivos.'"
+        },
+        "insights": {
+            "insight_operacional": "A necessidade de recontato e a insatisfação persistente do cliente indicam uma falha no processo de comunicação e resolução de contestações de juros, tanto no ponto de venda quanto na primeira interação do banco. É crucial revisar a jornada completa do cliente para evitar que problemas como este escalem e gerem alto esforço.",
+            "apontamentos_cx": "O cliente teve que repetir informações e a expectativa de resolução não foi atendida, gerando alto esforço e fricção na jornada. O risco de reincidência permanece alto, impactando negativamente a experiência do cliente.",
+            "apontamentos_resolutividade": "A resolução não foi completa, pois a questão principal dos juros não foi solucionada, apenas reencaminhada para nova análise, o que não atende à expectativa inicial do cliente de 'baixar os juros abusivos'.",
+            "oportunidades_operador": "O operador pode melhorar na oferta de desculpas pela experiência negativa anterior do cliente e na eliminação do gerundismo para uma comunicação mais formal e direta. Além disso, aprimorar a escuta ativa para evitar que o cliente precise repetir informações."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Validação ou registro incompleto",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Alta",
+                "acao": "Revisar o processo de comunicação das taxas de juros e condições contratuais nos pontos de venda (revendedoras parceiras) para garantir clareza e transparência ao cliente no momento da contratação.",
+                "responsavel": "Área de Parcerias/Comercial, Jurídico",
+                "prazo": "Médio prazo",
+                "impacto": "Redução de contestações e reclamações sobre juros, melhorando a satisfação do cliente na origem."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Aprimorar o processo de tratativa e retorno de contestações de juros, buscando uma resolução mais efetiva no primeiro contato ou um acompanhamento proativo para evitar recontatos.",
+                "responsavel": "Operações, Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da experiência do cliente, redução de recontatos e aumento da resolutividade no primeiro contato."
+            },
+            {
+                "prioridade": "Baixa",
+                "acao": "Realizar treinamento de reciclagem para operadores sobre a importância de oferecer desculpas pela experiência negativa do cliente e evitar o uso de gerundismo, além de técnicas de escuta ativa para evitar repetições de informações.",
+                "responsavel": "Treinamento",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da percepção de relacionamento, profissionalismo e eficiência na comunicação do operador."
+            }
+        ],
+        "conclusao_executiva": "O caso é classificado como relevante devido à persistência da contestação de juros abusivos pelo cliente, que já havia contatado o banco anteriormente sem resolução. O Score Experiência foi de 0/100, refletindo o alto esforço e a fricção na jornada do cliente, que não teve sua expectativa atendida. O operador Letícia obteve 77.5/100, classificando-se como 'Atende as expectativas', demonstrando bom relacionamento e proatividade ao registrar um desacordo. A causa raiz reside na comunicação inadequada das condições contratuais no ponto de venda e na ineficácia da primeira tratativa do banco. A ação prioritária é revisar o processo de comunicação das taxas de juros e aprimorar a tratativa de contestações para evitar reincidências e melhorar a experiência do cliente."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Neutro",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Média"
+}

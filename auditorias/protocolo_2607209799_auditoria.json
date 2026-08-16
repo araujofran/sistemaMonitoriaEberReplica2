@@ -1,0 +1,377 @@
+{
+    "cabecalho": {
+        "data": "16/08/2026",
+        "protocolo": "2607209799",
+        "cliente": "Ana",
+        "cpf": "XXX.XXX.XXX-XX",
+        "atendente": "Cleideson",
+        "produto": "Financiamento de veículo",
+        "categoria": "Erro em documento (Carta Saldo)",
+        "canal": "Telefone"
+    },
+    "score_operador": 0.0,
+    "classificacao_operador": "Pode Melhorar Muito",
+    "visao_geral": {
+        "status": "🟠 CASO RELEVANTE",
+        "resumo": "A cliente Ana contatou o atendimento referente a um financiamento de veículo que sofreu perda total, após ter solicitado a carta saldo e o boleto de quitação. Ao receber os documentos, a cliente identificou que a carta saldo continha informações de um veículo completamente diferente do seu, com placa, chassi e modelo incorretos. O atendente Cleideson realizou a confirmação de dados com a cliente e validou o entendimento do problema. No entanto, não apresentou uma solução imediata para o problema da carta saldo incorreta, nem informou os próximos passos ou prazos para a resolução. A ligação foi encerrada sem a demanda ser resolvida, resultando em alto esforço para a cliente e alta probabilidade de recontato."
+    },
+    "feedback": {
+        "positivos": [
+            "O atendente iniciou o contato de forma cordial e se apresentou, perguntando como a cliente gostaria de ser chamada.",
+            "Realizou a confirmação de dados de forma completa, solicitando múltiplos itens cadastrais e do veículo.",
+            "Manteve a calma e a paciência durante toda a interação, mesmo quando a cliente solicitou a repetição de informações.",
+            "A comunicação foi clara, formal e adequada ao contexto de atendimento bancário, sem interrupções."
+        ],
+        "melhorias": [
+            "Não pediu desculpas pelo erro na carta saldo, que foi o motivo do contato da cliente.",
+            "Não demonstrou empatia genuína em relação à frustração da cliente com o documento incorreto.",
+            "Utilizou gerundismo em algumas falas, o que pode ser evitado para uma comunicação mais direta.",
+            "Não ofereceu uma solução imediata, alternativas ou próximos passos claros para a resolução do problema da carta saldo incorreta.",
+            "Não informou nenhum prazo para a resolução do problema, o que é uma inaderência crítica.",
+            "O problema principal da cliente não foi resolvido, gerando risco de reincidência e não atendendo à expectativa."
+        ],
+        "coaching": "Cleideson, seu atendimento demonstrou boa cordialidade e habilidade na confirmação de dados. Para aprimorar, foque em reconhecer o impacto de problemas como documentos incorretos, pedindo desculpas pelo inconveniente. É crucial sempre informar os próximos passos e prazos para o cliente, mesmo que a resolução não seja imediata, para gerenciar expectativas e reduzir o esforço do cliente. Revise o uso de gerundismo para uma comunicação mais assertiva."
+    },
+    "nota_monitoria": {
+        "relacionamento": 39.5,
+        "resolutividade": 0.0,
+        "cx": 21.0,
+        "inaderencias": -100.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente perguntou 'Como gostaria de ser chamada durante o atendimento?' e utilizou 'Prazer, dona Ana.' após a identificação."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não pediu desculpas pelo erro na carta saldo, que foi o motivo do contato da cliente."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou acolhimento ao perguntar 'como é que a senhora está?' e ao agradecer a confirmação dos dados ('Certo, obrigada pela confirmação.')."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "Embora cordial, o atendente não demonstrou empatia genuína em relação à frustração da cliente com o documento incorreto, não reconhecendo o impacto do erro."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente demonstrou paciência ao aguardar a cliente confirmar a placa do veículo ('Calma aí, deixa eu ver aqui, moça.') e ao repetir o protocolo e soletrar seu nome."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente não interrompeu a cliente durante a explicação do problema ou a confirmação dos dados."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve a calma e a postura profissional durante toda a interação, mesmo quando a cliente solicitou a repetição de informações."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A comunicação do atendente foi clara, formal e adequada ao contexto de atendimento bancário, utilizando termos apropriados."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente não apresentou vícios de linguagem durante a interação, mantendo um discurso profissional."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente transmitiu segurança nas informações e no processo de confirmação de dados, conduzindo a interação de forma confiante."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente utilizou gerundismo ao dizer 'eu vou fazer uma confirmação de dados' e 'me aguarde um momentinho, por gentileza?'."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "A linguagem utilizada pelo atendente foi clara e de fácil compreensão para a cliente, sem termos técnicos excessivos."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente foi objetivo ao conduzir a confirmação de dados e ao resumir o problema da cliente, focando na demanda principal."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "O atendente manteve o foco no problema relatado pela cliente, sem desviar do assunto principal durante a interação."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não demonstrou proatividade ao não oferecer uma solução imediata, alternativas ou próximos passos claros para a resolução do problema da carta saldo incorreta."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não facilitou o processo para a cliente, pois o problema não foi resolvido e não foram informados os próximos passos, o que provavelmente exigirá um novo contato e mais esforço da cliente."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente iniciou o contato de forma cordial e se apresentou: 'Boa tarde, tudo bem com você? Meu nome é Cleiton. Como gostaria de ser chamada durante o atendimento?'."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente confirmou a data de nascimento, nome da mãe, e-mail e modelo/placa do veículo, totalizando mais de quatro dados cadastrais."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente realizou uma sondagem adequada ao pedir a confirmação dos dados do veículo para entender o problema da carta saldo incorreta."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O atendente identificou corretamente o motivo do contato da cliente, resumindo-o como: 'No caso, a senhora está informando que solicitou a carta saldo, porém o documento que chegou veio com um veículo totalmente diferente do seu?'."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A cliente precisou repetir o número do protocolo da ligação ('Você pode passar o protocolo da ligação de novo, por gentileza?') e o nome do atendente ('Com quem eu falei?')."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "O atendente validou o entendimento do problema ao perguntar: 'No caso, a senhora está informando que solicitou a carta saldo, porém o documento que chegou veio com um veículo totalmente diferente do seu?'."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema principal da cliente (carta saldo incorreta) não foi resolvido, o que gera um alto risco de reincidência de contato para tratar do mesmo assunto."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O atendente não informou os próximos passos para a resolução do problema da carta saldo incorreta, nem o prazo esperado para a correção."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa da cliente era ter o problema da carta saldo incorreta resolvido, o que não ocorreu durante o atendimento, pois a ligação foi encerrada sem solução."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente convidou a cliente para responder à pesquisa de satisfação: 'Peço só mais um momentinho para a senhora permanecer na linha e responder à pesquisa.'."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente informou o protocolo no início da ligação ('Nossa ligação gerou o número de protocolo 2607209799.') e o repetiu quando solicitado pela cliente."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Sim",
+            "penalidade": -100.0,
+            "evidencia": "O atendente não informou nenhum prazo para a resolução do problema da carta saldo incorreta, deixando a cliente sem expectativa de quando o erro seria corrigido."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não Aplicável",
+            "penalidade": 0.0,
+            "evidencia": "Não houve informação de prazo, portanto não houve alteração de prazo."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente encerrou a ligação de forma cordial, desejando 'Tenha uma ótima noite.'."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O atendente utilizou linguagem formal e adequada durante toda a interação, sem termos ofensivos ou inapropriados."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não há evidência na transcrição de que o atendente causou prejuízo financeiro direto à cliente. O problema é um erro no documento, não uma ação do atendente que gerou prejuízo imediato."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo do cliente ao atendimento. A frase 'Beleza, querido. Muito obrigada, viu?' foi após o atendente soletrar o nome, não um elogio ao atendimento em si."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Médio",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "A experiência da cliente foi severamente impactada pela falha no processo de emissão da carta saldo, que continha dados incorretos do veículo. O atendimento, embora cordial, não conseguiu resolver o problema nem fornecer os próximos passos ou prazos, resultando em alto esforço para a cliente e a necessidade de recontato. A inaderência crítica de não informar prazos contribuiu para uma experiência negativa, apesar do bom comportamento relacional do operador. A responsabilidade recai sobre o processo de geração de documentos, que falhou na acurácia dos dados.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Recebimento de carta saldo com dados de veículo incorretos (placa, chassi, modelo).",
+            "causa_identificada": "A carta saldo foi emitida com informações incorretas do veículo, indicando uma falha na base de dados ou no processo de vinculação de dados ao documento. O atendimento não conseguiu corrigir o erro nem informar os próximos passos.",
+            "causa_raiz": "Falha no processo de emissão de documentos, especificamente na recuperação e inserção dos dados do veículo na carta saldo, resultando em informações divergentes do financiamento da cliente.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "O erro na emissão da carta saldo com dados incorretos do veículo indica uma falha no processo de geração ou conferência de documentos, anterior ao atendimento. A falta de resolução pelo atendente também aponta para uma lacuna no processo de tratamento de erros documentais e comunicação de prazos.",
+            "evidencia": "Cliente afirmou: 'Porém, na carta saldo, consta um veículo totalmente diferente. O veículo está errado, a placa está errada e o chassi está errado.'"
+        },
+        "insights": {
+            "insight_operacional": "O processo de emissão de carta saldo para veículos com perda total precisa de revisão urgente para garantir a acurácia dos dados do veículo. É fundamental que os atendentes tenham ferramentas ou procedimentos para iniciar a correção de documentos incorretos ou, no mínimo, informar os próximos passos e prazos para o cliente, evitando a não resolutividade e o recontato.",
+            "apontamentos_cx": "A experiência do cliente foi prejudicada pela necessidade de recontato devido a um documento incorreto e pela falta de resolução e clareza sobre os próximos passos no atendimento. A cliente precisou repetir informações (protocolo, nome do atendente), aumentando o esforço na jornada.",
+            "apontamentos_resolutividade": "A resolutividade foi comprometida pela ausência de uma solução efetiva para o problema da carta saldo incorreta e pela falta de proatividade em informar os próximos passos ou prazos, deixando a demanda em aberto e exigindo um novo contato da cliente.",
+            "oportunidades_operador": "O operador poderia ter demonstrado mais empatia ao reconhecer a frustração da cliente pelo erro no documento. Além disso, a utilização de gerundismo pode ser evitada para uma comunicação mais direta. A principal oportunidade é aprimorar a comunicação de próximos passos e prazos, mesmo que a resolução não seja imediata, para gerenciar as expectativas do cliente."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "O atendente realizou sondagem adequada, confirmando os dados do veículo e o problema relatado."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 3,
+                "evidencia": "O atendente não informou os próximos passos para a resolução do problema (at_cx_classif2=Não), não garantiu ausência de risco de reincidência (at_cx_classif1=Não) e não informou sobre prazo (at_inad_compr3=Sim)."
+            },
+            {
+                "falha": "Registro incompleto",
+                "ocorrencias": 0,
+                "evidencia": "O protocolo foi informado e os dados cadastrais e do veículo foram confirmados (at_inad_compr2=Não, at_cx_intro2=Sim)."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Revisar e corrigir o processo de emissão de carta saldo para financiamentos de veículos com perda total, garantindo a acurácia dos dados do veículo no documento.",
+                "responsavel": "Área de Processos/Produto",
+                "prazo": "Curto prazo",
+                "impacto": "Redução de recontatos por erro documental, melhoria da satisfação do cliente e conformidade."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Treinar operadores sobre a importância de informar os próximos passos e prazos para a resolução de problemas, mesmo quando a solução não é imediata, e como registrar a demanda para acompanhamento.",
+                "responsavel": "Treinamento/Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da experiência do cliente, redução do esforço do cliente e diminuição da probabilidade de recontato."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Reforçar a importância de evitar gerundismo na comunicação para uma linguagem mais direta e profissional.",
+                "responsavel": "Treinamento",
+                "prazo": "Contínuo",
+                "impacto": "Aumento da clareza e profissionalismo na comunicação do atendente."
+            }
+        ],
+        "conclusao_executiva": "Este caso é classificado como relevante devido à não resolução do problema da cliente e à inaderência crítica de não informar prazos. A experiência do cliente foi negativa, com alto esforço e alta probabilidade de recontato, apesar do operador ter demonstrado cordialidade e boa capacidade de identificação do problema. A causa raiz principal reside em uma falha de processo na emissão de documentos. A ação prioritária é a revisão do processo de emissão da carta saldo e o treinamento dos operadores para gerenciar expectativas e comunicar próximos passos e prazos de forma eficaz."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Neutro",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

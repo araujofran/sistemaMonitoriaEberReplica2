@@ -1,0 +1,378 @@
+{
+    "cabecalho": {
+        "data": "Não identificado",
+        "protocolo": "2607233824",
+        "cliente": "Flávio",
+        "cpf": "Não identificado",
+        "atendente": "Taiana",
+        "produto": "Financiamento de Veículo",
+        "categoria": "Problemas com veículo financiado / Cancelamento de contrato",
+        "canal": "Telefone"
+    },
+    "score_operador": 74.5,
+    "classificacao_operador": "Atende as expectativas",
+    "visao_geral": {
+        "status": "🔴 ALERTA CRÍTICO",
+        "resumo": "O cliente Flávio contatou o Banco Daycoval para relatar problemas com um veículo financiado, cuja agência vendedora, Duarte Motors, está em processo de falência e se recusa a honrar a garantia. O veículo apresentou falhas mecânicas recorrentes (câmbio, motor) logo após a compra. Após um primeiro reparo ineficaz, o carro permaneceu na loja por cerca de 50 dias sem solução. O lojista informou ao cliente que não faria mais o reparo devido à falência e o orientou a processar. O cliente busca o cancelamento do contrato de financiamento junto ao banco. A atendente Taiana registrou uma solicitação de desacordo contratual, sinalizando a situação e o desejo de cancelamento do cliente. Ela informou que o setor interno do banco analisará a situação e enviará uma tratativa por e-mail em até três dias úteis, podendo tentar uma mediação com a loja. O problema principal não foi resolvido no contato, mas uma ação foi iniciada pelo banco."
+    },
+    "feedback": {
+        "positivos": [
+            "A atendente utilizou o nome do cliente e manteve uma comunicação respeitosa durante toda a interação.",
+            "Demonstrou acolhimento e empatia genuína ao ouvir o relato do cliente e reconhecer a dificuldade da situação.",
+            "Manteve a paciência e a calma, sem interrupções inadequadas.",
+            "Utilizou linguagem formal, clara e objetiva, transmitindo segurança nas informações.",
+            "Realizou sondagem adequada para compreender o histórico e a expectativa do cliente.",
+            "Validou o entendimento da situação do cliente antes de registrar a solicitação.",
+            "Informou claramente os próximos passos e o prazo para a tratativa."
+        ],
+        "melhorias": [
+            "Aprimorar a linguagem para evitar o uso de gerundismo.",
+            "Buscar formas de oferecer desculpas ou um acolhimento mais direto pela situação do cliente, mesmo que o problema não possa ser resolvido imediatamente.",
+            "Reduzir a necessidade de o cliente repetir informações, garantindo que a sondagem inicial seja completa.",
+            "Melhorar a capacidade de resolução no primeiro contato, quando possível, para evitar recontatos e reduzir o esforço do cliente."
+        ],
+        "coaching": "Senhor(a) Taiana, seu atendimento demonstrou excelente cordialidade, empatia e clareza na comunicação dos próximos passos. Para aprimorar ainda mais, sugiro atenção ao uso do gerundismo, buscando uma linguagem mais direta. Além disso, em situações de alta complexidade como esta, explore a possibilidade de um acolhimento mais explícito em relação ao inconveniente do cliente, mesmo que a solução dependa de outras áreas. Revise a sondagem para garantir que todas as informações sejam coletadas de uma única vez, minimizando a necessidade de o cliente repetir detalhes."
+    },
+    "nota_monitoria": {
+        "relacionamento": 43.5,
+        "resolutividade": 5.0,
+        "cx": 26.0,
+        "inaderencias": 0.0,
+        "pontos_extras": 0.0
+    },
+    "detalhamento": {
+        "relacionamento": [
+            {
+                "codigo": "at_rel_cord1",
+                "criterio": "Tratamento pelo nome",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utilizou o nome do cliente ('Senhor Flávio') no início e no decorrer da ligação, demonstrando tratamento respeitoso."
+            },
+            {
+                "codigo": "at_rel_cord2",
+                "criterio": "Desculpas",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente não ofereceu desculpas explícitas pela situação do cliente ou pelo inconveniente causado, focando em registrar a solicitação."
+            },
+            {
+                "codigo": "at_rel_cord3",
+                "criterio": "Acolhimento",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou acolhimento ao ouvir atentamente o relato do cliente e registrar a situação detalhadamente, sem minimizar o problema."
+            },
+            {
+                "codigo": "at_rel_cord4",
+                "criterio": "Empatia genuína",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente demonstrou empatia ao reconhecer a dificuldade do cliente ('para o senhor também não ter tanta dor de cabeça nesse sentido') e ao registrar a situação complexa, incluindo a necessidade do carro para a família."
+            },
+            {
+                "codigo": "at_rel_cord5",
+                "criterio": "Paciência",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a paciência durante todo o atendimento, mesmo com o cliente detalhando a situação e repetindo algumas informações."
+            },
+            {
+                "codigo": "at_rel_cord6",
+                "criterio": "Sem interrupção",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não interrompeu o cliente de forma inadequada, permitindo que ele expusesse toda a sua situação."
+            },
+            {
+                "codigo": "at_rel_cord7",
+                "criterio": "Calma",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve a calma e a postura profissional durante toda a interação, mesmo diante de um problema complexo e da frustração do cliente."
+            },
+            {
+                "codigo": "at_rel_ling1",
+                "criterio": "Comunicação adequada",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente utilizou uma linguagem formal, clara e apropriada para o contexto de atendimento bancário."
+            },
+            {
+                "codigo": "at_rel_ling2",
+                "criterio": "Sem vícios",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente não apresentou vícios de linguagem, gírias ou informalidades excessivas."
+            },
+            {
+                "codigo": "at_rel_ling3",
+                "criterio": "Segurança",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente transmitiu segurança ao informar os procedimentos do banco e ao registrar a solicitação, explicando os próximos passos."
+            },
+            {
+                "codigo": "at_rel_ling4",
+                "criterio": "Gerundismo",
+                "peso": 3.5,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A atendente utilizou gerundismo em algumas falas, como 'estou registrando', 'estou abrindo', 'estou sinalizando', 'estaria decretando falência', 'permanece sendo'."
+            },
+            {
+                "codigo": "at_rel_ling5",
+                "criterio": "Clareza",
+                "peso": 4.5,
+                "resultado": "Sim",
+                "nota": 4.5,
+                "evidencia": "A atendente comunicou as informações de forma clara e compreensível, explicando o papel do banco e os próximos passos da solicitação."
+            },
+            {
+                "codigo": "at_rel_cond1",
+                "criterio": "Objetividade",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente foi objetiva ao coletar as informações necessárias e ao explicar o procedimento de abertura da solicitação."
+            },
+            {
+                "codigo": "at_rel_cond2",
+                "criterio": "Foco",
+                "peso": 3.5,
+                "resultado": "Sim",
+                "nota": 3.5,
+                "evidencia": "A atendente manteve o foco na solicitação do cliente, direcionando a conversa para a coleta de dados e o registro do problema."
+            }
+        ],
+        "resolutividade": [
+            {
+                "codigo": "at_resol_solic1",
+                "criterio": "Proatividade",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente demonstrou proatividade ao abrir uma solicitação de desacordo contratual e sinalizar a situação complexa do cliente, buscando uma forma de mediar a questão junto à loja."
+            },
+            {
+                "codigo": "at_resol_solic2",
+                "criterio": "Esforço do cliente",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A solução não foi imediata e exigiu que o cliente aguardasse um prazo e acompanhasse a tratativa, o que não reduziu significativamente o esforço do cliente na jornada."
+            }
+        ],
+        "cx": [
+            {
+                "codigo": "at_cx_intro1",
+                "criterio": "Contato",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente iniciou o contato de forma institucional, identificando o banco e a si mesma ('Boa tarde, Central de Atendimento Banco Daycoval, meu nome é Taiana. Com quem eu falo?')."
+            },
+            {
+                "codigo": "at_cx_intro2",
+                "criterio": "Confirmação de dados",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente confirmou múltiplos dados cadastrais do cliente antes de prosseguir com o atendimento: nome da mãe, data de nascimento, endereço e veículo financiado."
+            },
+            {
+                "codigo": "at_cx_compr1",
+                "criterio": "Sondagem adequada",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "A atendente realizou uma sondagem adequada, fazendo perguntas para entender o histórico do problema do veículo, as tentativas de contato com a loja e a expectativa do cliente."
+            },
+            {
+                "codigo": "at_cx_compr2",
+                "criterio": "Motivo identificado",
+                "peso": 4.0,
+                "resultado": "Sim",
+                "nota": 4.0,
+                "evidencia": "O motivo do contato do cliente (cancelamento do contrato de financiamento devido a problemas no veículo e falência da agência) foi claramente identificado pela atendente."
+            },
+            {
+                "codigo": "at_cx_compr3",
+                "criterio": "Cliente não repetiu informações",
+                "peso": 4.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O cliente precisou repetir algumas informações, como o histórico de problemas do carro e a situação da loja, e a atendente precisou confirmar detalhes como o nome do cliente ('Como é o seu nome mesmo?')."
+            },
+            {
+                "codigo": "at_cx_compr4",
+                "criterio": "Validou o entendimento",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente validou o entendimento da situação do cliente ao resumir os pontos principais antes de registrar a solicitação."
+            },
+            {
+                "codigo": "at_cx_classif1",
+                "criterio": "Sem risco de reincidência",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "O problema do cliente não foi resolvido no primeiro contato, e a solução apresentada é a abertura de um protocolo para análise, gerando risco de reincidência."
+            },
+            {
+                "codigo": "at_cx_classif2",
+                "criterio": "Próximos passos",
+                "peso": 5.0,
+                "resultado": "Sim",
+                "nota": 5.0,
+                "evidencia": "A atendente informou claramente os próximos passos da solicitação, incluindo o prazo de três dias úteis para análise e o envio da tratativa por e-mail, além de como acompanhar a solicitação."
+            },
+            {
+                "codigo": "at_cx_classif3",
+                "criterio": "Atendeu à expectativa",
+                "peso": 5.0,
+                "resultado": "Não",
+                "nota": 0.0,
+                "evidencia": "A expectativa do cliente era cancelar o contrato de financiamento, o que não foi possível de ser resolvido no primeiro contato, não atendendo à expectativa imediata."
+            }
+        ]
+    },
+    "inaderencias": [
+        {
+            "codigo": "at_inad_compr1",
+            "criterio": "Direcionamento para pesquisa",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente direcionou o cliente para a pesquisa de satisfação no final do atendimento ('Eu vou encaminhar o senhor para a pesquisa.')."
+        },
+        {
+            "codigo": "at_inad_compr2",
+            "criterio": "Omissão do protocolo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente forneceu o número de protocolo no início da ligação e o repetiu a pedido do cliente no final."
+        },
+        {
+            "codigo": "at_inad_compr3",
+            "criterio": "Falta de informação sobre prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente informou o prazo de três dias úteis para a análise da solicitação e o envio da tratativa por e-mail."
+        },
+        {
+            "codigo": "at_inad_compr4",
+            "criterio": "Alteração de prazo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "Não houve alteração de prazo durante o atendimento."
+        },
+        {
+            "codigo": "at_inad_compr5",
+            "criterio": "Desligamento inadequado",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "O desligamento foi adequado, com a atendente agradecendo e encaminhando para a pesquisa."
+        },
+        {
+            "codigo": "at_inad_compr6",
+            "criterio": "Uso de linguagem inadequada",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente utilizou linguagem formal e adequada durante toda a interação."
+        },
+        {
+            "codigo": "at_inad_compr7",
+            "criterio": "Causar prejuízo",
+            "resultado": "Não",
+            "penalidade": 0.0,
+            "evidencia": "A atendente não causou prejuízo direto ao cliente durante o atendimento. O prejuízo relatado pelo cliente é decorrente da situação com a loja e o veículo."
+        }
+    ],
+    "pontos_extras": [
+        {
+            "codigo": "inv_extra1",
+            "criterio": "Elogio espontâneo do cliente",
+            "resultado": "Não",
+            "bonus": 0.0,
+            "evidencia": "Não houve elogio espontâneo do cliente ao atendimento da atendente."
+        }
+    ],
+    "inteligencia_cx": {
+        "score_experiencia": 0.0,
+        "esforco_cliente": "Alto",
+        "risco_reclamacao": "Alto",
+        "interpretacao": "O cliente experimentou uma jornada crítica devido a um defeito persistente no veículo e à falência da agência vendedora, resultando em garantia não honrada. Apesar da abordagem profissional e empática do operador, o problema não foi resolvido no contato, exigindo que o cliente aguardasse uma análise interna. Isso gerou alto esforço e significativa frustração, aumentando a probabilidade de recontato e reclamações formais. O operador agiu dentro de sua alçada, mas o processo subjacente falhou em fornecer uma solução imediata.",
+        "friccao": "Alta",
+        "causa_raiz": {
+            "motivo": "Problemas com veículo financiado e falência da agência vendedora",
+            "causa_identificada": "Veículo com defeito persistente e garantia não honrada pela agência em falência.",
+            "causa_raiz": "O veículo apresentou defeitos de fábrica ou vício oculto logo após a compra, e a agência responsável pela venda e garantia entrou em processo de falência, impossibilitando o cumprimento de suas obrigações contratuais e legais.",
+            "dono_jornada": "Processo",
+            "responsabilidade": "Processo",
+            "responsabilidade_motivo": "A falha principal reside no processo de financiamento que não prevê ou não mitiga adequadamente os riscos associados à falência de parceiros lojistas e à garantia de bens financiados, deixando o cliente em uma situação de desamparo e sem uma solução imediata por parte do banco. Embora o operador tenha agido dentro de sua alçada, o processo não permitiu uma resolução no primeiro contato.",
+            "evidencia": "Cliente: 'Eu financiei um veículo no Banco Daycoval, na agência Duarte Motors, e essa agência está declarando falência. O meu carro está na garantia e o rapaz me falou que não vai fazer o serviço.' e 'se eu quisesse processar, eu processava, porque ele já estava preparado.'"
+        },
+        "insights": {
+            "insight_operacional": "O banco precisa revisar e fortalecer os processos de gestão de risco com lojistas parceiros, especialmente em relação à saúde financeira e à capacidade de honrar garantias. Desenvolver um plano de contingência para casos de falência de parceiros, incluindo opções claras para o cliente e o papel do banco na mediação ou resolução.",
+            "apontamentos_cx": "A experiência do cliente foi severamente impactada pela falta de uma solução imediata e pela necessidade de aguardar uma análise interna, gerando alto esforço e frustração. O banco deve buscar soluções mais ágeis e proativas para casos de alta complexidade e impacto financeiro para o cliente.",
+            "apontamentos_resolutividade": "A resolutividade do atendimento foi baixa, pois o problema principal do cliente não foi resolvido no primeiro contato. Embora a atendente tenha aberto um protocolo, a ausência de uma solução concreta e a necessidade de aguardar um prazo contribuem para a percepção de não resolutividade.",
+            "oportunidades_operador": "O operador demonstrou boa capacidade de sondagem, empatia e clareza na comunicação dos próximos passos. Uma oportunidade de melhoria seria aprimorar a linguagem para evitar gerundismo e, se possível dentro da alçada, oferecer um acolhimento mais direto em relação à situação do cliente, mesmo que não possa resolver o problema."
+        },
+        "falhas_operacionais": [
+            {
+                "falha": "Sondagem inadequada",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Próximos passos não informados",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            },
+            {
+                "falha": "Registro incompleto",
+                "ocorrencias": 0,
+                "evidencia": "Nenhuma ocorrência identificada."
+            }
+        ],
+        "recomendacoes": [
+            {
+                "prioridade": "Crítica",
+                "acao": "Desenvolver e implementar um protocolo de ação para casos de falência de lojistas parceiros, incluindo diretrizes claras sobre a responsabilidade do banco e opções para o cliente (ex: mediação, recompra do financiamento, direcionamento jurídico).",
+                "responsavel": "Área de Risco, Jurídico, Operações de Crédito",
+                "prazo": "Curto prazo",
+                "impacto": "Redução de riscos regulatórios, melhoria da experiência do cliente em situações críticas, proteção da reputação do banco."
+            },
+            {
+                "prioridade": "Alta",
+                "acao": "Treinar a equipe de atendimento para lidar com situações complexas de garantia e falência de lojistas, focando em comunicação empática, gestão de expectativas e conhecimento dos novos protocolos.",
+                "responsavel": "Treinamento, Qualidade",
+                "prazo": "Curto prazo",
+                "impacto": "Melhoria da qualidade do atendimento, redução do esforço do cliente e da probabilidade de recontato."
+            },
+            {
+                "prioridade": "Média",
+                "acao": "Revisar a linguagem padrão utilizada pelos operadores para minimizar o uso de gerundismo, promovendo uma comunicação mais direta e assertiva.",
+                "responsavel": "Qualidade, Treinamento",
+                "prazo": "Médio prazo",
+                "impacto": "Aprimoramento da comunicação e percepção de profissionalismo."
+            }
+        ],
+        "conclusao_executiva": "O caso apresenta um ALERTA CRÍTICO devido à grave situação do cliente com um veículo financiado defeituoso e a falência da agência vendedora, gerando alto potencial de reclamação e contestação. O operador demonstrou um desempenho que Atende as expectativas, com boa empatia e clareza nos próximos passos, mas a experiência do cliente foi crítica (Score Experiência 0/100), pois o problema principal não foi resolvido no contato. A causa raiz reside em uma lacuna no processo do banco para gerenciar riscos de parceiros e oferecer soluções imediatas em cenários de falência. A ação prioritária é o desenvolvimento urgente de um protocolo de contingência para essas situações, visando proteger o cliente e mitigar riscos para o banco."
+    },
+    "atendimento_resolutivo": "Não",
+    "humor_cliente": "Negativo",
+    "humor_atendente": "Positivo",
+    "probabilidade_recontato": "Alta"
+}

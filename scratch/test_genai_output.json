@@ -1,0 +1,375 @@
+{
+  "cabecalho": {
+    "data": "15/08/2023",
+    "protocolo": "12345",
+    "cliente": "João S.",
+    "cpf": "123.XXX.XXX-XX",
+    "atendente": "Maria Oliveira",
+    "produto": "Cartão de Crédito",
+    "categoria": "Compra Duplicada",
+    "canal": "Telefone"
+  },
+  "score_operador": 0,
+  "classificacao_operador": "Pode Melhorar Muito",
+  "visao_geral": {
+    "status": "🔴 ALERTA CRÍTICO",
+    "resumo": "O cliente João S. contatou o Banco Daycoval para relatar uma compra duplicada de R$ 150,00 em sua fatura de Cartão de Crédito. A atendente Maria Oliveira confirmou a duplicidade, atribuindo-a a uma instabilidade temporária do sistema, e informou que o estorno seria automático. No entanto, apesar da insistência do cliente, a atendente não forneceu um prazo exato para a visualização do estorno no aplicativo, encerrando o atendimento abruptamente. O desfecho resultou em alta insatisfação do cliente e um atendimento não resolutivo, configurando inaderências críticas."
+  },
+  "feedback": {
+    "positivos": [
+      "O atendente cumprimentou o cliente, manteve comunicação respeitosa e chamou o cliente pelo nome durante a interação.",
+      "O atendente demonstrou acolhimento e empatia inicial ao compreender a preocupação do cliente.",
+      "O atendente manteve a calma e a paciência, sem interrupções, mesmo diante da insistência do cliente."
+    ],
+    "melhorias": [
+      "Não forneceu um prazo claro para o estorno, mesmo após a insistência do cliente.",
+      "Não realizou sondagem adequada para entender a necessidade do cliente em relação ao prazo.",
+      "Não confirmou dados cadastrais suficientes para prosseguir com o atendimento de forma segura.",
+      "Encerrou o atendimento de forma inadequada, sem resolver a dúvida principal do cliente.",
+      "Não informou os próximos passos de forma completa, gerando risco de recontato."
+    ],
+    "coaching": "É fundamental que o operador aprimore a comunicação de prazos e a sondagem das necessidades do cliente. Em situações onde a informação do prazo não está disponível, o operador deve buscar alternativas para obtê-la ou informar claramente a impossibilidade, em vez de encerrar o atendimento sem a devida resolução. A confirmação de dados cadastrais completos é um procedimento de segurança essencial."
+  },
+  "nota_monitoria": {
+    "relacionamento": 44.25,
+    "resolutividade": 0,
+    "cx": 8,
+    "inaderencias": -200,
+    "pontos_extras": 0
+  },
+  "detalhamento": {
+    "relacionamento": [
+      {
+        "codigo": "at_rel_cord1",
+        "criterio": "Tratamento pelo nome",
+        "peso": 3.5,
+        "resultado": "Sim",
+        "nota": 3.5,
+        "evidencia": "O atendente chamou o cliente de 'Sr. João' em diversas ocasiões, como em '[13:41:20] Atendente (Maria Oliveira): Compreendo perfeitamente a sua preocupação, Sr. João.'"
+      },
+      {
+        "codigo": "at_rel_cord2",
+        "criterio": "Desculpas",
+        "peso": 3.5,
+        "resultado": "Não",
+        "nota": 0,
+        "evidencia": "O atendente não apresentou desculpas pela instabilidade do sistema que causou a duplicidade ou pela insatisfação gerada ao cliente."
+      },
+      {
+        "codigo": "at_rel_cord3",
+        "criterio": "Acolhimento",
+        "peso": 3.5,
+        "resultado": "Sim",
+        "nota": 3.5,
+        "evidencia": "O atendente demonstrou acolhimento ao expressar 'Compreendo perfeitamente a sua preocupação, Sr. João' no início do atendimento."
+      },
+      {
+        "codigo": "at_rel_cord4",
+        "criterio": "Empatia genuína",
+        "peso": 3.5,
+        "resultado": "Sim",
+        "nota": 3.5,
+        "evidencia": "A frase 'Compreendo perfeitamente a sua preocupação, Sr. João' demonstra uma tentativa de empatia inicial, embora a falta de resolução do prazo tenha comprometido a experiência final."
+      },
+      {
+        "codigo": "at_rel_cord5",
+        "criterio": "Paciência",
+        "peso": 3.5,
+        "resultado": "Sim",
+        "nota": 3.5,
+        "evidencia": "O atendente manteve a paciência durante toda a interação, mesmo quando o cliente insistiu na pergunta sobre o prazo."
+      },
+      {
+        "codigo": "at_rel_cord6",
+        "criterio": "Sem interrupção",
+        "peso": 3.5,
+        "resultado": "Sim",
+        "nota": 3.5,
+        "evidencia": "Não foi localizada evidência de que o atendente interrompeu o cliente durante a conversa."
+      },
+      {
+        "codigo": "at_rel_cord7",
+        "criterio": "Calma",
+        "peso": 3.5,
+        "resultado": "Sim",
+        "nota": 3.5,
+        "evidencia": "O atendente manteve a calma e a postura profissional durante toda a interação, sem alterar o tom de voz."
+      },
+      {
+        "codigo": "at_rel_ling1",
+        "criterio": "Comunicação adequada",
+        "peso": 3.5,
+        "resultado": "Sim",
+        "nota": 3.5,
+        "evidencia": "O atendente utilizou linguagem formal e respeitosa, como 'Sr. João' e 'Compreendo perfeitamente a sua preocupação'."
+      },
+      {
+        "codigo": "at_rel_ling2",
+        "criterio": "Sem vícios",
+        "peso": 3.5,
+        "resultado": "Sim",
+        "nota": 3.5,
+        "evidencia": "Não foram identificados vícios de linguagem na fala do atendente."
+      },
+      {
+        "codigo": "at_rel_ling3",
+        "criterio": "Segurança",
+        "peso": 3.5,
+        "resultado": "Sim",
+        "nota": 3.5,
+        "evidencia": "O atendente demonstrou segurança ao explicar a causa da duplicidade e que o estorno seria automático: 'Isso ocorreu devido a uma instabilidade temporária de comunicação... o estorno da segunda cobrança será realizado de forma automática'."
+      },
+      {
+        "codigo": "at_rel_ling4",
+        "criterio": "Gerundismo",
+        "peso": 3.5,
+        "resultado": "Sim",
+        "nota": 3.5,
+        "evidencia": "Não foi identificado o uso de gerundismo na fala do atendente."
+      },
+      {
+        "codigo": "at_rel_ling5",
+        "criterio": "Clareza",
+        "peso": 4.5,
+        "resultado": "Parcial",
+        "nota": 2.25,
+        "evidencia": "A explicação sobre a causa da duplicidade e o estorno foi clara, mas a comunicação sobre o prazo foi evasiva e não forneceu a informação solicitada pelo cliente, como em '[13:45:50] Atendente (Maria Oliveira): Conforme expliquei, o sistema fará a correção automaticamente na sua fatura. Mais alguma dúvida em que eu possa ajudar hoje?'"
+      },
+      {
+        "codigo": "at_rel_cond1",
+        "criterio": "Objetividade",
+        "peso": 3.5,
+        "resultado": "Parcial",
+        "nota": 1.75,
+        "evidencia": "O atendente foi objetivo ao identificar o problema e a causa, mas não foi objetivo ao responder à pergunta do cliente sobre o prazo, desviando da questão principal."
+      },
+      {
+        "codigo": "at_rel_cond2",
+        "criterio": "Foco",
+        "peso": 3.5,
+        "resultado": "Parcial",
+        "nota": 1.75,
+        "evidencia": "O atendente manteve o foco na identificação da duplicidade e no estorno, mas perdeu o foco na necessidade do cliente de saber o prazo exato para a correção, ignorando a insistência do cliente."
+      }
+    ],
+    "resolutividade": [
+      {
+        "codigo": "at_resol_solic1",
+        "criterio": "Proatividade",
+        "peso": 5,
+        "resultado": "Não",
+        "nota": 0,
+        "evidencia": "O atendente não demonstrou proatividade em buscar ou fornecer o prazo exato para o estorno, mesmo após a insistência do cliente, nem ofereceu alternativas para que o cliente obtivesse essa informação."
+      },
+      {
+        "codigo": "at_resol_solic2",
+        "criterio": "Esforço do cliente",
+        "peso": 5,
+        "resultado": "Não",
+        "nota": 0,
+        "evidencia": "O atendente não facilitou o processo para o cliente obter a informação do prazo, exigindo que ele repetisse a pergunta e, no final, encerrando o atendimento sem responder, aumentando o esforço do cliente."
+      }
+    ],
+    "cx": [
+      {
+        "codigo": "at_cx_intro1",
+        "criterio": "Contato",
+        "peso": 4,
+        "resultado": "Sim",
+        "nota": 4,
+        "evidencia": "O atendente iniciou o contato de forma adequada: '[13:40:02] Atendente (Maria Oliveira): Olá, João S.! Bem-vindo ao atendimento do Banco Daycoval. Meu nome é Maria Oliveira. Como posso ajudar você hoje?'"
+      },
+      {
+        "codigo": "at_cx_intro2",
+        "criterio": "Confirmação de dados",
+        "peso": 4,
+        "resultado": "Não",
+        "nota": 0,
+        "evidencia": "O atendente solicitou e confirmou apenas os três primeiros dígitos do CPF ('[13:41:20] Atendente (Maria Oliveira): Por favor, confirme para mim os três primeiros dígitos do seu CPF. [13:41:40] Cliente (João S.): Sim, é 123.'), o que não é suficiente para a confirmação de pelo menos quatro dados cadastrais."
+      },
+      {
+        "codigo": "at_cx_compr1",
+        "criterio": "Sondagem adequada",
+        "peso": 4,
+        "resultado": "Não",
+        "nota": 0,
+        "evidencia": "O atendente não realizou sondagem adequada para entender a real necessidade do cliente em relação ao prazo ('Eu preciso do limite liberado', 'Eu gostaria de saber o prazo exato para alinhar meu orçamento'), apenas repetiu que o estorno seria automático."
+      },
+      {
+        "codigo": "at_cx_compr2",
+        "criterio": "Motivo identificado",
+        "peso": 4,
+        "resultado": "Sim",
+        "nota": 4,
+        "evidencia": "O atendente identificou corretamente o motivo do contato do cliente: '[13:43:05] Atendente (Maria Oliveira): Verifiquei aqui e realmente constam dois lançamentos idênticos de R$ 150,00 no Supermercado Silva no dia 15/08.'"
+      },
+      {
+        "codigo": "at_cx_compr3",
+        "criterio": "Cliente não repetiu informações",
+        "peso": 4,
+        "resultado": "Não",
+        "nota": 0,
+        "evidencia": "O cliente precisou repetir a pergunta sobre o prazo diversas vezes: '[13:45:20] Cliente (João S.): Certo, mas qual é o prazo exato para sumir do app? Você pode me dizer? É hoje, amanhã?' e '[13:46:15] Cliente (João S.): Você não respondeu minha pergunta sobre o prazo de resolução, Maria.'"
+      },
+      {
+        "codigo": "at_cx_compr4",
+        "criterio": "Validou o entendimento",
+        "peso": 5,
+        "resultado": "Não",
+        "nota": 0,
+        "evidencia": "O atendente não validou o entendimento do cliente sobre a solução completa, especialmente após a insistência sobre o prazo. A pergunta 'Mais alguma dúvida em que eu possa ajudar hoje?' foi feita após a recusa em dar o prazo, o que não valida o entendimento da solução completa."
+      },
+      {
+        "codigo": "at_cx_classif1",
+        "criterio": "Sem risco de reincidência",
+        "peso": 5,
+        "resultado": "Não",
+        "nota": 0,
+        "evidencia": "A falta de informação sobre o prazo exato para o estorno aparecer no aplicativo gera um alto risco de reincidência de contato, pois o cliente pode ligar novamente para obter essa informação."
+      },
+      {
+        "codigo": "at_cx_classif2",
+        "criterio": "Próximos passos",
+        "peso": 5,
+        "resultado": "Não",
+        "nota": 0,
+        "evidencia": "O atendente não informou os próximos passos de forma clara e completa, especificamente o prazo para o estorno ser visualizado no aplicativo, que era a principal dúvida do cliente."
+      },
+      {
+        "codigo": "at_cx_classif3",
+        "criterio": "Atendeu à expectativa",
+        "peso": 5,
+        "resultado": "Não",
+        "nota": 0,
+        "evidencia": "O cliente expressou claramente que sua expectativa não foi atendida: '[13:47:00] Cliente (João S.): Poxa, encerrou sem me falar o prazo... muito ruim isso.'"
+      }
+    ]
+  },
+  "inaderencias": [
+    {
+      "codigo": "at_inad_compr1",
+      "criterio": "Direcionamento para pesquisa",
+      "resultado": "Não",
+      "penalidade": 0,
+      "evidencia": "Não foi localizada evidência de que o atendente não convidou o cliente para a pesquisa de satisfação."
+    },
+    {
+      "codigo": "at_inad_compr2",
+      "criterio": "Omissão do protocolo",
+      "resultado": "Não",
+      "penalidade": 0,
+      "evidencia": "Não foi localizada evidência de omissão do protocolo de atendimento."
+    },
+    {
+      "codigo": "at_inad_compr3",
+      "criterio": "Falta de informação sobre prazo",
+      "resultado": "Sim",
+      "penalidade": -100,
+      "evidencia": "O atendente não informou o prazo exato para o estorno aparecer no aplicativo, mesmo após a insistência do cliente: '[13:46:15] Cliente (João S.): Você não respondeu minha pergunta sobre o prazo de resolução, Maria.'"
+    },
+    {
+      "codigo": "at_inad_compr4",
+      "criterio": "Alteração de prazo",
+      "resultado": "Não",
+      "penalidade": 0,
+      "evidencia": "Não houve alteração de prazo, pois nenhum prazo foi fornecido inicialmente."
+    },
+    {
+      "codigo": "at_inad_compr5",
+      "criterio": "Desligamento inadequado",
+      "resultado": "Sim",
+      "penalidade": -100,
+      "evidencia": "O atendente encerrou a ligação abruptamente após a insistência do cliente sobre o prazo, sem resolver a questão: '[13:46:40] Atendente (Maria Oliveira): Agradecemos o seu contato com o Banco Daycoval. Tenha uma excelente tarde!'"
+    },
+    {
+      "codigo": "at_inad_compr6",
+      "criterio": "Uso de linguagem inadequada",
+      "resultado": "Não",
+      "penalidade": 0,
+      "evidencia": "Não foi identificada linguagem inadequada por parte do atendente."
+    },
+    {
+      "codigo": "at_inad_compr7",
+      "criterio": "Causar prejuízo",
+      "resultado": "Não",
+      "penalidade": 0,
+      "evidencia": "Não há evidência de que o atendente causou prejuízo financeiro direto ao cliente, embora tenha gerado insatisfação e potencial de recontato."
+    }
+  ],
+  "pontos_extras": [
+    {
+      "codigo": "inv_extra1",
+      "criterio": "Elogio espontâneo",
+      "resultado": "Não",
+      "bonus": 0,
+      "evidencia": "Não houve elogio espontâneo ou reconhecimento explícito do cliente ao atendimento."
+    }
+  ],
+  "inteligencia_cx": {
+    "score_experiencia": 0,
+    "esforco_cliente": "Alto",
+    "risco_reclamacao": "Alto",
+    "interpretacao": "A experiência do cliente foi severamente comprometida devido à falta de resolução da sua principal dúvida sobre o prazo do estorno. Apesar da cordialidade inicial do atendente e da identificação da causa da duplicidade, a falha em fornecer uma informação crucial levou a um alto nível de esforço do cliente, insatisfação explícita e alta probabilidade de recontato. A atuação do operador, embora tecnicamente correta na identificação do problema, foi deficiente na comunicação e na resolutividade da demanda do cliente, culminando em um encerramento inadequado.",
+    "friccao": "Alta",
+    "causa_raiz": {
+      "motivo": "Compra duplicada na fatura do cartão de crédito e falta de informação sobre o prazo exato para o estorno aparecer no aplicativo.",
+      "causa_identificada": "A duplicidade da compra foi causada por uma instabilidade temporária de comunicação entre a maquininha e o sistema do banco. A falta de informação sobre o prazo foi devido à falha do atendente em fornecer essa informação ou à ausência de um prazo claro no processo.",
+      "causa_raiz": "A causa raiz da duplicidade é uma falha de plataforma (instabilidade de comunicação). A causa raiz da insatisfação do cliente e do atendimento não resolutivo é uma falha de processo na comunicação de prazos de estorno e/ou na capacitação do atendente para lidar com essa lacuna de informação.",
+      "dono_jornada": "Sistema (instabilidade na comunicação) e Comunicação (falha na transmissão de informações claras ao cliente).",
+      "responsabilidade": "Processo",
+      "responsabilidade_motivo": "A instabilidade do sistema causou a duplicidade, e o processo de atendimento falhou ao não prover o atendente com a informação do prazo ou ao permitir o encerramento sem a devida resolução da dúvida do cliente. A responsabilidade é primariamente do processo que não garante a informação ou a forma de obtê-la.",
+      "evidencia": "A duplicidade foi explicada por '[13:43:30] Atendente (Maria Oliveira): Isso ocorreu devido a uma instabilidade temporária de comunicação entre a maquininha do estabelecimento e o nosso sistema'. A falta de prazo é evidenciada por '[13:46:15] Cliente (João S.): Você não respondeu minha pergunta sobre o prazo de resolução, Maria.'"
+    },
+    "insights": {
+      "insight_operacional": "O processo de comunicação de estornos automáticos precisa ser revisado para incluir um prazo estimado para a visualização no aplicativo, ou o atendente precisa ter acesso a essa informação de forma clara e padronizada. Isso evitaria recontatos e melhoraria a satisfação do cliente.",
+      "apontamentos_cx": "A experiência do cliente foi negativamente impactada pela falta de transparência e resolutividade em relação ao prazo do estorno, resultando em alto esforço e insatisfação. A expectativa do cliente não foi atendida, e a fricção na jornada foi alta.",
+      "apontamentos_resolutividade": "O atendente não foi proativo em fornecer a informação completa e não conseguiu resolver a dúvida principal do cliente, levando a um atendimento não resolutivo. O cliente teve que repetir a informação e não obteve a resposta desejada.",
+      "oportunidades_operador": "O operador poderia ter buscado a informação do prazo em outras fontes, escalado a questão para um supervisor ou informado claramente a impossibilidade de fornecer o prazo, em vez de encerrar o atendimento sem responder à pergunta do cliente. Há uma oportunidade de aprimorar a sondagem para entender a necessidade do cliente (orçamento) e a comunicação de próximos passos."
+    },
+    "falhas_operacionais": [
+      {
+        "falha": "Sondagem inadequada",
+        "ocorrencias": 1,
+        "evidencia": "O atendente não sondou a necessidade do cliente em relação ao prazo (at_cx_compr1 = Não)."
+      },
+      {
+        "falha": "Próximos passos não informados",
+        "ocorrencias": 2,
+        "evidencia": "O atendente não informou os próximos passos claros sobre o prazo para o estorno (at_cx_classif1 = Não, at_cx_classif2 = Não)."
+      },
+      {
+        "falha": "Validação ou registro incompleto",
+        "ocorrencias": 1,
+        "evidencia": "A confirmação de dados foi incompleta (at_cx_intro2 = Não)."
+      }
+    ],
+    "recomendacoes": [
+      {
+        "prioridade": "Crítica",
+        "acao": "Revisar e padronizar a comunicação de prazos para estornos automáticos, garantindo que os operadores tenham acesso a essa informação e saibam como transmiti-la de forma clara ao cliente.",
+        "responsavel": "Área de Processos/CX",
+        "prazo": "Curto prazo",
+        "impacto": "Redução de recontatos, aumento da satisfação do cliente e melhoria da resolutividade."
+      },
+      {
+        "prioridade": "Alta",
+        "acao": "Desenvolver treinamento específico para operadores sobre técnicas de sondagem para identificar a real necessidade do cliente (ex: impacto no orçamento) e como gerenciar expectativas quando a informação de prazo não está prontamente disponível, incluindo opções de escalonamento.",
+        "responsavel": "Treinamento/Qualidade",
+        "prazo": "Curto prazo",
+        "impacto": "Melhoria da qualidade do atendimento, aumento da empatia e redução da insatisfação do cliente."
+      },
+      {
+        "prioridade": "Média",
+        "acao": "Investigar a fundo a instabilidade de comunicação entre maquininhas e o sistema do banco que causou a duplicidade de cobranças, implementando correções para evitar futuras ocorrências.",
+        "responsavel": "Tecnologia",
+        "prazo": "Médio prazo",
+        "impacto": "Redução de erros sistêmicos, diminuição de contatos por problemas de cobrança e melhoria da confiança do cliente no sistema."
+      }
+    ],
+    "conclusao_executiva": "O atendimento foi classificado como ALERTA CRÍTICO devido à insatisfação do cliente com a falta de informação sobre o prazo de estorno, resultando em um atendimento não resolutivo e alto potencial de reclamação. O operador, embora cordial, falhou em fornecer a informação essencial, levando a inaderências críticas e um Score Operador de 0. A experiência do cliente foi negativa, com alto esforço e fricção. A causa principal do contato envolve tanto uma falha de plataforma (instabilidade na comunicação) quanto uma falha de processo/comunicação (ausência de prazo claro). A ação prioritária é a padronização e treinamento na comunicação de prazos de estorno para evitar recontatos e melhorar a experiência do cliente."
+  },
+  "atendimento_resolutivo": "Não",
+  "humor_cliente": "Negativo",
+  "humor_atendente": "Neutro",
+  "probabilidade_recontato": "Alta"
+}
