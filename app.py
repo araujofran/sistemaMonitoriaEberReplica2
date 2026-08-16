@@ -809,6 +809,53 @@ def main():
                     except Exception as e:
                         st.error(f"Erro na planilha {sf.name}: {str(e)}")
 
+        # ---------------------------------------------------------
+        # PASSO 2: CONSOLIDAÇÃO LLM EM LOTE (REGRAS ORQUESTRADORAS)
+        # ---------------------------------------------------------
+        st.markdown("---")
+        st.subheader("⚡ Passo 2: Consolidação LLM em Lote (Micro-batching de 5)")
+        st.markdown("Conforme as **Regras Orquestradoras**, após o Passo 1 (NLP), o Passo 2 executa a inteligência do Gemini LLM em micro-lotes de 5 chamadas sobre os dados salvos no SQLite.")
+        
+        audits_llm_pendentes = [a["protocolo"] for a in lista_auditorias if a.get("llm_status") == "pendente"]
+        
+        col_llm1, col_llm2 = st.columns([2, 1])
+        with col_llm1:
+            st.metric("Auditorias Pendentes do Passo 2 (LLM)", f"{len(audits_llm_pendentes)} chamadas", delta="Aguardando LLM" if audits_llm_pendentes else "100% Concluído")
+            
+        with col_llm2:
+            st.write("")
+            if st.button("⚡ Executar Passo 2 (Consolidação LLM em Lote)", key="btn_passo2_llm_lote"):
+                if not audits_llm_pendentes:
+                    st.info("Nenhuma auditoria pendente de análise LLM (Passo 2). Todas as auditorias já foram consolidadas!")
+                elif not use_real or not api_key:
+                    st.warning("⚠️ Ative o modo Real (Gemini LLM) com a chave de API para rodar o Passo 2.")
+                else:
+                    status_lote = st.empty()
+                    log_box_lote = st.empty()
+                    logs_lote = []
+                    
+                    def log_cb_lote(msg):
+                        logs_lote.append(f"[{len(logs_lote)+1}] {msg}")
+                        log_html = "".join([f"<div class='console-line'>{l}</div>" for l in logs_lote])
+                        log_box_lote.markdown(f"<div class='console-box'>{log_html}</div>", unsafe_allow_html=True)
+                        
+                    orchestrator = NLPAuditOrchestrator(use_real_llm=use_real, api_key=api_key, model_name=model_name)
+                    log_cb_lote(f"🚀 [Passo 2 Orquestrador] Iniciando consolidação LLM em Micro-lotes de 5 para {len(audits_llm_pendentes)} protocolos pendentes...")
+                    
+                    try:
+                        loop = asyncio.new_event_loop()
+                        asyncio.set_event_loop(loop)
+                        res_lote = loop.run_until_complete(
+                            orchestrator.executar_passo2_llm_microbatch(audits_llm_pendentes, batch_size=5, log_callback=log_cb_lote)
+                        )
+                        loop.close()
+                        status_lote.success(f"✅ Passo 2 (LLM Micro-batching) concluído com sucesso! ({len(res_lote)} relatórios consolidados)")
+                        time.sleep(2)
+                        st.rerun()
+                    except Exception as e:
+                        log_cb_lote(f"❌ Erro no Passo 2 LLM: {str(e)}")
+                        status_lote.error(f"Erro no Passo 2 LLM: {str(e)}")
+
     # ---------------------------------------------------------
     # ABA 3: JORNADA DO CLIENTE & HANDOFF INVISÍVEL (TIMELINE)
     # ---------------------------------------------------------
