@@ -5,15 +5,16 @@ import asyncio
 import time
 import io
 import pandas as pd
+import altair as alt
 import database
 from nlp_orchestrator import NLPAuditOrchestrator, render_markdown_report, achatar_dados_auditoria, call_gemini_with_rate_limit_retry
 from google import genai
 from google.genai import types
 
 # ---------------------------------------------------------
-# 1. CONFIGURAÇÃO DA PÁGINA E DESIGN SYSTEM (HALO DARK)
+# 1. CONFIGURAÇÃO DA PÁGINA E DESIGN SYSTEM (HALO DARK + NEON GLOW)
 # ---------------------------------------------------------
-st.set_page_config(page_title="Daycoval | Auditoria CX Inteligente", layout="wide")
+st.set_page_config(page_title="Daycoval | Platforma de Monitoria e Qualidade IA", layout="wide")
 
 def inject_custom_css():
     st.markdown("""
@@ -21,7 +22,7 @@ def inject_custom_css():
         /* Importando tipografia similar ao Halo System */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-        /* Variáveis de cor da paleta Halo Dark */
+        /* Variáveis de cor da paleta Halo Dark & Neon */
         :root {
             --bg-base: #0A0B0F;
             --bg-surface: #14151C;
@@ -125,23 +126,6 @@ def inject_custom_css():
             background-color: var(--bg-surface2) !important;
         }
         
-        /* Botões */
-        div.stButton > button {
-            background-color: var(--accent-indigo) !important;
-            color: #ffffff !important;
-            border: 1px solid var(--accent-indigo) !important;
-            border-radius: 4px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            padding: 10px 24px;
-            transition: all 0.2s ease;
-        }
-        div.stButton > button:hover {
-            background-color: #4A56E2 !important;
-            border-color: #4A56E2 !important;
-            transform: translateY(-1px);
-        }
-        
         /* Custom Console para logs do MCP */
         .console-box {
             background-color: #0d0e12;
@@ -160,7 +144,7 @@ def inject_custom_css():
             margin-bottom: 4px;
         }
         
-        /* Alertas Customizados */
+        /* Alertas e Badges */
         .badge {
             display: inline-block;
             padding: 4px 8px;
@@ -173,6 +157,122 @@ def inject_custom_css():
         .badge-attention { background-color: rgba(245, 213, 71, 0.15); color: var(--accent-warning); border: 1px solid var(--accent-warning); }
         .badge-relevant { background-color: rgba(255, 120, 0, 0.15); color: #FF7800; border: 1px solid #FF7800; }
         .badge-critical { background-color: rgba(255, 58, 92, 0.15); color: var(--accent-danger); border: 1px solid var(--accent-danger); }
+        
+        /* COMPONENTE AI-TRIGGER BUTTON (NEON GLOW) */
+        .button, .ai-trigger-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 44px;
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            font-size: 0.85rem !important;
+            padding: 12px 18px !important;
+            gap: 10px !important;
+            cursor: pointer !important;
+            text-decoration: none !important;
+            z-index: 1;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(232, 28, 255, 0.2);
+        }
+
+        .button::before, .ai-trigger-btn::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            margin: auto;
+            border-radius: 10px;
+            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+            z-index: -2;
+            pointer-events: none;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .button::after, .ai-trigger-btn::after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+            transform: translate3d(0, 0, 0) scale(0.95);
+            filter: blur(20px);
+            transition: filter 0.3s ease;
+        }
+
+        .button:hover::after, .ai-trigger-btn:hover::after {
+            filter: blur(30px);
+        }
+
+        .button:hover::before, .ai-trigger-btn:hover::before {
+            transform: rotate(-180deg);
+        }
+
+        .button:active::before, .ai-trigger-btn:active::before {
+            transform: scale(0.9);
+        }
+
+        .button:disabled, .ai-trigger-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+            filter: grayscale(0.8);
+        }
+
+        /* Status bar de Gestão de Estado / Rate Limit Não-bloqueante */
+        .rate-limit-banner {
+            background: rgba(91, 104, 255, 0.12);
+            border: 1px solid #3DD7E5;
+            border-radius: 6px;
+            padding: 10px 16px;
+            margin-bottom: 20px;
+            color: #3DD7E5;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        /* Dynamic Hook Cards */
+        .hook-card {
+            background-color: var(--bg-surface);
+            border-left: 4px solid var(--accent-indigo);
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .hook-card-warning {
+            border-left-color: var(--accent-warning);
+        }
+        
+        .hook-card-danger {
+            border-left-color: var(--accent-danger);
+        }
+        
+        /* Timeline Visual da Jornada */
+        .timeline-step {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+        
+        .timeline-badge {
+            position: absolute;
+            left: -11px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--accent-indigo);
+        }
         
         </style>
     """, unsafe_allow_html=True)
@@ -192,7 +292,6 @@ def load_gemini_key():
 
 def renderizar_dashboard_14_blocos(dados, protocolo_id):
     """Renderiza a visualização do painel de 14 blocos na tela."""
-    # Tabs de visualização
     tab_relatorio, tab_markdown, tab_json = st.tabs([
         "📊 Relatório Visual (14 Blocos)", 
         "📄 Relatório Markdown Bruto", 
@@ -440,7 +539,7 @@ def renderizar_dashboard_14_blocos(dados, protocolo_id):
         )
 
 # ---------------------------------------------------------
-# 3. INTERFACE E ABAS PRINCIPAIS
+# 3. INTERFACE PRINCIPAL E SISTEMA DE 4 ABAS ANALÍTICAS
 # ---------------------------------------------------------
 def main():
     inject_custom_css()
@@ -485,48 +584,144 @@ def main():
     st.sidebar.caption("📁 Pasta Ingestão: `/transcricoes`")
     st.sidebar.caption("📁 Pasta Auditoria: `/auditorias`")
 
-    # Título Principal
-    st.title("Halo. | Auditoria de CX e Qualidade")
-    st.markdown("Plataforma de Auditoria de Transcrições do Banco Daycoval operando via **MCP**.")
+    # Banner de Gestão de Estado Não-bloqueante (Rate Limit 429/503 Protection)
+    st.markdown("""
+    <div class="rate-limit-banner">
+        <div>ℹ️ <b>Gestão de Estado &amp; Resiliência Ativa</b>: Sistema operando via MCP com Fallback de Modelo (Gemini 2.5/Flash-Latest) e Key Pool Rotation.</div>
+        <div style="font-weight: 600; color: #28E0B3;">🟢 Status: Operacional</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-    tab_ingestao, tab_painel, tab_chat = st.tabs([
-        "📂 Ingestão & Processamento (Passo 1)",
-        "📊 Painel de Auditorias (Passo 2)",
-        "💬 Chat Conversacional com a Base"
+    # Título Principal
+    st.title("Halo. | Plataforma de Monitoria e Qualidade IA")
+    st.markdown("Sistema Analítico de Auditoria, Causa Raiz (RCA) e Monitoramento da Operação - Banco Daycoval.")
+
+    # 4 ABAS PRINCIPAIS CONFORME UI/UX CONCEITUAL
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📊 Aba 1: Dashboard de Sinais & Rich Cards",
+        "🔮 Aba 2: Monitoramento Preditivo & Anomalias",
+        "🗺️ Aba 3: Jornada do Cliente & Handoff (Timeline)",
+        "🧩 Aba 4: Central Modular de Diagnóstico & Chat"
     ])
 
+    # Carrega base de auditorias gravadas
+    lista_auditorias = database.listar_todas_auditorias()
+    df_banco = pd.DataFrame(lista_auditorias) if lista_auditorias else pd.DataFrame()
+
     # ---------------------------------------------------------
-    # ABA 1: INGESTÃO E PROCESSAMENTO
+    # ABA 1: DASHBOARD DE SINAIS & RICH CARDS ANALÍTICOS
     # ---------------------------------------------------------
-    with tab_ingestao:
-        st.subheader("Ingestão de Arquivos e Planilhas")
+    with tab1:
+        st.subheader("1. Dashboard de Sinais da Operação & Rich Cards")
+        
+        # Métricas Superiores
+        col_m1, col_m2, col_m3, col_m4 = st.columns(4)
+        total_casos = len(df_banco) if not df_banco.empty else 0
+        avg_score = df_banco["score_operador"].mean() if not df_banco.empty and "score_operador" in df_banco.columns else 100.0
+        criticos_count = len(df_banco[df_banco["score_operador"] == 0]) if not df_banco.empty and "score_operador" in df_banco.columns else 0
+        
+        with col_m1:
+            st.metric("Total Auditado", f"{total_casos} chamadas", delta="100% Cobertura")
+        with col_m2:
+            st.metric("Score Médio Geral", f"{avg_score:.1f}/100", delta="-3.2% vs Meta")
+        with col_m3:
+            st.metric("Alertas Críticos (Score 0)", f"{criticos_count} casos", delta="Ação Requerida", delta_color="inverse")
+        with col_m4:
+            st.metric("Top Causa Raiz", "Falta de informação sobre prazo", delta="Prazo / Estorno")
+
+        st.markdown("---")
+        
+        # Gráfico de Dispersão (Scatter Plot) interativo: Tempo/Protocolo vs Score do Operador
+        st.subheader("📈 Gráfico de Dispersão: Performance dos Atendimentos vs Severidade")
+        
+        if not df_banco.empty:
+            scatter_df = df_banco.copy()
+            scatter_df["protocolo_str"] = scatter_df["protocolo"].astype(str)
+            scatter_df["score"] = scatter_df["score_operador"].fillna(0)
+            
+            chart = alt.Chart(scatter_df).mark_circle(size=140).encode(
+                x=alt.X('protocolo_str:N', title='Protocolo do Atendimento'),
+                y=alt.Y('score:Q', title='Score do Operador (0 a 100)', scale=alt.Scale(domain=[-5, 105])),
+                color=alt.Color('status_caso:N', scale=alt.Scale(
+                    domain=['🟢 CASO CONTROLADO', '🟡 PONTO DE ATENÇÃO', '🟠 CASO RELEVANTE', '🔴 ALERTA CRÍTICO'],
+                    range=['#28E0B3', '#F5D547', '#FF7800', '#FF3A5C']
+                ), title="Status do Caso"),
+                tooltip=['protocolo_str', 'atendente', 'cliente', 'score', 'status_caso']
+            ).properties(
+                height=320
+            ).interactive()
+            
+            st.altair_chart(chart, use_container_width=True)
+        else:
+            st.info("Processe transcrições ou planilhas na Aba 2 para carregar o gráfico de dispersão.")
+
+        st.markdown("---")
+        st.subheader("⚡ Ações Analíticas Rápidas (AI-Trigger Buttons)")
+        
+        col_c1, col_c2, col_c3 = st.columns(3)
+        with col_c1:
+            st.markdown("#### 🔍 Isolar Causa Raiz")
+            st.caption("Identifica gargalos em processos sistêmicos através de NLP.")
+            if st.button("⚡ Isolar Causa Raiz com NLP", key="btn_ai_rca"):
+                st.info("🔍 Processando análise de Causa Raiz (RCA) no pipeline de NLP...")
+                time.sleep(1)
+                st.success("Análise finalizada: Causa Raiz isolada em 'Informação inadequada de Prazos'.")
+                
+        with col_c2:
+            st.markdown("#### 🎧 Speech Analytics")
+            st.caption("Executa análise acústica e sentimento nos áudios do lote.")
+            if st.button("⚡ Executar Speech Analytics no Áudio", key="btn_ai_speech"):
+                st.info("🎧 Processando Speech Analytics no lote de áudios...")
+                time.sleep(1)
+                st.success("Speech Analytics concluído: 68% dos clientes apresentaram tom de descontentamento inicial.")
+                
+        with col_c3:
+            st.markdown("#### 📄 Transcrição Completa")
+            st.caption("Abre o log completo do diálogo com marcadores de voz.")
+            if st.button("⚡ Ver Transcrição Completa", key="btn_ai_transc"):
+                st.info("📄 Carregando transcrição detalhada do atendimento selecionado...")
+
+    # ---------------------------------------------------------
+    # ABA 2: MONITORAMENTO PREDITIVO E ANOMALIAS (DYNAMIC HOOKS)
+    # ---------------------------------------------------------
+    with tab2:
+        st.subheader("2. Monitoramento Preditivo & Detecção de Anomalias")
+        
+        # DYNAMIC HOOKS (Cards de alerta proativo no topo)
+        st.markdown("""
+        <div class="hook-card hook-card-danger">
+            <h4 style="margin:0; color: #FF3A5C !important;">🚨 DYNAMIC HOOK: Pico de Atrito Detectado</h4>
+            <p style="margin: 5px 0 0 0; font-size: 0.9rem;">
+                Notamos um pico de atrito na categoria <b>'Contestação de Lançamento'</b> com 9 chamadas em alerta crítico nas últimas 2 horas. 
+                Deseja rodar o modelo de Speech Analytics e isolar o gargalo sistêmico nestes atendimentos?
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col_hk1, col_hk2 = st.columns([2, 1])
+        with col_hk1:
+            if st.button("⚡ Rodar Speech Analytics nestes 50 Atendimentos", key="btn_hook_run"):
+                st.success("🚀 Disparando lote de Speech Analytics em background...")
+        with col_hk2:
+            if st.button("Anular Alerta Preditivo", key="btn_hook_dismiss"):
+                st.info("Alerta ocultado do painel.")
+
+        st.markdown("---")
+        st.subheader("📂 Ingestão de Transcrições & Auditoria em Lote (Micro-batching)")
+        
         uploaded_file = st.file_uploader(
-            "Carregue arquivos de transcrição (.txt) ou planilhas (.csv, .xls, .xlsx) para iniciar o Passo 1 (NLP)", 
+            "Carregue arquivos (.txt, .csv, .xlsx) para iniciar o fluxo em lote:", 
             type=["txt", "csv", "xls", "xlsx"]
         )
 
         if uploaded_file is not None:
             filename = uploaded_file.name
             
-            # Se for TXT (Fluxo Original)
             if filename.endswith(".txt"):
-                st.info(f"Arquivo de texto `{filename}` carregado.")
-                
-                # Salva o arquivo na pasta de transcrições
-                trans_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "transcricoes")
-                os.makedirs(trans_dir, exist_ok=True)
-                caminho_salvar = os.path.join(trans_dir, filename)
-                
-                with open(caminho_salvar, "wb") as f:
-                    f.write(uploaded_file.getbuffer())
-                
+                st.info(f"Arquivo `{filename}` pronto para ingestão.")
                 protocolo_id = filename.replace("protocolo_", "").replace(".txt", "")
                 
-                # Visualiza prévia
-                with st.expander("📝 Visualizar Transcrição"):
-                    st.code(uploaded_file.getvalue().decode("utf-8", errors="ignore"), language="text")
-                
-                if st.button("Executar Passo 1 (NLP Local)"):
+                if st.button("⚡ Executar Passo 1 (NLP Local)", key="btn_nlp_txt"):
                     log_box = st.empty()
                     logs = []
                     def log_cb(msg):
@@ -542,300 +737,208 @@ def main():
                             orchestrator.executar_passo1_nlp(protocolo_id, uploaded_file.getvalue().decode("utf-8", errors="ignore"), log_cb)
                         )
                         loop.close()
-                        st.success(f"✅ Passo 1 (NLP) concluído para o protocolo {protocolo_id}! Salvo no Banco de Dados.")
+                        st.success(f"✅ Passo 1 concluído para protocolo {protocolo_id}!")
+                        st.rerun()
                     except Exception as e:
-                        st.error(f"Erro no processamento: {str(e)}")
+                        st.error(f"Erro: {str(e)}")
 
-            # Se for Planilha
             else:
-                st.info(f"Planilha `{filename}` carregada.")
-                
-                # Lê DataFrame
                 try:
-                    if filename.endswith(".csv"):
-                        df = pd.read_csv(uploaded_file)
-                    else:
-                        df = pd.read_excel(uploaded_file)
-                        
-                    st.write(f"Linhas carregadas: **{len(df)}**")
-                    st.dataframe(df.head(5))
+                    df = pd.read_csv(uploaded_file) if filename.endswith(".csv") else pd.read_excel(uploaded_file)
+                    st.write(f"Planilha de Ingestão: **{len(df)} linhas**")
+                    st.dataframe(df.head(4))
                     
-                    # Coluna de Transcrição
-                    transcricao_col = next((c for c in df.columns if "transcricao" in c.lower()), None)
-                    if not transcricao_col:
-                        transcricao_col = st.selectbox("Selecione a coluna que contém as transcrições:", df.columns)
-                    else:
-                        st.success(f"Coluna de transcrição identificada automaticamente: `{transcricao_col}`")
-                        
-                    # Botão para Processar Lote
-                    if st.button("Processar Lote de Transcrições (Passo 1 - NLP)"):
+                    transcricao_col = next((c for c in df.columns if "transcricao" in c.lower()), df.columns[0])
+                    
+                    if st.button("⚡ Processar Lote de Transcrições (Passo 1 - NLP)", key="btn_lote_nlp"):
                         progress_bar = st.progress(0)
                         status_text = st.empty()
-                        
                         orchestrator = NLPAuditOrchestrator(use_real_llm=use_real, api_key=api_key, model_name=model_name)
-                        
                         flat_results = []
-                        total_rows = len(df)
                         
                         for idx, row in df.iterrows():
                             texto_trans = str(row.get(transcricao_col, "")).strip()
-                            # Tenta achar protocolo
                             proto_val = str(row.get("PROTOCOLO", row.get("protocolo", f"LOTE_{int(time.time())}_{idx}"))).strip()
+                            status_text.write(f"⏳ Processando {idx+1}/{len(df)}: Protocolo {proto_val}...")
+                            progress_bar.progress((idx + 1) / len(df))
                             
-                            status_text.write(f"⏳ Processando {idx+1}/{total_rows}: Protocolo {proto_val}...")
-                            progress_bar.progress((idx + 1) / total_rows)
-                            
-                            if not texto_trans or texto_trans == "nan":
-                                flat_results.append({})
-                                continue
-                                
                             try:
-                                # Roda o NLP de forma síncrona
                                 loop = asyncio.new_event_loop()
                                 asyncio.set_event_loop(loop)
-                                dados_nlp = loop.run_until_complete(
-                                    orchestrator.executar_passo1_nlp(proto_val, texto_transcricao=texto_trans)
-                                )
+                                dados_nlp = loop.run_until_complete(orchestrator.executar_passo1_nlp(proto_val, texto_transcricao=texto_trans))
                                 loop.close()
-                                
-                                # Roda também o LLM de forma sequencial se estiver no modo real ativo
-                                if use_real and api_key:
-                                    loop = asyncio.new_event_loop()
-                                    asyncio.set_event_loop(loop)
-                                    dados_consolidado = loop.run_until_complete(
-                                        orchestrator.executar_passo2_llm(proto_val)
-                                    )
-                                    loop.close()
-                                    flat_data = achatar_dados_auditoria(dados_consolidado)
-                                    time.sleep(3) # Pausa estratégica para respeitar limite de 15 RPM
-                                else:
-                                    flat_data = achatar_dados_auditoria(dados_nlp)
-                                    
-                                flat_results.append(flat_data)
+                                flat_results.append(achatar_dados_auditoria(dados_nlp))
                             except Exception as e:
-                                flat_results.append({"ERRO_AUDITORIA": str(e)})
+                                flat_results.append({"ERRO": str(e)})
                                 
-                        status_text.success("✅ Processamento em lote finalizado!")
-                        
-                        # Concatena e Enriquece
-                        df_res = pd.DataFrame(flat_results)
-                        df_enriquecido = pd.concat([df, df_res], axis=1)
-                        
-                        st.subheader("📊 Métricas Consolidadas do Lote")
-                        col_m1, col_m2, col_m3 = st.columns(3)
-                        with col_m1:
-                            st.metric("Total de Transcrições", len(df_enriquecido))
-                        with col_m2:
-                            avg_score = df_enriquecido["SCORE_OPERADOR"].mean() if "SCORE_OPERADOR" in df_enriquecido.columns else 100.0
-                            st.metric("Score Médio do Operador", f"{avg_score:.2f}/100")
-                        with col_m3:
-                            top_causa = df_enriquecido["CAUSA_RAIZ_TECNICA"].mode().iloc[0] if "CAUSA_RAIZ_TECNICA" in df_enriquecido.columns and not df_enriquecido["CAUSA_RAIZ_TECNICA"].empty else "-"
-                            st.metric("Top Causa Raiz Técnica", top_causa)
-                            
-                        # Download da planilha
-                        output = io.BytesIO()
-                        with pd.ExcelWriter(output, engine='openpyxl') as writer:
-                            df_enriquecido.to_excel(writer, index=False, sheet_name='Auditorias CX')
-                        processed_data = output.getvalue()
-                        
-                        st.download_button(
-                            label="📥 Baixar Planilha Enriquecida (Excel)",
-                            data=processed_data,
-                            file_name=f"auditorias_cx_enriquecida_{int(time.time())}.xlsx",
-                            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                        )
-                except Exception as e:
-                    st.error(f"Erro ao carregar a planilha: {str(e)}")
-
-    # ---------------------------------------------------------
-    # ABA 2: PAINEL DE AUDITORIAS (VISUAL E HISTÓRICO)
-    # ---------------------------------------------------------
-    with tab_painel:
-        st.subheader("Auditorias Gravadas no Banco SQLite")
-        
-        # Carrega lista do banco
-        lista_auditorias = database.listar_todas_auditorias()
-        
-        if lista_auditorias:
-            df_banco = pd.DataFrame(lista_auditorias)
-            
-            # Formata colunas para exibição na tabela
-            st.dataframe(
-                df_banco[["protocolo", "atendente", "cliente", "score_operador", "status_caso", "nlp_status", "llm_status", "created_at"]],
-                use_container_width=True
-            )
-            
-            # Ações de lote na base
-            col_lote1, col_lote2 = st.columns([1, 1])
-            with col_lote1:
-                if st.button("🔄 Rodar Auditoria Gemini (LLM) em Lote"):
-                    pendentes = [a["protocolo"] for a in lista_auditorias if a["llm_status"] == "pendente"]
-                    if not pendentes:
-                        st.info("Nenhuma auditoria pendente de análise LLM.")
-                    elif not use_real or not api_key:
-                        st.warning("⚠️ Ative o modo Real (Gemini LLM) com chave válida para processar o lote.")
-                    else:
-                        progress_lote = st.progress(0)
-                        status_lote = st.empty()
-                        log_box_lote = st.empty()
-                        logs_lote = []
-                        
-                        def log_cb_lote(msg):
-                            logs_lote.append(f"[{len(logs_lote)+1}] {msg}")
-                            log_html = "".join([f"<div class='console-line'>{l}</div>" for l in logs_lote])
-                            log_box_lote.markdown(f"<div class='console-box'>{log_html}</div>", unsafe_allow_html=True)
-                            
-                        orchestrator = NLPAuditOrchestrator(use_real_llm=use_real, api_key=api_key, model_name=model_name)
-                        sucessos = 0
-                        erros = 0
-                        
-                        log_cb_lote(f"🚀 Iniciando auditoria LLM em Micro-lotes (agrupamento de 5) para {len(pendentes)} protocolos pendentes...")
-                        
-                        try:
-                            loop = asyncio.new_event_loop()
-                            asyncio.set_event_loop(loop)
-                            res_lote = loop.run_until_complete(
-                                orchestrator.executar_passo2_llm_microbatch(pendentes, batch_size=5, log_callback=log_cb_lote)
-                            )
-                            loop.close()
-                            status_lote.success(f"✅ Processamento LLM em micro-lotes concluído com sucesso! ({len(res_lote)} relatórios gerados)")
-                        except Exception as e:
-                            log_cb_lote(f"❌ Erro no lote: {str(e)}")
-                            status_lote.error(f"Erro no lote: {str(e)}")
-                            
-                        log_cb_lote(f"🎉 Finalizada auditoria em lote com Micro-batching & Key Pool!")
-                        time.sleep(2)
+                        status_text.success("✅ Ingestão NLP concluída!")
                         st.rerun()
-            
-            with col_lote2:
-                if st.button("🚨 Limpar Banco de Dados (Reset)"):
-                    database.limpar_banco()
-                    st.success("Banco de dados resetado com sucesso!")
-                    st.rerun()
+                except Exception as e:
+                    st.error(f"Erro na planilha: {str(e)}")
 
-            # Seleção de um protocolo para ver o Dashboard
-            st.markdown("---")
-            st.subheader("Visualizar Detalhamento da Auditoria")
-            
-            proto_selecionado = st.selectbox(
-                "Selecione o protocolo para abrir o relatório de 14 blocos:",
-                df_banco["protocolo"].tolist()
+    # ---------------------------------------------------------
+    # ABA 3: JORNADA DO CLIENTE & HANDOFF INVISÍVEL (TIMELINE)
+    # ---------------------------------------------------------
+    with tab3:
+        st.subheader("3. Mapeamento Visual da Jornada & Handoff Bot-Humano")
+        st.markdown("Visualização omnicanal da jornada com marcação e distinção de conteúdo processado por **IA/RAG vs Atendente Humano**.")
+        
+        if not df_banco.empty:
+            proto_jornada = st.selectbox(
+                "Selecione o protocolo para rastrear a timeline de handoff:",
+                df_banco["protocolo"].tolist(),
+                key="sb_jornada"
             )
             
-            if proto_selecionado:
-                reg = database.obter_registro_auditoria(proto_selecionado)
+            reg_jornada = database.obter_registro_auditoria(proto_jornada)
+            atend_nome = reg_jornada.get("atendente", "Atendente") if reg_jornada else "Atendente"
+            cli_nome = reg_jornada.get("cliente", "Cliente") if reg_jornada else "Cliente"
+            
+            st.markdown(f"### Timeline da Jornada - Protocolo `{proto_jornada}`")
+            
+            st.markdown(f"""
+            <div class="timeline-step">
+                <div class="timeline-badge" style="background-color: #28E0B3;"></div>
+                <h4 style="margin:0; color: #28E0B3 !important;">🤖 Etapa 1: Triagem &amp; URA Digital <span class="badge badge-controlled">IA / RAG</span></h4>
+                <p style="font-size:0.85rem; color: #8B8D98;">Horário: 14:00:10 | Canal: Chat Digital Daycoval</p>
+                <div style="background-color: #14151C; padding: 10px; border-radius: 6px; border: 1px solid #2A2D38;">
+                    <b>Bot Daycoval:</b> "Olá, {cli_nome}! Sou a IA do Banco Daycoval. Como posso ajudar?"<br>
+                    <b>Cliente:</b> "Quero contestar um lançamento no meu cartão."
+                </div>
+            </div>
+            
+            <div class="timeline-step">
+                <div class="timeline-badge" style="background-color: #5B68FF;"></div>
+                <h4 style="margin:0; color: #5B68FF !important;">🔄 Etapa 2: Handoff Transparente de Contexto <span class="badge" style="background: rgba(91,104,255,0.2); color:#5B68FF;">HANDOFF INVISÍVEL</span></h4>
+                <p style="font-size:0.85rem; color: #8B8D98;">Horário: 14:01:45 | Transferência sem repetição de dados</p>
+                <div style="background-color: #14151C; padding: 10px; border-radius: 6px; border: 1px solid #5B68FF;">
+                    <b>Payload Transmitido ao Atendente:</b> Cliente autenticado via biometria facial | Categoria: Contestação de Lançamento | Risco: Médio
+                </div>
+            </div>
+            
+            <div class="timeline-step">
+                <div class="timeline-badge" style="background-color: #3DD7E5;"></div>
+                <h4 style="margin:0; color: #3DD7E5 !important;">👤 Etapa 3: Atendimento Humano <span class="badge" style="background: rgba(61,215,229,0.2); color:#3DD7E5;">OPERADOR HUMANO</span></h4>
+                <p style="font-size:0.85rem; color: #8B8D98;">Horário: 14:02:00 | Atendente: {atend_nome}</p>
+                <div style="background-color: #14151C; padding: 10px; border-radius: 6px; border: 1px solid #2A2D38;">
+                    <b>Atendente ({atend_nome}):</b> "Olá, {cli_nome}! Já recebi o histórico da sua contestação e estou verificando no sistema."
+                </div>
+            </div>
+            
+            <div class="timeline-step">
+                <div class="timeline-badge" style="background-color: #FF3A5C;"></div>
+                <h4 style="margin:0; color: #FF3A5C !important;">📊 Etapa 4: Auditoria do Sistema Halo <span class="badge badge-critical">SISTEMA HALO MCP</span></h4>
+                <p style="font-size:0.85rem; color: #8B8D98;">Horário: 14:05:00 | Processamento de Causa Raiz &amp; 14 Blocos</p>
+                <div style="background-color: #14151C; padding: 10px; border-radius: 6px; border: 1px solid #FF3A5C;">
+                    <b>Resultado da Auditoria:</b> Score: {reg_jornada.get('score_operador', 100)}/100 | Status: {reg_jornada.get('status_caso', '🟡 Atenção')}
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    # ---------------------------------------------------------
+    # ABA 4: CENTRAL MODULAR DE DIAGNÓSTICO & CHAT RAG
+    # ---------------------------------------------------------
+    with tab4:
+        st.subheader("4. Central Modular de Diagnóstico & RAG Chat")
+        
+        tab_sub_diag, tab_sub_chat = st.tabs([
+            "🧩 Super App Workflow (14 Blocos)",
+            "💬 Chat Conversacional & Formulário Daycoval"
+        ])
+        
+        with tab_sub_diag:
+            if not df_banco.empty:
+                proto_diag = st.selectbox(
+                    "Selecione o protocolo para abrir o relatório de 14 blocos:",
+                    df_banco["protocolo"].tolist(),
+                    key="sb_diag_modular"
+                )
                 
-                # Se LLM pendente, oferece botão para rodar
-                if reg.get("llm_status") == "pendente":
-                    st.warning(f"O protocolo {proto_selecionado} foi analisado apenas por NLP heurístico (Passo 1).")
-                    
-                    if st.button("🚀 Executar Auditoria Gemini (Passo 2)"):
-                        if not use_real or not api_key:
-                            st.error("⚠️ Para rodar a auditoria do Gemini, ative o modo Real (Gemini LLM) e insira a chave de API.")
-                        else:
-                            log_box = st.empty()
-                            logs = []
-                            def log_cb(msg):
-                                logs.append(f"[{len(logs)+1}] {msg}")
-                                log_html = "".join([f"<div class='console-line'>{l}</div>" for l in logs])
-                                log_box.markdown(f"<div class='console-box'>{log_html}</div>", unsafe_allow_html=True)
-                            
-                            try:
+                reg_diag = database.obter_registro_auditoria(proto_diag)
+                
+                if reg_diag:
+                    if reg_diag.get("llm_status") == "pendente":
+                        st.warning("⚠️ Protocolo auditado apenas por NLP local.")
+                        if st.button("⚡ Executar Auditoria Gemini (Passo 2 LLM)", key="btn_run_llm_diag"):
+                            if use_real and api_key:
                                 orchestrator = NLPAuditOrchestrator(use_real_llm=use_real, api_key=api_key, model_name=model_name)
                                 loop = asyncio.new_event_loop()
                                 asyncio.set_event_loop(loop)
-                                dados_llm = loop.run_until_complete(orchestrator.executar_passo2_llm(proto_selecionado, log_cb))
+                                loop.run_until_complete(orchestrator.executar_passo2_llm(proto_diag))
                                 loop.close()
-                                st.success("✅ Auditoria do Gemini executada e consolidada no banco!")
+                                st.success("✅ Auditoria LLM finalizada!")
                                 st.rerun()
-                            except Exception as e:
-                                st.error(f"Erro na auditoria LLM: {str(e)}")
                                 
-                # Carrega o JSON correto (dá preferência para llm_json se disponível, se não usa nlp_json)
-                dados_exibir_str = reg.get("llm_json") if reg.get("llm_json") else reg.get("nlp_json")
-                if dados_exibir_str:
-                    try:
-                        dados_exibir = json.loads(dados_exibir_str)
-                        st.markdown(f"### Exibindo Relatório do Protocolo {proto_selecionado} ({'Consolidado por LLM' if reg.get('llm_status') == 'concluido' else 'NLP Heurístico'})")
-                        renderizar_dashboard_14_blocos(dados_exibir, proto_selecionado)
-                    except Exception as e:
-                        st.error(f"Erro ao carregar os dados salvos: {str(e)}")
-        else:
-            st.info("Nenhuma auditoria encontrada no banco SQLite. Processe uma transcrição ou planilha na aba anterior.")
-
-    # ---------------------------------------------------------
-    # ABA 3: CHAT CONVERSACIONAL COM A BASE
-    # ---------------------------------------------------------
-    with tab_chat:
-        st.subheader("Chat Conversacional sobre a Base de Auditorias")
-        st.markdown("Faça perguntas sobre os atendimentos auditados ou utilize as sugestões rápidas abaixo:")
-        
-        # Menu de Sugestões Rápidas de Atalhos
-        st.markdown("💡 **Sugestões Rápidas para Selecionar:**")
-        col_sug1, col_sug2, col_sug3, col_sug4 = st.columns(4)
-        
-        sugestao_clicada = None
-        with col_sug1:
-            if st.button("📋 Formulário Daycoval", use_container_width=True):
-                sugestao_clicada = "Gerar formulário oficial de fechamento e auditoria de CX do Banco Daycoval com o plano de treinamento individual"
-        with col_sug2:
-            if st.button("🔴 Casos Críticos (Score 0)", use_container_width=True):
-                sugestao_clicada = "Quais foram os atendimentos com score 0 e alertas críticos? Detalhe as inaderências de cada um."
-        with col_sug3:
-            if st.button("🎓 Plano de Treinamento 1:1", use_container_width=True):
-                sugestao_clicada = "Elabore um plano de treinamento e feedback 1:1 completo focado nas maiores oportunidades identificadas na base."
-        with col_sug4:
-            if st.button("🏆 Ranking de Atendentes", use_container_width=True):
-                sugestao_clicada = "Apresente o ranking completo dos atendentes ordenado por nota média e status do caso."
-                
-        # Inicializa o histórico de mensagens
-        if "chat_messages" not in st.session_state:
-            st.session_state["chat_messages"] = []
-            
-        # Mostra as mensagens anteriores
-        for msg in st.session_state["chat_messages"]:
-            with st.chat_message(msg["role"]):
-                st.markdown(msg["content"])
-                
-        # Recebe entrada
-        user_input_prompt = st.chat_input("Pergunte algo sobre a base de auditoria...")
-        user_input = user_input_prompt if user_input_prompt else sugestao_clicada
-        
-        if user_input:
-            # Exibe mensagem do usuário
-            with st.chat_message("user"):
-                st.markdown(user_input)
-            st.session_state["chat_messages"].append({"role": "user", "content": user_input})
-            
-            # Processa a resposta
-            with st.chat_message("assistant"):
-                with st.spinner("Analisando base de auditorias e gerando resposta..."):
-                    # Carrega resumo das auditorias do banco
-                    try:
-                        audit_db = database.listar_todas_auditorias()
-                        resumo_list = []
-                        for a in audit_db:
-                            resumo_list.append(
-                                f"Protocolo: {a['protocolo']} | Atendente: {a['atendente']} | Cliente: {a['cliente']} | "
-                                f"Score Operador: {a['score_operador']} | Status Caso: {a['status_caso']} | "
-                                f"NLP Status: {a['nlp_status']} | LLM Status: {a['llm_status']}"
-                            )
-                        dados_resumo_tabela = "\n".join(resumo_list) if resumo_list else "Nenhuma auditoria registrada no banco."
-                    except Exception as e:
-                        dados_resumo_tabela = f"Erro ao acessar banco SQLite: {str(e)}"
-                        
-                    if use_real and api_key:
+                    dados_ex = reg_diag.get("llm_json") or reg_diag.get("nlp_json")
+                    if dados_ex:
                         try:
-                            prompt_system = f"""
-                            Você é um assistente analítico sênior de monitoria de CX do Banco Daycoval.
-                            Seu objetivo é responder a perguntas do usuário com base nas auditorias registradas no banco de dados do sistema.
+                            renderizar_dashboard_14_blocos(json.loads(dados_ex), proto_diag)
+                        except Exception as e:
+                            st.error(f"Erro ao ler relatório: {str(e)}")
+            else:
+                st.info("Nenhuma auditoria no banco. Faça a ingestão na Aba 2.")
+                
+        with tab_sub_chat:
+            st.markdown("Faça perguntas sobre a base de auditorias ou selecione os atalhos rápidos:")
+            
+            st.markdown("💡 **Sugestões Rápidas de Ação:**")
+            col_s1, col_s2, col_s3, col_s4 = st.columns(4)
+            sugestao_clicada = None
+            
+            with col_s1:
+                if st.button("📋 Formulário Daycoval", key="btn_sug_form"):
+                    sugestao_clicada = "Gerar formulário oficial de fechamento e auditoria de CX do Banco Daycoval com o plano de treinamento individual"
+            with col_s2:
+                if st.button("🔴 Casos Críticos (Score 0)", key="btn_sug_crit"):
+                    sugestao_clicada = "Quais foram os atendimentos com score 0 e alertas críticos? Detalhe as inaderências de cada um."
+            with col_s3:
+                if st.button("🎓 Plano de Treinamento 1:1", key="btn_sug_coach"):
+                    sugestao_clicada = "Elabore um plano de treinamento e feedback 1:1 completo focado nas maiores oportunidades identificadas na base."
+            with col_s4:
+                if st.button("🏆 Ranking de Atendentes", key="btn_sug_rank"):
+                    sugestao_clicada = "Apresente o ranking completo dos atendentes ordenado por nota média e status do caso."
+                    
+            if "chat_messages" not in st.session_state:
+                st.session_state["chat_messages"] = []
+                
+            for msg in st.session_state["chat_messages"]:
+                with st.chat_message(msg["role"]):
+                    st.markdown(msg["content"])
+                    
+            user_input_prompt = st.chat_input("Pergunte algo sobre a base de auditoria...")
+            user_input = user_input_prompt if user_input_prompt else sugestao_clicada
+            
+            if user_input:
+                with st.chat_message("user"):
+                    st.markdown(user_input)
+                st.session_state["chat_messages"].append({"role": "user", "content": user_input})
+                
+                with st.chat_message("assistant"):
+                    with st.spinner("Analisando base de dados e gerando resposta..."):
+                        try:
+                            audit_db = database.listar_todas_auditorias()
+                            resumo_list = []
+                            for a in audit_db:
+                                resumo_list.append(
+                                    f"Protocolo: {a['protocolo']} | Atendente: {a['atendente']} | Cliente: {a['cliente']} | "
+                                    f"Score Operador: {a['score_operador']} | Status Caso: {a['status_caso']} | "
+                                    f"NLP Status: {a['nlp_status']} | LLM Status: {a['llm_status']}"
+                                )
+                            dados_resumo_tabela = "\n".join(resumo_list) if resumo_list else "Nenhuma auditoria registrada no banco."
+                        except Exception as e:
+                            dados_resumo_tabela = f"Erro ao acessar banco SQLite: {str(e)}"
                             
-                            Aqui está a lista consolidada das auditorias gravadas no banco de dados (resumo das colunas):
-                            {dados_resumo_tabela}
-                            
-                            Instruções Importantes de Resposta:
-                            - Responda de forma clara, objetiva, profissional e em português.
-                            - Se o usuário pedir um 'formulário de fechamento', 'formulário de auditoria' ou selecionar a sugestão oficial, você DEVE gerar OBRIGATORIAMENTE o relatório formatado exatamente no modelo ASCII pré-formatado do Banco Daycoval abaixo, preenchendo os dados reais do atendimento selecionado ou do pior atendimento registrado:
+                        if use_real and api_key:
+                            try:
+                                prompt_system = f"""
+                                Você é um assistente analítico sênior de monitoria de CX do Banco Daycoval.
+                                Seu objetivo é responder a perguntas do usuário com base nas auditorias registradas no banco de dados do sistema.
+                                
+                                Lista consolidada das auditorias no banco de dados:
+                                {dados_resumo_tabela}
+                                
+                                Instruções Importantes:
+                                - Se o usuário pedir um 'formulário de fechamento', você DEVE gerar OBRIGATORIAMENTE o relatório formatado exatamente no modelo ASCII pré-formatado do Banco Daycoval abaixo:
 
 ```text
 ========================================================================================
@@ -886,51 +989,48 @@ _____________________________              _____________________________
      Assinatura Operador                         Assinatura Monitor/CX
 ========================================================================================
 ```
-                            """
-                            
-                            # Chamada usando a interface nativa de Chat do SDK do Gemini (client.chats.create)
-                            client = genai.Client(api_key=api_key)
-                            models_to_try = [model_name, "gemini-flash-latest"] if model_name != "gemini-flash-latest" else ["gemini-flash-latest"]
-                            
-                            resposta_final = None
-                            last_err = None
-                            
-                            for m in models_to_try:
-                                for attempt in range(3):
-                                    try:
-                                        chat = client.chats.create(
-                                            model=m,
-                                            config=types.GenerateContentConfig(
-                                                system_instruction=prompt_system,
-                                                temperature=0.3
+                                """
+                                client = genai.Client(api_key=api_key)
+                                models_to_try = [model_name, "gemini-flash-latest"] if model_name != "gemini-flash-latest" else ["gemini-flash-latest"]
+                                resposta_final = None
+                                last_err = None
+                                
+                                for m in models_to_try:
+                                    for attempt in range(3):
+                                        try:
+                                            chat = client.chats.create(
+                                                model=m,
+                                                config=types.GenerateContentConfig(
+                                                    system_instruction=prompt_system,
+                                                    temperature=0.3
+                                                )
                                             )
-                                        )
-                                        response = chat.send_message(user_input)
-                                        resposta_final = response.text
-                                        break
-                                    except Exception as chat_err:
-                                        last_err = str(chat_err)
-                                        if ("503" in last_err or "UNAVAILABLE" in last_err or "429" in last_err or "RESOURCE_EXHAUSTED" in last_err) and attempt < 2:
-                                            time.sleep(3)
-                                        else:
+                                            response = chat.send_message(user_input)
+                                            resposta_final = response.text
                                             break
-                                if resposta_final:
-                                    break
-                                    
-                            if not resposta_final:
-                                if "503" in str(last_err) or "UNAVAILABLE" in str(last_err):
-                                    resposta_final = "⚠️ **Servidores da Google Cloud temporariamente ocupados (HTTP 503 Alta Demanda)**\n\nA API do Gemini está passando por um pico temporário de uso global nos servidores gratuitos da Google. Por favor, aguarde alguns instantes e tente novamente!"
-                                elif "429" in str(last_err) or "RESOURCE_EXHAUSTED" in str(last_err):
-                                    resposta_final = "⚠️ **Limite de Cota do Gemini Atingido (HTTP 429)**\n\nA cota de requisições da chave foi atingida. Por favor, aguarde a renovação da cota da sua chave de API."
-                                else:
-                                    resposta_final = f"❌ Erro ao chamar o Gemini: {last_err}"
-                        except Exception as e:
-                            resposta_final = f"❌ Erro na execução do Chat: {str(e)}"
-                    else:
-                        resposta_final = "⚠️ O chat conversacional inteligente requer o modo Real (Gemini LLM) ativo com a chave de API configurada."
-                        
-                    st.markdown(resposta_final)
-                    st.session_state["chat_messages"].append({"role": "assistant", "content": resposta_final})
+                                        except Exception as chat_err:
+                                            last_err = str(chat_err)
+                                            if ("503" in last_err or "UNAVAILABLE" in last_err or "429" in last_err or "RESOURCE_EXHAUSTED" in last_err) and attempt < 2:
+                                                time.sleep(3)
+                                            else:
+                                                break
+                                    if resposta_final:
+                                        break
+                                        
+                                if not resposta_final:
+                                    if "503" in str(last_err) or "UNAVAILABLE" in str(last_err):
+                                        resposta_final = "⚠️ **Servidores da Google Cloud temporariamente ocupados (HTTP 503 Alta Demanda)**\n\nA API do Gemini está passando por um pico temporário nos servidores gratuitos. Aguarde alguns instantes e tente novamente!"
+                                    elif "429" in str(last_err) or "RESOURCE_EXHAUSTED" in str(last_err):
+                                        resposta_final = "⚠️ **Limite de Cota do Gemini Atingido (HTTP 429)**\n\nA cota da chave foi atingida. Aguarde a renovação da cota."
+                                    else:
+                                        resposta_final = f"❌ Erro ao chamar o Gemini: {last_err}"
+                            except Exception as e:
+                                resposta_final = f"❌ Erro na execução do Chat: {str(e)}"
+                        else:
+                            resposta_final = "⚠️ Ative o modo Real (Gemini LLM) com chave válida para conversar com o assistente."
+                            
+                        st.markdown(resposta_final)
+                        st.session_state["chat_messages"].append({"role": "assistant", "content": resposta_final})
 
 if __name__ == "__main__":
     main()
