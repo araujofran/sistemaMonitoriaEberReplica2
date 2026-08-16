@@ -768,8 +768,26 @@ def main():
     # ---------------------------------------------------------
     with tab_chat:
         st.subheader("Chat Conversacional sobre a Base de Auditorias")
-        st.markdown("Faça perguntas sobre os atendimentos auditados (ex: Notas médias, piores causas, resumos operacionais).")
+        st.markdown("Faça perguntas sobre os atendimentos auditados ou utilize as sugestões rápidas abaixo:")
         
+        # Menu de Sugestões Rápidas de Atalhos
+        st.markdown("💡 **Sugestões Rápidas para Selecionar:**")
+        col_sug1, col_sug2, col_sug3, col_sug4 = st.columns(4)
+        
+        sugestao_clicada = None
+        with col_sug1:
+            if st.button("📋 Formulário Daycoval", use_container_width=True):
+                sugestao_clicada = "Gerar formulário oficial de fechamento e auditoria de CX do Banco Daycoval com o plano de treinamento individual"
+        with col_sug2:
+            if st.button("🔴 Casos Críticos (Score 0)", use_container_width=True):
+                sugestao_clicada = "Quais foram os atendimentos com score 0 e alertas críticos? Detalhe as inaderências de cada um."
+        with col_sug3:
+            if st.button("🎓 Plano de Treinamento 1:1", use_container_width=True):
+                sugestao_clicada = "Elabore um plano de treinamento e feedback 1:1 completo focado nas maiores oportunidades identificadas na base."
+        with col_sug4:
+            if st.button("🏆 Ranking de Atendentes", use_container_width=True):
+                sugestao_clicada = "Apresente o ranking completo dos atendentes ordenado por nota média e status do caso."
+                
         # Inicializa o histórico de mensagens
         if "chat_messages" not in st.session_state:
             st.session_state["chat_messages"] = []
@@ -780,7 +798,8 @@ def main():
                 st.markdown(msg["content"])
                 
         # Recebe entrada
-        user_input = st.chat_input("Pergunte algo sobre a base de auditoria...")
+        user_input_prompt = st.chat_input("Pergunte algo sobre a base de auditoria...")
+        user_input = user_input_prompt if user_input_prompt else sugestao_clicada
         
         if user_input:
             # Exibe mensagem do usuário
@@ -808,17 +827,65 @@ def main():
                     if use_real and api_key:
                         try:
                             prompt_system = f"""
-                            Você é um assistente analítico de monitoria de CX do Banco Daycoval.
+                            Você é um assistente analítico sênior de monitoria de CX do Banco Daycoval.
                             Seu objetivo é responder a perguntas do usuário com base nas auditorias registradas no banco de dados do sistema.
                             
-                            Aqui está a lista consolidada das auditorias gravadas no banco de dados (resumo das principais colunas):
+                            Aqui está a lista consolidada das auditorias gravadas no banco de dados (resumo das colunas):
                             {dados_resumo_tabela}
                             
-                            Instruções:
+                            Instruções Importantes de Resposta:
                             - Responda de forma clara, objetiva, profissional e em português.
-                            - Se a pergunta for sobre um protocolo específico (ex: 12345), você pode detalhar as notas, inaderências e causa raiz se esses dados estiverem presentes.
-                            - Se a pergunta pedir estatísticas (ex: média de notas, atendentes com problemas), faça as contas aproximadas com base na lista fornecida.
-                            - Responda apenas sobre os dados presentes no banco de dados. Caso não tenha informações, informe gentilmente.
+                            - Se o usuário pedir um 'formulário de fechamento', 'formulário de auditoria' ou selecionar a sugestão oficial, você DEVE gerar OBRIGATORIAMENTE o relatório formatado exatamente no modelo ASCII pré-formatado do Banco Daycoval abaixo, preenchendo os dados reais do atendimento selecionado ou do pior atendimento registrado:
+
+```text
+========================================================================================
+           BANCO DAYCOVAL - FORMULÁRIO DE FECHAMENTO E AUDITORIA DE CX
+========================================================================================
+
+1. DADOS DO PROTOCOLO E ATENDIMENTO
+----------------------------------------------------------------------------------------
+Protocolo: [ <PROTOCOLO_REAL> ]     Data da Auditoria: [ <DATA_REAL> ]
+Operador:  [ <ATENDENTE_REAL> ]     Supervisor/Gestor: [ CX / Monitoria ]
+Cliente:   [ <CLIENTE_REAL> ]     Canal: ( ) Voz  (X) Chat  ( ) WhatsApp
+Status do Caso: ( ) 🟢 Controlado  ( ) 🟡 Atenção  ( ) 🟠 Relevante  (X) 🔴 Crítico
+
+2. MATRIZ DE AVALIAÇÃO DE COMPETÊNCIAS (0 a 100)
+----------------------------------------------------------------------------------------
+[ PILAR 1: COMPLIANCE & SEGURANÇA (Eliminatório) ]
+[X] Confirmação positiva de dados (LGPD / Sigilo Bancário)            Peso: 25 | Nota: [ <NOTA_P1A> ]
+[X] Não incorreu em erro fatal (queda deliberada, postura antiética)  Peso: 25 | Nota: [ <NOTA_P1B> ]
+
+[ PILAR 2: RESOLUTIVIDADE & DOMÍNIO TÉCNICO ]
+[X] Sondagem correta da necessidade e diagnóstico da solicitação      Peso: 15 | Nota: [ <NOTA_P2A> ]
+[X] Aderência aos procedimentos, políticas de crédito e regras Banco  Peso: 15 | Nota: [ <NOTA_P2B> ]
+
+[ PILAR 3: EXPERIÊNCIA DO CLIENTE (CX) & COMUNICAÇÃO ]
+[X] Cordialidade, escuta ativa, empatia e clareza na explicação       Peso: 10 | Nota: [ <NOTA_P3A> ]
+[X] Gestão do tempo de espera, script correto e encerramento padrão   Peso: 10 | Nota: [ <NOTA_P3B> ]
+
+----------------------------------------------------------------------------------------
+SCORE FINAL DA AUDITORIA: [ <SCORE_OPERADOR_REAL> / 100 ]
+----------------------------------------------------------------------------------------
+
+3. CLASSIFICAÇÃO DA CAUSA RAIZ
+[ ] Falha de Processo / Procedimento Não Documentado
+[X] Falha de Domínio Técnico / Erro Operacional
+[ ] Falha Comportamental / Postura / Falta de Empatia
+[X] Violação de Script Regulatório / Erro Crítico Eliminatório
+[ ] Falha Sistêmica / Queda de Conexão / Identificação de URA
+
+4. PLANO DE AÇÃO INDIVIDUAL (1:1 / FEEDBACK)
+Diagnóstico do Avaliador:
+<Diagnóstico detalhado com base nos dados reais do atendimento auditado>
+
+Compromisso do Operador:
+<Compromisso do operador e plano de treinamento sugerido com tópicos de reciclagem>
+Prazo para Reavaliação: [ 15 dias ]
+
+_____________________________              _____________________________
+     Assinatura Operador                         Assinatura Monitor/CX
+========================================================================================
+```
                             """
                             
                             # Chamada usando a interface nativa de Chat do SDK do Gemini (client.chats.create)
