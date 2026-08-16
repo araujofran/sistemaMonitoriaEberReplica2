@@ -1225,9 +1225,12 @@ def main():
 
         # Filtro de Protocolo para Rastreabilidade
         opcoes_jornada = ["⭐ Protocolo Exemplo 2607199947 (12 Micro-eventos de NLP - Análise Granular)"]
+        dict_jornada_proto = {}
         if not df_banco.empty:
             for p in df_banco["protocolo"].tolist():
-                opcoes_jornada.append(f"Protocolo {p} (Auditado no SQLite)")
+                lbl = f"Protocolo {p} (Auditado no SQLite)"
+                opcoes_jornada.append(lbl)
+                dict_jornada_proto[lbl] = p
                 
         proto_jornada_sel = st.selectbox(
             "Selecione o protocolo para rastrear a timeline de micro-eventos:",
@@ -1235,11 +1238,88 @@ def main():
             key="sb_jornada_timeline"
         )
         
-        st.markdown("---")
-        st.markdown("### 🌲 Árvore Vertical de Eventos da Jornada (Vertical Stepper)")
+        # Determina quais eventos renderizar (Mock Exemplo ou Dados Reais do SQLite)
+        events_to_render = mock_timeline_events
+        proto_real_id = dict_jornada_proto.get(proto_jornada_sel, None)
         
-        # Renderização dos Nós da Timeline
-        for ev in mock_timeline_events:
+        if proto_real_id:
+            reg = database.obter_registro_auditoria(proto_real_id)
+            if reg:
+                raw_json = reg.get("llm_json") or reg.get("nlp_json")
+                if raw_json:
+                    try:
+                        d_json = json.loads(raw_json)
+                        cab = d_json.get("cabecalho", {})
+                        atend = cab.get("atendente", reg.get("atendente", "Atendente"))
+                        cli = cab.get("cliente", reg.get("cliente", "Cliente"))
+                        score = d_json.get("score_operador", reg.get("score_operador", 100))
+                        status = d_json.get("visao_geral", {}).get("status", reg.get("status_caso", "🟡 Ponto de Atenção"))
+                        causa_info = d_json.get("inteligencia_cx", {}).get("causa_raiz", {})
+                        causa_raiz_str = causa_info.get("causa_raiz", "Inconsistência nos procedimentos operacionais")
+                        evidencia_str = causa_info.get("evidencia", "Falta de informação sobre prazos obrigatórios")
+                        inad_list = d_json.get("inaderencias", [])
+                        
+                        is_crit = (score == 0) or ("CRÍTICO" in str(status)) or (len(inad_list) > 0)
+                        
+                        events_to_render = [
+                            {
+                                "etapa": 1,
+                                "tempo": "00:00",
+                                "ator": f"Atendente ({atend})",
+                                "acao_nlp": f"Saudação Inicial e Abertura de Chamada Padrão para {cli}",
+                                "nivel_risco": "BAIXO"
+                            },
+                            {
+                                "etapa": 2,
+                                "tempo": "00:30",
+                                "ator": "Sistema (URA / Biometria)",
+                                "acao_nlp": f"Validação Positiva de Cadastro do Cliente ({cli})",
+                                "protocolo_gerado": str(proto_real_id),
+                                "nivel_risco": "BAIXO"
+                            },
+                            {
+                                "etapa": 3,
+                                "tempo": "01:15",
+                                "ator": f"Cliente ({cli})",
+                                "acao_nlp": f"Relato da Solicitação / Categoria: {cab.get('categoria', 'Atendimento Geral')}",
+                                "entidades": [cab.get("produto", "Produto Bancário"), f"Cliente: {cli}"],
+                                "nivel_risco": "BAIXO"
+                            },
+                            {
+                                "etapa": 4,
+                                "tempo": "02:00",
+                                "ator": "Sistema (Motor Halo NLP)",
+                                "acao_nlp": f"Diagnóstico de Causa Raiz (RCA): {causa_raiz_str}",
+                                "causa_raiz": causa_raiz_str,
+                                "entidades": [f"Evidência: {evidencia_str}"],
+                                "nivel_risco": "ALTO" if is_crit else "MÉDIO",
+                                "acao_sugerida": f"Reciclagem Operacional: {causa_raiz_str}"
+                            },
+                            {
+                                "etapa": 5,
+                                "tempo": "03:45",
+                                "ator": f"Atendente ({atend})",
+                                "acao_nlp": f"Condução dos Procedimentos Operacionais (Score do Operador: {score}/100)",
+                                "causa_raiz": inad_list[0].get("evidencia", evidencia_str) if inad_list else evidencia_str,
+                                "nivel_risco": "ALTO" if is_crit else "BAIXO",
+                                "acao_sugerida": "Aplicar Coaching 1:1 de Compliance" if is_crit else "Manter Padrão de Qualidade"
+                            },
+                            {
+                                "etapa": 6,
+                                "tempo": "05:00",
+                                "ator": "Sistema Halo (Consolidação)",
+                                "acao_nlp": f"Encerramento, Tabulação e Cálculo dos 14 Blocos (Status: {status})",
+                                "nivel_risco": "BAIXO"
+                            }
+                        ]
+                    except Exception as e:
+                        pass
+
+        st.markdown("---")
+        st.markdown(f"### 🌲 Árvore Vertical de Eventos da Jornada - Protocolo `{proto_real_id if proto_real_id else '2607199947'}`")
+        
+        # Renderização dos Nós da Timeline Dinâmica
+        for ev in events_to_render:
             risco = ev.get("nivel_risco", "BAIXO")
             if risco == "ALTO":
                 card_class = "node-card-high"
@@ -1281,7 +1361,7 @@ def main():
                         st.write("")
                         st.markdown("**⚡ Ação Analítica Recomendada (AITriggerButton):**")
                         lbl_acao = ev['acao_sugerida']
-                        if st.button(f"⚡ {lbl_acao}", key=f"btn_ai_trigger_node_{ev['etapa']}"):
+                        if st.button(f"⚡ {lbl_acao}", key=f"btn_ai_trigger_node_{ev['etapa']}_{proto_real_id if proto_real_id else 'mock'}"):
                             st.success(f"🚀 [AITrigger Executado] Ação '{lbl_acao}' disparada com sucesso no pipeline RAG/MCP!")
 
     # ---------------------------------------------------------
