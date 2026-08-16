@@ -127,60 +127,68 @@ class AuditoriaCXReport(BaseModel):
 # GESTÃO INTELIGENTE DE RATE LIMIT (HTTP 429) & BACKOFF
 # ---------------------------------------------------------
 
-def call_gemini_with_rate_limit_retry(client, model_name, prompt_input, prompt_rules, response_schema=None, log_callback=None, max_retries=5):
+def call_gemini_with_rate_limit_retry(client, model_name, prompt_input, prompt_rules, response_schema=None, log_callback=None, max_retries=4):
     """
-    Executa a chamada ao Gemini com gestão inteligente de Rate Limit (HTTP 429 RESOURCE_EXHAUSTED).
-    Extrai o tempo de espera sugerido (retryDelay / retry in X.Xs) e realiza a pausa pró-ativa com recuo exponencial.
+    Executa a chamada ao Gemini com gestão inteligente de Rate Limit (HTTP 429 RESOURCE_EXHAUSTED) 
+    e Roteamento/Fallback de Modelo de IA (ex: gemini-2.5-flash -> gemini-1.5-flash).
     """
-    attempt = 0
-    while attempt < max_retries:
-        try:
-            config_args = {
-                "system_instruction": prompt_rules,
-                "temperature": 0.1
-            }
-            if response_schema:
-                config_args["response_mime_type"] = "application/json"
-                config_args["response_schema"] = response_schema
-                
-            response = client.models.generate_content(
-                model=model_name,
-                contents=prompt_input,
-                config=types.GenerateContentConfig(**config_args)
-            )
-            return response
-        except Exception as e:
-            err_str = str(e)
-            if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "Quota exceeded" in err_str:
-                attempt += 1
-                wait_time = 10.0 * (2 ** (attempt - 1))
-                
-                # Procura por tempo exato de espera na mensagem de erro do Google (ex: "retry in 34.9s")
-                match_wait = re.search(r"retry in (\d+(\.\d+)?)s", err_str, re.IGNORECASE)
-                if match_wait:
-                    try:
-                        wait_time = float(match_wait.group(1)) + 2.0
-                    except Exception:
-                        pass
-                else:
-                    match_delay = re.search(r"retryDelay': '(\d+)s", err_str)
-                    if match_delay:
+    models_to_try = [model_name]
+    if model_name != "gemini-1.5-flash":
+        models_to_try.append("gemini-1.5-flash")
+        
+    for current_model in models_to_try:
+        attempt = 0
+        while attempt < max_retries:
+            try:
+                config_args = {
+                    "system_instruction": prompt_rules,
+                    "temperature": 0.1
+                }
+                if response_schema:
+                    config_args["response_mime_type"] = "application/json"
+                    config_args["response_schema"] = response_schema
+                    
+                response = client.models.generate_content(
+                    model=current_model,
+                    contents=prompt_input,
+                    config=types.GenerateContentConfig(**config_args)
+                )
+                return response
+            except Exception as e:
+                err_str = str(e)
+                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "Quota exceeded" in err_str:
+                    attempt += 1
+                    
+                    # Se cota diária excedida no modelo atual e temos modelo de fallback na fila, alterna imediatamente
+                    if ("QuotaId" in err_str or "PerDay" in err_str or "free_tier" in err_str) and len(models_to_try) > 1 and current_model != models_to_try[-1]:
+                        msg_fallback = f"🔄 [Fallback Routing] Cota do modelo `{current_model}` atingida. Redirecionando automaticamente para o modelo fallback `{models_to_try[-1]}`..."
+                        if log_callback: log_callback(msg_fallback)
+                        else: print(msg_fallback)
+                        break
+                        
+                    wait_time = 8.0 * (1.5 ** (attempt - 1))
+                    match_wait = re.search(r"retry in (\d+(\.\d+)?)s", err_str, re.IGNORECASE)
+                    if match_wait:
                         try:
-                            wait_time = float(match_delay.group(1)) + 2.0
+                            wait_time = float(match_wait.group(1)) + 1.5
                         except Exception:
                             pass
-                            
-                msg = f"⏳ [Rate Limit Gemini 429] Cota por minuto excedida. Aguardando {wait_time:.1f}s para retentar automaticamente (Tentativa {attempt}/{max_retries})..."
-                if log_callback:
-                    log_callback(msg)
+                    else:
+                        match_delay = re.search(r"retryDelay': '(\d+)s", err_str)
+                        if match_delay:
+                            try:
+                                wait_time = float(match_delay.group(1)) + 1.5
+                            except Exception:
+                                pass
+                                
+                    msg = f"⏳ [Rate Limit Gemini 429 - Modelo `{current_model}`] Cota excedida. Aguardando {wait_time:.1f}s para retentar (Tentativa {attempt}/{max_retries})..."
+                    if log_callback: log_callback(msg)
+                    else: print(msg)
+                    time.sleep(wait_time)
                 else:
-                    print(msg)
+                    raise e
                     
-                time.sleep(wait_time)
-            else:
-                raise e
-                
-    raise RuntimeError(f"Cota do Gemini (Rate Limit 429) temporariamente excedida após {max_retries} tentativas com recuo automático.")
+    raise RuntimeError(f"Cota do Gemini (Rate Limit 429) excedida em todos os modelos testados ({', '.join(models_to_try)}). Aguarde a renovação da cota da sua chave.")
 
 # ---------------------------------------------------------
 # CLASSE ORQUESTRADORA PRINCIPAL

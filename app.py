@@ -827,22 +827,38 @@ def main():
                             - Responda apenas sobre os dados presentes no banco de dados. Caso não tenha informações, informe gentilmente.
                             """
                             
-                            # Chamada ao Gemini com gestão de Rate Limit (HTTP 429)
+                            # Chamada usando a interface nativa de Chat do SDK do Gemini (client.chats.create)
                             client = genai.Client(api_key=api_key)
                             
-                            response = call_gemini_with_rate_limit_retry(
-                                client=client,
-                                model_name=model_name,
-                                prompt_input=user_input,
-                                prompt_rules=prompt_system,
-                                max_retries=3
-                            )
-                            
-                            resposta_final = response.text
+                            try:
+                                chat = client.chats.create(
+                                    model=model_name,
+                                    config=types.GenerateContentConfig(
+                                        system_instruction=prompt_system,
+                                        temperature=0.3
+                                    )
+                                )
+                                response = chat.send_message(user_input)
+                                resposta_final = response.text
+                            except Exception as chat_err:
+                                err_str = str(chat_err)
+                                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
+                                    # Fallback de modelo para gemini-1.5-flash
+                                    chat_fallback = client.chats.create(
+                                        model="gemini-1.5-flash",
+                                        config=types.GenerateContentConfig(
+                                            system_instruction=prompt_system,
+                                            temperature=0.3
+                                        )
+                                    )
+                                    response = chat_fallback.send_message(user_input)
+                                    resposta_final = response.text
+                                else:
+                                    raise chat_err
                         except Exception as e:
                             err_msg = str(e)
                             if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg or "Quota exceeded" in err_msg:
-                                resposta_final = "⚠️ **Limite de Cota do Gemini Atingido (HTTP 429)**\n\nA cota de requisições da chave do Gemini foi excedida temporariamente. O sistema tentou o recuo automático, mas atingiu o limite de cota gratuita do dia/minuto.\n\n*Dica: Você pode consultar as notas e estatísticas navegando diretamente na aba **Painel de Auditorias**.*"
+                                resposta_final = "⚠️ **Limite de Cota do Gemini Atingido (HTTP 429)**\n\nA cota de requisições da chave do Gemini foi excedida temporariamente. O sistema aplicou a troca de modelo fallback, mas a cota gratuita do projeto foi atingida.\n\n*Dica: Você pode consultar as notas e estatísticas navegando diretamente na aba **Painel de Auditorias**.*"
                             else:
                                 resposta_final = f"❌ Erro ao chamar o Gemini: {err_msg}"
                     else:
