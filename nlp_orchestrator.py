@@ -124,6 +124,65 @@ class AuditoriaCXReport(BaseModel):
     probabilidade_recontato: str = Field(description="Probabilidade de recontato (valores: Baixa, Média, Alta)")
 
 # ---------------------------------------------------------
+# GESTÃO INTELIGENTE DE RATE LIMIT (HTTP 429) & BACKOFF
+# ---------------------------------------------------------
+
+def call_gemini_with_rate_limit_retry(client, model_name, prompt_input, prompt_rules, response_schema=None, log_callback=None, max_retries=5):
+    """
+    Executa a chamada ao Gemini com gestão inteligente de Rate Limit (HTTP 429 RESOURCE_EXHAUSTED).
+    Extrai o tempo de espera sugerido (retryDelay / retry in X.Xs) e realiza a pausa pró-ativa com recuo exponencial.
+    """
+    attempt = 0
+    while attempt < max_retries:
+        try:
+            config_args = {
+                "system_instruction": prompt_rules,
+                "temperature": 0.1
+            }
+            if response_schema:
+                config_args["response_mime_type"] = "application/json"
+                config_args["response_schema"] = response_schema
+                
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt_input,
+                config=types.GenerateContentConfig(**config_args)
+            )
+            return response
+        except Exception as e:
+            err_str = str(e)
+            if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "Quota exceeded" in err_str:
+                attempt += 1
+                wait_time = 10.0 * (2 ** (attempt - 1))
+                
+                # Procura por tempo exato de espera na mensagem de erro do Google (ex: "retry in 34.9s")
+                match_wait = re.search(r"retry in (\d+(\.\d+)?)s", err_str, re.IGNORECASE)
+                if match_wait:
+                    try:
+                        wait_time = float(match_wait.group(1)) + 2.0
+                    except Exception:
+                        pass
+                else:
+                    match_delay = re.search(r"retryDelay': '(\d+)s", err_str)
+                    if match_delay:
+                        try:
+                            wait_time = float(match_delay.group(1)) + 2.0
+                        except Exception:
+                            pass
+                            
+                msg = f"⏳ [Rate Limit Gemini 429] Cota por minuto excedida. Aguardando {wait_time:.1f}s para retentar automaticamente (Tentativa {attempt}/{max_retries})..."
+                if log_callback:
+                    log_callback(msg)
+                else:
+                    print(msg)
+                    
+                time.sleep(wait_time)
+            else:
+                raise e
+                
+    raise RuntimeError(f"Cota do Gemini (Rate Limit 429) temporariamente excedida após {max_retries} tentativas com recuo automático.")
+
+# ---------------------------------------------------------
 # CLASSE ORQUESTRADORA PRINCIPAL
 # ---------------------------------------------------------
 
@@ -269,15 +328,13 @@ class NLPAuditOrchestrator:
             
         response = await loop.run_in_executor(
             None,
-            lambda: client.models.generate_content(
-                model=self.model_name,
-                contents=prompt_input,
-                config=types.GenerateContentConfig(
-                    system_instruction=self.prompt_rules,
-                    response_mime_type="application/json",
-                    response_schema=AuditoriaCXReport,
-                    temperature=0.1
-                )
+            lambda: call_gemini_with_rate_limit_retry(
+                client=client,
+                model_name=self.model_name,
+                prompt_input=prompt_input,
+                prompt_rules=self.prompt_rules,
+                response_schema=AuditoriaCXReport,
+                log_callback=log_callback
             )
         )
         
