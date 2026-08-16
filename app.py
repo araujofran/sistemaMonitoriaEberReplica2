@@ -879,7 +879,27 @@ def main():
                 st.info("Nenhuma auditoria no banco. Faça a ingestão na Aba 2.")
                 
         with tab_sub_chat:
-            st.markdown("Faça perguntas sobre a base de auditorias ou selecione os atalhos rápidos:")
+            st.markdown("### 💬 Chat Conversacional Analítico com a Base")
+            
+            # 1. LISTA SUSPENSA DE PROTOCOLOS (SELEÇÃO DIRECIOMADA OU GERAL)
+            st.markdown("🎯 **Selecione o Contexto de Análise (Lista Suspensa):**")
+            audit_db = database.listar_todas_auditorias()
+            
+            opcoes_protocolo = ["🌐 Todos os Protocolos (Visão Consolidada da Base)"]
+            dict_protocolos = {}
+            if audit_db:
+                for a in audit_db:
+                    label = f"Protocolo {a['protocolo']} - Atendente: {a['atendente']} | Cliente: {a['cliente']} | Score: {a['score_operador']} | Status: {a['status_caso']}"
+                    opcoes_protocolo.append(label)
+                    dict_protocolos[label] = a['protocolo']
+                    
+            proto_selecionado_chat = st.selectbox(
+                "Escolha um protocolo específico ou mantenha a análise global:",
+                opcoes_protocolo,
+                key="sb_chat_protocolo"
+            )
+            
+            proto_foco_id = dict_protocolos.get(proto_selecionado_chat, None)
             
             st.markdown("💡 **Sugestões Rápidas de Ação:**")
             col_s1, col_s2, col_s3, col_s4 = st.columns(4)
@@ -887,13 +907,19 @@ def main():
             
             with col_s1:
                 if st.button("📋 Formulário Daycoval", key="btn_sug_form"):
-                    sugestao_clicada = "Gerar formulário oficial de fechamento e auditoria de CX do Banco Daycoval com o plano de treinamento individual"
+                    if proto_foco_id:
+                        sugestao_clicada = f"Gerar formulário oficial de fechamento e auditoria de CX do Banco Daycoval especificamente para o protocolo {proto_foco_id}"
+                    else:
+                        sugestao_clicada = "Gerar formulário oficial de fechamento e auditoria de CX do Banco Daycoval para o atendimento crítico"
             with col_s2:
                 if st.button("🔴 Casos Críticos (Score 0)", key="btn_sug_crit"):
                     sugestao_clicada = "Quais foram os atendimentos com score 0 e alertas críticos? Detalhe as inaderências de cada um."
             with col_s3:
                 if st.button("🎓 Plano de Treinamento 1:1", key="btn_sug_coach"):
-                    sugestao_clicada = "Elabore um plano de treinamento e feedback 1:1 completo focado nas maiores oportunidades identificadas na base."
+                    if proto_foco_id:
+                        sugestao_clicada = f"Elabore um plano de treinamento e feedback 1:1 focado nos pontos de melhoria do protocolo {proto_foco_id}"
+                    else:
+                        sugestao_clicada = "Elabore um plano de treinamento e feedback 1:1 completo focado nas maiores oportunidades identificadas na base."
             with col_s4:
                 if st.button("🏆 Ranking de Atendentes", key="btn_sug_rank"):
                     sugestao_clicada = "Apresente o ranking completo dos atendentes ordenado por nota média e status do caso."
@@ -930,15 +956,33 @@ def main():
                             
                         if use_real and api_key:
                             try:
+                                contexto_foco_str = ""
+                                if proto_foco_id:
+                                    reg_foco = database.obter_registro_auditoria(proto_foco_id)
+                                    contexto_foco_str = f"""
+                                    O USUÁRIO SELECIONOU O PROTOCOLO ESPECÍFICO NA LISTA SUSPENSA: Protocolo {proto_foco_id}
+                                    Detalhes completos salvos no banco para este protocolo:
+                                    - Atendente: {reg_foco.get('atendente')} | Cliente: {reg_foco.get('cliente')}
+                                    - Score do Operador: {reg_foco.get('score_operador')}
+                                    - Status do Caso: {reg_foco.get('status_caso')}
+                                    - Relatório de Auditoria JSON: {reg_foco.get('llm_json') or reg_foco.get('nlp_json')}
+                                    """
+                                else:
+                                    contexto_foco_str = "VISÃO GLOBAL ATIVA: O usuário pode fazer perguntas sobre toda a base, pedir comparação entre 2, 3 ou todos os atendimentos, ou solicitar estatísticas gerais."
+
                                 prompt_system = f"""
                                 Você é um assistente analítico sênior de monitoria de CX do Banco Daycoval.
-                                Seu objetivo é responder a perguntas do usuário com base nas auditorias registradas no banco de dados do sistema.
+                                Seu objetivo é responder a perguntas do usuário com base nas auditorias registradas no banco de dados.
                                 
-                                Lista consolidada das auditorias no banco de dados:
+                                {contexto_foco_str}
+                                
+                                Lista consolidada das auditorias gravadas no banco de dados SQLite:
                                 {dados_resumo_tabela}
                                 
-                                Instruções Importantes:
-                                - Se o usuário pedir um 'formulário de fechamento', você DEVE gerar OBRIGATORIAMENTE o relatório formatado exatamente no modelo ASCII pré-formatado do Banco Daycoval abaixo:
+                                Instruções Importantes de Resposta:
+                                1. Responda de forma clara, objetiva, profissional e em português.
+                                2. FLEXIBILIDADE TOTAL DE ANÁLISE: O usuário pode fazer perguntas sobre um protocolo individual, sobre um grupo específico (ex: 'analise os 3 piores'), sobre comparações entre atendimentos ou sobre todos os atendimentos da base ao mesmo tempo. Você deve sempre responder considerando toda a amplitude da pergunta.
+                                3. FORMULÁRIO DAYCOVAL: Se o usuário pedir um 'formulário de fechamento' ou clicar na sugestão, você DEVE gerar OBRIGATORIAMENTE o relatório formatado exatamente no modelo ASCII pré-formatado do Banco Daycoval abaixo, preenchendo com os dados reais do protocolo focado ou do atendimento em análise:
 
 ```text
 ========================================================================================
@@ -948,7 +992,7 @@ def main():
 1. DADOS DO PROTOCOLO E ATENDIMENTO
 ----------------------------------------------------------------------------------------
 Protocolo: [ <PROTOCOLO_REAL> ]     Data da Auditoria: [ <DATA_REAL> ]
-Operador:  [ <ATENDENTE_REAL> ]     Supervisor/Gestor: [ CX / Monitoria ]
+Operador:  [ <ATENDENTE_REAL> ]     Supervisor/Gestor: [ CX / Monitoria     ]
 Cliente:   [ <CLIENTE_REAL> ]     Canal: ( ) Voz  (X) Chat  ( ) WhatsApp
 Status do Caso: ( ) 🟢 Controlado  ( ) 🟡 Atenção  ( ) 🟠 Relevante  (X) 🔴 Crítico
 
