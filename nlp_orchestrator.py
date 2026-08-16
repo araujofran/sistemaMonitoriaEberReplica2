@@ -123,6 +123,51 @@ class AuditoriaCXReport(BaseModel):
     humor_atendente: str = Field(description="Humor do atendente (valores: Negativo, Neutro, Positivo)")
     probabilidade_recontato: str = Field(description="Probabilidade de recontato (valores: Baixa, Média, Alta)")
 
+class AuditoriaCXReportBatch(BaseModel):
+    relatorios: List[AuditoriaCXReport] = Field(description="Lista contendo os relatórios individuais de auditoria de cada protocolo analisado no lote")
+
+# ---------------------------------------------------------
+# GERENCIADOR DE POOL DE CHAVES DE API (KEY POOL ROTATION)
+# ---------------------------------------------------------
+
+class KeyPoolManager:
+    """Gerencia a rotação inteligente de múltiplas chaves de API do Gemini para evitar estouro de cotas."""
+    def __init__(self, primary_key: str = None):
+        self.keys = []
+        if primary_key:
+            self.keys.append(primary_key)
+        self._load_additional_keys()
+        self.current_index = 0
+
+    def _load_additional_keys(self):
+        chave_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "chaveGemini")
+        if os.path.exists(chave_dir):
+            for file in os.listdir(chave_dir):
+                if file.endswith(".txt") and not file.startswith("gemini_fabio_exemplo"):
+                    try:
+                        with open(os.path.join(chave_dir, file), "r", encoding="utf-8") as f:
+                            k = f.read().strip()
+                            if k and k not in self.keys and not k.startswith("COLE_"):
+                                self.keys.append(k)
+                    except Exception:
+                        pass
+
+    def get_current_key(self) -> str:
+        if not self.keys:
+            return None
+        return self.keys[self.current_index % len(self.keys)]
+
+    def rotate_key(self, log_callback=None) -> str:
+        if len(self.keys) <= 1:
+            return self.get_current_key()
+        old_idx = self.current_index
+        self.current_index = (self.current_index + 1) % len(self.keys)
+        new_key = self.keys[self.current_index]
+        msg = f"🔑 [Key Pool Rotation] Alternando para a chave de API #{self.current_index+1}/{len(self.keys)}..."
+        if log_callback: log_callback(msg)
+        else: print(msg)
+        return new_key
+
 # ---------------------------------------------------------
 # GESTÃO INTELIGENTE DE RATE LIMIT (HTTP 429) & BACKOFF
 # ---------------------------------------------------------
@@ -371,6 +416,107 @@ class NLPAuditOrchestrator:
         if log_callback: log_callback(f"✅ Auditoria do protocolo {protocolo} gravada com sucesso!")
         dados_consolidado["_raw_llm_markdown"] = ""
         return dados_consolidado
+
+    async def executar_passo2_llm_microbatch(self, lote_protocolos: list, batch_size: int = 5, log_callback=None) -> list:
+        """
+        Executa a auditoria em micro-lotes (micro-batching) agrupando de 3 a 5 atendimentos em uma única chamada ao Gemini.
+        Reduz o consumo de requisições por minuto (RPM) em até 80%.
+        """
+        if log_callback: log_callback(f"📦 [Micro-batching] Iniciando auditoria em lote de {len(lote_protocolos)} protocolos (agrupamento: {batch_size} por chamada)...")
+        
+        import database
+        resultados_finais = []
+        
+        # Divide lote_protocolos em grupos de tamanho batch_size
+        grupos = [lote_protocolos[i:i + batch_size] for i in range(0, len(lote_protocolos), batch_size)]
+        key_manager = KeyPoolManager(primary_key=self.api_key)
+        
+        for g_idx, grupo in enumerate(grupos):
+            if log_callback: log_callback(f"--- 📦 [Micro-lote {g_idx+1}/{len(grupos)}] Processando protocolos: {', '.join(grupo)} ---")
+            
+            # Coleta transcrições e NLP preliminares do grupo
+            prompts_transcricoes = []
+            for p in grupo:
+                reg = database.obter_registro_auditoria(p)
+                txt = reg.get("texto_transcricao") if reg else None
+                nlp_str = reg.get("nlp_json", "{}") if reg else "{}"
+                if not txt:
+                    trans_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "transcricoes", f"protocolo_{p}.txt")
+                    if os.path.exists(trans_file):
+                        with open(trans_file, "r", encoding="utf-8", errors="ignore") as f:
+                            txt = f.read()
+                if txt:
+                    prompts_transcricoes.append(f"=== PROTOCOLO: {p} ===\nTRANSCRIÇÃO:\n{txt}\nNLP PRELIMINAR:\n{nlp_str}\n=== FIM PROTOCOLO {p} ===")
+                    
+            if not prompts_transcricoes:
+                continue
+                
+            prompt_input_grupo = f"""
+            Você deve auditar a lista de {len(prompts_transcricoes)} atendimentos abaixo, gerando um relatório estruturado individual de 14 blocos para CADA um deles.
+            Retorne a resposta estritamente preenchendo o schema 'AuditoriaCXReportBatch' com o campo 'relatorios' contendo a lista dos relatórios de cada protocolo.
+            
+            ATENDIMENTOS DO LOTE:
+            {"\n\n".join(prompts_transcricoes)}
+            """
+            
+            sucesso_grupo = False
+            for retry_key in range(max(1, len(key_manager.keys))):
+                active_key = key_manager.get_current_key()
+                client = genai.Client(api_key=active_key)
+                
+                try:
+                    if log_callback: log_callback(f"🌐 Envia grupo de {len(prompts_transcricoes)} atendimentos em chamada única ao Gemini...")
+                    
+                    try:
+                        loop = asyncio.get_running_loop()
+                    except RuntimeError:
+                        loop = asyncio.get_event_loop()
+                        
+                    response = await loop.run_in_executor(
+                        None,
+                        lambda: call_gemini_with_rate_limit_retry(
+                            client=client,
+                            model_name=self.model_name,
+                            prompt_input=prompt_input_grupo,
+                            prompt_rules=self.prompt_rules,
+                            response_schema=AuditoriaCXReportBatch,
+                            log_callback=log_callback
+                        )
+                    )
+                    
+                    batch_json_str = response.text
+                    batch_dados = json.loads(batch_json_str)
+                    relatorios_list = batch_dados.get("relatorios", [])
+                    
+                    for rel in relatorios_list:
+                        proto_rel = str(rel.get("cabecalho", {}).get("protocolo", ""))
+                        rel_json_str = json.dumps(rel, ensure_ascii=False)
+                        database.salvar_auditoria_llm(proto_rel, rel_json_str)
+                        resultados_finais.append(rel)
+                        if log_callback: log_callback(f"✅ Protocolo {proto_rel} auditado e salvo no banco SQLite.")
+                        
+                    sucesso_grupo = True
+                    break
+                except Exception as batch_err:
+                    err_s = str(batch_err)
+                    if "429" in err_s or "RESOURCE_EXHAUSTED" in err_s:
+                        if len(key_manager.keys) > 1:
+                            key_manager.rotate_key(log_callback)
+                            continue
+                    if log_callback: log_callback(f"⚠️ Notificação no micro-lote: {err_s}. Fazendo fallback individual...")
+                    break
+                    
+            if not sucesso_grupo:
+                for p in grupo:
+                    try:
+                        res_ind = await self.executar_passo2_llm(p, log_callback)
+                        resultados_finais.append(res_ind)
+                    except Exception as ind_err:
+                        if log_callback: log_callback(f"❌ Erro no protocolo {p}: {str(ind_err)}")
+                        
+            time.sleep(3) # Pausa estratégica entre micro-lotes
+            
+        return resultados_finais
 
     def analisar_nlp_local(self, protocolo: str, texto: str) -> dict:
         """Executa a análise NLP heurística local (Passo 1) sobre a transcrição."""

@@ -1,8 +1,16 @@
 import sqlite3
 import json
 import os
+import streamlit as st
 
 DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sistema_piloto.db")
+
+def clear_db_cache():
+    """Limpa o cache de consultas do Streamlit para refletir novas atualizações."""
+    try:
+        st.cache_data.clear()
+    except Exception:
+        pass
 
 def get_connection():
     """Retorna uma conexão com o banco de dados SQLite."""
@@ -36,7 +44,6 @@ def salvar_transcricao_nlp(protocolo: str, texto: str, nlp_json_str: str) -> Non
     """Insere ou atualiza o registro da transcrição com o resultado da análise NLP local."""
     init_db()
     
-    # Extrai metadados básicos do JSON
     atendente = "-"
     cliente = "-"
     score_operador = 100.0
@@ -55,7 +62,6 @@ def salvar_transcricao_nlp(protocolo: str, texto: str, nlp_json_str: str) -> Non
     conn = get_connection()
     cursor = conn.cursor()
     
-    # Verifica se já existe
     cursor.execute("SELECT 1 FROM auditorias_cx WHERE protocolo = ?", (protocolo,))
     exists = cursor.fetchone()
     
@@ -79,12 +85,12 @@ def salvar_transcricao_nlp(protocolo: str, texto: str, nlp_json_str: str) -> Non
         
     conn.commit()
     conn.close()
+    clear_db_cache()
 
 def salvar_auditoria_llm(protocolo: str, llm_json_str: str) -> None:
     """Atualiza a auditoria com o resultado consolidado da LLM (Gemini)."""
     init_db()
     
-    # Extrai metadados atualizados pela LLM
     atendente = None
     cliente = None
     score_operador = None
@@ -103,7 +109,6 @@ def salvar_auditoria_llm(protocolo: str, llm_json_str: str) -> None:
     conn = get_connection()
     cursor = conn.cursor()
     
-    # Atualiza
     updates = ["llm_status = 'concluido'", "llm_json = ?"]
     params = [llm_json_str]
     
@@ -126,6 +131,7 @@ def salvar_auditoria_llm(protocolo: str, llm_json_str: str) -> None:
     cursor.execute(query, tuple(params))
     conn.commit()
     conn.close()
+    clear_db_cache()
 
 def obter_registro_auditoria(protocolo: str) -> dict:
     """Retorna um registro completo a partir do número do protocolo."""
@@ -140,6 +146,7 @@ def obter_registro_auditoria(protocolo: str) -> dict:
         return dict(row)
     return None
 
+@st.cache_data(ttl=30)
 def listar_todas_auditorias() -> list:
     """Retorna a lista resumida de todas as auditorias para listagem no painel."""
     init_db()
@@ -163,6 +170,6 @@ def limpar_banco() -> None:
     cursor.execute("DELETE FROM auditorias_cx")
     conn.commit()
     conn.close()
+    clear_db_cache()
 
-# Inicializa o banco de dados na importação
 init_db()

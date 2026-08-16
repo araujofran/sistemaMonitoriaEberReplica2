@@ -689,27 +689,21 @@ def main():
                         sucessos = 0
                         erros = 0
                         
-                        log_cb_lote(f"🚀 Iniciando auditoria LLM em lote para {len(pendentes)} protocolos pendentes...")
+                        log_cb_lote(f"🚀 Iniciando auditoria LLM em Micro-lotes (agrupamento de 5) para {len(pendentes)} protocolos pendentes...")
                         
-                        for idx, proto in enumerate(pendentes):
-                            pct = (idx + 1) / len(pendentes)
-                            status_lote.write(f"⏳ Processando LLM para protocolo `{proto}` ({idx+1}/{len(pendentes)})...")
-                            progress_lote.progress(pct)
-                            log_cb_lote(f"--- [Protocolo {proto}] ({idx+1}/{len(pendentes)}) ---")
+                        try:
+                            loop = asyncio.new_event_loop()
+                            asyncio.set_event_loop(loop)
+                            res_lote = loop.run_until_complete(
+                                orchestrator.executar_passo2_llm_microbatch(pendentes, batch_size=5, log_callback=log_cb_lote)
+                            )
+                            loop.close()
+                            status_lote.success(f"✅ Processamento LLM em micro-lotes concluído com sucesso! ({len(res_lote)} relatórios gerados)")
+                        except Exception as e:
+                            log_cb_lote(f"❌ Erro no lote: {str(e)}")
+                            status_lote.error(f"Erro no lote: {str(e)}")
                             
-                            try:
-                                loop = asyncio.new_event_loop()
-                                asyncio.set_event_loop(loop)
-                                loop.run_until_complete(orchestrator.executar_passo2_llm(proto, log_cb_lote))
-                                loop.close()
-                                sucessos += 1
-                                time.sleep(3) # Pausa estratégica pró-ativa para evitar HTTP 429 Rate Limit (15 RPM)
-                            except Exception as e:
-                                erros += 1
-                                log_cb_lote(f"❌ Erro no protocolo {proto}: {str(e)}")
-                        
-                        status_lote.success(f"✅ Processamento LLM em lote concluído! Sucessos: {sucessos} | Erros: {erros}")
-                        log_cb_lote(f"🎉 Finalizado lote: {sucessos} com sucesso, {erros} com erro.")
+                        log_cb_lote(f"🎉 Finalizada auditoria em lote com Micro-batching & Key Pool!")
                         time.sleep(2)
                         st.rerun()
             
