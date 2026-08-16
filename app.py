@@ -709,72 +709,105 @@ def main():
         st.markdown("---")
         st.subheader("📂 Ingestão de Transcrições & Auditoria em Lote (Micro-batching)")
         
-        uploaded_file = st.file_uploader(
-            "Carregue arquivos (.txt, .csv, .xlsx) para iniciar o fluxo em lote:", 
-            type=["txt", "csv", "xls", "xlsx"]
+        uploaded_files = st.file_uploader(
+            "Carregue quantos arquivos (.txt, .csv, .xlsx) quiser para iniciar o fluxo em lote:", 
+            type=["txt", "csv", "xls", "xlsx"],
+            accept_multiple_files=True
         )
 
-        if uploaded_file is not None:
-            filename = uploaded_file.name
+        if uploaded_files:
+            # Separa arquivos TXT e Planilhas
+            txt_files = [f for f in uploaded_files if f.name.endswith(".txt")]
+            sheet_files = [f for f in uploaded_files if f.name.endswith((".csv", ".xls", ".xlsx"))]
             
-            if filename.endswith(".txt"):
-                st.info(f"Arquivo `{filename}` pronto para ingestão.")
-                protocolo_id = filename.replace("protocolo_", "").replace(".txt", "")
-                
-                if st.button("⚡ Executar Passo 1 (NLP Local)", key="btn_nlp_txt"):
-                    log_box = st.empty()
-                    logs = []
-                    def log_cb(msg):
-                        logs.append(f"[{len(logs)+1}] {msg}")
-                        log_html = "".join([f"<div class='console-line'>{l}</div>" for l in logs])
-                        log_box.markdown(f"<div class='console-box'>{log_html}</div>", unsafe_allow_html=True)
-                    
-                    try:
-                        orchestrator = NLPAuditOrchestrator(use_real_llm=use_real, api_key=api_key, model_name=model_name)
-                        loop = asyncio.new_event_loop()
-                        asyncio.set_event_loop(loop)
-                        dados_nlp = loop.run_until_complete(
-                            orchestrator.executar_passo1_nlp(protocolo_id, uploaded_file.getvalue().decode("utf-8", errors="ignore"), log_cb)
-                        )
-                        loop.close()
-                        st.success(f"✅ Passo 1 concluído para protocolo {protocolo_id}!")
-                        st.rerun()
-                    except Exception as e:
-                        st.error(f"Erro: {str(e)}")
-
-            else:
-                try:
-                    df = pd.read_csv(uploaded_file) if filename.endswith(".csv") else pd.read_excel(uploaded_file)
-                    st.write(f"Planilha de Ingestão: **{len(df)} linhas**")
-                    st.dataframe(df.head(4))
-                    
-                    transcricao_col = next((c for c in df.columns if "transcricao" in c.lower()), df.columns[0])
-                    
-                    if st.button("⚡ Processar Lote de Transcrições (Passo 1 - NLP)", key="btn_lote_nlp"):
-                        progress_bar = st.progress(0)
-                        status_text = st.empty()
-                        orchestrator = NLPAuditOrchestrator(use_real_llm=use_real, api_key=api_key, model_name=model_name)
-                        flat_results = []
+            # 1. PROCESSAMENTO DE MÚLTIPLOS ARQUIVOS TXT
+            if txt_files:
+                st.success(f"📁 **{len(txt_files)} arquivo(s) de transcrição TXT carregado(s) para ingestão em lote!**")
+                with st.expander("📝 Visualizar lista dos arquivos TXT selecionados:"):
+                    for tf in txt_files:
+                        st.markdown(f"- `{tf.name}` ({tf.size} bytes)")
                         
-                        for idx, row in df.iterrows():
-                            texto_trans = str(row.get(transcricao_col, "")).strip()
-                            proto_val = str(row.get("PROTOCOLO", row.get("protocolo", f"LOTE_{int(time.time())}_{idx}"))).strip()
-                            status_text.write(f"⏳ Processando {idx+1}/{len(df)}: Protocolo {proto_val}...")
-                            progress_bar.progress((idx + 1) / len(df))
+                if st.button(f"⚡ Processar Lote de Transcrições TXT ({len(txt_files)} arquivos)", key="btn_lote_txt_multi"):
+                    progress_bar = st.progress(0)
+                    status_text = st.empty()
+                    log_box_txt = st.empty()
+                    logs_txt = []
+                    
+                    def log_cb_txt(msg):
+                        logs_txt.append(f"[{len(logs_txt)+1}] {msg}")
+                        log_html = "".join([f"<div class='console-line'>{l}</div>" for l in logs_txt])
+                        log_box_txt.markdown(f"<div class='console-box'>{log_html}</div>", unsafe_allow_html=True)
+                        
+                    orchestrator = NLPAuditOrchestrator(use_real_llm=use_real, api_key=api_key, model_name=model_name)
+                    sucessos_txt = 0
+                    
+                    trans_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "transcricoes")
+                    os.makedirs(trans_dir, exist_ok=True)
+                    
+                    for idx, tf in enumerate(txt_files):
+                        filename = tf.name
+                        protocolo_id = filename.replace("protocolo_", "").replace(".txt", "").replace(" ", "_")
+                        status_text.write(f"⏳ Processando {idx+1}/{len(txt_files)}: Protocolo {protocolo_id} (`{filename}`)...")
+                        progress_bar.progress((idx + 1) / len(txt_files))
+                        
+                        # Salva na pasta local /transcricoes
+                        caminho_salvar = os.path.join(trans_dir, filename)
+                        with open(caminho_salvar, "wb") as f:
+                            f.write(tf.getbuffer())
                             
-                            try:
-                                loop = asyncio.new_event_loop()
-                                asyncio.set_event_loop(loop)
-                                dados_nlp = loop.run_until_complete(orchestrator.executar_passo1_nlp(proto_val, texto_transcricao=texto_trans))
-                                loop.close()
-                                flat_results.append(achatar_dados_auditoria(dados_nlp))
-                            except Exception as e:
-                                flat_results.append({"ERRO": str(e)})
+                        texto_conteudo = tf.getvalue().decode("utf-8", errors="ignore")
+                        
+                        try:
+                            loop = asyncio.new_event_loop()
+                            asyncio.set_event_loop(loop)
+                            dados_nlp = loop.run_until_complete(
+                                orchestrator.executar_passo1_nlp(protocolo_id, texto_conteudo, log_cb_txt)
+                            )
+                            loop.close()
+                            sucessos_txt += 1
+                        except Exception as e:
+                            log_cb_txt(f"❌ Erro ao processar {filename}: {str(e)}")
+                            
+                    status_text.success(f"✅ Ingestão NLP concluída para {sucessos_txt}/{len(txt_files)} arquivos TXT!")
+                    time.sleep(2)
+                    st.rerun()
+
+            # 2. PROCESSAMENTO DE PLANILHAS
+            if sheet_files:
+                for sf in sheet_files:
+                    st.info(f"Planilha `{sf.name}` carregada.")
+                    try:
+                        df = pd.read_csv(sf) if sf.name.endswith(".csv") else pd.read_excel(sf)
+                        st.write(f"Linhas na planilha: **{len(df)}**")
+                        st.dataframe(df.head(4))
+                        
+                        transcricao_col = next((c for c in df.columns if "transcricao" in c.lower()), df.columns[0])
+                        
+                        if st.button(f"⚡ Processar Planilha `{sf.name}` (Passo 1 - NLP)", key=f"btn_sheet_{sf.name}"):
+                            progress_bar = st.progress(0)
+                            status_text = st.empty()
+                            orchestrator = NLPAuditOrchestrator(use_real_llm=use_real, api_key=api_key, model_name=model_name)
+                            flat_results = []
+                            
+                            for idx, row in df.iterrows():
+                                texto_trans = str(row.get(transcricao_col, "")).strip()
+                                proto_val = str(row.get("PROTOCOLO", row.get("protocolo", f"LOTE_{int(time.time())}_{idx}"))).strip()
+                                status_text.write(f"⏳ Processando {idx+1}/{len(df)}: Protocolo {proto_val}...")
+                                progress_bar.progress((idx + 1) / len(df))
                                 
-                        status_text.success("✅ Ingestão NLP concluída!")
-                        st.rerun()
-                except Exception as e:
-                    st.error(f"Erro na planilha: {str(e)}")
+                                try:
+                                    loop = asyncio.new_event_loop()
+                                    asyncio.set_event_loop(loop)
+                                    dados_nlp = loop.run_until_complete(orchestrator.executar_passo1_nlp(proto_val, texto_transcricao=texto_trans))
+                                    loop.close()
+                                    flat_results.append(achatar_dados_auditoria(dados_nlp))
+                                except Exception as e:
+                                    flat_results.append({"ERRO": str(e)})
+                                    
+                            status_text.success("✅ Ingestão NLP de planilha concluída!")
+                            st.rerun()
+                    except Exception as e:
+                        st.error(f"Erro na planilha {sf.name}: {str(e)}")
 
     # ---------------------------------------------------------
     # ABA 3: JORNADA DO CLIENTE & HANDOFF INVISÍVEL (TIMELINE)
