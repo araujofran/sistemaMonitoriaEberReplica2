@@ -837,9 +837,9 @@ def main():
                             except Exception as chat_err:
                                 err_str = str(chat_err)
                                 if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
-                                    # Fallback de modelo para gemini-1.5-flash
+                                    # Fallback de modelo para gemini-flash-latest
                                     chat_fallback = client.chats.create(
-                                        model="gemini-1.5-flash",
+                                        model="gemini-flash-latest",
                                         config=types.GenerateContentConfig(
                                             system_instruction=prompt_system,
                                             temperature=0.3

@@ -175,11 +175,11 @@ class KeyPoolManager:
 def call_gemini_with_rate_limit_retry(client, model_name, prompt_input, prompt_rules, response_schema=None, log_callback=None, max_retries=4):
     """
     Executa a chamada ao Gemini com gestão inteligente de Rate Limit (HTTP 429 RESOURCE_EXHAUSTED) 
-    e Roteamento/Fallback de Modelo de IA (ex: gemini-2.5-flash -> gemini-1.5-flash).
+    e Roteamento/Fallback de Modelo de IA (ex: gemini-2.5-flash -> gemini-flash-latest).
     """
     models_to_try = [model_name]
-    if model_name != "gemini-1.5-flash":
-        models_to_try.append("gemini-1.5-flash")
+    if model_name != "gemini-flash-latest":
+        models_to_try.append("gemini-flash-latest")
         
     for current_model in models_to_try:
         attempt = 0
