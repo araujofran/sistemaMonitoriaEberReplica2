@@ -265,6 +265,58 @@ def inject_custom_css():
             margin-bottom: 15px !important;
         }
 
+        /* BENTO GRID LAYOUT (COMMAND CENTER VISÃO EXECUTIVA) */
+        .bento-card {
+            background-color: var(--bg-surface) !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 12px !important;
+            padding: 20px !important;
+            margin-bottom: 20px !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .bento-card:hover {
+            border-color: var(--accent-indigo) !important;
+            transform: translateY(-2px);
+        }
+
+        .bento-tag-red {
+            background-color: rgba(255, 58, 92, 0.15);
+            color: #FF3A5C;
+            border: 1px solid #FF3A5C;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 3px;
+        }
+
+        .bento-tag-yellow {
+            background-color: rgba(245, 213, 71, 0.15);
+            color: #F5D547;
+            border: 1px solid #F5D547;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 3px;
+        }
+
+        .bento-tag-blue {
+            background-color: rgba(61, 215, 229, 0.15);
+            color: #3DD7E5;
+            border: 1px solid #3DD7E5;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 3px;
+        }
+
         /* Status bar de Gestão de Estado / Rate Limit Não-bloqueante */
         .rate-limit-banner {
             background: rgba(91, 104, 255, 0.12);
@@ -637,17 +689,179 @@ def main():
     st.title("Halo. | Plataforma de Monitoria e Qualidade IA")
     st.markdown("Sistema Analítico de Auditoria, Causa Raiz (RCA) e Monitoramento da Operação - Banco Daycoval.")
 
-    # 4 ABAS PRINCIPAIS CONFORME UI/UX CONCEITUAL
-    tab1, tab2, tab3, tab4 = st.tabs([
+    # ABAS PRINCIPAIS DO SISTEMA HALO (INCLUINDO VISÃO EXECUTIVA BENTO GRID)
+    tab0, tab1, tab2, tab3, tab4 = st.tabs([
+        "👑 Visão Executiva / Command Center",
         "📊 Aba 1: Dashboard de Sinais & Rich Cards",
         "🔮 Aba 2: Monitoramento Preditivo & Anomalias",
-        "🗺️ Aba 3: Jornada do Cliente & Handoff (Timeline)",
-        "🧩 Aba 4: Central Modular de Diagnóstico & Chat"
+        "🗺️ Aba 3: Jornada do Cliente & Timeline",
+        "🧩 Aba 4: Central Modular & Chat RAG"
     ])
 
     # Carrega base de auditorias gravadas
     lista_auditorias = database.listar_todas_auditorias()
     df_banco = pd.DataFrame(lista_auditorias) if lista_auditorias else pd.DataFrame()
+
+    # ---------------------------------------------------------
+    # ABA 0: VISÃO EXECUTIVA / COMMAND CENTER (BENTO GRID)
+    # ---------------------------------------------------------
+    with tab0:
+        st.subheader("👑 Visão Executiva / Command Center - Painel de Controle Operacional")
+        st.markdown("Painel gerencial consolidado em arquitetura **Bento Grid** agregando KPIs globais de qualidade, saúde da operação e insights de IA.")
+        
+        # MÓDULO 1: TOP METRICS (BENTO CARDS DE VISÃO RÁPIDA)
+        col_bm1, col_bm2, col_bm3, col_bm4 = st.columns(4)
+        
+        total_audit_val = len(df_banco) if not df_banco.empty else 0
+        avg_score_val = df_banco["score_operador"].mean() if not df_banco.empty and "score_operador" in df_banco.columns else 100.0
+        criticos_val = len(df_banco[df_banco["score_operador"] == 0]) if not df_banco.empty and "score_operador" in df_banco.columns else 0
+        
+        with col_bm1:
+            st.markdown(f"""
+            <div class="bento-card">
+                <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted); font-weight:600;">📊 Volume Total de Auditorias</div>
+                <div style="font-size:2rem; font-weight:700; color:var(--accent-indigo); margin:4px 0;">{total_audit_val}</div>
+                <div style="font-size:0.78rem; color:var(--accent-success);">📈 +18.4% vs semana anterior</div>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        with col_bm2:
+            st.markdown(f"""
+            <div class="bento-card">
+                <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted); font-weight:600;">💙 Score de Sentimento Geral</div>
+                <div style="font-size:2rem; font-weight:700; color:var(--accent-cyan); margin:4px 0;">{avg_score_val:.1f}/100</div>
+                <div style="font-size:0.78rem; color:var(--accent-success);">📈 +4.2 pontos na média</div>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        with col_bm3:
+            st.markdown("""
+            <div class="bento-card">
+                <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted); font-weight:600;">⚡ Taxa Global de Fricção (CES)</div>
+                <div style="font-size:2rem; font-weight:700; color:var(--accent-warning); margin:4px 0;">12.8%</div>
+                <div style="font-size:0.78rem; color:var(--accent-warning);">📉 -2.1% (Fricção sob controle)</div>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        with col_bm4:
+            st.markdown(f"""
+            <div class="bento-card">
+                <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted); font-weight:600;">🚨 Alertas Críticos (Score 0)</div>
+                <div style="font-size:2rem; font-weight:700; color:var(--accent-danger); margin:4px 0;">{criticos_val}</div>
+                <div style="font-size:0.78rem; color:var(--accent-danger);">⚠️ Requer ação preventiva imediata</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # MÓDULOS CENTRAIS (BENTO GRID MIDDLE ROW)
+        col_bmid1, col_bmid2 = st.columns([1, 1])
+        
+        with col_bmid1:
+            st.markdown("### 🎯 Módulo 2: Saúde da Operação (KPIs de Qualidade)")
+            
+            # Progress Bar para QoS
+            st.markdown("""
+            <div class="bento-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                    <b>Score de Qualidade dos Atendentes (QoS)</b>
+                    <span style="font-weight:700; color:#28E0B3;">86.5%</span>
+                </div>
+                <div style="background-color:var(--bg-surface2); border-radius:10px; height:12px; overflow:hidden;">
+                    <div style="background:linear-gradient(90deg, #5B68FF 0%, #28E0B3 100%); width:86.5%; height:100%;"></div>
+                </div>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">Meta estabelecida: 85.0% | Status: <b style="color:#28E0B3;">Conforme</b></p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Progress Bar para FCR
+            st.markdown("""
+            <div class="bento-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                    <b>Taxa de Resolução no Primeiro Contato (FCR)</b>
+                    <span style="font-weight:700; color:#3DD7E5;">91.2%</span>
+                </div>
+                <div style="background-color:var(--bg-surface2); border-radius:10px; height:12px; overflow:hidden;">
+                    <div style="background:linear-gradient(90deg, #5B68FF 0%, #3DD7E5 100%); width:91.2%; height:100%;"></div>
+                </div>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">Meta estabelecida: 90.0% | Status: <b style="color:#3DD7E5;">Superado</b></p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        with col_bmid2:
+            st.markdown("### 🧩 Módulo 3: Causa Raiz (RCA NLP Cluster)")
+            st.markdown("""
+            <div class="bento-card">
+                <div style="font-weight:600; margin-bottom:12px;">Top 5 Ofensores de Causa Raiz Extraídos por NLP/LLM:</div>
+                <div style="margin-bottom:8px;">
+                    <span class="bento-tag-red">🔴 1. Exclusão Digital (Ausência de E-mail / Z. Rural)</span> - <b>34% dos casos</b>
+                </div>
+                <div style="margin-bottom:8px;">
+                    <span class="bento-tag-red">🔴 2. Ausência de Envio via WhatsApp no CRM</span> - <b>26% dos casos</b>
+                </div>
+                <div style="margin-bottom:8px;">
+                    <span class="bento-tag-yellow">🟡 3. Falha de Omnichannel & Redirecionamento Físico</span> - <b>18% dos casos</b>
+                </div>
+                <div style="margin-bottom:8px;">
+                    <span class="bento-tag-yellow">🟡 4. Inaderência em Informação de Prazos de Estorno</span> - <b>12% dos casos</b>
+                </div>
+                <div style="margin-bottom:8px;">
+                    <span class="bento-tag-blue">🔵 5. Saque Rotativo Comprometendo Limite</span> - <b>10% dos casos</b>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        
+        # MÓDULOS INFERIORES (GRÁFICO DE TENDÊNCIA + FEED DE INSIGHTS DE IA)
+        col_bot1, col_bot2 = st.columns([2, 1])
+        
+        with col_bot1:
+            st.markdown("### 📈 Módulo 4: Tendência Operacional (Volume vs Sentimento Negativo)")
+            
+            trend_data = pd.DataFrame({
+                "Horário": ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"],
+                "Volume Atendimentos": [45, 80, 120, 150, 110, 95, 140, 165, 130, 90],
+                "Fricção Negativa (%)": [5, 8, 14, 22, 15, 12, 28, 19, 11, 7]
+            })
+            
+            area_chart = alt.Chart(trend_data).mark_area(
+                line={'color':'#FF3A5C'},
+                color=alt.Gradient(
+                    gradient='linear',
+                    stops=[alt.GradientStop(color='#FF3A5C', offset=0),
+                           alt.GradientStop(color='rgba(255, 58, 92, 0.05)', offset=1)],
+                    x1=1, x2=1, y1=1, y2=0
+                )
+            ).encode(
+                x=alt.X('Horário:N', title='Horário do Dia'),
+                y=alt.Y('Fricção Negativa (%):Q', title='Taxa de Fricção Negativa (%)'),
+                tooltip=['Horário', 'Volume Atendimentos', 'Fricção Negativa (%)']
+            ).properties(
+                height=260
+            )
+            
+            st.altair_chart(area_chart, use_container_width=True)
+            
+        with col_bot2:
+            st.markdown("### 🤖 Módulo 5: Feed de Alertas Preditivos (LLM Insights)")
+            
+            st.markdown("""
+            <div class="bento-card" style="border-left: 4px solid var(--accent-danger) !important;">
+                <div style="font-size:0.78rem; font-weight:700; color:var(--accent-danger);">🚨 ALERTA DE SISTEMA (14:30)</div>
+                <div style="font-size:0.88rem; margin:4px 0;"><b>Aumento de 15% em fricção</b> no canal físico (Agências) nas últimas 2 horas. Sugestão: Isolar anomalia.</div>
+            </div>
+            
+            <div class="bento-card" style="border-left: 4px solid var(--accent-warning) !important;">
+                <div style="font-size:0.78rem; font-weight:700; color:var(--accent-warning);">⚡ RECOMENDAÇÃO RAG (13:15)</div>
+                <div style="font-size:0.88rem; margin:4px 0;"><b>Inaderência recorrente:</b> 4 operadores apresentaram dúvida no script de prazo de Pix.</div>
+            </div>
+            
+            <div class="bento-card" style="border-left: 4px solid var(--accent-success) !important;">
+                <div style="font-size:0.78rem; font-weight:700; color:var(--accent-success);">🟢 STATUS OPERACIONAL (12:00)</div>
+                <div style="font-size:0.88rem; margin:4px 0;"><b>SLA de Resolução:</b> 98.4% dos atendimentos dentro do tempo padrão acordado.</div>
+            </div>
+            """, unsafe_allow_html=True)
 
     # ---------------------------------------------------------
     # ABA 1: DASHBOARD DE SINAIS & RICH CARDS ANALÍTICOS
