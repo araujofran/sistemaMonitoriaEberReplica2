@@ -6,7 +6,7 @@
 ![MCP Protocol](https://img.shields.io/badge/Protocol-MCP-00E5FF?style=for-the-badge)
 ![SQLite](https://img.shields.io/badge/Database-SQLite3-003B57?style=for-the-badge&logo=sqlite)
 
-Plataforma de inteligência operacional e auditoria automatizada de interações de atendimento ao cliente (voz/transcrição e texto) do **Banco Daycoval**. 
+Plataforma de inteligência operacional e auditoria automatizada de interações de atendimento ao cliente (voz/transcrição e texto) do **Banco **. 
 
 O sistema utiliza uma arquitetura híbrida de **NLP Heurístico de Alta Performance** e **Inteligência Artificial Generativa (Google Gemini LLM)** integrados via **Model Context Protocol (MCP)** para auditar 100% dos atendimentos, gerar notas objetivas por pilares de qualidade, diagnosticar causa raiz de atritos e formular planos de ação executivos.
 
