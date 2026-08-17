@@ -1,4 +1,4 @@
-# 🚀 Halo. | Sistema de Auditoria de CX e Qualidade Automatizada (Banco Daycoval)
+# 🚀 Halo. | Sistema de Auditoria de CX e Qualidade Automatizada (Banco )
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B?style=for-the-badge&logo=streamlit)
